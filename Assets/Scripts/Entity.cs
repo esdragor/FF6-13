@@ -38,6 +38,16 @@ public class Entity : MonoBehaviour
         
     }
     
+    public virtual void Attack()
+    {
+        Debug.Log("Attack");
+    }
+    
+    public virtual void TakeDamage(int damage)
+    {
+        Debug.Log("TakeDamage");
+    }
+    
     public void Move(Direction dir)
     {
         ForwardDirection = dir;

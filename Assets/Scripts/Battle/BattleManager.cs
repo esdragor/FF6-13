@@ -28,12 +28,12 @@ public class BattleManager : MonoBehaviour
     public void StartBattle()
     {
         UIBattle.SetActive(true);
-        // nbMonster = Random.Range(1, 4);
-        // for (int i = 0; i < nbMonster; i++)
-        // {
-        //     Monsters.TryGetValue(monstersNames[Random.Range(0, monstersNames.Count)], out var monster);
-        //     monstersToSpawn.Add(monster);
-        // }
+        nbMonster = Random.Range(1, 4);
+        for (int i = 0; i < nbMonster; i++)
+        {
+            Monsters.TryGetValue(monstersNames[Random.Range(0, monstersNames.Count)], out var monster);
+            monstersToSpawn.Add(monster);
+        }
     }
 
     private void Start()
