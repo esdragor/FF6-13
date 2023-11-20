@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Guards
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Guards
+  <Hp>k__BackingField: 10
   <Strength>k__BackingField: 0
   <Agility>k__BackingField: 0
   <Stamina>k__BackingField: 0
   <Magic>k__BackingField: 0
   <Attack>k__BackingField: 0
-  <HitRate>k__BackingField: 0
   <Defence>k__BackingField: 0
   <MagicDefence>k__BackingField: 0
   <Evasion>k__BackingField: 0
@@ -28,6 +28,7 @@ MonoBehaviour:
   <Sprite>k__BackingField: {fileID: 0}
   <XpReward>k__BackingField: 0
   <GilReward>k__BackingField: 0
+  <HitRate>k__BackingField: 0
   <StealItems>k__BackingField: []
   <DropItems>k__BackingField: []
   <MorphItems>k__BackingField: []

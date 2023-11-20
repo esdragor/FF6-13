@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: monster
   m_EditorClassIdentifier: 
   <Name>k__BackingField: monster
-  <Hp>k__BackingField: 0
+  <Hp>k__BackingField: 5
   <Strength>k__BackingField: 0
   <Agility>k__BackingField: 0
   <Stamina>k__BackingField: 0

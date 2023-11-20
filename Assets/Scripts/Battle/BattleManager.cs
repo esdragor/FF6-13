@@ -18,11 +18,11 @@ public class BattleManager : MonoBehaviour
     public static event Action<int> OnSelectionChanged;
 
     [SerializeField] private GameObject UIBattle;
-    [SerializeField] private List<MonsterSO> soMonster = new();
+    [SerializeField] private List<Entity> soMonster = new();
 
     private int nbMonster = 0;
-    [SerializeField] private Dictionary<string, MonsterSO> Monsters = new();
-    private List<MonsterSO> monstersToSpawn = new();
+    private Dictionary<string, Entity> Monsters = new();
+    private List<Entity> monstersToSpawn = new();
     private ActionBattle actionIndex = ActionBattle.Attack;
 
     public void StartBattle()
@@ -32,7 +32,12 @@ public class BattleManager : MonoBehaviour
         for (int i = 0; i < nbMonster; i++)
         {
             Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
-            monstersToSpawn.Add(monster);
+            if (monster != null)
+            {
+                Entity newMonster = Instantiate(monster.gameObject, Vector3.zero, Quaternion.identity).GetComponent<Entity>();
+                newMonster.Init();
+                monstersToSpawn.Add(newMonster);
+            }
         }
     }
 
@@ -60,6 +65,7 @@ public class BattleManager : MonoBehaviour
         {
             case ActionBattle.Attack:
                 Debug.Log("Attack");
+                GameManager.Instance.GetPlayerAtIndex(0).Attack(monstersToSpawn[0]);
                 break;
             case ActionBattle.Defend:
                 Debug.Log("Defend");

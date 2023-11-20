@@ -22,7 +22,7 @@ namespace Scriptable_Objects.Unit
         
         public PlayerCharacterInfoInstance CreateInstance(int currentLevel)
         {
-            return new PlayerCharacterInfoInstance(this, currentLevel);
+             return new PlayerCharacterInfoInstance(this, currentLevel);
         }
     }
     

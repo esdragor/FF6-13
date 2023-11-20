@@ -46,9 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIBattle: {fileID: 0}
   soMonster:
-  - {fileID: 11400000, guid: 283d1bda70651a34fadf665e49c02a1c, type: 2}
-  - {fileID: 11400000, guid: 1e846d6d47608c44f90f5f3cbc94ad00, type: 2}
-  - {fileID: 11400000, guid: 6125045257955af4b9a9c1e735e49443, type: 2}
+  - {fileID: 5267095582099474484, guid: a705e93902f34b041bed3c18af477a8e, type: 3}
 --- !u!1 &5270237582146529806
 GameObject:
   m_ObjectHideFlags: 0

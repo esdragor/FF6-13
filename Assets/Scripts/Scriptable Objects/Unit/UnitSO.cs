@@ -41,7 +41,7 @@ namespace Scriptable_Objects.Unit
     public class UnitSOInstance
     {
         public UnitSO So { get;}
-        public int currentHp { get; private set; }
+        public int currentHp { get; set; }
         
         public UnitSOInstance(UnitSO info)
         {

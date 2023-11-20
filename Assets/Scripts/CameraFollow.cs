@@ -8,9 +8,9 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float smoothSpeed = 0.125f;
     [SerializeField] private Vector3 offset;
     
-    private Transform target;
+    [SerializeField] private Transform target;
 
-    private void Start()
+    private void Awake()
     {
         PlayerController.OnPlayerSpawned += SetTarget;
     }

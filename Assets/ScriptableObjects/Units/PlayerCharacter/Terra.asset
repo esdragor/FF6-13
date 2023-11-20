@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Terra
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Terra
+  <Hp>k__BackingField: 0
   <Strength>k__BackingField: 31
   <Agility>k__BackingField: 33
   <Stamina>k__BackingField: 28
@@ -28,6 +29,8 @@ MonoBehaviour:
   <InitialHp>k__BackingField: 40
   <InitialMp>k__BackingField: 16
   <EscapeRate>k__BackingField: 4
+  <GrowthTable>k__BackingField: {fileID: 11400000, guid: 909acd1faa8ee7249945807f49ed41ca,
+    type: 2}
   <RightHandTypes>k__BackingField: 
   <LeftHandTypes>k__BackingField: 
   <HeadTypes>k__BackingField: 

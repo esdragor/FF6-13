@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Guard
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Guard
+  <Hp>k__BackingField: 7
   <Strength>k__BackingField: 0
   <Agility>k__BackingField: 0
   <Stamina>k__BackingField: 0

@@ -7,17 +7,11 @@ public class PlayerEntity : Entity
     private Vector3 newPosition;
     private PlayerCharacterInfoInstance _playerCharacterInfoInstance;
     
-    public override void Attack()
+    public void Attack(Entity target)
     {
         Debug.Log("Attack");
-        
+        target.TakeDamage(_playerCharacterInfoInstance.So.Attack, _playerCharacterInfoInstance.So);
     }
-    
-    public override void TakeDamage(int damage)
-    {
-        Debug.Log("TakeDamage");
-    }
-    
     
     private void Start()
     {
