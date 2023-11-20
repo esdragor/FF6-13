@@ -12,3 +12,7 @@ Assembly-CSharp.csproj
 FF6-13.sln
 
 Temp/
+
+.idea/
+
+obj/
