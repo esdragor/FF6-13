@@ -2,13 +2,40 @@
     "name": "Controls",
     "maps": [
         {
-            "name": "TurnUp",
-            "id": "75c8fc2f-24c3-4a10-8a7d-7203f2c7ec45",
+            "name": "Inputs",
+            "id": "b42e7c39-0c1e-4103-ab0c-e85a815e1d41",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Turn",
+                    "type": "Value",
+                    "id": "97bb4842-daf1-4702-adfd-67867a944751",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Talk",
                     "type": "Button",
-                    "id": "a4520e4a-aa14-4dda-9e40-79041abcf5c9",
+                    "id": "1f85146c-de86-40b2-b146-ebd8cee5e827",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "a4dab27a-25b1-4e1e-a960-50cd2e0dba65",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "0cc57426-c6bc-4f73-ab54-2720308a7aab",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -17,258 +44,178 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "21b2cc0a-4c90-4da3-ab62-709c874319e3",
-                    "path": "<Joystick>/stick/up",
+                    "name": "2D Vector",
+                    "id": "5af44752-a008-4a58-b987-579a66459b1f",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
+                    "action": "Turn",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "3c18b859-83dd-4a56-876b-a0c63626b441",
-                    "path": "<Keyboard>/upArrow",
+                    "name": "up",
+                    "id": "5c0430c0-21c0-46d2-9725-3f800e98ff0f",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Sheme",
-                    "action": "New action",
+                    "action": "Turn",
                     "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "TurnDown",
-            "id": "b372682c-945f-4563-bbde-eb2e3547d43b",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "c1db6e7a-98af-4f9c-876c-dcc773eef93b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "319afc80-2c8b-4c4a-adb1-15fe1725abca",
-                    "path": "<Joystick>/stick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "e6401c9e-310f-4fb1-806f-2131c091e356",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Sheme",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "TurnLeft",
-            "id": "45d1b2ee-b3f3-42f9-9738-003797608c09",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "f2de25ea-5bdd-49f6-bc60-1575ca28b71b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "7af68648-dcd7-4485-8702-ec7a26a89cb8",
-                    "path": "<Joystick>/stick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d57aacc2-d991-45fe-a08e-75f83421f20d",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Sheme",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "TurnRight",
-            "id": "b78dcfac-a6ad-47ae-be23-afd32b28fe61",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "13a1d1d9-e98b-46f5-ad7a-98d1ac3cf3d7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "b8ad484d-049c-4557-b6f4-04673aa8e57f",
-                    "path": "<Joystick>/stick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6d0069be-c8bf-44ec-95ab-aa5b1009c080",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Sheme",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Select",
-            "id": "00ab33d6-7be7-4c4e-b8cd-fa1b3f9d5896",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "5e82793b-8b44-43e3-b529-0cc9d1351f6b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "12416274-874f-42a2-8fb5-31598e72be05",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Sheme",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0a8fd132-f9d8-46c8-8925-07f84ae70cf1",
-                    "path": "<Keyboard>/enter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Sheme",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Cancel",
-            "id": "05cc0dd1-a333-4a41-9bfa-0908b6e60a16",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "61fb58ef-5bcd-453c-aa8f-3d4a6498361b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "3e475879-34d2-4fd9-9d52-7aa07c098650",
+                    "name": "down",
+                    "id": "c3dc1e25-9faf-43bb-937e-4fd387784080",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Sheme",
-                    "action": "New action",
+                    "action": "Turn",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "8c67f31a-327f-4042-8c5c-3d7a9dfde053",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Sheme",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Talk",
-            "id": "c968ae4d-7d29-41ad-9fb0-5f47c08d0ef2",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "b2c682fb-fa6e-4ad3-8d39-9ce2ef743665",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "7cc95002-8180-4ceb-98d4-ece737e19b46",
+                    "name": "left",
+                    "id": "e990af6d-23f0-459c-bef5-e90a56846408",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Sheme",
-                    "action": "New action",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "339b1286-d329-4b36-80c6-dc4de39ed1f4",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "1bfb1895-cda8-4203-bb96-d593a6cf626f",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "c6e9c109-c2a7-4f9a-aa1c-fb29cb1c8423",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "ee726542-f744-47eb-bfbe-2885d24ce9ee",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "279a8dfc-27e7-4295-a0b5-8c9ea6de5643",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "1e1c6756-6bf4-44ba-9969-d97af6e7fd02",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "32e23759-baea-412f-b38e-37af67adedae",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Talk",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "6a5d8b53-fc76-4fe3-a9d1-1bfbf82ab248",
+                    "id": "20220ca2-c769-46ef-ab95-093dc080bdeb",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Talk",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e7ee9f4-3fd6-416a-99ff-cfba97fd8a90",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "426c4061-d689-4e2b-b343-697422a28934",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5554ce6-0fba-4f8c-9c8f-b693aec9e2ff",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "Sheme",
-                    "action": "New action",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6d6799cc-cbe2-45d6-aee2-1ed96d48ce51",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
