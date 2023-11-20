@@ -14,6 +14,13 @@ namespace Scriptable_Objects.Spells___Effects
         [field:SerializeField] public Stats Stat { get; private set; }
         [field:SerializeField] public int Amount { get; private set; }
         [field:SerializeField] public bool FlatValue { get; private set; }
+        
+        public int GetStatChanged(bool flatValue)
+        {
+            if (flatValue != FlatValue) return 0;
+            
+            return Amount;
+        }
     }
 
     
