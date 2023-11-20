@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Scriptable_Objects.Unit
@@ -30,18 +31,64 @@ namespace Scriptable_Objects.Unit
         [field:Space]
         [field:Header("Misc")]
         [field:SerializeField] public Sprite Sprite { get; private set; }
+
+
+        [ContextMenu("Init All")]
+        public void InitAll()
+        {
+            InitAllResistances();
+            InitAllImmunity();
+        }
+        
+        [ContextMenu("Init All Resistances")]
+        public void InitAllResistances()
+        {
+            Resistances = new List<ElementResistance>();
+            
+            for (int i = 0; i < Enum.GetValues(typeof(Elements)).Length-1; i++)
+            {
+                Resistances.Add(new ElementResistance((Elements) i, Elements.Heal == (Elements) i ? -100 : 100));
+            }
+        }
+
+        [ContextMenu("Init All Immunity")]
+        public void InitAllImmunity()
+        {
+            AlterationImmunity = new List<AlterationImmunity>();
+            
+            for (int i = 0; i < Enum.GetValues(typeof(Alterations)).Length; i++)
+            {
+                AlterationImmunity.Add(new AlterationImmunity( (Alterations) i, false));
+            }
+        }
     }
     
     [Serializable] public class ElementResistance
     {
+        [field:SerializeField] public string name { get; private set; }
         [field:SerializeField] public Elements Element { get; private set; }
         [field:SerializeField] public int Resistance { get; private set; }
+        
+        public ElementResistance(Elements element, int resistance)
+        {
+            Element = element;
+            Resistance = resistance;
+            name = $"{element}";
+        }
     }
     
     [Serializable] public class AlterationImmunity
     {
+        [field:SerializeField] public string name { get; private set; }
         [field:SerializeField] public Alterations Alteration { get; private set; }
         [field:SerializeField] public bool Immunity { get; private set; }
+        
+        public AlterationImmunity(Alterations alterations, bool immunity)
+        {
+            Alteration = alterations;
+            Immunity = immunity;
+            name = $"{alterations}";
+        }
     }
 
     

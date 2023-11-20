@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 198aa9046e4a4460867750456375c850, type: 3}
-  m_Name: Guard
+  m_Name: Vomammoth
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Guard
+  <Name>k__BackingField: Vomammoth
   <Strength>k__BackingField: 0
-  <Agility>k__BackingField: 30
+  <Agility>k__BackingField: 25
   <Stamina>k__BackingField: 0
-  <Magic>k__BackingField: 6
-  <Attack>k__BackingField: 16
-  <Defence>k__BackingField: 100
-  <MagicDefence>k__BackingField: 140
+  <Magic>k__BackingField: 0
+  <Attack>k__BackingField: 110
+  <Defence>k__BackingField: 75
+  <MagicDefence>k__BackingField: 160
   <Evasion>k__BackingField: 0
   <MagicEvasion>k__BackingField: 0
   <Resistances>k__BackingField:
@@ -28,7 +28,7 @@ MonoBehaviour:
     <Resistance>k__BackingField: 100
   - <name>k__BackingField: Fire
     <Element>k__BackingField: 1
-    <Resistance>k__BackingField: 100
+    <Resistance>k__BackingField: 200
   - <name>k__BackingField: Lightning
     <Element>k__BackingField: 2
     <Resistance>k__BackingField: 100
@@ -101,7 +101,7 @@ MonoBehaviour:
     <Immunity>k__BackingField: 0
   - <name>k__BackingField: Psyche
     <Alteration>k__BackingField: 15
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Float
     <Alteration>k__BackingField: 16
     <Immunity>k__BackingField: 0
@@ -148,14 +148,14 @@ MonoBehaviour:
     <Alteration>k__BackingField: 30
     <Immunity>k__BackingField: 0
   <Sprite>k__BackingField: {fileID: 0}
-  <Level>k__BackingField: 5
-  <MaxHp>k__BackingField: 40
-  <MaxMp>k__BackingField: 15
-  <XpReward>k__BackingField: 48
-  <GilReward>k__BackingField: 48
+  <Level>k__BackingField: 1
+  <MaxHp>k__BackingField: 115
+  <MaxMp>k__BackingField: 30
+  <XpReward>k__BackingField: 50
+  <GilReward>k__BackingField: 90
   <HitRate>k__BackingField: 100
   <StealItems>k__BackingField: []
   <DropItems>k__BackingField: []
   <MorphItems>k__BackingField: []
   <StealFailChance>k__BackingField: 0
-  <MorphFailChance>k__BackingField: 100
+  <MorphFailChance>k__BackingField: 28.6

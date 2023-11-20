@@ -9,6 +9,10 @@ namespace Scriptable_Objects.Unit
     public class MonsterSO : UnitSO
     {
         [field:Header("---PlayerCharactersSO---")]
+        [field:SerializeField] public int Level { get; private set; }
+        [field:SerializeField] public int MaxHp { get; private set; }
+        [field:SerializeField] public int MaxMp { get; private set; }
+        [field:Space]
         [field:SerializeField] public int XpReward { get; private set; }
         [field:SerializeField] public int GilReward { get; private set; }
         [field:Space]

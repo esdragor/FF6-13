@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 198aa9046e4a4460867750456375c850, type: 3}
-  m_Name: Guard
+  m_Name: Bandit
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Guard
+  <Name>k__BackingField: Bandit
   <Strength>k__BackingField: 0
-  <Agility>k__BackingField: 30
+  <Agility>k__BackingField: 35
   <Stamina>k__BackingField: 0
-  <Magic>k__BackingField: 6
-  <Attack>k__BackingField: 16
-  <Defence>k__BackingField: 100
-  <MagicDefence>k__BackingField: 140
+  <Magic>k__BackingField: 10
+  <Attack>k__BackingField: 19
+  <Defence>k__BackingField: 90
+  <MagicDefence>k__BackingField: 120
   <Evasion>k__BackingField: 0
   <MagicEvasion>k__BackingField: 0
   <Resistances>k__BackingField:
@@ -149,13 +149,13 @@ MonoBehaviour:
     <Immunity>k__BackingField: 0
   <Sprite>k__BackingField: {fileID: 0}
   <Level>k__BackingField: 5
-  <MaxHp>k__BackingField: 40
-  <MaxMp>k__BackingField: 15
-  <XpReward>k__BackingField: 48
-  <GilReward>k__BackingField: 48
+  <MaxHp>k__BackingField: 35
+  <MaxMp>k__BackingField: 0
+  <XpReward>k__BackingField: 25
+  <GilReward>k__BackingField: 25
   <HitRate>k__BackingField: 100
   <StealItems>k__BackingField: []
   <DropItems>k__BackingField: []
   <MorphItems>k__BackingField: []
   <StealFailChance>k__BackingField: 0
-  <MorphFailChance>k__BackingField: 100
+  <MorphFailChance>k__BackingField: 0

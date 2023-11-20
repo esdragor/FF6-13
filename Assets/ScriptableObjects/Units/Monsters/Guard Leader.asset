@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 198aa9046e4a4460867750456375c850, type: 3}
-  m_Name: Guard
+  m_Name: Guard Leader
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Guard
+  <Name>k__BackingField: Guard Leader
   <Strength>k__BackingField: 0
-  <Agility>k__BackingField: 30
+  <Agility>k__BackingField: 40
   <Stamina>k__BackingField: 0
-  <Magic>k__BackingField: 6
-  <Attack>k__BackingField: 16
-  <Defence>k__BackingField: 100
+  <Magic>k__BackingField: 9
+  <Attack>k__BackingField: 13
+  <Defence>k__BackingField: 110
   <MagicDefence>k__BackingField: 140
   <Evasion>k__BackingField: 0
   <MagicEvasion>k__BackingField: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
     <Resistance>k__BackingField: 100
   - <name>k__BackingField: Poison
     <Element>k__BackingField: 5
-    <Resistance>k__BackingField: 100
+    <Resistance>k__BackingField: 0
   - <name>k__BackingField: Holy
     <Element>k__BackingField: 6
     <Resistance>k__BackingField: 100
@@ -62,13 +62,13 @@ MonoBehaviour:
     <Immunity>k__BackingField: 0
   - <name>k__BackingField: Poison
     <Alteration>k__BackingField: 2
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: MagiTek
     <Alteration>k__BackingField: 3
     <Immunity>k__BackingField: 0
   - <name>k__BackingField: Clear
     <Alteration>k__BackingField: 4
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Imp
     <Alteration>k__BackingField: 5
     <Immunity>k__BackingField: 0
@@ -148,14 +148,14 @@ MonoBehaviour:
     <Alteration>k__BackingField: 30
     <Immunity>k__BackingField: 0
   <Sprite>k__BackingField: {fileID: 0}
-  <Level>k__BackingField: 5
-  <MaxHp>k__BackingField: 40
-  <MaxMp>k__BackingField: 15
-  <XpReward>k__BackingField: 48
-  <GilReward>k__BackingField: 48
+  <Level>k__BackingField: 8
+  <MaxHp>k__BackingField: 420
+  <MaxMp>k__BackingField: 150
+  <XpReward>k__BackingField: 0
+  <GilReward>k__BackingField: 350
   <HitRate>k__BackingField: 100
   <StealItems>k__BackingField: []
   <DropItems>k__BackingField: []
   <MorphItems>k__BackingField: []
   <StealFailChance>k__BackingField: 0
-  <MorphFailChance>k__BackingField: 100
+  <MorphFailChance>k__BackingField: 0

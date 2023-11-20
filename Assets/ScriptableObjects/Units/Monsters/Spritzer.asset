@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 198aa9046e4a4460867750456375c850, type: 3}
-  m_Name: Guard
+  m_Name: Spritzer
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Guard
+  <Name>k__BackingField: Spritzer
   <Strength>k__BackingField: 0
   <Agility>k__BackingField: 30
   <Stamina>k__BackingField: 0
-  <Magic>k__BackingField: 6
-  <Attack>k__BackingField: 16
-  <Defence>k__BackingField: 100
-  <MagicDefence>k__BackingField: 140
+  <Magic>k__BackingField: 10
+  <Attack>k__BackingField: 13
+  <Defence>k__BackingField: 95
+  <MagicDefence>k__BackingField: 150
   <Evasion>k__BackingField: 0
   <MagicEvasion>k__BackingField: 0
   <Resistances>k__BackingField:
@@ -28,10 +28,10 @@ MonoBehaviour:
     <Resistance>k__BackingField: 100
   - <name>k__BackingField: Fire
     <Element>k__BackingField: 1
-    <Resistance>k__BackingField: 100
+    <Resistance>k__BackingField: 200
   - <name>k__BackingField: Lightning
     <Element>k__BackingField: 2
-    <Resistance>k__BackingField: 100
+    <Resistance>k__BackingField: -100
   - <name>k__BackingField: Ice
     <Element>k__BackingField: 3
     <Resistance>k__BackingField: 100
@@ -40,13 +40,13 @@ MonoBehaviour:
     <Resistance>k__BackingField: 100
   - <name>k__BackingField: Poison
     <Element>k__BackingField: 5
-    <Resistance>k__BackingField: 100
+    <Resistance>k__BackingField: 0
   - <name>k__BackingField: Holy
     <Element>k__BackingField: 6
-    <Resistance>k__BackingField: 100
+    <Resistance>k__BackingField: 200
   - <name>k__BackingField: Heal
     <Element>k__BackingField: 7
-    <Resistance>k__BackingField: -100
+    <Resistance>k__BackingField: 100
   - <name>k__BackingField: Earth
     <Element>k__BackingField: 8
     <Resistance>k__BackingField: 100
@@ -56,13 +56,13 @@ MonoBehaviour:
   <AlterationImmunity>k__BackingField:
   - <name>k__BackingField: Darkness
     <Alteration>k__BackingField: 0
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Zombie
     <Alteration>k__BackingField: 1
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Poison
     <Alteration>k__BackingField: 2
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: MagiTek
     <Alteration>k__BackingField: 3
     <Immunity>k__BackingField: 0
@@ -71,10 +71,10 @@ MonoBehaviour:
     <Immunity>k__BackingField: 0
   - <name>k__BackingField: Imp
     <Alteration>k__BackingField: 5
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Petrify
     <Alteration>k__BackingField: 6
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Fatal
     <Alteration>k__BackingField: 7
     <Immunity>k__BackingField: 0
@@ -89,10 +89,10 @@ MonoBehaviour:
     <Immunity>k__BackingField: 0
   - <name>k__BackingField: Mute
     <Alteration>k__BackingField: 11
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Berserk
     <Alteration>k__BackingField: 12
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Confuse
     <Alteration>k__BackingField: 13
     <Immunity>k__BackingField: 0
@@ -101,10 +101,10 @@ MonoBehaviour:
     <Immunity>k__BackingField: 0
   - <name>k__BackingField: Psyche
     <Alteration>k__BackingField: 15
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Float
     <Alteration>k__BackingField: 16
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Regen
     <Alteration>k__BackingField: 17
     <Immunity>k__BackingField: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
     <Immunity>k__BackingField: 0
   - <name>k__BackingField: Suplex
     <Alteration>k__BackingField: 24
-    <Immunity>k__BackingField: 0
+    <Immunity>k__BackingField: 1
   - <name>k__BackingField: Scan
     <Alteration>k__BackingField: 25
     <Immunity>k__BackingField: 0
@@ -149,13 +149,13 @@ MonoBehaviour:
     <Immunity>k__BackingField: 0
   <Sprite>k__BackingField: {fileID: 0}
   <Level>k__BackingField: 5
-  <MaxHp>k__BackingField: 40
-  <MaxMp>k__BackingField: 15
-  <XpReward>k__BackingField: 48
-  <GilReward>k__BackingField: 48
+  <MaxHp>k__BackingField: 15
+  <MaxMp>k__BackingField: 0
+  <XpReward>k__BackingField: 23
+  <GilReward>k__BackingField: 29
   <HitRate>k__BackingField: 100
   <StealItems>k__BackingField: []
   <DropItems>k__BackingField: []
   <MorphItems>k__BackingField: []
   <StealFailChance>k__BackingField: 0
-  <MorphFailChance>k__BackingField: 100
+  <MorphFailChance>k__BackingField: 0
