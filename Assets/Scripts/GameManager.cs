@@ -1,27 +1,58 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Scriptable_Objects.Unit;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
+
+public enum State
+{
+    Battle,
+    Explore,
+    Dialog,
+    None
+}
 
 public class GameManager : MonoBehaviour
 {
-    public Dictionary<string, MonsterSO> Monsters = new ();
+    [SerializeField] private InputManager _inputManager;
+    [SerializeField] private BattleManager _battleManager;
+    
+    private State _state;
+    private PlayerController _player;
+    
+    private bool DebugBattle = false;
     
     private IEnumerator LaunchBattle()
     {
         yield return new WaitForSeconds(0.1f);
         int random = Random.Range(0, 100);
-        if (random < 20)
+        if ((random < 20 && _state != State.Dialog && _state != State.Battle) || DebugBattle)
         {
             Debug.Log("Battle");
+            _state = State.Battle;
+            _inputManager.OnBattle();
+            _battleManager.StartBattle();
         }
-        else
+        else if (_state != State.Battle)
             StartCoroutine(LaunchBattle());
+    }
 
+    public void GetBackToExplore()
+    {
+        _state = State.Dialog;
+        //StartCoroutine(LaunchBattle());
     }
     
     void Start()
     {
-        StartCoroutine(LaunchBattle());
+        GetBackToExplore();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            DebugBattle = !DebugBattle;
     }
 }

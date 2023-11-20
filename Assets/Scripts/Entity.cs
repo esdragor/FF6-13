@@ -1,4 +1,5 @@
 using System;
+using Scriptable_Objects.Unit;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -7,6 +8,7 @@ public class Entity : MonoBehaviour
     [SerializeField] protected Animator _animator;
     [SerializeField] protected BoxCollider2D _boxCollider2D;
     [SerializeField] protected float delayToMove = 1f;
+    [SerializeField] protected UnitSO SO;
 
     protected Direction ForwardDirection = Direction.None;
 
@@ -32,8 +34,6 @@ public class Entity : MonoBehaviour
                 _spriteRenderer.flipX = true;
                 _spriteRenderer.flipY = false;
                 break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(dir), dir, null);
         }
         
     }
