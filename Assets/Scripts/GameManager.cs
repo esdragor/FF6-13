@@ -16,11 +16,13 @@ public enum State
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+    
     [SerializeField] private InputManager _inputManager;
     [SerializeField] private BattleManager _battleManager;
     
     private State _state;
-    private PlayerController _player;
+    private PlayerEntity _player;
     
     private bool DebugBattle = false;
     
@@ -44,7 +46,21 @@ public class GameManager : MonoBehaviour
         _state = State.Dialog;
         //StartCoroutine(LaunchBattle());
     }
-    
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+        PlayerController.OnPlayerSpawned += SetTarget;
+    }
+
+    private void SetTarget(Entity _entity)
+    {
+        _player = _entity as PlayerEntity;
+    }
+
     void Start()
     {
         GetBackToExplore();
@@ -53,6 +69,15 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            DebugBattle = !DebugBattle;
+        {
+            _state = State.Battle;
+            _inputManager.OnBattle();
+            _battleManager.StartBattle();
+        }
+    }
+
+    public PlayerEntity GetPlayerAtIndex(int i)
+    {
+        return _player;
     }
 }

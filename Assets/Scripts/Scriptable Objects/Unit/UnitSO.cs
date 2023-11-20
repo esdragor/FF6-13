@@ -12,6 +12,7 @@ namespace Scriptable_Objects.Unit
         [field:SerializeField] public string Name { get; private set; }
         
         [field:Header("Stats")]
+        [field:SerializeField] public int Hp { get; private set; }
         [field:SerializeField] public int Strength { get; private set; }
         [field:SerializeField] public int Agility { get; private set; }
         [field:SerializeField] public int Stamina { get; private set; }
@@ -32,7 +33,13 @@ namespace Scriptable_Objects.Unit
         [field:Header("Misc")]
         [field:SerializeField] public Sprite Sprite { get; private set; }
 
-
+        
+        public UnitSOInstance CreateInstance()
+        {
+            return new UnitSOInstance(this);
+        }
+        
+        
         [ContextMenu("Init All")]
         public void InitAll()
         {
@@ -55,11 +62,23 @@ namespace Scriptable_Objects.Unit
         public void InitAllImmunity()
         {
             AlterationImmunity = new List<AlterationImmunity>();
-            
+
             for (int i = 0; i < Enum.GetValues(typeof(Alterations)).Length; i++)
             {
-                AlterationImmunity.Add(new AlterationImmunity( (Alterations) i, false));
+                AlterationImmunity.Add(new AlterationImmunity((Alterations)i, false));
             }
+        }
+    }
+    
+    public class UnitSOInstance
+    {
+        public UnitSO So { get;}
+        public int currentHp { get; set; }
+        
+        public UnitSOInstance(UnitSO info)
+        {
+            So = info;
+            currentHp = info.Hp;
         }
     }
     
@@ -90,6 +109,8 @@ namespace Scriptable_Objects.Unit
             name = $"{alterations}";
         }
     }
+    
+
 
     
     

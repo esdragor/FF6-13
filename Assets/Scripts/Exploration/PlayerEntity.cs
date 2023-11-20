@@ -1,13 +1,22 @@
 using DG.Tweening;
+using Scriptable_Objects.Unit;
 using UnityEngine;
 
 public class PlayerEntity : Entity
 {
     private Vector3 newPosition;
+    private PlayerCharacterInfoInstance _playerCharacterInfoInstance;
+    
+    public void Attack(Entity target)
+    {
+        Debug.Log("Attack");
+        target.TakeDamage(_playerCharacterInfoInstance.So.Attack, _playerCharacterInfoInstance.So);
+    }
     
     private void Start()
     {
         newPosition = transform.position;
+        _playerCharacterInfoInstance = (SO as PlayerCharactersSO)?.CreateInstance(1);
     }
 
     private void LateUpdate()

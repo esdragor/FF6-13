@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7884ce1132cd1c4a85d47a649b39e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monstersNames: []
+  UIBattle: {fileID: 0}
+  soMonster:
+  - {fileID: 5267095582099474484, guid: a705e93902f34b041bed3c18af477a8e, type: 3}
 --- !u!1 &5270237582146529806
 GameObject:
   m_ObjectHideFlags: 0

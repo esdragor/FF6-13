@@ -11,6 +11,7 @@ public class Entity : MonoBehaviour
     [SerializeField] protected UnitSO SO;
 
     protected Direction ForwardDirection = Direction.None;
+    private UnitSOInstance _unitSoInstance;
 
     public void Turn(Direction dir)
     {
@@ -38,9 +39,30 @@ public class Entity : MonoBehaviour
         
     }
     
+    public virtual void Attack()
+    {
+        Debug.Log("Attack");
+    }
+    
+    public virtual void TakeDamage(int damage, UnitSO attacker)
+    {
+        Debug.Log( _unitSoInstance.So.Name + " Take Damage " + damage + " from " + attacker.Name);
+        _unitSoInstance.currentHp -= damage;
+        if (_unitSoInstance.currentHp <= 0)
+        {
+            Debug.Log(_unitSoInstance.So.Name + " is dead");
+            Destroy(gameObject);
+        }
+    }
+    
     public void Move(Direction dir)
     {
         ForwardDirection = dir;
         Debug.Log("Moved " + dir);
+    }
+
+    public void Init()
+    {
+        _unitSoInstance = SO.CreateInstance();
     }
 }
