@@ -16,12 +16,12 @@ public class BattleManager : MonoBehaviour
 {
     public static event Action OnBattleStarted;
     public static event Action<int> OnSelectionChanged;
-    
+
     [SerializeField] private GameObject UIBattle;
-    [SerializeField] private Dictionary<string, MonsterSO> Monsters = new();
-    [SerializeField] private List<string> monstersNames = new();
+    [SerializeField] private List<MonsterSO> soMonster = new();
 
     private int nbMonster = 0;
+    [SerializeField] private Dictionary<string, MonsterSO> Monsters = new();
     private List<MonsterSO> monstersToSpawn = new();
     private ActionBattle actionIndex = ActionBattle.Attack;
 
@@ -31,7 +31,7 @@ public class BattleManager : MonoBehaviour
         nbMonster = Random.Range(1, 4);
         for (int i = 0; i < nbMonster; i++)
         {
-            Monsters.TryGetValue(monstersNames[Random.Range(0, monstersNames.Count)], out var monster);
+            Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
             monstersToSpawn.Add(monster);
         }
     }
@@ -40,6 +40,8 @@ public class BattleManager : MonoBehaviour
     {
         InputManager.OnSelect += SelectAction;
         InputManager.OnSelection += SelectionAction;
+        foreach (var so in soMonster)
+            Monsters.Add(so.name, so);
     }
 
     private void SelectionAction(Direction dir)
@@ -48,7 +50,7 @@ public class BattleManager : MonoBehaviour
             actionIndex = (actionIndex == ActionBattle.Attack) ? ActionBattle.Escape : actionIndex - 1;
         else if (dir == Direction.Down)
             actionIndex = (actionIndex == ActionBattle.Escape) ? ActionBattle.Attack : actionIndex + 1;
-        OnSelectionChanged?.Invoke((int) actionIndex);
+        OnSelectionChanged?.Invoke((int)actionIndex);
     }
 
 

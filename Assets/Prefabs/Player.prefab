@@ -103,6 +103,7 @@ MonoBehaviour:
   _animator: {fileID: 2317830123916161200}
   _boxCollider2D: {fileID: 7509104964156181236}
   delayToMove: 0.5
+  SO: {fileID: 11400000, guid: c02e141d82c58e942a8a734104ed920c, type: 2}
 --- !u!95 &2317830123916161200
 Animator:
   serializedVersion: 5
@@ -160,7 +161,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.24}
+    oldSize: {x: 0.5, y: 0.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

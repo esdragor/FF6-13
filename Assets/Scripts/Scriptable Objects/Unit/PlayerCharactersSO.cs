@@ -11,6 +11,7 @@ namespace Scriptable_Objects.Unit
         [field:SerializeField] public int InitialHp { get; private set; }
         [field:SerializeField] public int InitialMp { get; private set; }
         [field:SerializeField] public int EscapeRate { get; private set; }
+        [field:SerializeField] public GrowthRatesSO GrowthTable { get; private set; }
         
         [field:Space]
         [field:Header("EquipmentAvailable")]
@@ -41,8 +42,8 @@ namespace Scriptable_Objects.Unit
         {
             So = info;
             currentLvl = currentLevel;
-            currentHp = info.InitialHp;
-            currentMp = info.InitialMp;
+            currentHp = info.InitialHp + info.GrowthTable.GrowthRates[currentLevel].Health;
+            currentMp = info.InitialMp + info.GrowthTable.GrowthRates[currentLevel].Mp;
             currentRightHandTypes = info.RightHandTypes;
             currentLeftHandTypes = info.LeftHandTypes;
             currentHeadTypes = info.HeadTypes;
