@@ -6,6 +6,7 @@ namespace Scriptable_Objects.Items
     {
         [field:Header("---ItemSO---")]
         [field:SerializeField] public string Name { get; private set; }
+        [field:SerializeField] public string Description { get; private set; } //TODO: auto generate description from stats?
         [field:SerializeField] public int MaxQuantity { get; private set; }
         [field:SerializeField] public int Price { get; private set; }
         [field:SerializeField] public Sprite Sprite { get; private set; }
