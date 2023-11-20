@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : ExplorationController
+public class PlayerController : BattleController
 {
     public static event Action<Entity> OnPlayerSpawned;
     
@@ -17,14 +17,14 @@ public class PlayerController : ExplorationController
     {
         InputManager.OnStartedToTurn += TurnEntity;
         //InputManager.OnStoppedToTurn += TurnEntity;
-        InputManager.OnMovindDirection += MoveEntity;
+        InputManager.OnMovingDirection += MoveEntity;
     }
 
     protected override void OnDisable()
     {
         InputManager.OnStartedToTurn -= TurnEntity;
         //InputManager.OnStoppedToTurn -= TurnEntity;
-        InputManager.OnMovindDirection -= MoveEntity;
+        InputManager.OnMovingDirection -= MoveEntity;
     }
 
 }
