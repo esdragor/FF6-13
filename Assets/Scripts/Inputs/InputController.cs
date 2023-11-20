@@ -14,6 +14,7 @@ public abstract class InputController : MonoBehaviour
     protected virtual void InstantiateEntity()
     {
         entity = Instantiate(EntityPrefab.gameObject).GetComponent<Entity>();
+        entity.transform.position = transform.position;
     }
 
     private void Start()
@@ -21,13 +22,5 @@ public abstract class InputController : MonoBehaviour
         InstantiateEntity();
     }
 
-    protected void TurnEntity(Direction dir)
-    {
-        entity.Turn(dir);
-    }
-    
-    protected void MoveEntity(Direction dir)
-    {
-        entity.Move(dir);
-    }
+
 }

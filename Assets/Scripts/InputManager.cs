@@ -8,6 +8,10 @@ public enum Direction
     Down,
     Left,
     Right,
+    UpLeft,
+    UpRight,
+    DownLeft,
+    DownRight,
     None
 }
 
@@ -22,14 +26,14 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         _input = new Controls();
-        _input.Inputs.Turn.started += Turn;
-        _input.Inputs.Turn.performed += Move;
-        _input.Inputs.Turn.canceled += Turn;
-        _input.Inputs.Turn.canceled += Move;
-        _input.Inputs.Talk.started += Talk;
+        _input.Exploration.Turn.started += Turn;
+        _input.Exploration.Turn.performed += Move;
+        _input.Exploration.Turn.canceled += Turn;
+        _input.Exploration.Turn.canceled += Move;
+        _input.Exploration.Talk.started += Talk;
 
-        _input.Inputs.Turn.Enable();
-        _input.Inputs.Talk.Enable();
+        _input.Exploration.Turn.Enable();
+        _input.Exploration.Talk.Enable();
     }
 
     private void Talk(InputAction.CallbackContext obj)
@@ -37,27 +41,67 @@ public class InputManager : MonoBehaviour
         Debug.Log("Talk");
     }
 
+    private Direction CheckDirection(InputAction.CallbackContext context)
+    {
+        bool isUp = false;
+        bool isLeft = false;
+        bool nullXvalue = false;
+        bool nullYvalue = false;
+
+        var value = context.ReadValue<Vector2>();
+
+        if (value.x == 0 && value.y == 0)
+            return (Direction.None);
+        if (value.x > 0)
+            isLeft = false;
+        else if (value.x < 0)
+            isLeft = true;
+        else
+            nullXvalue = true;
+
+        if (value.y > 0)
+            isUp = true;
+        else if (value.y < 0)
+            isUp = false;
+        else
+            nullYvalue = true;
+
+        switch (isUp)
+        {
+            case true when isLeft:
+                return (Direction.UpLeft);
+            case true when !nullXvalue:
+                return (Direction.UpRight);
+            case false when isLeft && !nullYvalue:
+                return (Direction.DownLeft);
+            case false when !isLeft && !nullYvalue && !nullXvalue:
+                return (Direction.DownRight);
+            case true:
+                return (Direction.Up);
+        }
+
+        if (!nullYvalue)
+            return (Direction.Down);
+        if (isLeft)
+            return (Direction.Left);
+        
+        return !nullXvalue ? Direction.Right : Direction.None;
+    }
+
 
     public void Move(InputAction.CallbackContext context)
     {
-        var value = context.ReadValue<Vector2>();
-
-        Direction dir = value.x > 0 ? Direction.Right :
-            (value.x < 0) ? Direction.Left :
-            (value.y < 0) ? Direction.Down : (value.y > 0) ? Direction.Up : Direction.None;
-        OnMovindDirection?.Invoke(dir);
+        OnMovindDirection?.Invoke(CheckDirection(context));
     }
 
     public void Turn(InputAction.CallbackContext context)
     {
-        var value = context.ReadValue<Vector2>();
-        if (value.x > 0)
-            OnStartedToTurn?.Invoke(Direction.Right);
-        else if (value.x < 0)
-            OnStartedToTurn?.Invoke(Direction.Left);
-        else if (value.y > 0)
-            OnStartedToTurn?.Invoke(Direction.Up);
-        else if (value.y < 0)
-            OnStartedToTurn?.Invoke(Direction.Down);
+        OnStartedToTurn?.Invoke(CheckDirection(context));
+    }
+
+    private void OnDisable()
+    {
+        _input.Exploration.Turn.Disable();
+        _input.Exploration.Talk.Disable();
     }
 }

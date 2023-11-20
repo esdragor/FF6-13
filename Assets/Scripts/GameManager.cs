@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Scriptable_Objects.Unit;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Dictionary<string, MonsterSO> Monsters = new ();
     
     private IEnumerator LaunchBattle()
     {

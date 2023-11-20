@@ -24,7 +24,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     ""name"": ""Controls"",
     ""maps"": [
         {
-            ""name"": ""Inputs"",
+            ""name"": ""Exploration"",
             ""id"": ""b42e7c39-0c1e-4103-ab0c-e85a815e1d41"",
             ""actions"": [
                 {
@@ -242,6 +242,195 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Battle"",
+            ""id"": ""1377e076-9262-4de7-afd5-65db5e7aedc1"",
+            ""actions"": [
+                {
+                    ""name"": ""Selection"",
+                    ""type"": ""Value"",
+                    ""id"": ""e71ec020-b100-4cc6-b722-fd945d31ca98"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""036d0661-f040-44e0-8ffd-2300664c5465"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""20d794c6-446e-49c7-b5d2-5e55800b3720"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""13d82858-1af6-4103-a400-78ac411a9fa8"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Selection"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""a86a6cf3-5be1-495c-b1d1-879526b24a09"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2909a2ab-72fe-4226-a73e-ed49466e038b"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""81dc71ff-2f23-4dae-9250-4ced24db3c36"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""a3d1f6ba-bda0-4310-a5a2-295c046ed63b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""c5517a8c-0df9-41a7-a844-81dfa2b82543"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Selection"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""6a04d1d5-60d9-40cd-94a6-0b97d5922cd4"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""5840347e-7c54-4e70-80b6-cba1515e66e9"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""b6e9b496-5e87-43cc-9546-f3b3103f5ed4"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""5f751078-da03-4f72-8dac-04cc6ab14962"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4d338997-86f8-41b9-b2de-bd4dd6ac710e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f478eaf4-f620-4854-981a-22cbd2756049"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1167af51-150b-49b0-b916-4d076944ce04"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8a19dc22-53a0-4dd5-8c47-ffadb22f382f"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Sheme"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -252,12 +441,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         }
     ]
 }");
-        // Inputs
-        m_Inputs = asset.FindActionMap("Inputs", throwIfNotFound: true);
-        m_Inputs_Turn = m_Inputs.FindAction("Turn", throwIfNotFound: true);
-        m_Inputs_Talk = m_Inputs.FindAction("Talk", throwIfNotFound: true);
-        m_Inputs_Cancel = m_Inputs.FindAction("Cancel", throwIfNotFound: true);
-        m_Inputs_Select = m_Inputs.FindAction("Select", throwIfNotFound: true);
+        // Exploration
+        m_Exploration = asset.FindActionMap("Exploration", throwIfNotFound: true);
+        m_Exploration_Turn = m_Exploration.FindAction("Turn", throwIfNotFound: true);
+        m_Exploration_Talk = m_Exploration.FindAction("Talk", throwIfNotFound: true);
+        m_Exploration_Cancel = m_Exploration.FindAction("Cancel", throwIfNotFound: true);
+        m_Exploration_Select = m_Exploration.FindAction("Select", throwIfNotFound: true);
+        // Battle
+        m_Battle = asset.FindActionMap("Battle", throwIfNotFound: true);
+        m_Battle_Selection = m_Battle.FindAction("Selection", throwIfNotFound: true);
+        m_Battle_Select = m_Battle.FindAction("Select", throwIfNotFound: true);
+        m_Battle_Cancel = m_Battle.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -316,30 +510,30 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Inputs
-    private readonly InputActionMap m_Inputs;
-    private List<IInputsActions> m_InputsActionsCallbackInterfaces = new List<IInputsActions>();
-    private readonly InputAction m_Inputs_Turn;
-    private readonly InputAction m_Inputs_Talk;
-    private readonly InputAction m_Inputs_Cancel;
-    private readonly InputAction m_Inputs_Select;
-    public struct InputsActions
+    // Exploration
+    private readonly InputActionMap m_Exploration;
+    private List<IExplorationActions> m_ExplorationActionsCallbackInterfaces = new List<IExplorationActions>();
+    private readonly InputAction m_Exploration_Turn;
+    private readonly InputAction m_Exploration_Talk;
+    private readonly InputAction m_Exploration_Cancel;
+    private readonly InputAction m_Exploration_Select;
+    public struct ExplorationActions
     {
         private @Controls m_Wrapper;
-        public InputsActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Turn => m_Wrapper.m_Inputs_Turn;
-        public InputAction @Talk => m_Wrapper.m_Inputs_Talk;
-        public InputAction @Cancel => m_Wrapper.m_Inputs_Cancel;
-        public InputAction @Select => m_Wrapper.m_Inputs_Select;
-        public InputActionMap Get() { return m_Wrapper.m_Inputs; }
+        public ExplorationActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Turn => m_Wrapper.m_Exploration_Turn;
+        public InputAction @Talk => m_Wrapper.m_Exploration_Talk;
+        public InputAction @Cancel => m_Wrapper.m_Exploration_Cancel;
+        public InputAction @Select => m_Wrapper.m_Exploration_Select;
+        public InputActionMap Get() { return m_Wrapper.m_Exploration; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(InputsActions set) { return set.Get(); }
-        public void AddCallbacks(IInputsActions instance)
+        public static implicit operator InputActionMap(ExplorationActions set) { return set.Get(); }
+        public void AddCallbacks(IExplorationActions instance)
         {
-            if (instance == null || m_Wrapper.m_InputsActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_InputsActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_ExplorationActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ExplorationActionsCallbackInterfaces.Add(instance);
             @Turn.started += instance.OnTurn;
             @Turn.performed += instance.OnTurn;
             @Turn.canceled += instance.OnTurn;
@@ -354,7 +548,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Select.canceled += instance.OnSelect;
         }
 
-        private void UnregisterCallbacks(IInputsActions instance)
+        private void UnregisterCallbacks(IExplorationActions instance)
         {
             @Turn.started -= instance.OnTurn;
             @Turn.performed -= instance.OnTurn;
@@ -370,21 +564,83 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Select.canceled -= instance.OnSelect;
         }
 
-        public void RemoveCallbacks(IInputsActions instance)
+        public void RemoveCallbacks(IExplorationActions instance)
         {
-            if (m_Wrapper.m_InputsActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_ExplorationActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IInputsActions instance)
+        public void SetCallbacks(IExplorationActions instance)
         {
-            foreach (var item in m_Wrapper.m_InputsActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_ExplorationActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_InputsActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_ExplorationActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public InputsActions @Inputs => new InputsActions(this);
+    public ExplorationActions @Exploration => new ExplorationActions(this);
+
+    // Battle
+    private readonly InputActionMap m_Battle;
+    private List<IBattleActions> m_BattleActionsCallbackInterfaces = new List<IBattleActions>();
+    private readonly InputAction m_Battle_Selection;
+    private readonly InputAction m_Battle_Select;
+    private readonly InputAction m_Battle_Cancel;
+    public struct BattleActions
+    {
+        private @Controls m_Wrapper;
+        public BattleActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Selection => m_Wrapper.m_Battle_Selection;
+        public InputAction @Select => m_Wrapper.m_Battle_Select;
+        public InputAction @Cancel => m_Wrapper.m_Battle_Cancel;
+        public InputActionMap Get() { return m_Wrapper.m_Battle; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(BattleActions set) { return set.Get(); }
+        public void AddCallbacks(IBattleActions instance)
+        {
+            if (instance == null || m_Wrapper.m_BattleActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_BattleActionsCallbackInterfaces.Add(instance);
+            @Selection.started += instance.OnSelection;
+            @Selection.performed += instance.OnSelection;
+            @Selection.canceled += instance.OnSelection;
+            @Select.started += instance.OnSelect;
+            @Select.performed += instance.OnSelect;
+            @Select.canceled += instance.OnSelect;
+            @Cancel.started += instance.OnCancel;
+            @Cancel.performed += instance.OnCancel;
+            @Cancel.canceled += instance.OnCancel;
+        }
+
+        private void UnregisterCallbacks(IBattleActions instance)
+        {
+            @Selection.started -= instance.OnSelection;
+            @Selection.performed -= instance.OnSelection;
+            @Selection.canceled -= instance.OnSelection;
+            @Select.started -= instance.OnSelect;
+            @Select.performed -= instance.OnSelect;
+            @Select.canceled -= instance.OnSelect;
+            @Cancel.started -= instance.OnCancel;
+            @Cancel.performed -= instance.OnCancel;
+            @Cancel.canceled -= instance.OnCancel;
+        }
+
+        public void RemoveCallbacks(IBattleActions instance)
+        {
+            if (m_Wrapper.m_BattleActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IBattleActions instance)
+        {
+            foreach (var item in m_Wrapper.m_BattleActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_BattleActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public BattleActions @Battle => new BattleActions(this);
     private int m_ShemeSchemeIndex = -1;
     public InputControlScheme ShemeScheme
     {
@@ -394,11 +650,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_ShemeSchemeIndex];
         }
     }
-    public interface IInputsActions
+    public interface IExplorationActions
     {
         void OnTurn(InputAction.CallbackContext context);
         void OnTalk(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
+    }
+    public interface IBattleActions
+    {
+        void OnSelection(InputAction.CallbackContext context);
+        void OnSelect(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }
