@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ namespace Scriptable_Objects.Unit
     {
         [field:Header("---UnitSO---")]
         
+        [field:SerializeField] public string Name { get; private set; }
+        
         [field:Header("Stats")]
         [field:SerializeField] public int Strength { get; private set; }
         [field:SerializeField] public int Agility { get; private set; }
@@ -14,7 +17,6 @@ namespace Scriptable_Objects.Unit
         [field:SerializeField] public int Magic { get; private set; }
         [field:Space]
         [field:SerializeField] public int Attack { get; private set; }
-        [field:SerializeField] public int HitRate { get; private set; }
         [field:Space]
         [field:SerializeField] public int Defence { get; private set; }
         [field:SerializeField] public int MagicDefence { get; private set; }
@@ -23,10 +25,41 @@ namespace Scriptable_Objects.Unit
         
         [field:Space]
         [field:Header("Resistances")]
-        [field:SerializeField] public Dictionary<Elements, int> Resistances { get; private set; }
-        [field:SerializeField] public Dictionary<Alterations, bool> AlterationImmunity { get; private set; } //Change to ?
+        [field:SerializeField] public List<ElementResistance> Resistances { get; private set; }
+        [field:SerializeField] public List<AlterationImmunity> AlterationImmunity { get; private set; } //Change to ?
+        [field:Space]
+        [field:Header("Misc")]
+        [field:SerializeField] public Sprite Sprite { get; private set; }
+    }
+    
+    [Serializable] public class ElementResistance
+    {
+        [field:SerializeField] public Elements Element { get; private set; }
+        [field:SerializeField] public int Resistance { get; private set; }
+    }
+    
+    [Serializable] public class AlterationImmunity
+    {
+        [field:SerializeField] public Alterations Alteration { get; private set; }
+        [field:SerializeField] public bool Immunity { get; private set; }
     }
 
+    
+    
+    // TODO: move theses enums outside of here
+    public enum Stats
+    {
+        Strength,
+        Agility,
+        Stamina,
+        Magic,
+        Attack,
+        HitRate,
+        Defence,
+        MagicDefence,
+        Evasion,
+        MagicEvasion
+    }
 
     public enum Alterations
     {
@@ -59,9 +92,15 @@ namespace Scriptable_Objects.Unit
         Sketch,
         Control,
         Fractional,
-        AllDamage
+        AllDamage,
+        Death
     }
     
+    /*
+        - -100% = absorption,
+        - 0% = annulation,
+        - 200% = faiblesse
+     */
     public enum Elements
     {
         Water,
@@ -74,5 +113,6 @@ namespace Scriptable_Objects.Unit
         Heal,
         Earth,
         Wind,
+        None
     }
 }

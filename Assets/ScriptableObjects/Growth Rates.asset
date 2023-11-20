@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4572e3c3bc8409380a21fa0d1fccddb, type: 3}
+  m_Name: Growth Rates
+  m_EditorClassIdentifier: 
+  growthRates:
+  - <Health>k__BackingField: 11
+    <Mp>k__BackingField: 4
+    <Xp>k__BackingField: 32
+  - <Health>k__BackingField: 23
+    <Mp>k__BackingField: 8
+    <Xp>k__BackingField: 96
+  - <Health>k__BackingField: 54
+    <Mp>k__BackingField: 13
+    <Xp>k__BackingField: 208
+  - <Health>k__BackingField: 54
+    <Mp>k__BackingField: 18
+    <Xp>k__BackingField: 400
+  - <Health>k__BackingField: 74
+    <Mp>k__BackingField: 24
+    <Xp>k__BackingField: 672
+  - <Health>k__BackingField: 96
+    <Mp>k__BackingField: 30
+    <Xp>k__BackingField: 1056
+  - <Health>k__BackingField: 120
+    <Mp>k__BackingField: 37
+    <Xp>k__BackingField: 1552
+  - <Health>k__BackingField: 146
+    <Mp>k__BackingField: 45
+    <Xp>k__BackingField: 2184
+  - <Health>k__BackingField: 173
+    <Mp>k__BackingField: 53
+    <Xp>k__BackingField: 2976
+  - <Health>k__BackingField: 201
+    <Mp>k__BackingField: 62
+    <Xp>k__BackingField: 3936
+  - <Health>k__BackingField: 231
+    <Mp>k__BackingField: 71
+    <Xp>k__BackingField: 5080
+  - <Health>k__BackingField: 266
+    <Mp>k__BackingField: 81
+    <Xp>k__BackingField: 6432
+  - <Health>k__BackingField: 305
+    <Mp>k__BackingField: 91
+    <Xp>k__BackingField: 7992
+  - <Health>k__BackingField: 349
+    <Mp>k__BackingField: 101
+    <Xp>k__BackingField: 9784
+  - <Health>k__BackingField: 399
+    <Mp>k__BackingField: 111
+    <Xp>k__BackingField: 11840
+  - <Health>k__BackingField: 453
+    <Mp>k__BackingField: 121
+    <Xp>k__BackingField: 14152
+  - <Health>k__BackingField: 510
+    <Mp>k__BackingField: 132
+    <Xp>k__BackingField: 16736
+  - <Health>k__BackingField: 571
+    <Mp>k__BackingField: 143
+    <Xp>k__BackingField: 19616
+  - <Health>k__BackingField: 636
+    <Mp>k__BackingField: 154
+    <Xp>k__BackingField: 22832
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
+  - <Health>k__BackingField: 3
+    <Mp>k__BackingField: 20
+    <Xp>k__BackingField: 30
