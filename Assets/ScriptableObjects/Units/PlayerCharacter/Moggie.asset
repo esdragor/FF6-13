@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2dee3968ec4bcd9b24b82bb9db7499, type: 3}
+  m_Name: Moggie
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Moggie
+  <Strength>k__BackingField: 18
+  <Agility>k__BackingField: 14
+  <Stamina>k__BackingField: 12
+  <Magic>k__BackingField: 33
+  <Attack>k__BackingField: 1
+  <Defence>k__BackingField: 42
+  <MagicDefence>k__BackingField: 33
+  <Evasion>k__BackingField: 7
+  <MagicEvasion>k__BackingField: 5
+  <Resistances>k__BackingField: []
+  <AlterationImmunity>k__BackingField: []
+  <Sprite>k__BackingField: {fileID: 0}
+  <InitialHp>k__BackingField: 48
+  <InitialMp>k__BackingField: 9
+  <EscapeRate>k__BackingField: 2
+  <RightHandTypes>k__BackingField: 
+  <LeftHandTypes>k__BackingField: 
+  <HeadTypes>k__BackingField: 
+  <BodyTypes>k__BackingField: 
