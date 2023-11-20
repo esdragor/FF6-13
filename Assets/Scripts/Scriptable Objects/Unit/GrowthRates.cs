@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Scriptable_Objects.Unit
 {
-    [CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
+    [CreateAssetMenu(fileName = "Growth rates", menuName = "ScriptableObjects/Units/GrowthSO", order = 0)]
     public class GrowthRates : ScriptableObject
     {
         [field:Header("Growth Rates")]
