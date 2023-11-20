@@ -7,14 +7,13 @@ public enum Direction
     Up,
     Down,
     Left,
-    Right
+    Right,
+    None
 }
 
 public class InputManager : MonoBehaviour
 {
     public static event Action<Direction> OnStartedToTurn;
-    public static event Action<Direction> OnFinishToTurn;
-    public static event Action<Direction> OnTriggerDirection;
     public static event Action<Direction> OnMovindDirection;
 
     private Controls _input;
@@ -24,13 +23,13 @@ public class InputManager : MonoBehaviour
     {
         _input = new Controls();
         _input.Inputs.Turn.started += Turn;
-        _input.Inputs.Turn.performed += MoveForward;
+        _input.Inputs.Turn.performed += Move;
         _input.Inputs.Turn.canceled += Turn;
+        _input.Inputs.Turn.canceled += Move;
         _input.Inputs.Talk.started += Talk;
-        
+
         _input.Inputs.Turn.Enable();
         _input.Inputs.Talk.Enable();
-        
     }
 
     private void Talk(InputAction.CallbackContext obj)
@@ -39,33 +38,26 @@ public class InputManager : MonoBehaviour
     }
 
 
-    public void MoveForward(InputAction.CallbackContext context)
+    public void Move(InputAction.CallbackContext context)
     {
-        Debug.Log("MoveForward");
+        var value = context.ReadValue<Vector2>();
+
+        Direction dir = value.x > 0 ? Direction.Right :
+            (value.x < 0) ? Direction.Left :
+            (value.y < 0) ? Direction.Down : (value.y > 0) ? Direction.Up : Direction.None;
+        OnMovindDirection?.Invoke(dir);
     }
 
     public void Turn(InputAction.CallbackContext context)
     {
         var value = context.ReadValue<Vector2>();
         if (value.x > 0)
-        {
             OnStartedToTurn?.Invoke(Direction.Right);
-            Debug.Log("Right");
-        }
         else if (value.x < 0)
-        {
             OnStartedToTurn?.Invoke(Direction.Left);
-            Debug.Log("Left");
-        }
         else if (value.y > 0)
-        {
             OnStartedToTurn?.Invoke(Direction.Up);
-            Debug.Log("Up");
-        }
         else if (value.y < 0)
-        {
             OnStartedToTurn?.Invoke(Direction.Down);
-            Debug.Log("Down");
-        }
     }
 }
