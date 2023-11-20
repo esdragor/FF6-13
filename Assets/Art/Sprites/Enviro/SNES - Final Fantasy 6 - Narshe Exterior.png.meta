@@ -1,0 +1,826 @@
+fileFormatVersion: 2
+guid: 823b23e3ee17f6f4c8989efc749aa7b7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Narshe_1
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1176
+        width: 497
+        height: 864
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bdb2fa50a0e2c42a609dbd420b5b6f
+      internalID: 1006549297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 133
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023902ed2da483840bbd58a45e51d174
+      internalID: 121761751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Clouds
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 637
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f578cb23f6b34b64a9d42c60b1a60cfa
+      internalID: -1705409147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Narshe Exterior_15
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 848
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a834945ac9dd84a8e4cb0123d28192
+      internalID: -1377398380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Narshe Exterior_51
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 2
+        width: 115
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ded01de83285ed4689791946e5e4e5e
+      internalID: 1774549531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Smoke_0
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 96
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6795823d8ec39134fb7329db29bae96d
+      internalID: -266137537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Smoke_1
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 96
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21f2a446601ea14ba62482fc7308434
+      internalID: -74999581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Hill
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 120
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca509caa0ee2fc458a76263ba11d890
+      internalID: -1971476948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Smoke_2
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 96
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a8dc6616ae68a4c955d9b6527c07d7
+      internalID: -1834905298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Narshe Exterior_80
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 81
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5545e3d80cfea6743b0b455617edd06b
+      internalID: -1296956057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Narshe Exterior_88
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 81
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac22cbc36abf3b4daa9e5a605a5872d
+      internalID: -1916987502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Narshe Exterior_89
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 81
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f40a2140cd8e1b48957d30a115e4400
+      internalID: 1589310202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_SmallWheel_0
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce80e574764b2940b6849ea3fb2ebad
+      internalID: 1190140587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_SmallWheel_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b54a60686e3504b9df52d36123905b
+      internalID: -830186480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_SmallWheel_2
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9918161058d4b974eb3e207f14cacf0e
+      internalID: -1901542873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_SmallWheel_3
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d797f6fa3dba4643b3931c4e8c81240
+      internalID: 895409368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Machine_0
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 47
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4b4d646d0591b49a30a7ed040481be
+      internalID: 1982938430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Machine_1
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 47
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2435408a04757a446ba96b3f17002520
+      internalID: -1228729883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Machine_2
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 47
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c317f3c02c2f9014da062c5bb74058b3
+      internalID: -979662108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Machine_3
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 47
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c93393289cf36c45b3ba2bf6cde541b
+      internalID: 360857426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_BigWheel_0
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 13
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b33fd0788f40841a074475991af7fd
+      internalID: -1128405864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_BigWheel_1
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 13
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db66f19fcae1f7409652277bf06f395
+      internalID: -34241944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_BigWheel_2
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 13
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd11f59ad85f5474c9c5ace0543bb43f
+      internalID: -495435592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_BigWheel_3
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 13
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a7adae1c34eed44ac3d433c0f30f4e
+      internalID: 1816763427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Front_0
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 13
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8138226deef4bf64f937b75e501cb7c2
+      internalID: 2061742280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Front_1
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 13
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79eab618f5b7d594d9e4372eba588f39
+      internalID: 293339662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Narshe_Front_2
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 13
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc1cb045ac35644cba732ddd2245e3b
+      internalID: 372755492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 030bcaea3cbaf0a4295485cbd4214528
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Narshe_0: 121761751
+      Narshe_1: 1006549297
+      Narshe_BigWheel_0: -1128405864
+      Narshe_BigWheel_1: -34241944
+      Narshe_BigWheel_2: -495435592
+      Narshe_BigWheel_3: 1816763427
+      Narshe_Clouds: -1705409147
+      Narshe_Front_0: 2061742280
+      Narshe_Front_1: 293339662
+      Narshe_Front_2: 372755492
+      Narshe_Hill: -1971476948
+      Narshe_Machine_0: 1982938430
+      Narshe_Machine_1: -1228729883
+      Narshe_Machine_2: -979662108
+      Narshe_Machine_3: 360857426
+      Narshe_SmallWheel_0: 1190140587
+      Narshe_SmallWheel_1: -830186480
+      Narshe_SmallWheel_2: -1901542873
+      Narshe_SmallWheel_3: 895409368
+      Narshe_Smoke_0: -266137537
+      Narshe_Smoke_1: -74999581
+      Narshe_Smoke_2: -1834905298
+      SNES - Final Fantasy 6 - Narshe Exterior_10: -2117118534
+      SNES - Final Fantasy 6 - Narshe Exterior_100: -1381035908
+      SNES - Final Fantasy 6 - Narshe Exterior_101: 1687564974
+      SNES - Final Fantasy 6 - Narshe Exterior_102: -1386593601
+      SNES - Final Fantasy 6 - Narshe Exterior_103: 406518448
+      SNES - Final Fantasy 6 - Narshe Exterior_104: 870975108
+      SNES - Final Fantasy 6 - Narshe Exterior_105: 803360052
+      SNES - Final Fantasy 6 - Narshe Exterior_106: 1556279429
+      SNES - Final Fantasy 6 - Narshe Exterior_11: 801398364
+      SNES - Final Fantasy 6 - Narshe Exterior_111: -491699225
+      SNES - Final Fantasy 6 - Narshe Exterior_112: -2082412180
+      SNES - Final Fantasy 6 - Narshe Exterior_113: 2088814883
+      SNES - Final Fantasy 6 - Narshe Exterior_114: -234373552
+      SNES - Final Fantasy 6 - Narshe Exterior_115: 1554463053
+      SNES - Final Fantasy 6 - Narshe Exterior_116: 1275808990
+      SNES - Final Fantasy 6 - Narshe Exterior_117: 513382029
+      SNES - Final Fantasy 6 - Narshe Exterior_118: -2123138706
+      SNES - Final Fantasy 6 - Narshe Exterior_12: -716597349
+      SNES - Final Fantasy 6 - Narshe Exterior_126: -251781997
+      SNES - Final Fantasy 6 - Narshe Exterior_127: -356198737
+      SNES - Final Fantasy 6 - Narshe Exterior_128: 1314702523
+      SNES - Final Fantasy 6 - Narshe Exterior_129: 2021159505
+      SNES - Final Fantasy 6 - Narshe Exterior_13: -1735612741
+      SNES - Final Fantasy 6 - Narshe Exterior_130: -1927356951
+      SNES - Final Fantasy 6 - Narshe Exterior_131: -210428358
+      SNES - Final Fantasy 6 - Narshe Exterior_14: 396545040
+      SNES - Final Fantasy 6 - Narshe Exterior_15: -1377398380
+      SNES - Final Fantasy 6 - Narshe Exterior_16: 877622683
+      SNES - Final Fantasy 6 - Narshe Exterior_17: 441311589
+      SNES - Final Fantasy 6 - Narshe Exterior_18: 43364587
+      SNES - Final Fantasy 6 - Narshe Exterior_19: -644322612
+      SNES - Final Fantasy 6 - Narshe Exterior_20: 1271174277
+      SNES - Final Fantasy 6 - Narshe Exterior_21: 371386759
+      SNES - Final Fantasy 6 - Narshe Exterior_22: 1830469404
+      SNES - Final Fantasy 6 - Narshe Exterior_23: 140978829
+      SNES - Final Fantasy 6 - Narshe Exterior_24: 426953543
+      SNES - Final Fantasy 6 - Narshe Exterior_25: -19118984
+      SNES - Final Fantasy 6 - Narshe Exterior_26: -1937980473
+      SNES - Final Fantasy 6 - Narshe Exterior_27: 1288819253
+      SNES - Final Fantasy 6 - Narshe Exterior_28: -2120197278
+      SNES - Final Fantasy 6 - Narshe Exterior_29: -562623901
+      SNES - Final Fantasy 6 - Narshe Exterior_3: -2120680568
+      SNES - Final Fantasy 6 - Narshe Exterior_30: -534319392
+      SNES - Final Fantasy 6 - Narshe Exterior_31: -2019647182
+      SNES - Final Fantasy 6 - Narshe Exterior_32: -1851984888
+      SNES - Final Fantasy 6 - Narshe Exterior_33: 442420896
+      SNES - Final Fantasy 6 - Narshe Exterior_34: 1359100254
+      SNES - Final Fantasy 6 - Narshe Exterior_35: 1417426151
+      SNES - Final Fantasy 6 - Narshe Exterior_36: -61174476
+      SNES - Final Fantasy 6 - Narshe Exterior_37: -1861302927
+      SNES - Final Fantasy 6 - Narshe Exterior_38: -467442279
+      SNES - Final Fantasy 6 - Narshe Exterior_39: 1024695908
+      SNES - Final Fantasy 6 - Narshe Exterior_4: -1755695646
+      SNES - Final Fantasy 6 - Narshe Exterior_40: -1848100797
+      SNES - Final Fantasy 6 - Narshe Exterior_41: 538029792
+      SNES - Final Fantasy 6 - Narshe Exterior_42: 967403401
+      SNES - Final Fantasy 6 - Narshe Exterior_43: -1234400098
+      SNES - Final Fantasy 6 - Narshe Exterior_44: 1024201317
+      SNES - Final Fantasy 6 - Narshe Exterior_45: 632610017
+      SNES - Final Fantasy 6 - Narshe Exterior_46: 917648291
+      SNES - Final Fantasy 6 - Narshe Exterior_47: 2022524604
+      SNES - Final Fantasy 6 - Narshe Exterior_48: -297451078
+      SNES - Final Fantasy 6 - Narshe Exterior_49: 2112747062
+      SNES - Final Fantasy 6 - Narshe Exterior_5: 1411168077
+      SNES - Final Fantasy 6 - Narshe Exterior_50: 1774549531
+      SNES - Final Fantasy 6 - Narshe Exterior_51: -266137537
+      SNES - Final Fantasy 6 - Narshe Exterior_55: 1242569259
+      SNES - Final Fantasy 6 - Narshe Exterior_56: 2061183148
+      SNES - Final Fantasy 6 - Narshe Exterior_57: -505892876
+      SNES - Final Fantasy 6 - Narshe Exterior_58: -227355139
+      SNES - Final Fantasy 6 - Narshe Exterior_59: -1711772823
+      SNES - Final Fantasy 6 - Narshe Exterior_6: -1281255230
+      SNES - Final Fantasy 6 - Narshe Exterior_60: -1834905298
+      SNES - Final Fantasy 6 - Narshe Exterior_62: 1589117546
+      SNES - Final Fantasy 6 - Narshe Exterior_63: 251092575
+      SNES - Final Fantasy 6 - Narshe Exterior_64: 949654607
+      SNES - Final Fantasy 6 - Narshe Exterior_65: -2108434069
+      SNES - Final Fantasy 6 - Narshe Exterior_66: 88597850
+      SNES - Final Fantasy 6 - Narshe Exterior_67: -377128498
+      SNES - Final Fantasy 6 - Narshe Exterior_68: 1739353865
+      SNES - Final Fantasy 6 - Narshe Exterior_69: 1319147405
+      SNES - Final Fantasy 6 - Narshe Exterior_7: 1407220398
+      SNES - Final Fantasy 6 - Narshe Exterior_70: -370205872
+      SNES - Final Fantasy 6 - Narshe Exterior_71: 506820093
+      SNES - Final Fantasy 6 - Narshe Exterior_72: 209840736
+      SNES - Final Fantasy 6 - Narshe Exterior_73: 421359215
+      SNES - Final Fantasy 6 - Narshe Exterior_74: -17811442
+      SNES - Final Fantasy 6 - Narshe Exterior_75: 1096414776
+      SNES - Final Fantasy 6 - Narshe Exterior_76: -2114038739
+      SNES - Final Fantasy 6 - Narshe Exterior_77: 277104929
+      SNES - Final Fantasy 6 - Narshe Exterior_78: -1848233045
+      SNES - Final Fantasy 6 - Narshe Exterior_79: -114285637
+      SNES - Final Fantasy 6 - Narshe Exterior_8: -1296956057
+      SNES - Final Fantasy 6 - Narshe Exterior_80: 1531728455
+      SNES - Final Fantasy 6 - Narshe Exterior_81: -1924568680
+      SNES - Final Fantasy 6 - Narshe Exterior_82: 1577523579
+      SNES - Final Fantasy 6 - Narshe Exterior_83: 2011431511
+      SNES - Final Fantasy 6 - Narshe Exterior_84: -2145382199
+      SNES - Final Fantasy 6 - Narshe Exterior_85: -1365325368
+      SNES - Final Fantasy 6 - Narshe Exterior_86: -845893287
+      SNES - Final Fantasy 6 - Narshe Exterior_87: -1916987502
+      SNES - Final Fantasy 6 - Narshe Exterior_88: 1589310202
+      SNES - Final Fantasy 6 - Narshe Exterior_89: 1187916503
+      SNES - Final Fantasy 6 - Narshe Exterior_9: 263552489
+      SNES - Final Fantasy 6 - Narshe Exterior_90: -2019047712
+      SNES - Final Fantasy 6 - Narshe Exterior_91: 308041474
+      SNES - Final Fantasy 6 - Narshe Exterior_92: 1333992115
+      SNES - Final Fantasy 6 - Narshe Exterior_93: -1737770959
+      SNES - Final Fantasy 6 - Narshe Exterior_94: -342049614
+      SNES - Final Fantasy 6 - Narshe Exterior_95: 1190140587
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
