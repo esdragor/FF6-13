@@ -1,0 +1,285 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "TurnUp",
+            "id": "75c8fc2f-24c3-4a10-8a7d-7203f2c7ec45",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "a4520e4a-aa14-4dda-9e40-79041abcf5c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "21b2cc0a-4c90-4da3-ab62-709c874319e3",
+                    "path": "<Joystick>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3c18b859-83dd-4a56-876b-a0c63626b441",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "TurnDown",
+            "id": "b372682c-945f-4563-bbde-eb2e3547d43b",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "c1db6e7a-98af-4f9c-876c-dcc773eef93b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "319afc80-2c8b-4c4a-adb1-15fe1725abca",
+                    "path": "<Joystick>/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6401c9e-310f-4fb1-806f-2131c091e356",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "TurnLeft",
+            "id": "45d1b2ee-b3f3-42f9-9738-003797608c09",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "f2de25ea-5bdd-49f6-bc60-1575ca28b71b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7af68648-dcd7-4485-8702-ec7a26a89cb8",
+                    "path": "<Joystick>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d57aacc2-d991-45fe-a08e-75f83421f20d",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "TurnRight",
+            "id": "b78dcfac-a6ad-47ae-be23-afd32b28fe61",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "13a1d1d9-e98b-46f5-ad7a-98d1ac3cf3d7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b8ad484d-049c-4557-b6f4-04673aa8e57f",
+                    "path": "<Joystick>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6d0069be-c8bf-44ec-95ab-aa5b1009c080",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Select",
+            "id": "00ab33d6-7be7-4c4e-b8cd-fa1b3f9d5896",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "5e82793b-8b44-43e3-b529-0cc9d1351f6b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "12416274-874f-42a2-8fb5-31598e72be05",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a8fd132-f9d8-46c8-8925-07f84ae70cf1",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Cancel",
+            "id": "05cc0dd1-a333-4a41-9bfa-0908b6e60a16",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "61fb58ef-5bcd-453c-aa8f-3d4a6498361b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3e475879-34d2-4fd9-9d52-7aa07c098650",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c67f31a-327f-4042-8c5c-3d7a9dfde053",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Talk",
+            "id": "c968ae4d-7d29-41ad-9fb0-5f47c08d0ef2",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "b2c682fb-fa6e-4ad3-8d39-9ce2ef743665",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7cc95002-8180-4ceb-98d4-ece737e19b46",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a5d8b53-fc76-4fe3-a9d1-1bfbf82ab248",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Sheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Sheme",
+            "bindingGroup": "Sheme",
+            "devices": []
+        }
+    ]
+}
