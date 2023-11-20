@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198aa9046e4a4460867750456375c850, type: 3}
+  m_Name: Vomammoth
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Vomammoth
+  <Strength>k__BackingField: 0
+  <Agility>k__BackingField: 25
+  <Stamina>k__BackingField: 0
+  <Magic>k__BackingField: 0
+  <Attack>k__BackingField: 110
+  <Defence>k__BackingField: 75
+  <MagicDefence>k__BackingField: 160
+  <Evasion>k__BackingField: 0
+  <MagicEvasion>k__BackingField: 0
+  <Resistances>k__BackingField:
+  - <name>k__BackingField: Water
+    <Element>k__BackingField: 0
+    <Resistance>k__BackingField: 100
+  - <name>k__BackingField: Fire
+    <Element>k__BackingField: 1
+    <Resistance>k__BackingField: 200
+  - <name>k__BackingField: Lightning
+    <Element>k__BackingField: 2
+    <Resistance>k__BackingField: 100
+  - <name>k__BackingField: Ice
+    <Element>k__BackingField: 3
+    <Resistance>k__BackingField: 100
+  - <name>k__BackingField: InstantDeath
+    <Element>k__BackingField: 4
+    <Resistance>k__BackingField: 100
+  - <name>k__BackingField: Poison
+    <Element>k__BackingField: 5
+    <Resistance>k__BackingField: 100
+  - <name>k__BackingField: Holy
+    <Element>k__BackingField: 6
+    <Resistance>k__BackingField: 100
+  - <name>k__BackingField: Heal
+    <Element>k__BackingField: 7
+    <Resistance>k__BackingField: -100
+  - <name>k__BackingField: Earth
+    <Element>k__BackingField: 8
+    <Resistance>k__BackingField: 100
+  - <name>k__BackingField: Wind
+    <Element>k__BackingField: 9
+    <Resistance>k__BackingField: 100
+  <AlterationImmunity>k__BackingField:
+  - <name>k__BackingField: Darkness
+    <Alteration>k__BackingField: 0
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Zombie
+    <Alteration>k__BackingField: 1
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Poison
+    <Alteration>k__BackingField: 2
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: MagiTek
+    <Alteration>k__BackingField: 3
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Clear
+    <Alteration>k__BackingField: 4
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Imp
+    <Alteration>k__BackingField: 5
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Petrify
+    <Alteration>k__BackingField: 6
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Fatal
+    <Alteration>k__BackingField: 7
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Condemned
+    <Alteration>k__BackingField: 8
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Critical
+    <Alteration>k__BackingField: 9
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Image
+    <Alteration>k__BackingField: 10
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Mute
+    <Alteration>k__BackingField: 11
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Berserk
+    <Alteration>k__BackingField: 12
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Confuse
+    <Alteration>k__BackingField: 13
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Sap
+    <Alteration>k__BackingField: 14
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Psyche
+    <Alteration>k__BackingField: 15
+    <Immunity>k__BackingField: 1
+  - <name>k__BackingField: Float
+    <Alteration>k__BackingField: 16
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Regen
+    <Alteration>k__BackingField: 17
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Slow
+    <Alteration>k__BackingField: 18
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Haste
+    <Alteration>k__BackingField: 19
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Stop
+    <Alteration>k__BackingField: 20
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Shell
+    <Alteration>k__BackingField: 21
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Safe
+    <Alteration>k__BackingField: 22
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Reflect
+    <Alteration>k__BackingField: 23
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Suplex
+    <Alteration>k__BackingField: 24
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Scan
+    <Alteration>k__BackingField: 25
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Sketch
+    <Alteration>k__BackingField: 26
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Control
+    <Alteration>k__BackingField: 27
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Fractional
+    <Alteration>k__BackingField: 28
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: AllDamage
+    <Alteration>k__BackingField: 29
+    <Immunity>k__BackingField: 0
+  - <name>k__BackingField: Death
+    <Alteration>k__BackingField: 30
+    <Immunity>k__BackingField: 0
+  <Sprite>k__BackingField: {fileID: 0}
+  <Level>k__BackingField: 1
+  <MaxHp>k__BackingField: 115
+  <MaxMp>k__BackingField: 30
+  <XpReward>k__BackingField: 50
+  <GilReward>k__BackingField: 90
+  <HitRate>k__BackingField: 100
+  <StealItems>k__BackingField: []
+  <DropItems>k__BackingField: []
+  <MorphItems>k__BackingField: []
+  <StealFailChance>k__BackingField: 0
+  <MorphFailChance>k__BackingField: 28.6

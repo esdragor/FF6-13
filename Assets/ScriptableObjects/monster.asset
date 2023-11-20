@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198aa9046e4a4460867750456375c850, type: 3}
+  m_Name: monster
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: monster
+  <Hp>k__BackingField: 5
+  <Strength>k__BackingField: 0
+  <Agility>k__BackingField: 0
+  <Stamina>k__BackingField: 0
+  <Magic>k__BackingField: 0
+  <Attack>k__BackingField: 0
+  <Defence>k__BackingField: 0
+  <MagicDefence>k__BackingField: 0
+  <Evasion>k__BackingField: 0
+  <MagicEvasion>k__BackingField: 0
+  <Resistances>k__BackingField: []
+  <AlterationImmunity>k__BackingField: []
+  <Sprite>k__BackingField: {fileID: 0}
+  <XpReward>k__BackingField: 0
+  <GilReward>k__BackingField: 0
+  <HitRate>k__BackingField: 0
+  <StealItems>k__BackingField: []
+  <DropItems>k__BackingField: []
+  <MorphItems>k__BackingField: []
+  <StealFailChance>k__BackingField: 0
+  <MorphFailChance>k__BackingField: 0
