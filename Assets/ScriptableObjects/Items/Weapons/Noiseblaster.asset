@@ -19,7 +19,8 @@ MonoBehaviour:
   <Price>k__BackingField: 750
   <Sprite>k__BackingField: {fileID: 0}
   <EquipableType>k__BackingField: 23
-  <ItemEffects>k__BackingField: []
+  <ItemEffects>k__BackingField:
+  - {fileID: 11400000, guid: efe474603d6f1e7479754cc6c2c090ed, type: 2}
   <AttackPower>k__BackingField: 0
   <HitRate>k__BackingField: 255
   <Element>k__BackingField: 10

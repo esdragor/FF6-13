@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73efa0063502403b8e798232a5fb1cd5, type: 3}
+  m_Name: Sleep
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Sleep
+  <Description>k__BackingField: Inflicts sleep on the target.
+  <MpCost>k__BackingField: 5
+  <ApCost>k__BackingField: 1
+  <Power>k__BackingField: 0
+  <HitRate>k__BackingField: 111
+  <SpellEffects>k__BackingField:
+  - {fileID: 11400000, guid: ba82ad8770fc1f340ba4eb68c7782645, type: 2}
+  <SpellType>k__BackingField: 2

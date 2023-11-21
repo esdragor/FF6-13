@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: XPotionHeal
   m_EditorClassIdentifier: Assembly-CSharp:Scriptable_Objects.Spells___Effects:DamageEffectSO
-  <Element>k__BackingField: 0
+  <Element>k__BackingField: 7
   <Damage>k__BackingField: 100
   <FlatValue>k__BackingField: 0
   <SingleTarget>k__BackingField: 1
+  <ScaleWithPower>k__BackingField: 0
