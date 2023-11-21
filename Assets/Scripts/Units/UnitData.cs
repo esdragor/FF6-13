@@ -64,6 +64,11 @@ namespace Units
         {
             get => currentHp;
         }
+        
+        public virtual string GetName()
+        {
+            return unitSo.Name;
+        }
 
         public virtual int CurrentMp
         {

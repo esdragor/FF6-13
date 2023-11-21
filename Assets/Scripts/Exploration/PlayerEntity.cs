@@ -5,17 +5,13 @@ using UnityEngine;
 
 public class PlayerEntity : Entity
 {
-    private Vector3 newPosition;
-    private PlayerCharacterInfoInstance _playerCharacterInfoInstance;
-    public PlayerController _playerController { get; private set; } 
+    public PlayerController _playerController { get; private set; }
+    
     [SerializeField] private float cellSize = 1f;
     
-    public bool Attack(Entity target)
-    {
-        Debug.Log("Attack");
-        return target.TakeDamage(unitData.Attack, _playerCharacterInfoInstance.So);
-    }
+    protected PlayerCharacterInfoInstance _playerCharacterInfoInstance;
     
+    private Vector3 newPosition;
     public void InitPlayer(PlayerController controller)
     {
         newPosition = transform.position;
@@ -49,5 +45,10 @@ public class PlayerEntity : Entity
         {
             transform.DOMove(newPosition, delayToMove);
         }
+    }
+    
+    public void InitData(UnitData data)
+    {
+        unitData = data;
     }
 }

@@ -9,10 +9,11 @@ public class Entity : MonoBehaviour
     [SerializeField] protected Animator _animator;
     [SerializeField] protected BoxCollider2D _boxCollider2D;
     [SerializeField] protected float delayToMove = 1f;
-    [SerializeField] protected UnitSO SO;
-    [SerializeField] protected UnitData unitData;
-
+    [field:SerializeField] public UnitSO SO { get; private set;}
+    [field: SerializeField] public UnitData unitData;
+    
     protected Direction ForwardDirection = Direction.None;
+
     private UnitSOInstance _unitSoInstance;
 
     public void Turn(Direction dir)
@@ -44,9 +45,9 @@ public class Entity : MonoBehaviour
         Debug.Log("Attack");
     }
     
-    public bool TakeDamage(int damage, UnitSO attacker)
+    public bool TakeDamage(int damage, UnitData attacker)
     {
-        Debug.Log( _unitSoInstance.So.Name + " Take Damage " + damage + " from " + attacker.Name);
+        Debug.Log( _unitSoInstance.So.Name + " Take Damage " + damage + " from " + attacker.GetName());
         _unitSoInstance.currentHp -= damage;
         if (_unitSoInstance.currentHp <= 0)
         {

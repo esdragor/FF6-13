@@ -25,7 +25,8 @@ MonoBehaviour:
   <MagicEvasion>k__BackingField: 7
   <Resistances>k__BackingField: []
   <AlterationImmunity>k__BackingField: []
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: -446205805, guid: 5735a704749448e4d9ac64352658bba3,
+    type: 3}
   <InitialHp>k__BackingField: 40
   <InitialMp>k__BackingField: 16
   <EscapeRate>k__BackingField: 4

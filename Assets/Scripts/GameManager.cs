@@ -77,9 +77,4 @@ public class GameManager : MonoBehaviour
             _battleManager.StartBattle();
         }
     }
-
-    public PlayerEntity GetPlayerAtIndex(int i)
-    {
-        return _player;
-    }
 }

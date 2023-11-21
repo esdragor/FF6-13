@@ -129,6 +129,8 @@ MonoBehaviour:
   - {fileID: 1002874636594976978}
   exploreCamera: {fileID: 0}
   combatCamera: {fileID: 0}
+  playerBattlePrefab: {fileID: -7508613938992618098, guid: b364bd199fab1c14290104f0220085b0,
+    type: 3}
 --- !u!1 &4318035243428216676
 GameObject:
   m_ObjectHideFlags: 0

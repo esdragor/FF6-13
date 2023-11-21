@@ -9,7 +9,6 @@ public class TESTUIBattle : MonoBehaviour
     [SerializeField] private Image AttackImage;
     [SerializeField] private Image DefendImage;
     [SerializeField] private Image ItemImage;
-    [SerializeField] private Image EscapeImage;
     
     private List<Image> images = new();
     private int actionIndex = 0;
@@ -27,7 +26,6 @@ public class TESTUIBattle : MonoBehaviour
         images.Add(AttackImage);
         images.Add(DefendImage);
         images.Add(ItemImage);
-        images.Add(EscapeImage);
         actionIndex = 0;
         images[actionIndex].color = Color.red;
     }
