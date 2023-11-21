@@ -108,7 +108,3451 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1151
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3776196642a36014e830128301685310
+      internalID: 1216663701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_1
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1149
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55293bdbe4e711049936130c49e5fb8a
+      internalID: 1181358870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1148
+        width: 63
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcc5e7c4362e93439efee2908e4c643
+      internalID: -2013414489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_3
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1149
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e7dcc3709098845852de65a0552267
+      internalID: -1520402168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_4
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1149
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce612ff2be3b9548a2b0c1808e9fccd
+      internalID: 1973079741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_5
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1149
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a141de81a448dc42954bfcba1d8c7fd
+      internalID: -1477325943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_6
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1150
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c61b83c6338b2447bd3284d82c3fe20
+      internalID: -401360025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_7
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1151
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61ed596d41299947aba216ed3020275
+      internalID: -75677504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_8
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1149
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d195ac17453d5f44b75edd6f9480fab
+      internalID: -1342082364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_9
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1148
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849dbd31df3c31e4b9d5d1e90ef5be93
+      internalID: -2112145886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4504f7f4f7e408645ad2a3a9aedce864
+      internalID: -709154312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_11
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1073
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837797a6bec478e418d4e293a18da751
+      internalID: -926817916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_12
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1070
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98132fe7134fc9445a5b7de75def16e8
+      internalID: 1143196104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_13
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1070
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e435a04ddc20f8e4791801b0ca9154d3
+      internalID: -326217372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1070
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef732556b60bee48b8e18026f6cf37c
+      internalID: -1825398174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_15
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1071
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f7703c75af09e4ca7e7d8389fd725a
+      internalID: -785792006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_16
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1070
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289ac73b0c3d35446ae7c3a24a158aec
+      internalID: -1055210752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_17
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1071
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95190a460daeebf4babc020da36ce5eb
+      internalID: 1089510792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_18
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1070
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314b4baa31f1005438f33e96e34d688e
+      internalID: 224027669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_19
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1069
+        width: 63
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bbfe96b1828bc43b1121e11ff9ddcf
+      internalID: -411061177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_20
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1005
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf679f6a9c7b7d4697634403a372687
+      internalID: -2050008501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_21
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1006
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3a1204803a9044495e1d577559df53
+      internalID: 2144474321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_22
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1006
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb126cdd24e6d54eafb5f98070414f2
+      internalID: 1785569717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_23
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1007
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff7cf0a2f3aa964fb61f58631c54820
+      internalID: -434221910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_24
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 999
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b77d2f12315d26469ff0e8b57b17d46
+      internalID: -564249699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_25
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1003
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32005e0b893f06468f6e109975720db
+      internalID: -1498368509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_26
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1003
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dae0bbcf5674743b8f83a29878c2e8
+      internalID: -418384771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_27
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1003
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf987901f8657e8488a3cad1da2ba461
+      internalID: -1523938635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_28
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1003
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed6a77657974ca48a53f9fa1b90d5fe
+      internalID: 1819803102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_29
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 937
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587b739b26bc3324ea2049d47d540395
+      internalID: -1330370942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_30
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 936
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7764cddc709bb2d4f9cf6c6ed0bcd68d
+      internalID: -1488162774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 935
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9369cbe2602a99d4181b9d89b4753665
+      internalID: -617426427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_32
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 933
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae976d12b9e60143a1d8f3682f86099
+      internalID: -706454192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_33
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 936
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eba17e628d0704428e34065ac7ee480
+      internalID: 1329496177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_34
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 938
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c08caccf5a2db54fb7fda74847deca4
+      internalID: -2022641292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_35
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 937
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cfd79939932c74ba4568cfb71eed65
+      internalID: -269102692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_36
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 938
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a152d2cf6cb7b1468485c31e20acd91
+      internalID: -1431870431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_37
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 936
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3b0875c23e63e4783cb21ab9a6e028
+      internalID: 257499813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_38
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 864
+        width: 53
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4abf390ff9711d4b9b6d9d6cbe25125
+      internalID: 891724198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_39
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 864
+        width: 53
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3a898283a2e814ca8a4c9ebbc929c9
+      internalID: 1348087668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_40
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 860
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379d49f7982bb424bb959fa4d16d1877
+      internalID: -1125736892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_41
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 868
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c046a3d4be1f0459ef58edccce2873
+      internalID: -741160224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_42
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 872
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34f47b27f21ae04590df328cf662592
+      internalID: -2052852187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_43
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 873
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5ae191c41bd8c4b83c01ff2d18a653
+      internalID: -1582419929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_44
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 867
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40247e644e25f8244a9bca79dedf860b
+      internalID: 1198865481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_45
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 865
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2da7a757e26124a809f31e233159c0
+      internalID: -566876445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_46
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 874
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bea4f52d72b52448224f9f51bbb744
+      internalID: -150021005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_47
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 901
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fd6ea59d8badc488d1d47add06ad15
+      internalID: 145488046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_48
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 788
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ea4336c2df15c4ebcdfa2115d051ce
+      internalID: 53420774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_49
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 788
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348d926354ba42d4d99ffe8fc4f3e691
+      internalID: 581455799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_50
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 789
+        width: 51
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21798e61c3b67494f832af64e7f78cc6
+      internalID: -18368541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_51
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 794
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e52084f9327fc445a35011caa73085f
+      internalID: 1751039388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_52
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 779
+        width: 64
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ff884cb80efce48973734f21af8835
+      internalID: 465101944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_53
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 794
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e1a75da3a9f7b4da70ad366c4fca6c
+      internalID: 719010407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_54
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 784
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e74521e74b6c148a00ed1bf22ec2cf
+      internalID: 307569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_55
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 781
+        width: 55
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8cdd70439a583f438e72e34921afeda
+      internalID: -1627988241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_56
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 785
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186c9015cce4b5d4f82b4580b10d039d
+      internalID: 1964579265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_57
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 717
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da48a7ec8ce7e5845bd6589335e8c156
+      internalID: -1732359669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_58
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 711
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ed590083fae984c9c667e84cf5a5ee
+      internalID: 829949359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_59
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 713
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f26c67c72752347ab51d1d9cbe253a
+      internalID: 2030990434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_60
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 709
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0616cd6c527be0e45ae2cc79e12331bf
+      internalID: 849229514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_61
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 707
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e307b796354fb4a990dbf4cc0c1c15
+      internalID: -777345449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_62
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 716
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752cc42177338754195101b8a412d29b
+      internalID: -807994477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_63
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 705
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6136bb615d0b9934fbf573d83085f476
+      internalID: 1246795187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_64
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 704
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a4d92ddebbd124dbc048a140bc95fc
+      internalID: -2117681524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_65
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 598
+        width: 64
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9ae38ee60bdd540a0f8946c5017873
+      internalID: -645492283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_66
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 599
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc564e9eff16934db5757cc6b65f23f
+      internalID: 194595012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_67
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 600
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3dfd9ff5ee1f6446ba129142650889f
+      internalID: 2104525776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_68
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 599
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a02759e42e1cd439b6749bd6d76aa2
+      internalID: -1151656824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_69
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 599
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c055448c158d4cd40be1d001bfd3cabf
+      internalID: 1221458430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_70
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 599
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea949b29736c534a908b69600660e1a
+      internalID: 1527680192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_71
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 600
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e48d0a2e8876347a1437fa3804a1e5
+      internalID: -1500632173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_72
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 596
+        width: 55
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071ac6eca8119fb4f9bda25c01b80352
+      internalID: -1432581351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_73
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 598
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cda1cfbdf9d194da12330b8bcd2d70
+      internalID: 2034237993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_74
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 599
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fe5f00afc44134e823b6caff5a272a
+      internalID: 1697784878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_75
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 527
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6458070f1b6c443b6bacd74c81f0b3
+      internalID: -399916655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_76
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 554
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02687c5333217c7428860c1ffd164e38
+      internalID: 156207278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_77
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 524
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ddaa6373f762f4282173559e4a3646
+      internalID: -1826500596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_78
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 525
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e692674b80a6dfd45be55f8b8f761c47
+      internalID: 1739827823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_79
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 524
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433237d7ca9c4b74a8cda44924d52d55
+      internalID: -1770960584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_80
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 522
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d685b043190724eb965683f72e6bd9
+      internalID: -697114235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_81
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 519
+        width: 61
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8807e2c3c52a314e960afe2d491bda6
+      internalID: -297227753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_82
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 519
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097e630ee39c73b46808c97a33bfea81
+      internalID: 2020703971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_83
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 521
+        width: 53
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8857addca37844b9b4676045684d5a
+      internalID: 1845025870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_84
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 521
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bad167bf8152bf4aa21fb320875e33f
+      internalID: -1400917311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_85
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 520
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28519108985f7904b8af31d2e7808ef2
+      internalID: -990269262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_86
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 452
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7021f2cf2cf26043bf773f92abba8bc
+      internalID: -758466298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_87
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 449
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33803e636331dbc43b04a417da8761b8
+      internalID: -1607604053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_88
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5467dad5eb8ed004e9775ec2c05d9edf
+      internalID: -402934971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_89
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 448
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4a66a45c64edd458f6124737bfa8c1
+      internalID: 623562751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_90
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 455
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15fbfa318ae4254f8fa9b4b08359f33
+      internalID: 1444360398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_91
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 453
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9dcf314c2172e44ebbf4124bf3415b2
+      internalID: 1320093463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_92
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 449
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0deeab8011c2ed24a839cfca537de595
+      internalID: -1783999634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_93
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 458
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51eb01fa7e169e04a822c3890daa6eb5
+      internalID: 2027946036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_94
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 452
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f4d7e7b26a7914eaf2be157d8a8fe2
+      internalID: -1053066172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_95
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9551dd0b76c164dada81651f8925fe
+      internalID: 495217832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_96
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 341
+        width: 53
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6400ccd04b6ba4c8056d5453e1f9ee
+      internalID: -1077895952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_97
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 338
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67dc569d291871049bbd337a83c006f8
+      internalID: 1223861177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_98
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 338
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e8064988ffc104e8001f46315ba73b
+      internalID: 1069536528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_99
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 339
+        width: 88
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ca3d00f8a5dd2488fca8aaf27984c4
+      internalID: -1875948465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_100
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 336
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f82d22eef29ae43b7ddd4ea9c17d3b
+      internalID: -1079364016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_101
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 336
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c12c486a27e6f24da635b258739aa39
+      internalID: 1391172829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_102
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 273
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e022b78a3424b6c48a81ed3aee622530
+      internalID: 1598927083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_103
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 269
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3e92cbeba3dd344aa3515f644777b1
+      internalID: 1668295877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_104
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 270
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0992f6ff5d8b17b42a19633704c2bf9f
+      internalID: -59018425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_105
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 268
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b780d63076766964294ce7999d48188d
+      internalID: 513012667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_106
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 264
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565d769e730051f41aac9e81739a7404
+      internalID: 40946052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_107
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 263
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae66610f7ef417d4c8a5203fbb71152c
+      internalID: 305948882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_108
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 269
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f68e972d46915a49a0f763dd53ea564
+      internalID: 1904303611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_109
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 162
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a562edbdbefeef743967858d502006dc
+      internalID: 412955835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_110
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 159
+        width: 64
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecbaf29e1761a147b471cc202646abd
+      internalID: 1505028085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_111
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 151
+        width: 96
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddddf765e4478f43bffbafa67e9e9c8
+      internalID: 1222612063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_112
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 174
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4604d14dfc9e71149ab4d3a59a782003
+      internalID: 789214743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_113
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 157
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb56095521422bf4aa243e82cd5afe2a
+      internalID: -1252519289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_114
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 162
+        width: 47
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e84ec37dff1f564e971e1fca5dfd727
+      internalID: -481573925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_115
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 170
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87858a9ec8006a4fb78430bde66e671
+      internalID: -1330880551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_329
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a760bb4aaf48ef342b4577f3ef1bdadb
+      internalID: 79595052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_330
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697531bb79f9c4f428ead08ba5566853
+      internalID: 1035908817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_331
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca318689bde3d414c938fb8b927a8e74
+      internalID: 1328381522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_332
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84535a59d0071ab4e9d33a46032c7080
+      internalID: 2077035715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_333
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f4080b978d04c41833ddb1535e3f07
+      internalID: 377734313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_334
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346059e9fdc6dd6479b1ba8adf311311
+      internalID: -782554754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_335
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400bc73c1f1e98948b8ef3923d37fde7
+      internalID: 130912182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_336
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81944740133791f47aaf30fa9f69d733
+      internalID: 1488806355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_337
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809dcf14fe7eaad4eb31d1a8bae30010
+      internalID: 1612624266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_338
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c458cb48d928cd344b1951c3b682211b
+      internalID: 912402638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_339
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5443933dd7ad90b4e928c78f2401fb59
+      internalID: -1321194264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_340
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 82
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1827ac4c83a2ab340bab7eb7c8b49659
+      internalID: -89926783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_350
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13d43748442a8f4195b6f535a127c39
+      internalID: -2108278108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_351
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd4a18080aea5240b19efad815cd684
+      internalID: 1771272474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_352
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0369b72f6a7f249b0b4d715d2cd94d
+      internalID: -446372217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_353
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1471119dfeeca4586dc3ee18c69f83
+      internalID: 393405584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_354
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e60bf36992779646ad3ac969fabc847
+      internalID: -1345507563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_355
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e8b21dcb589b747b1d7122f9930099
+      internalID: -25137601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_356
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9545332d2b9a30c40846c94b0285e6e5
+      internalID: 675554927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_357
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4dd9c4387914142b9772ddc1eabe88
+      internalID: 819010207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_358
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e0b31769817e5499b897ec5a69790b
+      internalID: -1745210215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_359
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fe6aef702b8054b807947a85a8e4ae
+      internalID: -1381984596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_360
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7326b84e52cfaed4bb33077665125fbc
+      internalID: -1316933985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_361
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 55
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e6c44341b85484b8e98359b0032568
+      internalID: -189881247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_456
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee3bfa15c9889346952cd562f363ebc
+      internalID: 1504097090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_457
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b692f536a9f0f47ac2921b12d5e2db
+      internalID: -833420404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_458
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0e0ab830a35dd4183baff5e8b22fbb
+      internalID: 2062343579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_459
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebca821a1852f541bb29890d5f19284
+      internalID: -1064317760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_460
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2ba0702a50d0c428fa831ab9cc1b23
+      internalID: 570032489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_461
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451d0a8edbfe9094a9f0c1c4f3d71e8a
+      internalID: 525515788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_462
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94657f49501e4f4ca9655b43ea9eec7
+      internalID: 562387327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_463
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d15ae6cbaa0bb441bb877fab81c904b
+      internalID: -79004675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_464
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc7d25a1b7aa9a48bc8857531bcd4ed
+      internalID: 465000647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_465
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2685a257cc2045d4a95e610b9fd538e7
+      internalID: -1454825171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_466
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d544af7ad79781a4eb2149eaa4e30bfc
+      internalID: 315062024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_467
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 28
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edfe9d6b75e3fa4db9ba6933290aa78
+      internalID: 607455844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_534
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294ef098107023b40a809d5251ef887b
+      internalID: 144351894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_535
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080e800b605a7c044bdf0fb1ffa23381
+      internalID: -1835473203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_536
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5a5fb9011c8f44db3f2c9089c3f46f
+      internalID: -507934102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_537
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf20996085e4d184f8de8bf1bcc3950b
+      internalID: 621941700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_538
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900c2ed9f95b112469f1b2a7748abb01
+      internalID: 1327163683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_539
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e004fcd1d77c7864b902779e25efe6c4
+      internalID: 262588438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_540
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b9ce9ad0eb82c428f3ab60b2090ba8
+      internalID: 37931795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_541
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a098bfbd0dcd64f8ac7d6020334ec5
+      internalID: 1580708154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_542
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cc9ff943d7f014b8b5f6fe453b9bff
+      internalID: -68712460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_543
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760cbf1adc72e2144a16afae03b38577
+      internalID: -2069178974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_544
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99b87ca918c0ef4fbabe60bd965da1a
+      internalID: -622625759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Enemies World of Balance_545
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8183d823795934685f77299c06b6d7
+      internalID: 1203559529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +3563,570 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SNES - Final Fantasy 6 - Enemies World of Balance_0: 1216663701
+      SNES - Final Fantasy 6 - Enemies World of Balance_1: 1181358870
+      SNES - Final Fantasy 6 - Enemies World of Balance_10: -709154312
+      SNES - Final Fantasy 6 - Enemies World of Balance_100: -1079364016
+      SNES - Final Fantasy 6 - Enemies World of Balance_101: 1391172829
+      SNES - Final Fantasy 6 - Enemies World of Balance_102: 1598927083
+      SNES - Final Fantasy 6 - Enemies World of Balance_103: 1668295877
+      SNES - Final Fantasy 6 - Enemies World of Balance_104: -59018425
+      SNES - Final Fantasy 6 - Enemies World of Balance_105: 513012667
+      SNES - Final Fantasy 6 - Enemies World of Balance_106: 40946052
+      SNES - Final Fantasy 6 - Enemies World of Balance_107: 305948882
+      SNES - Final Fantasy 6 - Enemies World of Balance_108: 1904303611
+      SNES - Final Fantasy 6 - Enemies World of Balance_109: 412955835
+      SNES - Final Fantasy 6 - Enemies World of Balance_11: -926817916
+      SNES - Final Fantasy 6 - Enemies World of Balance_110: 1505028085
+      SNES - Final Fantasy 6 - Enemies World of Balance_111: 1222612063
+      SNES - Final Fantasy 6 - Enemies World of Balance_112: 789214743
+      SNES - Final Fantasy 6 - Enemies World of Balance_113: -1252519289
+      SNES - Final Fantasy 6 - Enemies World of Balance_114: -481573925
+      SNES - Final Fantasy 6 - Enemies World of Balance_115: -1330880551
+      SNES - Final Fantasy 6 - Enemies World of Balance_116: -419978627
+      SNES - Final Fantasy 6 - Enemies World of Balance_117: -1932555922
+      SNES - Final Fantasy 6 - Enemies World of Balance_118: 1424500367
+      SNES - Final Fantasy 6 - Enemies World of Balance_119: 934692044
+      SNES - Final Fantasy 6 - Enemies World of Balance_12: 1143196104
+      SNES - Final Fantasy 6 - Enemies World of Balance_120: -289516257
+      SNES - Final Fantasy 6 - Enemies World of Balance_121: 331561673
+      SNES - Final Fantasy 6 - Enemies World of Balance_122: 91356453
+      SNES - Final Fantasy 6 - Enemies World of Balance_123: 704336366
+      SNES - Final Fantasy 6 - Enemies World of Balance_124: -1461162641
+      SNES - Final Fantasy 6 - Enemies World of Balance_125: 582448887
+      SNES - Final Fantasy 6 - Enemies World of Balance_126: -1815225344
+      SNES - Final Fantasy 6 - Enemies World of Balance_127: -1932455905
+      SNES - Final Fantasy 6 - Enemies World of Balance_128: -1572960882
+      SNES - Final Fantasy 6 - Enemies World of Balance_129: 1529807356
+      SNES - Final Fantasy 6 - Enemies World of Balance_13: -326217372
+      SNES - Final Fantasy 6 - Enemies World of Balance_130: 2117735067
+      SNES - Final Fantasy 6 - Enemies World of Balance_131: 277847406
+      SNES - Final Fantasy 6 - Enemies World of Balance_132: -171081416
+      SNES - Final Fantasy 6 - Enemies World of Balance_133: -1566765113
+      SNES - Final Fantasy 6 - Enemies World of Balance_134: 1197391221
+      SNES - Final Fantasy 6 - Enemies World of Balance_135: -154564188
+      SNES - Final Fantasy 6 - Enemies World of Balance_136: 1448287157
+      SNES - Final Fantasy 6 - Enemies World of Balance_137: -337490451
+      SNES - Final Fantasy 6 - Enemies World of Balance_138: 1772533611
+      SNES - Final Fantasy 6 - Enemies World of Balance_139: -1185832216
+      SNES - Final Fantasy 6 - Enemies World of Balance_14: -1825398174
+      SNES - Final Fantasy 6 - Enemies World of Balance_140: 1308031904
+      SNES - Final Fantasy 6 - Enemies World of Balance_141: 922826998
+      SNES - Final Fantasy 6 - Enemies World of Balance_142: -1013012532
+      SNES - Final Fantasy 6 - Enemies World of Balance_143: 2141283280
+      SNES - Final Fantasy 6 - Enemies World of Balance_144: -2110433067
+      SNES - Final Fantasy 6 - Enemies World of Balance_145: -473654251
+      SNES - Final Fantasy 6 - Enemies World of Balance_146: 1800206341
+      SNES - Final Fantasy 6 - Enemies World of Balance_147: -857540241
+      SNES - Final Fantasy 6 - Enemies World of Balance_148: -1943817658
+      SNES - Final Fantasy 6 - Enemies World of Balance_149: 1429165586
+      SNES - Final Fantasy 6 - Enemies World of Balance_15: -785792006
+      SNES - Final Fantasy 6 - Enemies World of Balance_150: 1378168644
+      SNES - Final Fantasy 6 - Enemies World of Balance_151: 424615295
+      SNES - Final Fantasy 6 - Enemies World of Balance_152: 30905722
+      SNES - Final Fantasy 6 - Enemies World of Balance_153: -256915074
+      SNES - Final Fantasy 6 - Enemies World of Balance_154: 1624448181
+      SNES - Final Fantasy 6 - Enemies World of Balance_155: 1771561182
+      SNES - Final Fantasy 6 - Enemies World of Balance_156: 1463217664
+      SNES - Final Fantasy 6 - Enemies World of Balance_157: -1338059824
+      SNES - Final Fantasy 6 - Enemies World of Balance_158: -1594659815
+      SNES - Final Fantasy 6 - Enemies World of Balance_159: -285833212
+      SNES - Final Fantasy 6 - Enemies World of Balance_16: -1055210752
+      SNES - Final Fantasy 6 - Enemies World of Balance_160: -961010422
+      SNES - Final Fantasy 6 - Enemies World of Balance_161: -1526301870
+      SNES - Final Fantasy 6 - Enemies World of Balance_162: 1940357628
+      SNES - Final Fantasy 6 - Enemies World of Balance_163: 441163135
+      SNES - Final Fantasy 6 - Enemies World of Balance_164: -1323610151
+      SNES - Final Fantasy 6 - Enemies World of Balance_165: 1644843318
+      SNES - Final Fantasy 6 - Enemies World of Balance_166: -1487064811
+      SNES - Final Fantasy 6 - Enemies World of Balance_167: 1543628886
+      SNES - Final Fantasy 6 - Enemies World of Balance_168: -95017875
+      SNES - Final Fantasy 6 - Enemies World of Balance_169: 1074559971
+      SNES - Final Fantasy 6 - Enemies World of Balance_17: 1089510792
+      SNES - Final Fantasy 6 - Enemies World of Balance_170: -1698736705
+      SNES - Final Fantasy 6 - Enemies World of Balance_171: -2047068012
+      SNES - Final Fantasy 6 - Enemies World of Balance_172: -863884904
+      SNES - Final Fantasy 6 - Enemies World of Balance_173: -116094408
+      SNES - Final Fantasy 6 - Enemies World of Balance_174: 949101372
+      SNES - Final Fantasy 6 - Enemies World of Balance_175: -581550459
+      SNES - Final Fantasy 6 - Enemies World of Balance_176: 49187633
+      SNES - Final Fantasy 6 - Enemies World of Balance_177: -962000521
+      SNES - Final Fantasy 6 - Enemies World of Balance_178: -1466092500
+      SNES - Final Fantasy 6 - Enemies World of Balance_179: -1876526971
+      SNES - Final Fantasy 6 - Enemies World of Balance_18: 224027669
+      SNES - Final Fantasy 6 - Enemies World of Balance_180: -309961455
+      SNES - Final Fantasy 6 - Enemies World of Balance_181: 222257816
+      SNES - Final Fantasy 6 - Enemies World of Balance_182: -371817328
+      SNES - Final Fantasy 6 - Enemies World of Balance_183: 1068581625
+      SNES - Final Fantasy 6 - Enemies World of Balance_184: 668162950
+      SNES - Final Fantasy 6 - Enemies World of Balance_185: 699760187
+      SNES - Final Fantasy 6 - Enemies World of Balance_186: 935783353
+      SNES - Final Fantasy 6 - Enemies World of Balance_187: -758964358
+      SNES - Final Fantasy 6 - Enemies World of Balance_188: -958302202
+      SNES - Final Fantasy 6 - Enemies World of Balance_189: -1034189434
+      SNES - Final Fantasy 6 - Enemies World of Balance_19: -411061177
+      SNES - Final Fantasy 6 - Enemies World of Balance_190: -867854221
+      SNES - Final Fantasy 6 - Enemies World of Balance_191: -1872700672
+      SNES - Final Fantasy 6 - Enemies World of Balance_192: 1274688323
+      SNES - Final Fantasy 6 - Enemies World of Balance_193: 682293272
+      SNES - Final Fantasy 6 - Enemies World of Balance_194: 848482478
+      SNES - Final Fantasy 6 - Enemies World of Balance_195: 90268019
+      SNES - Final Fantasy 6 - Enemies World of Balance_196: 1296718780
+      SNES - Final Fantasy 6 - Enemies World of Balance_197: -1771147586
+      SNES - Final Fantasy 6 - Enemies World of Balance_198: -1483995430
+      SNES - Final Fantasy 6 - Enemies World of Balance_199: -734452849
+      SNES - Final Fantasy 6 - Enemies World of Balance_2: -2013414489
+      SNES - Final Fantasy 6 - Enemies World of Balance_20: -2050008501
+      SNES - Final Fantasy 6 - Enemies World of Balance_200: 536517339
+      SNES - Final Fantasy 6 - Enemies World of Balance_201: -2015485130
+      SNES - Final Fantasy 6 - Enemies World of Balance_202: 470572546
+      SNES - Final Fantasy 6 - Enemies World of Balance_203: -919952931
+      SNES - Final Fantasy 6 - Enemies World of Balance_204: 1496307214
+      SNES - Final Fantasy 6 - Enemies World of Balance_205: 295774112
+      SNES - Final Fantasy 6 - Enemies World of Balance_206: -1876102906
+      SNES - Final Fantasy 6 - Enemies World of Balance_207: 1029597117
+      SNES - Final Fantasy 6 - Enemies World of Balance_208: -52233389
+      SNES - Final Fantasy 6 - Enemies World of Balance_209: -714624309
+      SNES - Final Fantasy 6 - Enemies World of Balance_21: 2144474321
+      SNES - Final Fantasy 6 - Enemies World of Balance_210: 913954509
+      SNES - Final Fantasy 6 - Enemies World of Balance_211: -2089338269
+      SNES - Final Fantasy 6 - Enemies World of Balance_212: 2052678305
+      SNES - Final Fantasy 6 - Enemies World of Balance_213: -1769428804
+      SNES - Final Fantasy 6 - Enemies World of Balance_214: 1287801015
+      SNES - Final Fantasy 6 - Enemies World of Balance_215: -317130975
+      SNES - Final Fantasy 6 - Enemies World of Balance_216: -1801259498
+      SNES - Final Fantasy 6 - Enemies World of Balance_217: 896601813
+      SNES - Final Fantasy 6 - Enemies World of Balance_218: -1137888223
+      SNES - Final Fantasy 6 - Enemies World of Balance_219: -1305422694
+      SNES - Final Fantasy 6 - Enemies World of Balance_22: 1785569717
+      SNES - Final Fantasy 6 - Enemies World of Balance_220: 2132915382
+      SNES - Final Fantasy 6 - Enemies World of Balance_221: 1037692110
+      SNES - Final Fantasy 6 - Enemies World of Balance_222: 2007995984
+      SNES - Final Fantasy 6 - Enemies World of Balance_223: -2092999551
+      SNES - Final Fantasy 6 - Enemies World of Balance_224: -2030135418
+      SNES - Final Fantasy 6 - Enemies World of Balance_225: -871709510
+      SNES - Final Fantasy 6 - Enemies World of Balance_226: -1847529362
+      SNES - Final Fantasy 6 - Enemies World of Balance_227: -1634770195
+      SNES - Final Fantasy 6 - Enemies World of Balance_228: -940180319
+      SNES - Final Fantasy 6 - Enemies World of Balance_229: -656850130
+      SNES - Final Fantasy 6 - Enemies World of Balance_23: -434221910
+      SNES - Final Fantasy 6 - Enemies World of Balance_230: 1949396773
+      SNES - Final Fantasy 6 - Enemies World of Balance_231: 953717535
+      SNES - Final Fantasy 6 - Enemies World of Balance_232: 1255642628
+      SNES - Final Fantasy 6 - Enemies World of Balance_233: -1875388283
+      SNES - Final Fantasy 6 - Enemies World of Balance_234: 894498041
+      SNES - Final Fantasy 6 - Enemies World of Balance_235: -62638099
+      SNES - Final Fantasy 6 - Enemies World of Balance_236: 133695024
+      SNES - Final Fantasy 6 - Enemies World of Balance_237: 696256680
+      SNES - Final Fantasy 6 - Enemies World of Balance_238: 1110548223
+      SNES - Final Fantasy 6 - Enemies World of Balance_239: 253591089
+      SNES - Final Fantasy 6 - Enemies World of Balance_24: -564249699
+      SNES - Final Fantasy 6 - Enemies World of Balance_240: 576428020
+      SNES - Final Fantasy 6 - Enemies World of Balance_241: -1554420602
+      SNES - Final Fantasy 6 - Enemies World of Balance_242: -461406568
+      SNES - Final Fantasy 6 - Enemies World of Balance_243: 1211194936
+      SNES - Final Fantasy 6 - Enemies World of Balance_244: -1879600222
+      SNES - Final Fantasy 6 - Enemies World of Balance_245: -226960025
+      SNES - Final Fantasy 6 - Enemies World of Balance_246: 14282599
+      SNES - Final Fantasy 6 - Enemies World of Balance_247: 861146776
+      SNES - Final Fantasy 6 - Enemies World of Balance_248: 1906619137
+      SNES - Final Fantasy 6 - Enemies World of Balance_249: 456192251
+      SNES - Final Fantasy 6 - Enemies World of Balance_25: -1498368509
+      SNES - Final Fantasy 6 - Enemies World of Balance_250: -1209008119
+      SNES - Final Fantasy 6 - Enemies World of Balance_251: -735841567
+      SNES - Final Fantasy 6 - Enemies World of Balance_252: -443443774
+      SNES - Final Fantasy 6 - Enemies World of Balance_253: 906702750
+      SNES - Final Fantasy 6 - Enemies World of Balance_254: -1962709326
+      SNES - Final Fantasy 6 - Enemies World of Balance_255: 572189644
+      SNES - Final Fantasy 6 - Enemies World of Balance_256: 1979229722
+      SNES - Final Fantasy 6 - Enemies World of Balance_257: -888409545
+      SNES - Final Fantasy 6 - Enemies World of Balance_258: -1959146057
+      SNES - Final Fantasy 6 - Enemies World of Balance_259: -649237822
+      SNES - Final Fantasy 6 - Enemies World of Balance_26: -418384771
+      SNES - Final Fantasy 6 - Enemies World of Balance_260: -1374157241
+      SNES - Final Fantasy 6 - Enemies World of Balance_261: 499979986
+      SNES - Final Fantasy 6 - Enemies World of Balance_262: 1589214003
+      SNES - Final Fantasy 6 - Enemies World of Balance_263: 87870611
+      SNES - Final Fantasy 6 - Enemies World of Balance_264: 542966354
+      SNES - Final Fantasy 6 - Enemies World of Balance_265: 399764568
+      SNES - Final Fantasy 6 - Enemies World of Balance_266: 397289172
+      SNES - Final Fantasy 6 - Enemies World of Balance_267: 86025028
+      SNES - Final Fantasy 6 - Enemies World of Balance_268: -1837268791
+      SNES - Final Fantasy 6 - Enemies World of Balance_269: -1426164381
+      SNES - Final Fantasy 6 - Enemies World of Balance_27: -1523938635
+      SNES - Final Fantasy 6 - Enemies World of Balance_270: -341243161
+      SNES - Final Fantasy 6 - Enemies World of Balance_271: -238992266
+      SNES - Final Fantasy 6 - Enemies World of Balance_272: -133928369
+      SNES - Final Fantasy 6 - Enemies World of Balance_273: -1796399403
+      SNES - Final Fantasy 6 - Enemies World of Balance_274: -952810869
+      SNES - Final Fantasy 6 - Enemies World of Balance_275: -617730152
+      SNES - Final Fantasy 6 - Enemies World of Balance_276: -1564202404
+      SNES - Final Fantasy 6 - Enemies World of Balance_277: 112684033
+      SNES - Final Fantasy 6 - Enemies World of Balance_278: 354532461
+      SNES - Final Fantasy 6 - Enemies World of Balance_279: -1961638556
+      SNES - Final Fantasy 6 - Enemies World of Balance_28: 1819803102
+      SNES - Final Fantasy 6 - Enemies World of Balance_280: 1538092652
+      SNES - Final Fantasy 6 - Enemies World of Balance_281: 487114862
+      SNES - Final Fantasy 6 - Enemies World of Balance_282: -1877472752
+      SNES - Final Fantasy 6 - Enemies World of Balance_283: -1891561881
+      SNES - Final Fantasy 6 - Enemies World of Balance_284: -1004332540
+      SNES - Final Fantasy 6 - Enemies World of Balance_285: -1634103065
+      SNES - Final Fantasy 6 - Enemies World of Balance_286: 1632979903
+      SNES - Final Fantasy 6 - Enemies World of Balance_287: -646809604
+      SNES - Final Fantasy 6 - Enemies World of Balance_288: -978991860
+      SNES - Final Fantasy 6 - Enemies World of Balance_289: -1010660534
+      SNES - Final Fantasy 6 - Enemies World of Balance_29: -1330370942
+      SNES - Final Fantasy 6 - Enemies World of Balance_290: -773948181
+      SNES - Final Fantasy 6 - Enemies World of Balance_291: -1203929240
+      SNES - Final Fantasy 6 - Enemies World of Balance_292: 1329050631
+      SNES - Final Fantasy 6 - Enemies World of Balance_293: 1776283969
+      SNES - Final Fantasy 6 - Enemies World of Balance_294: -1534540288
+      SNES - Final Fantasy 6 - Enemies World of Balance_295: -1316045676
+      SNES - Final Fantasy 6 - Enemies World of Balance_296: 494828044
+      SNES - Final Fantasy 6 - Enemies World of Balance_297: 483306950
+      SNES - Final Fantasy 6 - Enemies World of Balance_298: 78225845
+      SNES - Final Fantasy 6 - Enemies World of Balance_299: 256370652
+      SNES - Final Fantasy 6 - Enemies World of Balance_3: -1520402168
+      SNES - Final Fantasy 6 - Enemies World of Balance_30: -1488162774
+      SNES - Final Fantasy 6 - Enemies World of Balance_300: -161881437
+      SNES - Final Fantasy 6 - Enemies World of Balance_301: -1128922575
+      SNES - Final Fantasy 6 - Enemies World of Balance_302: -2102100140
+      SNES - Final Fantasy 6 - Enemies World of Balance_303: -1484257211
+      SNES - Final Fantasy 6 - Enemies World of Balance_304: -1826989121
+      SNES - Final Fantasy 6 - Enemies World of Balance_305: -30710634
+      SNES - Final Fantasy 6 - Enemies World of Balance_306: 1426808230
+      SNES - Final Fantasy 6 - Enemies World of Balance_307: -1099208280
+      SNES - Final Fantasy 6 - Enemies World of Balance_308: -359885504
+      SNES - Final Fantasy 6 - Enemies World of Balance_309: 2042685915
+      SNES - Final Fantasy 6 - Enemies World of Balance_31: -617426427
+      SNES - Final Fantasy 6 - Enemies World of Balance_310: -918420900
+      SNES - Final Fantasy 6 - Enemies World of Balance_311: -1613370296
+      SNES - Final Fantasy 6 - Enemies World of Balance_312: -1035782350
+      SNES - Final Fantasy 6 - Enemies World of Balance_313: -2112028172
+      SNES - Final Fantasy 6 - Enemies World of Balance_314: 177939361
+      SNES - Final Fantasy 6 - Enemies World of Balance_315: 320203381
+      SNES - Final Fantasy 6 - Enemies World of Balance_316: -1699213825
+      SNES - Final Fantasy 6 - Enemies World of Balance_317: -1076813844
+      SNES - Final Fantasy 6 - Enemies World of Balance_318: -1423988453
+      SNES - Final Fantasy 6 - Enemies World of Balance_319: 1886305288
+      SNES - Final Fantasy 6 - Enemies World of Balance_32: -706454192
+      SNES - Final Fantasy 6 - Enemies World of Balance_320: -594535292
+      SNES - Final Fantasy 6 - Enemies World of Balance_321: -979601720
+      SNES - Final Fantasy 6 - Enemies World of Balance_322: -1595598674
+      SNES - Final Fantasy 6 - Enemies World of Balance_323: -337536468
+      SNES - Final Fantasy 6 - Enemies World of Balance_324: 531900380
+      SNES - Final Fantasy 6 - Enemies World of Balance_325: -296459963
+      SNES - Final Fantasy 6 - Enemies World of Balance_326: -632277231
+      SNES - Final Fantasy 6 - Enemies World of Balance_327: -442566971
+      SNES - Final Fantasy 6 - Enemies World of Balance_328: 944603643
+      SNES - Final Fantasy 6 - Enemies World of Balance_329: 79595052
+      SNES - Final Fantasy 6 - Enemies World of Balance_33: 1329496177
+      SNES - Final Fantasy 6 - Enemies World of Balance_330: 1035908817
+      SNES - Final Fantasy 6 - Enemies World of Balance_331: 1328381522
+      SNES - Final Fantasy 6 - Enemies World of Balance_332: 2077035715
+      SNES - Final Fantasy 6 - Enemies World of Balance_333: 377734313
+      SNES - Final Fantasy 6 - Enemies World of Balance_334: -782554754
+      SNES - Final Fantasy 6 - Enemies World of Balance_335: 130912182
+      SNES - Final Fantasy 6 - Enemies World of Balance_336: 1488806355
+      SNES - Final Fantasy 6 - Enemies World of Balance_337: 1612624266
+      SNES - Final Fantasy 6 - Enemies World of Balance_338: 912402638
+      SNES - Final Fantasy 6 - Enemies World of Balance_339: -1321194264
+      SNES - Final Fantasy 6 - Enemies World of Balance_34: -2022641292
+      SNES - Final Fantasy 6 - Enemies World of Balance_340: -89926783
+      SNES - Final Fantasy 6 - Enemies World of Balance_341: 1098794041
+      SNES - Final Fantasy 6 - Enemies World of Balance_342: 2062731771
+      SNES - Final Fantasy 6 - Enemies World of Balance_343: 1349974175
+      SNES - Final Fantasy 6 - Enemies World of Balance_344: 809045668
+      SNES - Final Fantasy 6 - Enemies World of Balance_345: 361809658
+      SNES - Final Fantasy 6 - Enemies World of Balance_346: 1774718359
+      SNES - Final Fantasy 6 - Enemies World of Balance_347: 862195177
+      SNES - Final Fantasy 6 - Enemies World of Balance_348: -1927788023
+      SNES - Final Fantasy 6 - Enemies World of Balance_349: -1635369103
+      SNES - Final Fantasy 6 - Enemies World of Balance_35: -269102692
+      SNES - Final Fantasy 6 - Enemies World of Balance_350: -2108278108
+      SNES - Final Fantasy 6 - Enemies World of Balance_351: 1771272474
+      SNES - Final Fantasy 6 - Enemies World of Balance_352: -446372217
+      SNES - Final Fantasy 6 - Enemies World of Balance_353: 393405584
+      SNES - Final Fantasy 6 - Enemies World of Balance_354: -1345507563
+      SNES - Final Fantasy 6 - Enemies World of Balance_355: -25137601
+      SNES - Final Fantasy 6 - Enemies World of Balance_356: 675554927
+      SNES - Final Fantasy 6 - Enemies World of Balance_357: 819010207
+      SNES - Final Fantasy 6 - Enemies World of Balance_358: -1745210215
+      SNES - Final Fantasy 6 - Enemies World of Balance_359: -1381984596
+      SNES - Final Fantasy 6 - Enemies World of Balance_36: -1431870431
+      SNES - Final Fantasy 6 - Enemies World of Balance_360: -1316933985
+      SNES - Final Fantasy 6 - Enemies World of Balance_361: -189881247
+      SNES - Final Fantasy 6 - Enemies World of Balance_362: -501638864
+      SNES - Final Fantasy 6 - Enemies World of Balance_363: -318552717
+      SNES - Final Fantasy 6 - Enemies World of Balance_364: -1128395919
+      SNES - Final Fantasy 6 - Enemies World of Balance_365: 2097768328
+      SNES - Final Fantasy 6 - Enemies World of Balance_366: -1903924806
+      SNES - Final Fantasy 6 - Enemies World of Balance_367: -225175888
+      SNES - Final Fantasy 6 - Enemies World of Balance_368: 1603403739
+      SNES - Final Fantasy 6 - Enemies World of Balance_369: 1115235608
+      SNES - Final Fantasy 6 - Enemies World of Balance_37: 257499813
+      SNES - Final Fantasy 6 - Enemies World of Balance_370: -1094667733
+      SNES - Final Fantasy 6 - Enemies World of Balance_371: 749988733
+      SNES - Final Fantasy 6 - Enemies World of Balance_372: 823462778
+      SNES - Final Fantasy 6 - Enemies World of Balance_373: 1294464687
+      SNES - Final Fantasy 6 - Enemies World of Balance_374: -752916776
+      SNES - Final Fantasy 6 - Enemies World of Balance_375: -614075400
+      SNES - Final Fantasy 6 - Enemies World of Balance_376: 121132954
+      SNES - Final Fantasy 6 - Enemies World of Balance_377: -268031358
+      SNES - Final Fantasy 6 - Enemies World of Balance_378: 2019321481
+      SNES - Final Fantasy 6 - Enemies World of Balance_379: 1906074664
+      SNES - Final Fantasy 6 - Enemies World of Balance_38: 891724198
+      SNES - Final Fantasy 6 - Enemies World of Balance_380: -1753005117
+      SNES - Final Fantasy 6 - Enemies World of Balance_381: -193788504
+      SNES - Final Fantasy 6 - Enemies World of Balance_382: -31972291
+      SNES - Final Fantasy 6 - Enemies World of Balance_383: -971631228
+      SNES - Final Fantasy 6 - Enemies World of Balance_384: 1574522371
+      SNES - Final Fantasy 6 - Enemies World of Balance_385: 1032470236
+      SNES - Final Fantasy 6 - Enemies World of Balance_386: -986850679
+      SNES - Final Fantasy 6 - Enemies World of Balance_387: 1712344167
+      SNES - Final Fantasy 6 - Enemies World of Balance_388: 847165459
+      SNES - Final Fantasy 6 - Enemies World of Balance_389: -1736877450
+      SNES - Final Fantasy 6 - Enemies World of Balance_39: 1348087668
+      SNES - Final Fantasy 6 - Enemies World of Balance_390: 1021851829
+      SNES - Final Fantasy 6 - Enemies World of Balance_391: 300259166
+      SNES - Final Fantasy 6 - Enemies World of Balance_392: 656126443
+      SNES - Final Fantasy 6 - Enemies World of Balance_393: 1916896188
+      SNES - Final Fantasy 6 - Enemies World of Balance_394: 798410118
+      SNES - Final Fantasy 6 - Enemies World of Balance_395: 1209963392
+      SNES - Final Fantasy 6 - Enemies World of Balance_396: 849822925
+      SNES - Final Fantasy 6 - Enemies World of Balance_397: -218757787
+      SNES - Final Fantasy 6 - Enemies World of Balance_398: -1414024752
+      SNES - Final Fantasy 6 - Enemies World of Balance_399: 518937496
+      SNES - Final Fantasy 6 - Enemies World of Balance_4: 1973079741
+      SNES - Final Fantasy 6 - Enemies World of Balance_40: -1125736892
+      SNES - Final Fantasy 6 - Enemies World of Balance_400: -1657535232
+      SNES - Final Fantasy 6 - Enemies World of Balance_401: -970335605
+      SNES - Final Fantasy 6 - Enemies World of Balance_402: 2033553683
+      SNES - Final Fantasy 6 - Enemies World of Balance_403: 361205417
+      SNES - Final Fantasy 6 - Enemies World of Balance_404: -1990754591
+      SNES - Final Fantasy 6 - Enemies World of Balance_405: 2117093509
+      SNES - Final Fantasy 6 - Enemies World of Balance_406: -147903480
+      SNES - Final Fantasy 6 - Enemies World of Balance_407: -1833994910
+      SNES - Final Fantasy 6 - Enemies World of Balance_408: -551749509
+      SNES - Final Fantasy 6 - Enemies World of Balance_409: -613451598
+      SNES - Final Fantasy 6 - Enemies World of Balance_41: -741160224
+      SNES - Final Fantasy 6 - Enemies World of Balance_410: 858807818
+      SNES - Final Fantasy 6 - Enemies World of Balance_411: 236549126
+      SNES - Final Fantasy 6 - Enemies World of Balance_412: -1411785662
+      SNES - Final Fantasy 6 - Enemies World of Balance_413: -1623696718
+      SNES - Final Fantasy 6 - Enemies World of Balance_414: 1937305068
+      SNES - Final Fantasy 6 - Enemies World of Balance_415: -1048167104
+      SNES - Final Fantasy 6 - Enemies World of Balance_416: -1846409243
+      SNES - Final Fantasy 6 - Enemies World of Balance_417: -1688527583
+      SNES - Final Fantasy 6 - Enemies World of Balance_418: -146227477
+      SNES - Final Fantasy 6 - Enemies World of Balance_419: -2142114978
+      SNES - Final Fantasy 6 - Enemies World of Balance_42: -2052852187
+      SNES - Final Fantasy 6 - Enemies World of Balance_420: -415426806
+      SNES - Final Fantasy 6 - Enemies World of Balance_421: 1427078620
+      SNES - Final Fantasy 6 - Enemies World of Balance_422: -1773170133
+      SNES - Final Fantasy 6 - Enemies World of Balance_423: -552917871
+      SNES - Final Fantasy 6 - Enemies World of Balance_424: -1102486913
+      SNES - Final Fantasy 6 - Enemies World of Balance_425: 763183260
+      SNES - Final Fantasy 6 - Enemies World of Balance_426: -2145485894
+      SNES - Final Fantasy 6 - Enemies World of Balance_427: -568558373
+      SNES - Final Fantasy 6 - Enemies World of Balance_428: 930920908
+      SNES - Final Fantasy 6 - Enemies World of Balance_429: 1702586650
+      SNES - Final Fantasy 6 - Enemies World of Balance_43: -1582419929
+      SNES - Final Fantasy 6 - Enemies World of Balance_430: 933977218
+      SNES - Final Fantasy 6 - Enemies World of Balance_431: 806364075
+      SNES - Final Fantasy 6 - Enemies World of Balance_432: 1043230931
+      SNES - Final Fantasy 6 - Enemies World of Balance_433: -1945212921
+      SNES - Final Fantasy 6 - Enemies World of Balance_434: 67883830
+      SNES - Final Fantasy 6 - Enemies World of Balance_435: 1535189499
+      SNES - Final Fantasy 6 - Enemies World of Balance_436: -1631833784
+      SNES - Final Fantasy 6 - Enemies World of Balance_437: 474491170
+      SNES - Final Fantasy 6 - Enemies World of Balance_438: 1070383817
+      SNES - Final Fantasy 6 - Enemies World of Balance_439: 1696014356
+      SNES - Final Fantasy 6 - Enemies World of Balance_44: 1198865481
+      SNES - Final Fantasy 6 - Enemies World of Balance_440: -1163496089
+      SNES - Final Fantasy 6 - Enemies World of Balance_441: -1338462621
+      SNES - Final Fantasy 6 - Enemies World of Balance_442: -1002642032
+      SNES - Final Fantasy 6 - Enemies World of Balance_443: 1455148477
+      SNES - Final Fantasy 6 - Enemies World of Balance_444: -1808530764
+      SNES - Final Fantasy 6 - Enemies World of Balance_445: -1890771102
+      SNES - Final Fantasy 6 - Enemies World of Balance_446: -1660381004
+      SNES - Final Fantasy 6 - Enemies World of Balance_447: -60306536
+      SNES - Final Fantasy 6 - Enemies World of Balance_448: 528947352
+      SNES - Final Fantasy 6 - Enemies World of Balance_449: 173361152
+      SNES - Final Fantasy 6 - Enemies World of Balance_45: -566876445
+      SNES - Final Fantasy 6 - Enemies World of Balance_450: 1355329822
+      SNES - Final Fantasy 6 - Enemies World of Balance_451: 41055537
+      SNES - Final Fantasy 6 - Enemies World of Balance_452: 639159817
+      SNES - Final Fantasy 6 - Enemies World of Balance_453: -1883228861
+      SNES - Final Fantasy 6 - Enemies World of Balance_454: -1180671026
+      SNES - Final Fantasy 6 - Enemies World of Balance_455: -2131412691
+      SNES - Final Fantasy 6 - Enemies World of Balance_456: 1504097090
+      SNES - Final Fantasy 6 - Enemies World of Balance_457: -833420404
+      SNES - Final Fantasy 6 - Enemies World of Balance_458: 2062343579
+      SNES - Final Fantasy 6 - Enemies World of Balance_459: -1064317760
+      SNES - Final Fantasy 6 - Enemies World of Balance_46: -150021005
+      SNES - Final Fantasy 6 - Enemies World of Balance_460: 570032489
+      SNES - Final Fantasy 6 - Enemies World of Balance_461: 525515788
+      SNES - Final Fantasy 6 - Enemies World of Balance_462: 562387327
+      SNES - Final Fantasy 6 - Enemies World of Balance_463: -79004675
+      SNES - Final Fantasy 6 - Enemies World of Balance_464: 465000647
+      SNES - Final Fantasy 6 - Enemies World of Balance_465: -1454825171
+      SNES - Final Fantasy 6 - Enemies World of Balance_466: 315062024
+      SNES - Final Fantasy 6 - Enemies World of Balance_467: 607455844
+      SNES - Final Fantasy 6 - Enemies World of Balance_468: 1815658499
+      SNES - Final Fantasy 6 - Enemies World of Balance_469: 239679378
+      SNES - Final Fantasy 6 - Enemies World of Balance_47: 145488046
+      SNES - Final Fantasy 6 - Enemies World of Balance_470: -1123278354
+      SNES - Final Fantasy 6 - Enemies World of Balance_471: 1336546029
+      SNES - Final Fantasy 6 - Enemies World of Balance_472: 722691215
+      SNES - Final Fantasy 6 - Enemies World of Balance_473: -226039130
+      SNES - Final Fantasy 6 - Enemies World of Balance_474: -941739990
+      SNES - Final Fantasy 6 - Enemies World of Balance_475: -66810437
+      SNES - Final Fantasy 6 - Enemies World of Balance_476: 868028545
+      SNES - Final Fantasy 6 - Enemies World of Balance_477: 1808354955
+      SNES - Final Fantasy 6 - Enemies World of Balance_478: -588363867
+      SNES - Final Fantasy 6 - Enemies World of Balance_479: 1477002769
+      SNES - Final Fantasy 6 - Enemies World of Balance_48: 53420774
+      SNES - Final Fantasy 6 - Enemies World of Balance_480: -543664072
+      SNES - Final Fantasy 6 - Enemies World of Balance_481: 1518664990
+      SNES - Final Fantasy 6 - Enemies World of Balance_482: -329826068
+      SNES - Final Fantasy 6 - Enemies World of Balance_483: 1081443636
+      SNES - Final Fantasy 6 - Enemies World of Balance_484: 567556622
+      SNES - Final Fantasy 6 - Enemies World of Balance_485: -1379426265
+      SNES - Final Fantasy 6 - Enemies World of Balance_486: -1147203134
+      SNES - Final Fantasy 6 - Enemies World of Balance_487: -84208071
+      SNES - Final Fantasy 6 - Enemies World of Balance_488: -468180104
+      SNES - Final Fantasy 6 - Enemies World of Balance_489: -667813840
+      SNES - Final Fantasy 6 - Enemies World of Balance_49: 581455799
+      SNES - Final Fantasy 6 - Enemies World of Balance_490: 761363948
+      SNES - Final Fantasy 6 - Enemies World of Balance_491: -483448665
+      SNES - Final Fantasy 6 - Enemies World of Balance_492: -742734674
+      SNES - Final Fantasy 6 - Enemies World of Balance_493: -1955560339
+      SNES - Final Fantasy 6 - Enemies World of Balance_494: 687454681
+      SNES - Final Fantasy 6 - Enemies World of Balance_495: 501523947
+      SNES - Final Fantasy 6 - Enemies World of Balance_496: -690072512
+      SNES - Final Fantasy 6 - Enemies World of Balance_497: 2076696024
+      SNES - Final Fantasy 6 - Enemies World of Balance_498: 1433709620
+      SNES - Final Fantasy 6 - Enemies World of Balance_499: 398903809
+      SNES - Final Fantasy 6 - Enemies World of Balance_5: -1477325943
+      SNES - Final Fantasy 6 - Enemies World of Balance_50: -18368541
+      SNES - Final Fantasy 6 - Enemies World of Balance_500: -1892405423
+      SNES - Final Fantasy 6 - Enemies World of Balance_501: -2119743674
+      SNES - Final Fantasy 6 - Enemies World of Balance_502: 2074472939
+      SNES - Final Fantasy 6 - Enemies World of Balance_503: 635308062
+      SNES - Final Fantasy 6 - Enemies World of Balance_504: -1238569372
+      SNES - Final Fantasy 6 - Enemies World of Balance_505: 753809199
+      SNES - Final Fantasy 6 - Enemies World of Balance_506: 508719197
+      SNES - Final Fantasy 6 - Enemies World of Balance_507: -366285598
+      SNES - Final Fantasy 6 - Enemies World of Balance_508: 1763931281
+      SNES - Final Fantasy 6 - Enemies World of Balance_509: -319751421
+      SNES - Final Fantasy 6 - Enemies World of Balance_51: 1751039388
+      SNES - Final Fantasy 6 - Enemies World of Balance_510: -919732946
+      SNES - Final Fantasy 6 - Enemies World of Balance_511: 486123065
+      SNES - Final Fantasy 6 - Enemies World of Balance_512: 411719891
+      SNES - Final Fantasy 6 - Enemies World of Balance_513: -1378394392
+      SNES - Final Fantasy 6 - Enemies World of Balance_514: 305716265
+      SNES - Final Fantasy 6 - Enemies World of Balance_515: 326005914
+      SNES - Final Fantasy 6 - Enemies World of Balance_516: -917304390
+      SNES - Final Fantasy 6 - Enemies World of Balance_517: -171736942
+      SNES - Final Fantasy 6 - Enemies World of Balance_518: -1266075078
+      SNES - Final Fantasy 6 - Enemies World of Balance_519: 1395205631
+      SNES - Final Fantasy 6 - Enemies World of Balance_52: 465101944
+      SNES - Final Fantasy 6 - Enemies World of Balance_520: 725776749
+      SNES - Final Fantasy 6 - Enemies World of Balance_521: -1788467794
+      SNES - Final Fantasy 6 - Enemies World of Balance_522: -864505808
+      SNES - Final Fantasy 6 - Enemies World of Balance_523: 1751232580
+      SNES - Final Fantasy 6 - Enemies World of Balance_524: -987161003
+      SNES - Final Fantasy 6 - Enemies World of Balance_525: -1415349064
+      SNES - Final Fantasy 6 - Enemies World of Balance_526: -1617153302
+      SNES - Final Fantasy 6 - Enemies World of Balance_527: 1339128203
+      SNES - Final Fantasy 6 - Enemies World of Balance_528: 642088902
+      SNES - Final Fantasy 6 - Enemies World of Balance_529: 895233745
+      SNES - Final Fantasy 6 - Enemies World of Balance_53: 719010407
+      SNES - Final Fantasy 6 - Enemies World of Balance_530: -1688838626
+      SNES - Final Fantasy 6 - Enemies World of Balance_531: 840124614
+      SNES - Final Fantasy 6 - Enemies World of Balance_532: -1029125857
+      SNES - Final Fantasy 6 - Enemies World of Balance_533: 88512133
+      SNES - Final Fantasy 6 - Enemies World of Balance_534: 144351894
+      SNES - Final Fantasy 6 - Enemies World of Balance_535: -1835473203
+      SNES - Final Fantasy 6 - Enemies World of Balance_536: -507934102
+      SNES - Final Fantasy 6 - Enemies World of Balance_537: 621941700
+      SNES - Final Fantasy 6 - Enemies World of Balance_538: 1327163683
+      SNES - Final Fantasy 6 - Enemies World of Balance_539: 262588438
+      SNES - Final Fantasy 6 - Enemies World of Balance_54: 307569
+      SNES - Final Fantasy 6 - Enemies World of Balance_540: 37931795
+      SNES - Final Fantasy 6 - Enemies World of Balance_541: 1580708154
+      SNES - Final Fantasy 6 - Enemies World of Balance_542: -68712460
+      SNES - Final Fantasy 6 - Enemies World of Balance_543: -2069178974
+      SNES - Final Fantasy 6 - Enemies World of Balance_544: -622625759
+      SNES - Final Fantasy 6 - Enemies World of Balance_545: 1203559529
+      SNES - Final Fantasy 6 - Enemies World of Balance_546: -1400404823
+      SNES - Final Fantasy 6 - Enemies World of Balance_547: -1950789993
+      SNES - Final Fantasy 6 - Enemies World of Balance_548: -113013981
+      SNES - Final Fantasy 6 - Enemies World of Balance_549: -452029286
+      SNES - Final Fantasy 6 - Enemies World of Balance_55: -1627988241
+      SNES - Final Fantasy 6 - Enemies World of Balance_550: 722261301
+      SNES - Final Fantasy 6 - Enemies World of Balance_551: 1102120708
+      SNES - Final Fantasy 6 - Enemies World of Balance_552: -1555823375
+      SNES - Final Fantasy 6 - Enemies World of Balance_553: -920949057
+      SNES - Final Fantasy 6 - Enemies World of Balance_554: 955767799
+      SNES - Final Fantasy 6 - Enemies World of Balance_555: 340216143
+      SNES - Final Fantasy 6 - Enemies World of Balance_556: 2052362208
+      SNES - Final Fantasy 6 - Enemies World of Balance_557: -457091556
+      SNES - Final Fantasy 6 - Enemies World of Balance_558: -2139480678
+      SNES - Final Fantasy 6 - Enemies World of Balance_559: 1264795297
+      SNES - Final Fantasy 6 - Enemies World of Balance_56: 1964579265
+      SNES - Final Fantasy 6 - Enemies World of Balance_560: -1162255480
+      SNES - Final Fantasy 6 - Enemies World of Balance_561: -1794029855
+      SNES - Final Fantasy 6 - Enemies World of Balance_562: -2142507168
+      SNES - Final Fantasy 6 - Enemies World of Balance_57: -1732359669
+      SNES - Final Fantasy 6 - Enemies World of Balance_58: 829949359
+      SNES - Final Fantasy 6 - Enemies World of Balance_59: 2030990434
+      SNES - Final Fantasy 6 - Enemies World of Balance_6: -401360025
+      SNES - Final Fantasy 6 - Enemies World of Balance_60: 849229514
+      SNES - Final Fantasy 6 - Enemies World of Balance_61: -777345449
+      SNES - Final Fantasy 6 - Enemies World of Balance_62: -807994477
+      SNES - Final Fantasy 6 - Enemies World of Balance_63: 1246795187
+      SNES - Final Fantasy 6 - Enemies World of Balance_64: -2117681524
+      SNES - Final Fantasy 6 - Enemies World of Balance_65: -645492283
+      SNES - Final Fantasy 6 - Enemies World of Balance_66: 194595012
+      SNES - Final Fantasy 6 - Enemies World of Balance_67: 2104525776
+      SNES - Final Fantasy 6 - Enemies World of Balance_68: -1151656824
+      SNES - Final Fantasy 6 - Enemies World of Balance_69: 1221458430
+      SNES - Final Fantasy 6 - Enemies World of Balance_7: -75677504
+      SNES - Final Fantasy 6 - Enemies World of Balance_70: 1527680192
+      SNES - Final Fantasy 6 - Enemies World of Balance_71: -1500632173
+      SNES - Final Fantasy 6 - Enemies World of Balance_72: -1432581351
+      SNES - Final Fantasy 6 - Enemies World of Balance_73: 2034237993
+      SNES - Final Fantasy 6 - Enemies World of Balance_74: 1697784878
+      SNES - Final Fantasy 6 - Enemies World of Balance_75: -399916655
+      SNES - Final Fantasy 6 - Enemies World of Balance_76: 156207278
+      SNES - Final Fantasy 6 - Enemies World of Balance_77: -1826500596
+      SNES - Final Fantasy 6 - Enemies World of Balance_78: 1739827823
+      SNES - Final Fantasy 6 - Enemies World of Balance_79: -1770960584
+      SNES - Final Fantasy 6 - Enemies World of Balance_8: -1342082364
+      SNES - Final Fantasy 6 - Enemies World of Balance_80: -697114235
+      SNES - Final Fantasy 6 - Enemies World of Balance_81: -297227753
+      SNES - Final Fantasy 6 - Enemies World of Balance_82: 2020703971
+      SNES - Final Fantasy 6 - Enemies World of Balance_83: 1845025870
+      SNES - Final Fantasy 6 - Enemies World of Balance_84: -1400917311
+      SNES - Final Fantasy 6 - Enemies World of Balance_85: -990269262
+      SNES - Final Fantasy 6 - Enemies World of Balance_86: -758466298
+      SNES - Final Fantasy 6 - Enemies World of Balance_87: -1607604053
+      SNES - Final Fantasy 6 - Enemies World of Balance_88: -402934971
+      SNES - Final Fantasy 6 - Enemies World of Balance_89: 623562751
+      SNES - Final Fantasy 6 - Enemies World of Balance_9: -2112145886
+      SNES - Final Fantasy 6 - Enemies World of Balance_90: 1444360398
+      SNES - Final Fantasy 6 - Enemies World of Balance_91: 1320093463
+      SNES - Final Fantasy 6 - Enemies World of Balance_92: -1783999634
+      SNES - Final Fantasy 6 - Enemies World of Balance_93: 2027946036
+      SNES - Final Fantasy 6 - Enemies World of Balance_94: -1053066172
+      SNES - Final Fantasy 6 - Enemies World of Balance_95: 495217832
+      SNES - Final Fantasy 6 - Enemies World of Balance_96: -1077895952
+      SNES - Final Fantasy 6 - Enemies World of Balance_97: 1223861177
+      SNES - Final Fantasy 6 - Enemies World of Balance_98: 1069536528
+      SNES - Final Fantasy 6 - Enemies World of Balance_99: -1875948465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
