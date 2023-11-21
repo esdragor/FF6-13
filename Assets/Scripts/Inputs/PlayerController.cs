@@ -27,5 +27,4 @@ public class PlayerController : BattleController
         //InputManager.OnStoppedToTurn -= TurnEntity;
         InputManager.OnMovingDirection -= MoveEntity;
     }
-
 }

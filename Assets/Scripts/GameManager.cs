@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public void GetBackToExplore()
     {
         _state = State.Dialog;
+        _inputManager.OnExploration();
         //StartCoroutine(LaunchBattle());
     }
 
@@ -75,10 +76,5 @@ public class GameManager : MonoBehaviour
             _battleManager.UpdatePlayer(_player._playerController);
             _battleManager.StartBattle();
         }
-    }
-
-    public PlayerEntity GetPlayerAtIndex(int i)
-    {
-        return _player;
     }
 }

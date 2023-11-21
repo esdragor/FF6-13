@@ -21,6 +21,11 @@ public abstract class InputController : MonoBehaviour
     {
         InstantiateEntity();
     }
+    
+    public Entity getEntity()
+    {
+        return entity;
+    }
 
 
 }
