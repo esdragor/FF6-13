@@ -1,6 +1,6 @@
+using System;
 using System.Collections.Generic;
 using Scriptable_Objects.Unit;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 namespace Units
@@ -35,23 +35,23 @@ namespace Units
             switch (stat)
             {
                 case Stats.Strength:
-                    return Strength;
+                    return unitSo.Strength;
                 case Stats.Agility:
-                    return Agility;
+                    return unitSo.Agility;
                 case Stats.Stamina:
-                    return Stamina;
+                    return unitSo.Stamina;
                 case Stats.Magic:
-                    return Magic;
+                    return unitSo.Magic;
                 case Stats.Attack:
-                    return Attack;
+                    return unitSo.Attack;
                 case Stats.Defence:
-                    return Defence;
+                    return unitSo.Defence;
                 case Stats.MagicDefence:
-                    return MagicDefence;
+                    return unitSo.MagicDefence;
                 case Stats.Evasion:
-                    return Evasion;
+                    return unitSo.Evasion;
                 case Stats.MagicEvasion:
-                    return MagicEvasion;
+                    return unitSo.MagicEvasion;
                 default:
                     return 0;
             }
@@ -145,7 +145,36 @@ namespace Units
         {
             get => unitSo.Sprite;
         }
-        
+
+        public int TakeDamage(int damage)
+        {
+            if (damage <= 0) return 0;
+            
+            currentHp -= damage;
+            if (currentHp < 0)
+            {
+                var amount = Math.Abs(currentHp);
+                currentHp = 0;
+                return amount;
+            }
+
+            return 0;
+        }
+
+        public int HealDamage(int heal)
+        {
+            if (heal <= 0) return 0;
+            
+            currentHp += heal;
+            if (currentHp > MaxHp)
+            {
+                var amount = currentHp - MaxHp;
+                currentHp = MaxHp;
+                return amount;
+            }
+            
+            return 0;
+        }
         
         
         

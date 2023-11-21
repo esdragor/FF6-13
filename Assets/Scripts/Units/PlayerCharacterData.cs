@@ -11,11 +11,15 @@ namespace Units
         public EquipableData LeftHand { get; private set; } = null;
         public EquipableData Head { get; private set; } = null;
         public EquipableData Body { get; private set; } = null;
+        public EquipableData Accessory1 { get; private set; } = null;
+        public EquipableData Accessory2 { get; private set; } = null;
         
         private bool itemEquippedRightHand => RightHand != null;
         private bool itemEquippedLeftHand => LeftHand != null;
         private bool itemEquippedHead => Head != null;
         private bool itemEquippedBody => Body != null;
+        private bool itemEquippedAccessory1 => Accessory1 != null;
+        private bool itemEquippedAccessory2 => Accessory2 != null;
         
         private PlayerCharactersSO playerCharactersSo => (PlayerCharactersSO)unitSo;
         private GrowthRatesSO growthRatesSo;
@@ -75,6 +79,14 @@ namespace Units
             if (itemEquippedBody)
             {
                 val += Body.getStat(stat, flat);
+            }
+            if (itemEquippedAccessory1)
+            {
+                val += Accessory1.getStat(stat, flat);
+            }
+            if (itemEquippedAccessory2)
+            {
+                val += Accessory2.getStat(stat, flat);
             }
             return val;
 
