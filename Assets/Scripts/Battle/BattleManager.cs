@@ -18,27 +18,38 @@ public class BattleManager : MonoBehaviour
     public static event Action<int> OnSelectionChanged;
 
     [SerializeField] private GameObject UIBattle;
-    [SerializeField] private List<Entity> soMonster = new();
+    [SerializeField] private GameObject monsterPrefab;
+    [SerializeField] private List<MonsterSO> soMonster = new();
+    [SerializeField] private List<Transform> monsterPos = new();
+    [SerializeField] private List<Transform> heroPos = new();
+    [SerializeField] private Camera exploreCamera;
+    [SerializeField] private Camera combatCamera;
 
     private int nbMonster = 0;
-    private Dictionary<string, Entity> Monsters = new();
+    private Dictionary<string, MonsterSO> Monsters = new();
     private List<Entity> monstersToSpawn = new();
     private ActionBattle actionIndex = ActionBattle.Attack;
 
+    // ReSharper disable Unity.PerformanceAnalysis
     public void StartBattle()
     {
         UIBattle.SetActive(true);
+        exploreCamera.gameObject.SetActive(false);
+        combatCamera.gameObject.SetActive(true);
         nbMonster = Random.Range(1, 4);
+        nbMonster = 3;
         for (int i = 0; i < nbMonster; i++)
         {
             Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
             if (monster != null)
             {
-                Entity newMonster = Instantiate(monster.gameObject, Vector3.zero, Quaternion.identity).GetComponent<Entity>();
-                newMonster.Init();
+                Entity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity).GetComponent<Entity>();
+                newMonster.transform.position = monsterPos[i].position;
+                newMonster.Init(monster);
                 monstersToSpawn.Add(newMonster);
             }
         }
+        
     }
 
     private void Start()

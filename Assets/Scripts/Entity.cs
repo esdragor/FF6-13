@@ -60,9 +60,21 @@ public class Entity : MonoBehaviour
         ForwardDirection = dir;
         Debug.Log("Moved " + dir);
     }
+    
+    public void AssignSprite()
+    {
+        _spriteRenderer.sprite = SO.Sprite;
+    }
 
     public void Init()
     {
         _unitSoInstance = SO.CreateInstance();
+        AssignSprite();
+    }
+    
+    public void Init(UnitSO unitSo)
+    {
+        SO = unitSo;
+        Init();
     }
 }
