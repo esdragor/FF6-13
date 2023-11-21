@@ -64,5 +64,28 @@ namespace Scriptable_Objects.Spells___Effects
     {
         [field:SerializeField] public Alterations Alteration { get; private set; }
         [field:SerializeField] public bool Remove { get; private set; }
+        [field:SerializeField] public bool SingleTarget { get; private set; }
+    }
+    
+    [CreateAssetMenu(fileName = "new MpRegen", menuName = "ScriptableObjects/Effects/MpRegenSO", order = 0)]
+    [Serializable] public class MpRegenSO : EffectSO
+    {
+        [field:SerializeField] public int Regen { get; private set; }
+        [field:SerializeField] public bool FlatValue { get; private set; }
+        [field:SerializeField] public bool SingleTarget { get; private set; }
+        
+    }
+    
+    [CreateAssetMenu(fileName = "new AllowCommand", menuName = "ScriptableObjects/Effects/AllowCommandSO", order = 0)]
+    [Serializable] public class AllowCommandSO : EffectSO
+    {
+        [field:SerializeField] public AllowedCommands AllowedCommand { get; private set; }
+    }
+    
+    public enum AllowedCommands
+    {
+        Runic,
+        Bushido,
+        TwoHandedCompatibility,
     }
 }

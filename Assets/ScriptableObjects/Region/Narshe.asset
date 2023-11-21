@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce694f314e134611a3796131aff537ef, type: 3}
   m_Name: Narshe
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: 
-  <EncounterTables>k__BackingField: []
+  <Name>k__BackingField: 0
+  <EncounterTables>k__BackingField:
+  - {fileID: 11400000, guid: 78956f78dd1c90a49b543cc9e54d93e0, type: 2}
   <Ambiance>k__BackingField: []
   <BattleSounds>k__BackingField: []
   <Backgrounds>k__BackingField: []

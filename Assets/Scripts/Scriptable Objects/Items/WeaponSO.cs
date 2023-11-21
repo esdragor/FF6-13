@@ -9,6 +9,7 @@ namespace Scriptable_Objects.Items
     {
         [field:Header("---WeaponSO---")]
         [field:SerializeField] public int AttackPower { get; private set; }
+        [field:SerializeField] public int HitRate { get; private set; }
         [field:SerializeField] public Elements Element { get; private set; }
         [field:SerializeField] public bool OneHanded { get; private set; }
         [field:SerializeField] public bool Melee { get; private set; }

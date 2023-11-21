@@ -7,8 +7,8 @@ namespace Scriptable_Objects.Items
     public abstract class EquipableSO : ItemSO
     {
         [field:Header("---EquipableSO---")]
-        [field:SerializeField] public EquipableType EquipableType { get; private set; }
-        [field:SerializeField] public List<EffectSO> ItemEffects { get; private set; }
+        [field:SerializeField] public EquipableType EquipableType { get; protected set; }
+        [field:SerializeField] public List<EffectSO> ItemEffects { get; protected set; }
     }
     
     public enum EquipableType
