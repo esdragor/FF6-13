@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfa8177d7de4bd9a4b9e234fa2fe9ec, type: 3}
+  m_Name: Noiseblaster
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Noiseblaster
+  <Description>k__BackingField: Confuses all enemies with a blast of sound. Use with
+    the Tools command.
+  <MaxQuantity>k__BackingField: 1
+  <Price>k__BackingField: 750
+  <Sprite>k__BackingField: {fileID: 0}
+  <EquipableType>k__BackingField: 23
+  <ItemEffects>k__BackingField: []
+  <AttackPower>k__BackingField: 0
+  <HitRate>k__BackingField: 255
+  <Element>k__BackingField: 10
+  <OneHanded>k__BackingField: 0
+  <Melee>k__BackingField: 0
+  <HitAllEnemies>k__BackingField: 1
+  <UsableBy>k__BackingField: []

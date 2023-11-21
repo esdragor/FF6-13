@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a84b3d7f36441196b6eecf6bc3e34c, type: 3}
+  m_Name: Star Pendant
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Star Pendant
+  <Description>k__BackingField: Star-shaped pendant with a jewel at its center. Prevents
+    poison.
+  <MaxQuantity>k__BackingField: 1
+  <Price>k__BackingField: 500
+  <Sprite>k__BackingField: {fileID: 0}
+  <EquipableType>k__BackingField: 24
+  <ItemEffects>k__BackingField:
+  - {fileID: 11400000, guid: d3bdb81262d821245a9b0e11e8e6c8b0, type: 2}
+  <UsableBy>k__BackingField: []
