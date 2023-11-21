@@ -51,10 +51,11 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 7052240609822276024}
   _animator: {fileID: 2317830123916161200}
   _boxCollider2D: {fileID: 7509104964156181236}
-  delayToMove: 0.5
+  delayToMove: 2
   <SO>k__BackingField: {fileID: 11400000, guid: c02e141d82c58e942a8a734104ed920c,
     type: 2}
   cellSize: 0.5
+  toleranceMoving: 0.6
 --- !u!95 &2317830123916161200
 Animator:
   serializedVersion: 5
