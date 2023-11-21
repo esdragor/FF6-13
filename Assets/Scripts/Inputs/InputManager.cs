@@ -136,7 +136,7 @@ public class InputManager : MonoBehaviour
 
     public void Turn(InputAction.CallbackContext context)
     {
-        OnStartedToTurn?.Invoke(checkFourDirection(context));
+        OnStartedToTurn?.Invoke(CheckEightDirection(context));
     }
 
     private void Cancel(InputAction.CallbackContext context)

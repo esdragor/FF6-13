@@ -11,6 +11,8 @@ public abstract class ExplorationController : InputController
     
     protected void MoveEntity(Direction dir)
     {
-        entity.Move(dir);
+        if(entity.ForwardDirection != dir) entity.Turn(dir);
+        
+        entity.Move();
     }
 }

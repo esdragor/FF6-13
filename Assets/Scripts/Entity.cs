@@ -11,39 +11,33 @@ public class Entity : MonoBehaviour
     [SerializeField] protected float delayToMove = 1f;
     [field:SerializeField] public UnitSO SO { get; private set;}
     [field: SerializeField] public UnitData unitData;
-    
-    protected Direction ForwardDirection = Direction.None;
+
+    public Direction ForwardDirection { get; protected set; } = Direction.None;
 
     private UnitSOInstance _unitSoInstance;
     protected Material mat;
+    
+    private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
 
     public void Turn(Direction dir)
     {
+        _spriteRenderer.flipX = dir is Direction.Right or Direction.UpRight or Direction.DownRight;
+        
+        
         switch (dir)
         {
-            case Direction.Up:
-                _spriteRenderer.flipX = false;
-                //_spriteRenderer.flipY = false;
+            case Direction.Up :
+                mat.SetFloat(DirectionProperty, 0f);
                 break;
             case Direction.Down:
-                _spriteRenderer.flipX = false;
-                //_spriteRenderer.flipY = true;
+                mat.SetFloat(DirectionProperty, 1f);
                 break;
-            case Direction.Left:
-                _spriteRenderer.flipX = false;
-                //_spriteRenderer.flipY = false;
-                break;
-            case Direction.Right:
-                _spriteRenderer.flipX = true;
-                //_spriteRenderer.flipY = false;
+            case Direction.Left or Direction.Right:
+                mat.SetFloat(DirectionProperty, 2f);
                 break;
         }
-        
-    }
-    
-    public virtual void Attack()
-    {
-        Debug.Log("Attack");
+
+        ForwardDirection = dir;
     }
     
     public bool TakeDamage(int damage, UnitData attacker)
@@ -57,6 +51,11 @@ public class Entity : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void Move()
+    {
+        Move(ForwardDirection);
     }
     
     public void Move(Direction dir)
