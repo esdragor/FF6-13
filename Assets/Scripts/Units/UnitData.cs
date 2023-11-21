@@ -1,6 +1,6 @@
+using System;
 using System.Collections.Generic;
 using Scriptable_Objects.Unit;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 namespace Units
@@ -145,7 +145,36 @@ namespace Units
         {
             get => unitSo.Sprite;
         }
-        
+
+        public int TakeDamage(int damage)
+        {
+            if (damage <= 0) return 0;
+            
+            currentHp -= damage;
+            if (currentHp < 0)
+            {
+                var amount = Math.Abs(currentHp);
+                currentHp = 0;
+                return amount;
+            }
+
+            return 0;
+        }
+
+        public int HealDamage(int heal)
+        {
+            if (heal <= 0) return 0;
+            
+            currentHp += heal;
+            if (currentHp > MaxHp)
+            {
+                var amount = currentHp - MaxHp;
+                currentHp = MaxHp;
+                return amount;
+            }
+            
+            return 0;
+        }
         
         
         
