@@ -192,5 +192,13 @@ namespace Units
                 return val + itemsStat.Item1 + alterationsStat.Item1 * (1 + itemsStat.Item2 + alterationsStat.Item2);
             }
         }
+        
+        public override bool IsImmuneTo(Alterations alteration)
+        {
+            //TODO Check if the unit is immune to the alteration in his equipment
+            return unitSo.AlterationImmunity.Exists( immunity => immunity.Alteration == alteration && immunity.Immunity);
+        }
+        
+        
     }
 }

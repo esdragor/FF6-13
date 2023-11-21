@@ -1,7 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
+using Scriptable_Objects.Items;
+using Scriptable_Objects.Spells___Effects;
+using Units;
 using UnityEngine;
 
 public class PlayerEntityOnBattle : PlayerEntity
@@ -26,6 +30,39 @@ public class PlayerEntityOnBattle : PlayerEntity
         if (target == null)
             return false;
         return target.TakeDamage(unitData.Attack, unitData);
+    }
+    
+    public bool UseItem(UsableItemSo item, List<UnitData> targets)
+    {
+        Debug.Log($"Use {item.Name} on {targets}");
+        var effects = item.Effects.ToList();
+        
+        // Items can't miss, so we can do all effects
+        foreach (var effect in effects)
+        {
+            
+            // Check if the effects possess a ignore immunity
+            
+            
+            
+            foreach (var tgt in targets) {
+                switch (effect)
+                {
+                    case AddOrRemoveAlterationSO addOrRemoveAlterationSo:
+                        var ignoreAlteration = effects.Where(e => e is IgnoreAlterationSO).Any(e => ((IgnoreAlterationSO)e).Alteration == addOrRemoveAlterationSo.Alteration && ((IgnoreAlterationSO)e).IsPositive);
+                        
+                        if (addOrRemoveAlterationSo.Remove)
+                        {
+                            tgt.RemoveAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration);
+                            break;
+                        }
+                        tgt.AddAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration);
+                        break;
+                }
+            }
+        }
+        
+        return false;
     }
 
     public void ResetValues()

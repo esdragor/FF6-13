@@ -189,13 +189,19 @@ namespace Units
             return alterations.Contains(alteration);
         }
         
-        public void AddAlteration(Alterations alteration)
+        public void AddAlteration(Alterations alteration, bool ignoreImmunity)
         {
+            if (IsAflictedBy(alteration)) return;
+            if (!ignoreImmunity && IsImmuneTo(alteration)) return;
+            
             alterations.Add(alteration);
         }
         
-        public void RemoveAlteration(Alterations alteration)
+        public void RemoveAlteration(Alterations alteration, bool ignoreImmunity)
         {
+            if (!IsAflictedBy(alteration)) return;
+            if (!ignoreImmunity && IsImmuneTo(alteration)) return;
+            
             alterations.Remove(alteration);
         }
     }
