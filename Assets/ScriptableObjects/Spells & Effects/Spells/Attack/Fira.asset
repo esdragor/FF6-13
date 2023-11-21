@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73efa0063502403b8e798232a5fb1cd5, type: 3}
+  m_Name: Fira
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Fira
+  <Description>k__BackingField: Attacks with fire.
+  <MpCost>k__BackingField: 20
+  <ApCost>k__BackingField: 2
+  <Power>k__BackingField: 60
+  <HitRate>k__BackingField: 150
+  <SpellEffects>k__BackingField:
+  - {fileID: 11400000, guid: 1adf78e041bb17b4d8ad2667081c79fb, type: 2}

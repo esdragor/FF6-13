@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73efa0063502403b8e798232a5fb1cd5, type: 3}
+  m_Name: Esuna
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Esuna
+  <Description>k__BackingField: 'Removes most status ailments from the target. '
+  <MpCost>k__BackingField: 15
+  <ApCost>k__BackingField: 2
+  <Power>k__BackingField: 0
+  <HitRate>k__BackingField: 0
+  <SpellEffects>k__BackingField:
+  - {fileID: 11400000, guid: f8a26c05f1c9efa478ba5b4136ac1c3d, type: 2}
+  - {fileID: 11400000, guid: 7c4fdad4c64ae9945908d874466efdd1, type: 2}
+  - {fileID: 11400000, guid: fa9225fcf4eb0e64fa66ace42101d185, type: 2}
+  - {fileID: 11400000, guid: 4e8a52cec48ae2345935af08c77aa6c7, type: 2}
+  - {fileID: 11400000, guid: d68d139499670bd47af65c34402c950a, type: 2}
+  - {fileID: 11400000, guid: 7f2a98da54cef0848856325b336be8bf, type: 2}
+  - {fileID: 11400000, guid: c006c5b03499d9a4c9b1b705fc169410, type: 2}
+  - {fileID: 11400000, guid: fb7ec3216483f284e8e1fcdd262020bf, type: 2}
+  - {fileID: 11400000, guid: 73402aea7baf2ca478aa138c7cd2d1ad, type: 2}
+  <SpellType>k__BackingField: 1

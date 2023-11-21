@@ -11,5 +11,6 @@ namespace Scriptable_Objects.Spells___Effects
         [field:SerializeField] public int Damage { get; private set; }
         [field:SerializeField] public bool FlatValue { get; private set; }
         [field:SerializeField] public bool SingleTarget { get; private set; }
+        [field:SerializeField] public bool ScaleWithPower { get; private set; }
     }
 }

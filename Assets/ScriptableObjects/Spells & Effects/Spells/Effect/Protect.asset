@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73efa0063502403b8e798232a5fb1cd5, type: 3}
+  m_Name: Protect
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Protect
+  <Description>k__BackingField: Places a magical shield around the target that boosts
+    physical defense.
+  <MpCost>k__BackingField: 12
+  <ApCost>k__BackingField: 2
+  <Power>k__BackingField: 0
+  <HitRate>k__BackingField: 120
+  <SpellEffects>k__BackingField:
+  - {fileID: 11400000, guid: 648e7b85b057d8447998721b31e01885, type: 2}
+  - {fileID: 11400000, guid: 00370c6b2defbe8468ac592896b12f57, type: 2}
+  <SpellType>k__BackingField: 2
