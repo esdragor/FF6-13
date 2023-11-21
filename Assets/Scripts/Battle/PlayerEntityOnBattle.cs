@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerEntityOnBattle : PlayerEntity
 {
+    public static event Action<float> OnActionBarChanged;
+    
     [SerializeField] private float limitActionBar = 100;
     [SerializeField] private float speedActionBar = 1;
     
@@ -26,9 +28,15 @@ public class PlayerEntityOnBattle : PlayerEntity
         if (actionBar >= value)
         {
             actionBar -= value;
+            OnActionBarChanged?.Invoke(GetPercentageActionBar());
             return true;
         }
         return false;
+    }
+    
+    public float GetPercentageActionBar()
+    {
+        return (actionBar / limitActionBar) * 0.01f;
     }
 
     private void Update()
@@ -40,6 +48,7 @@ public class PlayerEntityOnBattle : PlayerEntity
         else
         {
             actionBar += speedActionBar * Time.deltaTime;
+            OnActionBarChanged?.Invoke(GetPercentageActionBar());
         }
     }
 }

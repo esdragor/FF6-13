@@ -129,6 +129,13 @@ public class BattleManager : MonoBehaviour
 
         if (playersOnBattle.Count > 0)
         {
+            for (int i = 0; i < playersOnBattle.Count; i++)
+            {
+                PlayerControllerOnBattle controller = playersOnBattle[i];
+                //controller.getEntity().UpdateData(player.getEntity().unitData);
+                controller.getEntity().gameObject.SetActive(true);
+            }
+            
             //on update les data du player
             //PlayerControllerOnBattle controller = playersOnBattle[playersOnBattle.IndexOf(player)];
             //controller.getEntity().UpdateData(player.getEntity().unitData);
