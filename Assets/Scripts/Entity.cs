@@ -22,8 +22,11 @@ public class Entity : MonoBehaviour
 
     public void Turn(Direction dir)
     {
-        _spriteRenderer.flipX = dir is Direction.Right or Direction.UpRight or Direction.DownRight;
+        ForwardDirection = dir;
         
+        if (dir == Direction.None) return;
+        
+        _spriteRenderer.flipX = dir is Direction.Right or Direction.UpRight or Direction.DownRight;
         
         switch (dir)
         {
@@ -37,8 +40,6 @@ public class Entity : MonoBehaviour
                 mat.SetFloat(DirectionProperty, 2f);
                 break;
         }
-
-        ForwardDirection = dir;
     }
     
     public bool TakeDamage(int damage, UnitData attacker)

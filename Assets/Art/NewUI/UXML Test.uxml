@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Art/NewUI/USSTest.uss?fileID=7433441132597879392&amp;guid=189ee6b568d32d54a8202ca66f9eca29&amp;type=3#USSTest" />
+    <ui:Button text="Clique :D" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Epic" class="EpicButton" />
+</ui:UXML>

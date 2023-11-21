@@ -1,0 +1,4 @@
+.EpicButton {
+    font-size: 28px;
+    color: rgb(255, 0, 0);
+}
