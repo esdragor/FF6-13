@@ -8,6 +8,7 @@ public class PlayerEntity : Entity
     private Vector3 newPosition;
     private PlayerCharacterInfoInstance _playerCharacterInfoInstance;
     public PlayerController _playerController { get; private set; } 
+    [SerializeField] private float cellSize = 1f;
     
     public bool Attack(Entity target)
     {
@@ -32,16 +33,16 @@ public class PlayerEntity : Entity
         switch (ForwardDirection)
         {
             case Direction.Up or Direction.UpLeft or Direction.UpRight:
-                newPosition.y = Mathf.RoundToInt(position.y + 1);
+                newPosition.y = position.y + cellSize;
                 break;
             case Direction.Down or Direction.DownLeft or Direction.DownRight:
-                newPosition.y = Mathf.RoundToInt(position.y - 1);
+                newPosition.y =position.y - cellSize;
                 break;
             case Direction.Left or Direction.DownLeft or Direction.UpLeft:
-                newPosition.x = Mathf.RoundToInt(position.x - 1);
+                newPosition.x = position.x - cellSize;
                 break;
             case Direction.Right or Direction.DownRight or Direction.UpRight:
-                newPosition.x = Mathf.RoundToInt(position.x + 1);
+                newPosition.x = position.x + cellSize;
                 break;
         }
         if (ForwardDirection != Direction.None)
