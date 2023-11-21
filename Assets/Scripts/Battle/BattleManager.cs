@@ -33,7 +33,24 @@ public class BattleManager : MonoBehaviour
     private List<PlayerControllerOnBattle> playersOnBattle = new();
     private List<PlayerController> playersOnExplore = new();
 
-    // ReSharper disable Unity.PerformanceAnalysis
+    private void Awake()
+    {
+        Entity.OnEntityDying += RemoveEntity;
+    }
+
+    private void RemoveEntity(Entity entity)
+    {
+        if (monstersSpawned.Contains(entity))
+        {
+            monstersSpawned.Remove(entity);
+            CheckVictory();
+        }
+        else
+        {
+            //one player is dead
+        }
+    }
+
     public void StartBattle()
     {
         UIBattle.SetActive(true);
@@ -53,7 +70,6 @@ public class BattleManager : MonoBehaviour
                 monstersSpawned.Add(newMonster);
             }
         }
-        // recup les heros et les spawns
     }
 
     private void Start()
@@ -99,12 +115,10 @@ public class BattleManager : MonoBehaviour
         {
             case ActionBattle.AutoAttack:
                 Debug.Log("Attack");
-                int indexAttack = 0;
-                if (GetPlayerAtIndex(0).Attack(monstersSpawned[indexAttack]))
-                {
-                    monstersSpawned.RemoveAt(indexAttack);
-                    CheckVictory();
-                }
+                PlayerEntityOnBattle player = GetPlayerAtIndex(0);
+                int indexTarget = Random.Range(0, monstersSpawned.Count);
+                player.addTarget(monstersSpawned[indexTarget]);
+                player.addActionToQueue(ActionBattle.AutoAttack);
 
                 break;
             case ActionBattle.Abilities:
@@ -115,7 +129,7 @@ public class BattleManager : MonoBehaviour
                 break;
         }
     }
-    
+
     private PlayerEntityOnBattle GetPlayerAtIndex(int index)
     {
         return playersOnBattle[index].getEntity() as PlayerEntityOnBattle;
@@ -135,7 +149,7 @@ public class BattleManager : MonoBehaviour
                 //controller.getEntity().UpdateData(player.getEntity().unitData);
                 controller.getEntity().gameObject.SetActive(true);
             }
-            
+
             //on update les data du player
             //PlayerControllerOnBattle controller = playersOnBattle[playersOnBattle.IndexOf(player)];
             //controller.getEntity().UpdateData(player.getEntity().unitData);
@@ -143,13 +157,16 @@ public class BattleManager : MonoBehaviour
         }
         else
         {
-            PlayerControllerOnBattle controller = Instantiate(playerBattlePrefab.gameObject, heroPos[0].position, Quaternion.identity)
-                .GetComponent<PlayerControllerOnBattle>();
+            PlayerControllerOnBattle controller =
+                Instantiate(playerBattlePrefab.gameObject, heroPos[0].position, Quaternion.identity)
+                    .GetComponent<PlayerControllerOnBattle>();
             playersOnBattle.Add(controller);
+            playersOnExplore.Add(player);
+
             controller.InitPlayer();
             controller.getEntity().Init(player.getEntity().SO);
-            (controller.getEntity() as PlayerEntity)?.InitData(player.getEntity().unitData);
-            playersOnExplore.Add(player);
+            controller.getEntity()?.InitData(player.getEntity().unitData);
+            controller.getEntity().ResetValues();
             player.gameObject.SetActive(false);
             player.getEntity().gameObject.SetActive(false);
         }

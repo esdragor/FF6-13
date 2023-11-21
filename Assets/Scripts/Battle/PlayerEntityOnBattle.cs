@@ -6,37 +6,108 @@ using UnityEngine;
 public class PlayerEntityOnBattle : PlayerEntity
 {
     public static event Action<float> OnActionBarChanged;
-    
+
+    private List<ActionBattle> actionsQueue = new();
+    private float costOfActionQueue = 0;
+
+    public float costAttack { get; private set; }
     [SerializeField] private float limitActionBar = 100;
-    [SerializeField] private float speedActionBar = 1;
-    
-    float actionBar = 0;
-    
-    public bool Attack(Entity target)
+    [SerializeField] private float ratioSpeedActionBar = 1;
+
+    private float actionBar = 0;
+    private float speedActionBar = 1;
+    private bool currentlyAttacking = false;
+    private Entity target;
+
+    public bool Attack()
     {
         Debug.Log("Attack");
+        if (target == null)
+            return false;
         return target.TakeDamage(unitData.Attack, unitData);
     }
-    
-    public void ResetActionBar()
+
+    public void ResetValues()
     {
         actionBar = 0;
+        costAttack = 50f;
+        costOfActionQueue = 0;
+        speedActionBar = ratioSpeedActionBar * unitData.Agility;
+        currentlyAttacking = false;
     }
-    
-    public bool SpendActionBar(float value)
+
+    public void addActionToQueue(ActionBattle action, int index = 0)
     {
-        if (actionBar >= value)
+        int nbAction = 0;
+        switch (action)
         {
-            actionBar -= value;
-            OnActionBarChanged?.Invoke(GetPercentageActionBar());
-            return true;
+            case ActionBattle.AutoAttack:
+                nbAction = (int)(limitActionBar / costAttack);
+                for (int i = 0; i < nbAction; i++)
+                {
+                    actionsQueue.Add(action);
+                    costOfActionQueue += costAttack;
+                }
+
+                break;
+            case ActionBattle.Abilities:
+                Debug.Log("Defend");
+                break;
+            case ActionBattle.Items:
+                Debug.Log("Item");
+                break;
         }
-        return false;
     }
-    
+
+    public void SpendActionBar(float value)
+    {
+        actionBar -= value;
+        if (actionBar < 0)
+            actionBar = 0;
+        OnActionBarChanged?.Invoke(GetPercentageActionBar());
+    }
+
     public float GetPercentageActionBar()
     {
-        return (actionBar / limitActionBar) * 0.01f;
+        return (actionBar / limitActionBar);
+    }
+
+    IEnumerator DequeueAllAction()
+    {
+        currentlyAttacking = true;
+        bool success = false;
+        while (actionsQueue.Count > 0)
+        {
+            ActionBattle action = actionsQueue[0];
+            actionsQueue.RemoveAt(0);
+            switch (action)
+            {
+                case ActionBattle.AutoAttack:
+
+                    success = Attack();
+                    costOfActionQueue -= costAttack;
+                    if (!success) break;
+                    SpendActionBar(costAttack);
+                    break;
+                case ActionBattle.Abilities:
+                    Debug.Log("Defend");
+                    break;
+                case ActionBattle.Items:
+                    Debug.Log("Item");
+                    break;
+            }
+
+            if (success)
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+
+        currentlyAttacking = false;
     }
 
     private void Update()
@@ -48,7 +119,16 @@ public class PlayerEntityOnBattle : PlayerEntity
         else
         {
             actionBar += speedActionBar * Time.deltaTime;
+            Debug.Log(actionBar);
             OnActionBarChanged?.Invoke(GetPercentageActionBar());
         }
+
+        if (actionBar >= costOfActionQueue && !currentlyAttacking)
+            StartCoroutine(DequeueAllAction());
+    }
+
+    public void addTarget(Entity entity)
+    {
+        target = entity;
     }
 }

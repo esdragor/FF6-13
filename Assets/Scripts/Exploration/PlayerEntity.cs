@@ -25,7 +25,7 @@ public class PlayerEntity : Entity
 
         moving = false;
         
-        Init();
+        AssignSprite();
     }
 
     private void LateUpdate()

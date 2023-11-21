@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    public static event Action<Entity> OnEntityDying;
+    
     [SerializeField] protected SpriteRenderer _spriteRenderer;
     [SerializeField] protected Animator _animator;
     [SerializeField] protected BoxCollider2D _boxCollider2D;
@@ -14,7 +16,6 @@ public class Entity : MonoBehaviour
 
     public Direction ForwardDirection { get; protected set; } = Direction.None;
 
-    private UnitSOInstance _unitSoInstance;
     protected Material mat;
     
     private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
@@ -42,12 +43,13 @@ public class Entity : MonoBehaviour
     
     public bool TakeDamage(int damage, UnitData attacker)
     {
-        Debug.Log( _unitSoInstance.So.Name + " Take Damage " + damage + " from " + attacker.GetName());
-        _unitSoInstance.currentHp -= damage;
-        if (_unitSoInstance.currentHp <= 0)
+        Debug.Log( unitData.GetName() + " Take Damage " + damage + " from " + attacker.GetName());
+        unitData.TakeDamage(damage);
+        if (unitData.CurrentHp <= 0)
         {
-            Debug.Log(_unitSoInstance.So.Name + " is dead");
-            Destroy(gameObject);
+            Debug.Log(unitData.GetName() + " is dead");
+            OnEntityDying?.Invoke(this);
+            Destroy(gameObject, 0.1f);
             return true;
         }
         return false;
@@ -65,7 +67,7 @@ public class Entity : MonoBehaviour
     
     public void AssignSprite()
     {
-        _spriteRenderer.sprite = SO.Sprite;
+        _spriteRenderer.sprite = unitData.Sprite;
 
         mat = new Material(_spriteRenderer.material);
         _spriteRenderer.material = mat;
@@ -74,7 +76,6 @@ public class Entity : MonoBehaviour
     public void Init()
     {
         unitData = new UnitData(SO);
-        _unitSoInstance = SO.CreateInstance();
         AssignSprite();
     }
     

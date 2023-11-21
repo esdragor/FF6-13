@@ -9,6 +9,7 @@ public class TESTUIBattle : MonoBehaviour
     [SerializeField] private Image AttackImage;
     [SerializeField] private Image DefendImage;
     [SerializeField] private Image ItemImage;
+    [SerializeField] private Slider ActionBar;
     
     private List<Image> images = new();
     private int actionIndex = 0;
@@ -18,6 +19,12 @@ public class TESTUIBattle : MonoBehaviour
     private void Awake()
     {
         BattleManager.OnSelectionChanged += SelectionAction;
+        PlayerEntityOnBattle.OnActionBarChanged += UpdateActionBar;
+    }
+
+    private void UpdateActionBar(float value)
+    {
+        ActionBar.value = value;
     }
 
     void OnEnable()
