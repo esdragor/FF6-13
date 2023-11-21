@@ -9,6 +9,7 @@ namespace Scriptable_Objects.Items
     {
         [field:Header("---UsableItemSO---")]
         [field:SerializeField] public List<EffectSO> Effects { get; private set; }
+        [field:SerializeField] public bool UsedOutsideCombat { get; private set; }
         
     }
 }

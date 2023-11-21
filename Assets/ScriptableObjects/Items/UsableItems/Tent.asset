@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b722d252af14fc6aba6f9feadf0de03, type: 3}
+  m_Name: Tent
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Tent
+  <Description>k__BackingField: Fully restores the entire party's HP and MP. Can
+    be used outdoors.
+  <MaxQuantity>k__BackingField: 99
+  <Price>k__BackingField: 1200
+  <Sprite>k__BackingField: {fileID: 0}
+  <Effects>k__BackingField:
+  - {fileID: 11400000, guid: 59893c14f1c833c40a0a2d32cb5afb33, type: 2}
+  - {fileID: 11400000, guid: bbacda7830cfab441a6e0441a4b783ef, type: 2}
+  - {fileID: 11400000, guid: 4d7642428e2193f4c9333522a5c6e697, type: 2}
+  - {fileID: 11400000, guid: e218e4f0a99fe4e47b9a52e3a07aa7c5, type: 2}
+  - {fileID: 11400000, guid: 00c4bebb01525f04aa077366a93a6604, type: 2}
+  - {fileID: 11400000, guid: aa9af41b86480f5459e5ae90e77b27bd, type: 2}
+  - {fileID: 11400000, guid: 7dce69b843d348844a21612d091e78d6, type: 2}
+  - {fileID: 11400000, guid: 7832dfb2f4f97cc4196fe5b0496bb985, type: 2}
+  - {fileID: 11400000, guid: 287aedebf55541f4188af4e80b776551, type: 2}
+  <UsedOutsideCombat>k__BackingField: 1

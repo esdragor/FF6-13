@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Rm-Zombie
+  m_Name: Rm-Death-all
   m_EditorClassIdentifier: Assembly-CSharp:Scriptable_Objects.Spells___Effects:AddOrRemoveAlterationSO
-  <Alteration>k__BackingField: 0
-  <Remove>k__BackingField: 0
+  <Alteration>k__BackingField: 30
+  <Remove>k__BackingField: 1
   <SingleTarget>k__BackingField: 0
