@@ -35,23 +35,23 @@ namespace Units
             switch (stat)
             {
                 case Stats.Strength:
-                    return Strength;
+                    return unitSo.Strength;
                 case Stats.Agility:
-                    return Agility;
+                    return unitSo.Agility;
                 case Stats.Stamina:
-                    return Stamina;
+                    return unitSo.Stamina;
                 case Stats.Magic:
-                    return Magic;
+                    return unitSo.Magic;
                 case Stats.Attack:
-                    return Attack;
+                    return unitSo.Attack;
                 case Stats.Defence:
-                    return Defence;
+                    return unitSo.Defence;
                 case Stats.MagicDefence:
-                    return MagicDefence;
+                    return unitSo.MagicDefence;
                 case Stats.Evasion:
-                    return Evasion;
+                    return unitSo.Evasion;
                 case Stats.MagicEvasion:
-                    return MagicEvasion;
+                    return unitSo.MagicEvasion;
                 default:
                     return 0;
             }
