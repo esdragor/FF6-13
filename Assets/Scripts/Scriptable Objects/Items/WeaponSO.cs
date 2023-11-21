@@ -13,6 +13,7 @@ namespace Scriptable_Objects.Items
         [field:SerializeField] public Elements Element { get; private set; }
         [field:SerializeField] public bool OneHanded { get; private set; }
         [field:SerializeField] public bool Melee { get; private set; }
+        [field:SerializeField] public bool HitAllEnemies { get; private set; }
         [field:SerializeField] public List<PlayerCharactersSO> UsableBy { get; private set; }
     }
 }

@@ -15,6 +15,7 @@ public class Entity : MonoBehaviour
     protected Direction ForwardDirection = Direction.None;
 
     private UnitSOInstance _unitSoInstance;
+    protected Material mat;
 
     public void Turn(Direction dir)
     {
@@ -22,19 +23,19 @@ public class Entity : MonoBehaviour
         {
             case Direction.Up:
                 _spriteRenderer.flipX = false;
-                _spriteRenderer.flipY = false;
+                //_spriteRenderer.flipY = false;
                 break;
             case Direction.Down:
                 _spriteRenderer.flipX = false;
-                _spriteRenderer.flipY = true;
+                //_spriteRenderer.flipY = true;
                 break;
             case Direction.Left:
                 _spriteRenderer.flipX = false;
-                _spriteRenderer.flipY = false;
+                //_spriteRenderer.flipY = false;
                 break;
             case Direction.Right:
                 _spriteRenderer.flipX = true;
-                _spriteRenderer.flipY = false;
+                //_spriteRenderer.flipY = false;
                 break;
         }
         
@@ -66,6 +67,9 @@ public class Entity : MonoBehaviour
     public void AssignSprite()
     {
         _spriteRenderer.sprite = SO.Sprite;
+
+        mat = new Material(_spriteRenderer.material);
+        _spriteRenderer.material = mat;
     }
 
     public void Init()
