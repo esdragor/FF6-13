@@ -9,16 +9,14 @@ public class PlayerEntity : Entity
     
     [SerializeField] private float cellSize = 1f;
     
-    protected PlayerCharacterInfoInstance _playerCharacterInfoInstance;
-    
     private Vector3 newPosition;
     public void InitPlayer(PlayerController controller)
     {
         newPosition = transform.position;
-        _playerCharacterInfoInstance = (SO as PlayerCharactersSO)?.CreateInstance(1);
-        if (_playerCharacterInfoInstance != null)
-            unitData = new PlayerCharacterData(_playerCharacterInfoInstance.So,
-                _playerCharacterInfoInstance.So.GrowthTable, 1);
+        PlayerCharactersSO so = SO as PlayerCharactersSO;
+        if (so != null)
+            unitData = new PlayerCharacterData(so,
+                so.GrowthTable, 1);
         _playerController = controller;
     }
 
