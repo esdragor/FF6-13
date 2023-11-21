@@ -30,9 +30,11 @@ public class BattleManager : MonoBehaviour
     private Dictionary<string, MonsterSO> Monsters = new();
     private List<Entity> monstersSpawned = new();
     private ActionBattle actionIndex = ActionBattle.AutoAttack;
-    private PlayerControllerOnBattle playerControllerBattle = new();
+    private PlayerControllerOnBattle playerControllerBattle;
     private List<PlayerEntityOnBattle> playersOnBattle = new();
-    private List<PlayerController> playersOnExplore = new();
+    private PlayerController playersOnExplore;
+
+    int indexPlayer = 0;
 
     private void Awake()
     {
@@ -58,7 +60,7 @@ public class BattleManager : MonoBehaviour
         exploreCamera.gameObject.SetActive(false);
         combatCamera.gameObject.SetActive(true);
         nbMonster = Random.Range(1, 4);
-        nbMonster = 3;
+        indexPlayer = 0;
         for (int i = 0; i < nbMonster; i++)
         {
             Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
@@ -84,8 +86,11 @@ public class BattleManager : MonoBehaviour
 
     private void ChangeCharacter(float axis)
     {
-        Debug.Log("Change Character");
-        Debug.Log(axis);
+        indexPlayer += (int)axis;
+        if (indexPlayer < 0)
+            indexPlayer = playersOnBattle.Count - 1;
+        else if (indexPlayer >= playersOnBattle.Count)
+            indexPlayer = 0;
     }
 
     private void SelectionAction(Direction dir)
@@ -105,12 +110,12 @@ public class BattleManager : MonoBehaviour
             UIBattle.SetActive(false);
             exploreCamera.gameObject.SetActive(true);
             combatCamera.gameObject.SetActive(false);
+            playersOnExplore.gameObject.SetActive(true);
+            playersOnExplore.getEntity().gameObject.SetActive(true);
             for (int i = 0; i < playersOnBattle.Count; i++)
             {
                 playerControllerBattle.gameObject.SetActive(false);
                 playersOnBattle[i].gameObject.SetActive(false);
-                playersOnExplore[i].gameObject.SetActive(true);
-                playersOnExplore[i].getEntity().gameObject.SetActive(true);
             }
 
             GameManager.Instance.GetBackToExplore();
@@ -123,7 +128,7 @@ public class BattleManager : MonoBehaviour
         {
             case ActionBattle.AutoAttack:
                 Debug.Log("Attack");
-                PlayerEntityOnBattle player = GetPlayerAtIndex(0);
+                PlayerEntityOnBattle player = GetPlayerAtIndex(indexPlayer);
                 int indexTarget = Random.Range(0, monstersSpawned.Count);
                 player.addTarget(monstersSpawned[indexTarget]);
                 player.addActionToQueue(ActionBattle.AutoAttack);
@@ -145,21 +150,21 @@ public class BattleManager : MonoBehaviour
 
     public void UpdatePlayer(PlayerController player)
     {
-        for (int i = 0; i < 1; i++)
-        {
-        }
-
         if (playersOnBattle.Count > 0)
         {
+            playerControllerBattle.gameObject.SetActive(true);
             for (int i = 0; i < playersOnBattle.Count; i++)
             {
                 //controller.getEntity().UpdateData(player.getEntity().unitData);
+                playersOnBattle[i].InitData(player.getEntity().unitData);
                 playersOnBattle[i].gameObject.SetActive(true);
+                playersOnBattle[i].ResetValues();
+                playersOnBattle[i].transform.position = heroPos[i].position;
             }
 
             //on update les data du player
             //PlayerControllerOnBattle controller = playersOnBattle[playersOnBattle.IndexOf(player)];
-            //controller.getEntity().UpdateData(player.getEntity().unitData);
+            //player.getEntity().InitData(player.getEntity().unitData);
             //controller.getEntity().gameObject.SetActive(true);
         }
         else
@@ -168,19 +173,27 @@ public class BattleManager : MonoBehaviour
                 Instantiate(playerBattlePrefab.gameObject, heroPos[0].position, Quaternion.identity)
                     .GetComponent<PlayerControllerOnBattle>();
             playerControllerBattle = controller;
-            playersOnExplore.Add(player);
+            playersOnExplore = player;
             controller.InitPlayer();
-            
+
             PlayerEntityOnBattle principalPlayer = controller.getEntity();
             principalPlayer.Init(player.getEntity().SO);
             principalPlayer.InitData(player.getEntity().unitData);
             principalPlayer.ResetValues();
-            
-            playersOnBattle.Add(principalPlayer);
-            
-            
-            //add here creation des autres persos
 
+            playersOnBattle.Add(principalPlayer);
+
+            //add here creation des autres persos
+            for (int i = 0; i < player.companions.Count; i++)
+            {
+                PlayerEntityOnBattle companion =
+                    Instantiate(principalPlayer.gameObject).GetComponent<PlayerEntityOnBattle>();
+                companion.Init(player.companions[i].SO);
+                companion.InitData(player.companions[i].unitData);
+                companion.ResetValues();
+                companion.transform.position = heroPos[i + 1].position;
+                playersOnBattle.Add(companion);
+            }
 
             player.gameObject.SetActive(false);
             player.getEntity().gameObject.SetActive(false);

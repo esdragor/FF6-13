@@ -46,3 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityPrefab: {fileID: 529669638004969026, guid: 47fda90fb4c7b2742bbd50c93d6627af,
     type: 3}
+  companions: []
+  companionsSo:
+  - {fileID: 11400000, guid: 602465b1df0e73c49bfa2cf2c666404c, type: 2}
+  - {fileID: 11400000, guid: 0db43c8160cd7ba49bb1c54313e03cb7, type: 2}
+  - {fileID: 11400000, guid: 1584e547c04095046b9ffac1872687b1, type: 2}
