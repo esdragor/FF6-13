@@ -33,11 +33,7 @@ public class GrowthRateSOEditor : Editor
         var element = list.serializedProperty.GetArrayElementAtIndex(index); // The element in the list
         
         EditorGUI.LabelField(new Rect(rectX, rect.y, 100, EditorGUIUtility.singleLineHeight), $" [{index}]: {index+2}");
-
-        var xLabel = 100;
-        var xField = 40;
-        var wLabel = 100;
-        var wField = 40;
+        
         
         DrawLabel("Hp","Health",50,45,100,35);
         

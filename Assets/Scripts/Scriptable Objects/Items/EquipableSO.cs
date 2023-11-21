@@ -40,6 +40,10 @@ namespace Scriptable_Objects.Items
         Shurikens,
         Scrolls,
         Tools,
+        
+        // Relics
+        Relics,
+        
         Others,
 
         

@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfa8177d7de4bd9a4b9e234fa2fe9ec, type: 3}
-  m_Name: Bioblaster
+  m_Name: Noiseblaster
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Bioblaster
-  <Description>k__BackingField: Deals poison damage and sap status to all enemies.
-    Use with the Tools command.
+  <Name>k__BackingField: Noiseblaster
+  <Description>k__BackingField: Confuses all enemies with a blast of sound. Use with
+    the Tools command.
   <MaxQuantity>k__BackingField: 1
   <Price>k__BackingField: 750
   <Sprite>k__BackingField: {fileID: 0}
   <EquipableType>k__BackingField: 23
-  <ItemEffects>k__BackingField:
-  - {fileID: 11400000, guid: 7c8ac2ed2f0480f41b93a24023a3dd91, type: 2}
-  <AttackPower>k__BackingField: 20
+  <ItemEffects>k__BackingField: []
+  <AttackPower>k__BackingField: 0
   <HitRate>k__BackingField: 255
-  <Element>k__BackingField: 5
+  <Element>k__BackingField: 10
   <OneHanded>k__BackingField: 0
   <Melee>k__BackingField: 0
   <HitAllEnemies>k__BackingField: 1
