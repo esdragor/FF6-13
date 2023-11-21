@@ -1,5 +1,6 @@
 using System;
 using Scriptable_Objects.Unit;
+using Units;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -9,14 +10,13 @@ public class Entity : MonoBehaviour
     [SerializeField] protected BoxCollider2D _boxCollider2D;
     [SerializeField] protected float delayToMove = 1f;
     [SerializeField] protected UnitSO SO;
+    [SerializeField] protected UnitData unitData;
 
     protected Direction ForwardDirection = Direction.None;
     private UnitSOInstance _unitSoInstance;
 
     public void Turn(Direction dir)
     {
-        Debug.Log("Turned " + dir);
-
         switch (dir)
         {
             case Direction.Up:
@@ -44,7 +44,7 @@ public class Entity : MonoBehaviour
         Debug.Log("Attack");
     }
     
-    public virtual void TakeDamage(int damage, UnitSO attacker)
+    public bool TakeDamage(int damage, UnitSO attacker)
     {
         Debug.Log( _unitSoInstance.So.Name + " Take Damage " + damage + " from " + attacker.Name);
         _unitSoInstance.currentHp -= damage;
@@ -52,17 +52,31 @@ public class Entity : MonoBehaviour
         {
             Debug.Log(_unitSoInstance.So.Name + " is dead");
             Destroy(gameObject);
+            return true;
         }
+        return false;
     }
     
     public void Move(Direction dir)
     {
         ForwardDirection = dir;
-        Debug.Log("Moved " + dir);
+    }
+    
+    public void AssignSprite()
+    {
+        _spriteRenderer.sprite = SO.Sprite;
     }
 
     public void Init()
     {
+        unitData = new UnitData(SO);
         _unitSoInstance = SO.CreateInstance();
+        AssignSprite();
+    }
+    
+    public void Init(UnitSO unitSo)
+    {
+        SO = unitSo;
+        Init();
     }
 }
