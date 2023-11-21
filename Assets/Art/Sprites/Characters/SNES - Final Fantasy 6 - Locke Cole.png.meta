@@ -108,7 +108,994 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 229
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43aab9d833b32242a01d94d68986172
+      internalID: -1507295688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 229
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148a3887cccaaa44a9a732a250fe491a
+      internalID: -91861586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 229
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bafd0442ccd9de47b945c1977d8f294
+      internalID: 1014639895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 229
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a720540b0022d89468a849f93858844e
+      internalID: -638536929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_4
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 229
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a227a95657e6c45a0d2bf703c1d18e
+      internalID: -64278224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_5
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 229
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200770524be6a144385b0ee101c85119
+      internalID: -1245030719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_6
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 229
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3775842171987345b4dfa2c4417ece2
+      internalID: 489347886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_7
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 229
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa4f08cafa1aac4692e4c1a2db6dd53
+      internalID: -452498444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_8
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 229
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fd025d9320c4041bc454f280e980c9
+      internalID: -185713303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_9
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 198
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e457f96865fef149bfb8ef4f49c10be
+      internalID: 1549572996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 198
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5030f17556a0f240a0be60727414269
+      internalID: -2147168120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_11
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 198
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb7d559fa178de478bd252707e55995
+      internalID: -640737657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_12
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 198
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adab8ab07422e0428345eae30c51988
+      internalID: 72057437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_13
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 198
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f41a60bfdffda47bc6776ae572b29d
+      internalID: 981147903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_14
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 198
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8757d4f023a97a244b86ae51bde4aa14
+      internalID: 1684441157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_15
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 198
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a3954335226664a87499e4b7067958
+      internalID: -270352537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_16
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 198
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd04c75f5f8bbe144b7c2ea146dd4731
+      internalID: -629650279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_17
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 198
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afbc3a6a34e8cd946bbbb8dee9c8c3f8
+      internalID: 392097681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_18
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 167
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e6a7697853e46429c9b03923b3c66e
+      internalID: 211155244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_19
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 167
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c589d790bc2224f90a1c4067064c0a
+      internalID: -1926217576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_20
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 167
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4362ea215f4454dae47272927097f4
+      internalID: -1507142877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_21
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 167
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cc4c702526f2043bcf6665e47869ea
+      internalID: -264912150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_22
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 166
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e53040b49ec3724d96f6d1def67f9f2
+      internalID: 459699480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_23
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 166
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e75d08c7b40e81408c1abb6ecbbd399
+      internalID: -1870737247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_24
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 166
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dc7808fccec3c43b903bbaa170f66c
+      internalID: 1199451134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_25
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 166
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e41af6f2c750c4da090f3b983afd8e
+      internalID: 114134701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_26
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 136
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d78333fc728e740a98f9bf9fbccf83
+      internalID: 1241635117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_27
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 136
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fecbd45c728e34b988b49649e58b06
+      internalID: -2031560083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_28
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 136
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f32ba0fbffc184f810592b18ce6290
+      internalID: 1338503217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_29
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 134
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491ed661d509d7b4682ac3e98de99ccd
+      internalID: 486011519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_30
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 134
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c6bf715ce366444a395b3b8a038124
+      internalID: -2138692627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_31
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 107
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f1a7129e2549847899ef5cbfd99cb9
+      internalID: -1587966396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_32
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 107
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8578dde41fb3dd49b617f5c89aad471
+      internalID: 1283004805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_33
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 107
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da051831bceffe64c93ff4c2720b1f2a
+      internalID: 1013074281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_34
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 107
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1734a5a61f42a3b4ca53dbfdd343a3cb
+      internalID: 12713741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_35
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 106
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53988e0ad01b063488efef1aa1bdc888
+      internalID: 1163228846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_36
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 106
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273af39fbb4bafc458dab34a152d697b
+      internalID: 1609813513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_37
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 104
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47dd65c79142e7a47ae63bead4fa655d
+      internalID: 1732042923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_38
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 104
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16166ad38fccf71408c6adc0f4044427
+      internalID: 1084354194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_39
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 104
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b126a00d48166ba438762adab2a8062d
+      internalID: -718799929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_40
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 85
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c894faadf202b18449f1f529d50b050e
+      internalID: -842297990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_41
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 61
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4f0a8b441abc94a8a446bd5d1d3fd2
+      internalID: -216031106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_42
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 73
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9360b0efa8618d7488c3529a9ab877f0
+      internalID: 434799366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_43
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 73
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0797504805086bd479b5ea88b0c55d12
+      internalID: 2067667200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_44
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 43
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98259f9fd607e5c4aa360eedbee83051
+      internalID: 1726887041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_45
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 41
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0408395b69f8144a1ad74c6c130a58
+      internalID: -1447867775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Locke Cole_46
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 193
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0a28de9e423684ea23e59d319bad68
+      internalID: -1705483012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +1106,54 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SNES - Final Fantasy 6 - Locke Cole_0: -1507295688
+      SNES - Final Fantasy 6 - Locke Cole_1: -91861586
+      SNES - Final Fantasy 6 - Locke Cole_10: -2147168120
+      SNES - Final Fantasy 6 - Locke Cole_11: -640737657
+      SNES - Final Fantasy 6 - Locke Cole_12: 72057437
+      SNES - Final Fantasy 6 - Locke Cole_13: 981147903
+      SNES - Final Fantasy 6 - Locke Cole_14: 1684441157
+      SNES - Final Fantasy 6 - Locke Cole_15: -270352537
+      SNES - Final Fantasy 6 - Locke Cole_16: -629650279
+      SNES - Final Fantasy 6 - Locke Cole_17: 392097681
+      SNES - Final Fantasy 6 - Locke Cole_18: 211155244
+      SNES - Final Fantasy 6 - Locke Cole_19: -1926217576
+      SNES - Final Fantasy 6 - Locke Cole_2: 1014639895
+      SNES - Final Fantasy 6 - Locke Cole_20: -1507142877
+      SNES - Final Fantasy 6 - Locke Cole_21: -264912150
+      SNES - Final Fantasy 6 - Locke Cole_22: 459699480
+      SNES - Final Fantasy 6 - Locke Cole_23: -1870737247
+      SNES - Final Fantasy 6 - Locke Cole_24: 1199451134
+      SNES - Final Fantasy 6 - Locke Cole_25: 114134701
+      SNES - Final Fantasy 6 - Locke Cole_26: 1241635117
+      SNES - Final Fantasy 6 - Locke Cole_27: -2031560083
+      SNES - Final Fantasy 6 - Locke Cole_28: 1338503217
+      SNES - Final Fantasy 6 - Locke Cole_29: 486011519
+      SNES - Final Fantasy 6 - Locke Cole_3: -638536929
+      SNES - Final Fantasy 6 - Locke Cole_30: -2138692627
+      SNES - Final Fantasy 6 - Locke Cole_31: -1587966396
+      SNES - Final Fantasy 6 - Locke Cole_32: 1283004805
+      SNES - Final Fantasy 6 - Locke Cole_33: 1013074281
+      SNES - Final Fantasy 6 - Locke Cole_34: 12713741
+      SNES - Final Fantasy 6 - Locke Cole_35: 1163228846
+      SNES - Final Fantasy 6 - Locke Cole_36: 1609813513
+      SNES - Final Fantasy 6 - Locke Cole_37: 1732042923
+      SNES - Final Fantasy 6 - Locke Cole_38: 1084354194
+      SNES - Final Fantasy 6 - Locke Cole_39: -718799929
+      SNES - Final Fantasy 6 - Locke Cole_4: -64278224
+      SNES - Final Fantasy 6 - Locke Cole_40: -842297990
+      SNES - Final Fantasy 6 - Locke Cole_41: -216031106
+      SNES - Final Fantasy 6 - Locke Cole_42: 434799366
+      SNES - Final Fantasy 6 - Locke Cole_43: 2067667200
+      SNES - Final Fantasy 6 - Locke Cole_44: 1726887041
+      SNES - Final Fantasy 6 - Locke Cole_45: -1447867775
+      SNES - Final Fantasy 6 - Locke Cole_46: -1705483012
+      SNES - Final Fantasy 6 - Locke Cole_5: -1245030719
+      SNES - Final Fantasy 6 - Locke Cole_6: 489347886
+      SNES - Final Fantasy 6 - Locke Cole_7: -452498444
+      SNES - Final Fantasy 6 - Locke Cole_8: -185713303
+      SNES - Final Fantasy 6 - Locke Cole_9: 1549572996
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
