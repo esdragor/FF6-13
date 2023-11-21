@@ -1,17 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class IntroAnimation : MonoBehaviour
 {
-    [Serializable]
-    private struct CloudLights
+    [SerializeField] private Animator introAnimator;
+    [SerializeField] private AudioSource audioSource;
+    private static readonly int Play = Animator.StringToHash("Play");
+
+    [ContextMenu("Play Intro Animation")]
+    public void StartAnimation()
     {
-        [field: SerializeField] public List<Light2D> Lights { get; private set; }
+        introAnimator.SetTrigger(Play);
+        audioSource.Play();
     }
-    
-    [SerializeField] private Animator animator;
-    [SerializeField] private List<CloudLights> cloudLights;
 }
