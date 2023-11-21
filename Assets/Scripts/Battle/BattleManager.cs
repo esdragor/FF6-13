@@ -46,14 +46,14 @@ public class BattleManager : MonoBehaviour
             Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
             if (monster != null)
             {
-                Entity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity).GetComponent<Entity>();
+                Entity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity)
+                    .GetComponent<Entity>();
                 newMonster.transform.position = monsterPos[i].position;
                 newMonster.Init(monster);
                 monstersSpawned.Add(newMonster);
             }
         }
         // recup les heros et les spawns
-        
     }
 
     private void Start()
@@ -84,8 +84,11 @@ public class BattleManager : MonoBehaviour
             for (int i = 0; i < playersOnBattle.Count; i++)
             {
                 playersOnBattle[i].gameObject.SetActive(false);
+                playersOnBattle[i].getEntity().gameObject.SetActive(false);
                 playersOnExplore[i].gameObject.SetActive(true);
+                playersOnExplore[i].getEntity().gameObject.SetActive(true);
             }
+
             GameManager.Instance.GetBackToExplore();
         }
     }
@@ -102,7 +105,7 @@ public class BattleManager : MonoBehaviour
                     monstersSpawned.RemoveAt(indexAttack);
                     CheckVictory();
                 }
-                
+
                 break;
             case ActionBattle.Defend:
                 Debug.Log("Defend");
@@ -120,17 +123,23 @@ public class BattleManager : MonoBehaviour
     {
         for (int i = 0; i < 1; i++)
         {
-            
         }
+
         if (playersOnBattle.Contains(player))
         {
             //on update les data du player
+            PlayerController controller = playersOnBattle[playersOnBattle.IndexOf(player)];
+            //controller.getEntity().UpdateData(player.getEntity().unitData);
+            controller.getEntity().gameObject.SetActive(true);
         }
         else
         {
-            playersOnBattle.Add(Instantiate(player.gameObject, heroPos[playersOnBattle.Count].position, Quaternion.identity).GetComponent<PlayerController>());
+            playersOnBattle.Add(
+                Instantiate(player.gameObject, heroPos[playersOnBattle.Count].position, Quaternion.identity)
+                    .GetComponent<PlayerController>());
             playersOnExplore.Add(player);
             player.gameObject.SetActive(false);
+            player.getEntity().gameObject.SetActive(false);
         }
     }
 }
