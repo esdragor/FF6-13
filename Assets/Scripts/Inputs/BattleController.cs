@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class BattleController : ExplorationController
 {
-    
+    [SerializeField] protected List<Entity> companions = new ();
 }

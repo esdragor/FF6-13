@@ -273,6 +273,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeCharacter"",
+                    ""type"": ""Value"",
+                    ""id"": ""58d0f381-9486-4d6a-8dd3-945d901f9787"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -429,6 +438,72 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""c4f90a39-b78a-45ac-99f1-7a4922757260"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeCharacter"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""7a545a22-ff92-4db4-8e88-6c7f65935b5b"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeCharacter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""dd1f06d8-9f77-4da9-8c6c-ef124eafc5c3"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeCharacter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""29c0b543-e0fd-44d7-8ca3-35ce79a734e0"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeCharacter"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""8f228fda-64a9-455a-b690-a091bcf45021"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeCharacter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""8bb43e5d-e3bc-480e-bd30-9a6e4ca9754c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeCharacter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -452,6 +527,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Battle_Selection = m_Battle.FindAction("Selection", throwIfNotFound: true);
         m_Battle_Select = m_Battle.FindAction("Select", throwIfNotFound: true);
         m_Battle_Cancel = m_Battle.FindAction("Cancel", throwIfNotFound: true);
+        m_Battle_ChangeCharacter = m_Battle.FindAction("ChangeCharacter", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -586,6 +662,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Battle_Selection;
     private readonly InputAction m_Battle_Select;
     private readonly InputAction m_Battle_Cancel;
+    private readonly InputAction m_Battle_ChangeCharacter;
     public struct BattleActions
     {
         private @Controls m_Wrapper;
@@ -593,6 +670,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Selection => m_Wrapper.m_Battle_Selection;
         public InputAction @Select => m_Wrapper.m_Battle_Select;
         public InputAction @Cancel => m_Wrapper.m_Battle_Cancel;
+        public InputAction @ChangeCharacter => m_Wrapper.m_Battle_ChangeCharacter;
         public InputActionMap Get() { return m_Wrapper.m_Battle; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -611,6 +689,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Cancel.started += instance.OnCancel;
             @Cancel.performed += instance.OnCancel;
             @Cancel.canceled += instance.OnCancel;
+            @ChangeCharacter.started += instance.OnChangeCharacter;
+            @ChangeCharacter.performed += instance.OnChangeCharacter;
+            @ChangeCharacter.canceled += instance.OnChangeCharacter;
         }
 
         private void UnregisterCallbacks(IBattleActions instance)
@@ -624,6 +705,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Cancel.started -= instance.OnCancel;
             @Cancel.performed -= instance.OnCancel;
             @Cancel.canceled -= instance.OnCancel;
+            @ChangeCharacter.started -= instance.OnChangeCharacter;
+            @ChangeCharacter.performed -= instance.OnChangeCharacter;
+            @ChangeCharacter.canceled -= instance.OnChangeCharacter;
         }
 
         public void RemoveCallbacks(IBattleActions instance)
@@ -662,5 +746,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnSelection(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
+        void OnChangeCharacter(InputAction.CallbackContext context);
     }
 }

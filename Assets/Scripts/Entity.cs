@@ -11,7 +11,7 @@ public class Entity : MonoBehaviour
     [SerializeField] protected Animator _animator;
     [SerializeField] protected BoxCollider2D _boxCollider2D;
     [SerializeField] protected float delayToMove = 1f;
-    [field:SerializeField] public UnitSO SO { get; private set;}
+    [field:SerializeField] public UnitSO SO { get; protected set;}
     [field: SerializeField] public UnitData unitData;
 
     public Direction ForwardDirection { get; protected set; } = Direction.None;

@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
 {
     public static event Action<Direction> OnStartedToTurn;
     public static event Action<Direction> OnMovingDirection;
+    public static event Action<float> OnChangeCharacter;
     
     public static event Action OnSelect;
     public static event Action<Direction> OnSelection;
@@ -39,6 +40,7 @@ public class InputManager : MonoBehaviour
         _input.Battle.Select.started += Select;
         _input.Battle.Cancel.started += Cancel;
         _input.Battle.Selection.started += Selection;
+        _input.Battle.ChangeCharacter.started += ChangeCharacter;
         OnExploration();
     }
 
@@ -52,9 +54,11 @@ public class InputManager : MonoBehaviour
     {
         _input.Exploration.Disable();
         _input.Battle.Enable();
-        _input.Battle.Select.Enable();
-        _input.Battle.Cancel.Enable();
-        _input.Battle.Selection.Enable();
+    }
+    
+    private void ChangeCharacter(InputAction.CallbackContext context)
+    {
+       OnChangeCharacter?.Invoke(context.ReadValue<float>());
     }
 
     private void Talk(InputAction.CallbackContext obj)

@@ -30,7 +30,8 @@ public class BattleManager : MonoBehaviour
     private Dictionary<string, MonsterSO> Monsters = new();
     private List<Entity> monstersSpawned = new();
     private ActionBattle actionIndex = ActionBattle.AutoAttack;
-    private List<PlayerControllerOnBattle> playersOnBattle = new();
+    private PlayerControllerOnBattle playerControllerBattle = new();
+    private List<PlayerEntityOnBattle> playersOnBattle = new();
     private List<PlayerController> playersOnExplore = new();
 
     private void Awake()
@@ -76,8 +77,15 @@ public class BattleManager : MonoBehaviour
     {
         InputManager.OnSelect += SelectAction;
         InputManager.OnSelection += SelectionAction;
+        InputManager.OnChangeCharacter += ChangeCharacter;
         foreach (var so in soMonster)
             Monsters.Add(so.name, so);
+    }
+
+    private void ChangeCharacter(float axis)
+    {
+        Debug.Log("Change Character");
+        Debug.Log(axis);
     }
 
     private void SelectionAction(Direction dir)
@@ -99,8 +107,8 @@ public class BattleManager : MonoBehaviour
             combatCamera.gameObject.SetActive(false);
             for (int i = 0; i < playersOnBattle.Count; i++)
             {
+                playerControllerBattle.gameObject.SetActive(false);
                 playersOnBattle[i].gameObject.SetActive(false);
-                playersOnBattle[i].getEntity().gameObject.SetActive(false);
                 playersOnExplore[i].gameObject.SetActive(true);
                 playersOnExplore[i].getEntity().gameObject.SetActive(true);
             }
@@ -132,7 +140,7 @@ public class BattleManager : MonoBehaviour
 
     private PlayerEntityOnBattle GetPlayerAtIndex(int index)
     {
-        return playersOnBattle[index].getEntity() as PlayerEntityOnBattle;
+        return playersOnBattle[index];
     }
 
     public void UpdatePlayer(PlayerController player)
@@ -145,9 +153,8 @@ public class BattleManager : MonoBehaviour
         {
             for (int i = 0; i < playersOnBattle.Count; i++)
             {
-                PlayerControllerOnBattle controller = playersOnBattle[i];
                 //controller.getEntity().UpdateData(player.getEntity().unitData);
-                controller.getEntity().gameObject.SetActive(true);
+                playersOnBattle[i].gameObject.SetActive(true);
             }
 
             //on update les data du player
@@ -160,13 +167,21 @@ public class BattleManager : MonoBehaviour
             PlayerControllerOnBattle controller =
                 Instantiate(playerBattlePrefab.gameObject, heroPos[0].position, Quaternion.identity)
                     .GetComponent<PlayerControllerOnBattle>();
-            playersOnBattle.Add(controller);
+            playerControllerBattle = controller;
             playersOnExplore.Add(player);
-
             controller.InitPlayer();
-            controller.getEntity().Init(player.getEntity().SO);
-            controller.getEntity()?.InitData(player.getEntity().unitData);
-            controller.getEntity().ResetValues();
+            
+            PlayerEntityOnBattle principalPlayer = controller.getEntity();
+            principalPlayer.Init(player.getEntity().SO);
+            principalPlayer.InitData(player.getEntity().unitData);
+            principalPlayer.ResetValues();
+            
+            playersOnBattle.Add(principalPlayer);
+            
+            
+            //add here creation des autres persos
+
+
             player.gameObject.SetActive(false);
             player.getEntity().gameObject.SetActive(false);
         }
