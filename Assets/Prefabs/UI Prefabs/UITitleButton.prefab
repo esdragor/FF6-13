@@ -203,7 +203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 5446f7ffba845584dbfb9a5f534d1725, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -269,3 +269,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Button>k__BackingField: {fileID: 87916057078966054}
+  <Image>k__BackingField: {fileID: 4951278119664659218}
+  <TextMeshProUGUI>k__BackingField: {fileID: 5220924007013929421}

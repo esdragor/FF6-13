@@ -14,6 +14,9 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private UIButton quitButton;
     [Header("Settings")]
     [SerializeField] private float fadeTime = 1f;
+
+    [Header("Debug")]
+    [SerializeField] private bool canLoadGame = false;
     
     private void Start()
     {
@@ -24,6 +27,18 @@ public class UIMenu : MonoBehaviour
         playButton.Button.onClick.AddListener(StartGame);
         loadButton.Button.onClick.AddListener(LoadGame);
         quitButton.Button.onClick.AddListener(QuitGame);
+        
+        EnableLoadGame(canLoadGame);
+    }
+
+    private void EnableLoadGame(bool value)
+    {
+        loadButton.Button.interactable = value;
+
+        if (!value) return;
+
+        loadButton.TextMeshProUGUI.color = Color.black;
+        loadButton.Button.Select();
     }
 
     private void LoadGame()
