@@ -32,24 +32,31 @@ public class PlayerEntity : Entity
     {
         var position = transform.position;
 
-        switch (ForwardDirection)
+        if (ForwardDirection == Direction.Up || ForwardDirection == Direction.UpRight ||
+            ForwardDirection == Direction.UpLeft)
         {
-            case Direction.Up or Direction.UpLeft or Direction.UpRight:
-                mat.SetFloat(DirectionProperty, 0f);
-                newPosition.y = position.y + cellSize;
-                break;
-            case Direction.Down or Direction.DownLeft or Direction.DownRight:
-                mat.SetFloat(DirectionProperty, 1f);
-                newPosition.y =position.y - cellSize;
-                break;
-            case Direction.Left or Direction.DownLeft or Direction.UpLeft:
-                mat.SetFloat(DirectionProperty, 2f);
-                newPosition.x = position.x - cellSize;
-                break;
-            case Direction.Right or Direction.DownRight or Direction.UpRight:
-                mat.SetFloat(DirectionProperty, 2f);
-                newPosition.x = position.x + cellSize;
-                break;
+            mat.SetFloat(DirectionProperty, 0f);
+            newPosition.y = position.y + cellSize; 
+        }
+        
+        else if (ForwardDirection == Direction.Down || ForwardDirection == Direction.DownLeft ||
+            ForwardDirection == Direction.DownRight)
+        {
+            mat.SetFloat(DirectionProperty, 1f);
+            newPosition.y = position.y - cellSize; 
+        }
+        
+        if (ForwardDirection == Direction.Left || ForwardDirection == Direction.DownLeft ||
+            ForwardDirection == Direction.UpLeft)
+        {
+            mat.SetFloat(DirectionProperty, 2f);
+            newPosition.x = position.x - cellSize; 
+        }
+        else if (ForwardDirection == Direction.Right || ForwardDirection == Direction.UpRight ||
+            ForwardDirection == Direction.DownRight)
+        {
+            mat.SetFloat(DirectionProperty, 2f);
+            newPosition.x = position.x + cellSize; 
         }
         
         if (ForwardDirection != Direction.None)
