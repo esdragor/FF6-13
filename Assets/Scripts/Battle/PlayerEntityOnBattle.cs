@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class PlayerEntityOnBattle : PlayerEntity
@@ -83,27 +84,35 @@ public class PlayerEntityOnBattle : PlayerEntity
             switch (action)
             {
                 case ActionBattle.AutoAttack:
+                    Vector3 originalPos = transform.position;
+                    if (target)
+                    {
+                        transform.DOMove(target.transform.position + Vector3.right, 1f);
+                        yield return new WaitForSeconds(1f);
 
-                    success = Attack();
-                    costOfActionQueue -= costAttack;
-                    if (!success) break;
-                    SpendActionBar(costAttack);
+
+                        success = Attack();
+
+                        if (success) yield return new WaitForSeconds(1f); //animation attack
+                        transform.DOMove(originalPos, 1f);
+                        yield return new WaitForSeconds(1f);
+                        costOfActionQueue -= costAttack;
+                        if (!success) break;
+                        SpendActionBar(costAttack);
+                    }
+                    else
+                    {
+                        Debug.Log("No target");
+                        costOfActionQueue -= costAttack;
+                        yield return new WaitForSeconds(1f);
+                    }
                     break;
                 case ActionBattle.Abilities:
-                    Debug.Log("Defend");
+                    Debug.Log("Abilities");
                     break;
                 case ActionBattle.Items:
                     Debug.Log("Item");
                     break;
-            }
-
-            if (success)
-            {
-                yield return new WaitForSeconds(0.5f);
-            }
-            else
-            {
-                yield return new WaitForSeconds(0.1f);
             }
         }
 
@@ -119,7 +128,7 @@ public class PlayerEntityOnBattle : PlayerEntity
         else
         {
             actionBar += speedActionBar * Time.deltaTime;
-            Debug.Log(actionBar);
+            //Debug.Log(actionBar);
             OnActionBarChanged?.Invoke(GetPercentageActionBar());
         }
 
