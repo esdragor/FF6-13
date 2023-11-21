@@ -11,6 +11,7 @@ public class PlayerController : BattleController
     {
         base.InstantiateEntity();
         OnPlayerSpawned?.Invoke(entity);
+        (entity as PlayerEntity)?.InitPlayer(this);
     }
     
     protected override void OnEnable()

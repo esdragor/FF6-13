@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Scriptable_Objects.Unit;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -27,8 +28,10 @@ public class BattleManager : MonoBehaviour
 
     private int nbMonster = 0;
     private Dictionary<string, MonsterSO> Monsters = new();
-    private List<Entity> monstersToSpawn = new();
+    private List<Entity> monstersSpawned = new();
     private ActionBattle actionIndex = ActionBattle.Attack;
+    private List<PlayerController> playersOnBattle = new();
+    private List<PlayerController> playersOnExplore = new();
 
     // ReSharper disable Unity.PerformanceAnalysis
     public void StartBattle()
@@ -46,9 +49,10 @@ public class BattleManager : MonoBehaviour
                 Entity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity).GetComponent<Entity>();
                 newMonster.transform.position = monsterPos[i].position;
                 newMonster.Init(monster);
-                monstersToSpawn.Add(newMonster);
+                monstersSpawned.Add(newMonster);
             }
         }
+        // recup les heros et les spawns
         
     }
 
@@ -69,6 +73,22 @@ public class BattleManager : MonoBehaviour
         OnSelectionChanged?.Invoke((int)actionIndex);
     }
 
+    private void CheckVictory()
+    {
+        if (monstersSpawned.Count == 0)
+        {
+            Debug.Log("Victory");
+            UIBattle.SetActive(false);
+            exploreCamera.gameObject.SetActive(true);
+            combatCamera.gameObject.SetActive(false);
+            for (int i = 0; i < playersOnBattle.Count; i++)
+            {
+                playersOnBattle[i].gameObject.SetActive(false);
+                playersOnExplore[i].gameObject.SetActive(true);
+            }
+            GameManager.Instance.GetBackToExplore();
+        }
+    }
 
     private void SelectAction()
     {
@@ -76,7 +96,13 @@ public class BattleManager : MonoBehaviour
         {
             case ActionBattle.Attack:
                 Debug.Log("Attack");
-                GameManager.Instance.GetPlayerAtIndex(0).Attack(monstersToSpawn[0]);
+                int indexAttack = 0;
+                if (GameManager.Instance.GetPlayerAtIndex(0).Attack(monstersSpawned[indexAttack]))
+                {
+                    monstersSpawned.RemoveAt(indexAttack);
+                    CheckVictory();
+                }
+                
                 break;
             case ActionBattle.Defend:
                 Debug.Log("Defend");
@@ -87,6 +113,24 @@ public class BattleManager : MonoBehaviour
             case ActionBattle.Escape:
                 Debug.Log("Escape");
                 break;
+        }
+    }
+
+    public void UpdatePlayer(PlayerController player)
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            
+        }
+        if (playersOnBattle.Contains(player))
+        {
+            //on update les data du player
+        }
+        else
+        {
+            playersOnBattle.Add(Instantiate(player.gameObject, heroPos[playersOnBattle.Count].position, Quaternion.identity).GetComponent<PlayerController>());
+            playersOnExplore.Add(player);
+            player.gameObject.SetActive(false);
         }
     }
 }

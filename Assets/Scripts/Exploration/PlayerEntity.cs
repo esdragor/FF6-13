@@ -1,22 +1,28 @@
 using DG.Tweening;
 using Scriptable_Objects.Unit;
+using Units;
 using UnityEngine;
 
 public class PlayerEntity : Entity
 {
     private Vector3 newPosition;
     private PlayerCharacterInfoInstance _playerCharacterInfoInstance;
+    public PlayerController _playerController { get; private set; } 
     
-    public void Attack(Entity target)
+    public bool Attack(Entity target)
     {
         Debug.Log("Attack");
-        target.TakeDamage(_playerCharacterInfoInstance.So.Attack, _playerCharacterInfoInstance.So);
+        return target.TakeDamage(unitData.Attack, _playerCharacterInfoInstance.So);
     }
     
-    private void Start()
+    public void InitPlayer(PlayerController controller)
     {
         newPosition = transform.position;
         _playerCharacterInfoInstance = (SO as PlayerCharactersSO)?.CreateInstance(1);
+        if (_playerCharacterInfoInstance != null)
+            unitData = new PlayerCharacterData(_playerCharacterInfoInstance.So,
+                _playerCharacterInfoInstance.So.GrowthTable, 1);
+        _playerController = controller;
     }
 
     private void LateUpdate()

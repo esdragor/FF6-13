@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
         {
             _state = State.Battle;
             _inputManager.OnBattle();
+            _battleManager.UpdatePlayer(_player._playerController);
             _battleManager.StartBattle();
         }
     }
