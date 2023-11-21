@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b722d252af14fc6aba6f9feadf0de03, type: 3}
+  m_Name: Eye Drops
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Eye Drops
+  <Description>k__BackingField: Cures darkness.
+  <MaxQuantity>k__BackingField: 99
+  <Price>k__BackingField: 50
+  <Sprite>k__BackingField: {fileID: 0}
+  <Effects>k__BackingField:
+  - {fileID: 11400000, guid: f8a26c05f1c9efa478ba5b4136ac1c3d, type: 2}
+  <UsedOutsideCombat>k__BackingField: 0
