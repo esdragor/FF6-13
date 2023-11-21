@@ -30,8 +30,6 @@ namespace Units
         
         protected override void Init()
         {
-            //TODO: Calculate from level
-            
             currentHp = MaxHp;
             currentMp = MaxMp;
         }
