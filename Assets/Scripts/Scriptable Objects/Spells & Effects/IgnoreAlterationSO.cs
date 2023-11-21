@@ -8,5 +8,6 @@ namespace Scriptable_Objects.Spells___Effects
     [Serializable] public class IgnoreAlterationSO : EffectSO
     {
         [field:SerializeField] public Alterations Alteration { get; private set; }
+        [field:SerializeField, Tooltip("True mean ignore for spell, is immune for items")] private bool isPositive { get; set; }
     }
 }
