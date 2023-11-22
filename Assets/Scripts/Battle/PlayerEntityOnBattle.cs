@@ -5,6 +5,7 @@ using System.Linq;
 using DG.Tweening;
 using Scriptable_Objects.Items;
 using Scriptable_Objects.Spells___Effects;
+using Scriptable_Objects.Unit;
 using Units;
 using UnityEngine;
 
@@ -29,21 +30,20 @@ public class PlayerEntityOnBattle : PlayerEntity
         Debug.Log("Attack");
         if (target == null)
             return false;
-        return target.TakeDamage(unitData.Attack, unitData);
+        return target.TakeDamage(unitData.Attack, Elements.None, unitData); //Physical for now, need to check the weapon's element
     }
     
-    public bool UseItem(UsableItemSo item, List<UnitData> targets)
+    public bool UseItem(UsableItemSo item, List<Entity> targets)
     {
         Debug.Log($"Use {item.Name} on {targets}");
+        // TODO: Should remove the item from the inventory
+        
         var effects = item.Effects.ToList();
         
         // Items can't miss, so we can do all effects
         foreach (var effect in effects)
         {
-            
             // Check if the effects possess a ignore immunity
-            
-            
             
             foreach (var tgt in targets) {
                 switch (effect)
@@ -51,18 +51,70 @@ public class PlayerEntityOnBattle : PlayerEntity
                     case AddOrRemoveAlterationSO addOrRemoveAlterationSo:
                         var ignoreAlteration = effects.Where(e => e is IgnoreAlterationSO).Any(e => ((IgnoreAlterationSO)e).Alteration == addOrRemoveAlterationSo.Alteration && ((IgnoreAlterationSO)e).IsPositive);
                         
-                        if (addOrRemoveAlterationSo.Remove)
-                        {
-                            tgt.RemoveAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration);
-                            break;
-                        }
-                        tgt.AddAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration);
+                        tgt.ApplyAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration, addOrRemoveAlterationSo.Remove);
+                        break;
+                    case DamageEffectSO damageEffectSo:
+                        var damage = damageEffectSo.Damage;
+                        var element = damageEffectSo.Element;
+                        var ignoreDefence = effects.Where(e => e is IgnoreBlockEvadeSO)
+                            .Any(e => ((IgnoreBlockEvadeSO)e).IgnoreBlock);
+                        var isPourcentDamage = !damageEffectSo.FlatValue;
+                        tgt.TakeDamage(damage, element, unitData, ignoreDefence, isPourcentDamage); 
+                        break;
+                    case MpRegenSO mpRegenSo:
+                        tgt.RegenMpDamage(mpRegenSo.Regen, !mpRegenSo.FlatValue);
                         break;
                 }
             }
         }
         
-        return false;
+        return true;
+    }
+
+    public bool UseSpell(SpellSO spell, List<Entity> targets)
+    {
+        Debug.Log($"Use {spell.Name} on {targets}");
+
+        var effects = spell.SpellEffects.ToList();
+        var onehit = false;
+        var hit = false;
+        
+        // Remove Mp ; Ap
+        
+        foreach (var tgt in targets)
+        {
+            //TODO: Check if the spell hit
+            //spell.HitRate
+            hit = true; // It seams player can't miss attacks (but enemies can dodge)
+            
+            if (spell.HitRate == 0) hit = true;
+            if (!hit) continue;
+            
+            foreach (var effect in effects)
+            {
+                switch (effect)
+                {
+                    case AddOrRemoveAlterationSO addOrRemoveAlterationSo:
+                        var ignoreAlteration = effects.Where(e => e is IgnoreAlterationSO).Any(e => ((IgnoreAlterationSO)e).Alteration == addOrRemoveAlterationSo.Alteration && ((IgnoreAlterationSO)e).IsPositive);
+                        
+                        tgt.ApplyAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration, addOrRemoveAlterationSo.Remove);
+                        break;
+                    case DamageEffectSO damageEffectSo:
+                        var damage = damageEffectSo.Damage;
+                        var element = damageEffectSo.Element;
+                        var ignoreDefence = effects.Where(e => e is IgnoreBlockEvadeSO)
+                            .Any(e => ((IgnoreBlockEvadeSO)e).IgnoreBlock);
+                        var isPourcentDamage = !damageEffectSo.FlatValue;
+                        tgt.TakeDamage(damage, element, unitData, ignoreDefence, isPourcentDamage); 
+                        break;
+                    case MpRegenSO mpRegenSo:
+                        tgt.RegenMpDamage(mpRegenSo.Regen, !mpRegenSo.FlatValue);
+                        break;
+                }
+            }
+        }
+
+        return hit;
     }
 
     public void ResetValues()
