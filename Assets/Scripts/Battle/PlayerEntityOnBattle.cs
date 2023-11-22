@@ -16,42 +16,49 @@ public class PlayerEntityOnBattle : PlayerEntity
     private List<ActionBattle> actionsQueue = new();
     private float costOfActionQueue = 0;
 
-    public float costAttack { get; private set; }
-    [SerializeField] private float limitActionBar = 100;
+    [SerializeField] private float costAttack = 1;
+    [SerializeField] private float nbBarre = 2;
+    [SerializeField] private float ratioBarre = 50;
     [SerializeField] private float ratioSpeedActionBar = 1;
 
-    private float actionBar = 0;
+    private float actionBar;
     private float speedActionBar = 1;
     private bool currentlyAttacking = false;
     private Entity target;
+    private bool isSelected = false;
 
     public bool Attack()
     {
         Debug.Log("Attack");
         if (target == null)
             return false;
-        return target.TakeDamage(unitData.Attack, Elements.None, unitData); //Physical for now, need to check the weapon's element
+        return target.TakeDamage(unitData.Attack, Elements.Physical,
+            unitData); //Physical for now, need to check the weapon's element
     }
-    
+
     public bool UseItem(UsableItemSo item, List<Entity> targets)
     {
         Debug.Log($"Use {item.Name} on {targets}");
         // TODO: Should remove the item from the inventory
-        
+
         var effects = item.Effects.ToList();
-        
+
         // Items can't miss, so we can do all effects
         foreach (var effect in effects)
         {
             // Check if the effects possess a ignore immunity
-            
-            foreach (var tgt in targets) {
+
+            foreach (var tgt in targets)
+            {
                 switch (effect)
                 {
                     case AddOrRemoveAlterationSO addOrRemoveAlterationSo:
-                        var ignoreAlteration = effects.Where(e => e is IgnoreAlterationSO).Any(e => ((IgnoreAlterationSO)e).Alteration == addOrRemoveAlterationSo.Alteration && ((IgnoreAlterationSO)e).IsPositive);
-                        
-                        tgt.ApplyAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration, addOrRemoveAlterationSo.Remove);
+                        var ignoreAlteration = effects.Where(e => e is IgnoreAlterationSO).Any(e =>
+                            ((IgnoreAlterationSO)e).Alteration == addOrRemoveAlterationSo.Alteration &&
+                            ((IgnoreAlterationSO)e).IsPositive);
+
+                        tgt.ApplyAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration,
+                            addOrRemoveAlterationSo.Remove);
                         break;
                     case DamageEffectSO damageEffectSo:
                         var damage = damageEffectSo.Damage;
@@ -59,7 +66,7 @@ public class PlayerEntityOnBattle : PlayerEntity
                         var ignoreDefence = effects.Where(e => e is IgnoreBlockEvadeSO)
                             .Any(e => ((IgnoreBlockEvadeSO)e).IgnoreBlock);
                         var isPourcentDamage = !damageEffectSo.FlatValue;
-                        tgt.TakeDamage(damage, element, unitData, ignoreDefence, isPourcentDamage); 
+                        tgt.TakeDamage(damage, element, unitData, ignoreDefence, isPourcentDamage);
                         break;
                     case MpRegenSO mpRegenSo:
                         tgt.RegenMpDamage(mpRegenSo.Regen, !mpRegenSo.FlatValue);
@@ -67,7 +74,7 @@ public class PlayerEntityOnBattle : PlayerEntity
                 }
             }
         }
-        
+
         return true;
     }
 
@@ -78,26 +85,29 @@ public class PlayerEntityOnBattle : PlayerEntity
         var effects = spell.SpellEffects.ToList();
         var onehit = false;
         var hit = false;
-        
+
         // Remove Mp ; Ap
-        
+
         foreach (var tgt in targets)
         {
             //TODO: Check if the spell hit
             //spell.HitRate
             hit = true; // It seams player can't miss attacks (but enemies can dodge)
-            
+
             if (spell.HitRate == 0) hit = true;
             if (!hit) continue;
-            
+
             foreach (var effect in effects)
             {
                 switch (effect)
                 {
                     case AddOrRemoveAlterationSO addOrRemoveAlterationSo:
-                        var ignoreAlteration = effects.Where(e => e is IgnoreAlterationSO).Any(e => ((IgnoreAlterationSO)e).Alteration == addOrRemoveAlterationSo.Alteration && ((IgnoreAlterationSO)e).IsPositive);
-                        
-                        tgt.ApplyAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration, addOrRemoveAlterationSo.Remove);
+                        var ignoreAlteration = effects.Where(e => e is IgnoreAlterationSO).Any(e =>
+                            ((IgnoreAlterationSO)e).Alteration == addOrRemoveAlterationSo.Alteration &&
+                            ((IgnoreAlterationSO)e).IsPositive);
+
+                        tgt.ApplyAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration,
+                            addOrRemoveAlterationSo.Remove);
                         break;
                     case DamageEffectSO damageEffectSo:
                         var damage = damageEffectSo.Damage;
@@ -105,7 +115,7 @@ public class PlayerEntityOnBattle : PlayerEntity
                         var ignoreDefence = effects.Where(e => e is IgnoreBlockEvadeSO)
                             .Any(e => ((IgnoreBlockEvadeSO)e).IgnoreBlock);
                         var isPourcentDamage = !damageEffectSo.FlatValue;
-                        tgt.TakeDamage(damage, element, unitData, ignoreDefence, isPourcentDamage); 
+                        tgt.TakeDamage(damage, element, unitData, ignoreDefence, isPourcentDamage);
                         break;
                     case MpRegenSO mpRegenSo:
                         tgt.RegenMpDamage(mpRegenSo.Regen, !mpRegenSo.FlatValue);
@@ -120,10 +130,10 @@ public class PlayerEntityOnBattle : PlayerEntity
     public void ResetValues()
     {
         actionBar = 0;
-        costAttack = 50f;
         costOfActionQueue = 0;
         speedActionBar = ratioSpeedActionBar * unitData.Agility;
         currentlyAttacking = false;
+        isSelected = false;
     }
 
     public void addActionToQueue(ActionBattle action, int index = 0)
@@ -132,19 +142,19 @@ public class PlayerEntityOnBattle : PlayerEntity
         switch (action)
         {
             case ActionBattle.AutoAttack:
-                nbAction = (int)(limitActionBar / costAttack);
+                nbAction = (int)((nbBarre * ratioBarre) / (costAttack * ratioBarre - costOfActionQueue));
                 for (int i = 0; i < nbAction; i++)
                 {
                     actionsQueue.Add(action);
-                    costOfActionQueue += costAttack;
+                    costOfActionQueue += costAttack * ratioBarre;
                 }
 
                 break;
             case ActionBattle.Abilities:
-                Debug.Log("Defend");
+                Debug.Log("Abilities");
                 break;
             case ActionBattle.Items:
-                Debug.Log("Item");
+                Debug.Log("Items");
                 break;
         }
     }
@@ -154,12 +164,13 @@ public class PlayerEntityOnBattle : PlayerEntity
         actionBar -= value;
         if (actionBar < 0)
             actionBar = 0;
-        OnActionBarChanged?.Invoke(GetPercentageActionBar());
+        if (isSelected)
+            OnActionBarChanged?.Invoke(GetPercentageActionBar());
     }
 
     public float GetPercentageActionBar()
     {
-        return (actionBar / limitActionBar);
+        return (actionBar / (nbBarre * ratioBarre));
     }
 
     IEnumerator DequeueAllAction()
@@ -179,22 +190,22 @@ public class PlayerEntityOnBattle : PlayerEntity
                         transform.DOMove(target.transform.position + Vector3.right, 1f);
                         yield return new WaitForSeconds(1f);
 
-
                         success = Attack();
+                        costOfActionQueue -= costAttack * ratioBarre;
+                        if (success)
+                            SpendActionBar(costAttack * ratioBarre);
 
-                        if (success) yield return new WaitForSeconds(1f); //animation attack
+                        if (success) yield return new WaitForSeconds(0.3f); //animation attack
                         transform.DOMove(originalPos, 1f);
                         yield return new WaitForSeconds(1f);
-                        costOfActionQueue -= costAttack;
-                        if (!success) break;
-                        SpendActionBar(costAttack);
                     }
                     else
                     {
                         Debug.Log("No target");
-                        costOfActionQueue -= costAttack;
+                        costOfActionQueue -= costAttack * ratioBarre;
                         yield return new WaitForSeconds(1f);
                     }
+
                     break;
                 case ActionBattle.Abilities:
                     Debug.Log("Abilities");
@@ -210,23 +221,30 @@ public class PlayerEntityOnBattle : PlayerEntity
 
     private void Update()
     {
-        if (actionBar >= limitActionBar)
+        if (actionBar >= (nbBarre * ratioBarre))
         {
-            actionBar = limitActionBar;
+            actionBar = (nbBarre * ratioBarre);
+            //Debug.Log("actionBar is full");
         }
         else
         {
             actionBar += speedActionBar * Time.deltaTime;
-            //Debug.Log(actionBar);
-            OnActionBarChanged?.Invoke(GetPercentageActionBar());
+            if (isSelected)
+                OnActionBarChanged?.Invoke(GetPercentageActionBar());
         }
 
-        if (actionBar >= costOfActionQueue && !currentlyAttacking)
+        //Debug.Log("D: " + actionBar);
+        if (costOfActionQueue > 0 && actionBar >= costOfActionQueue && !currentlyAttacking)
             StartCoroutine(DequeueAllAction());
     }
 
     public void addTarget(Entity entity)
     {
         target = entity;
+    }
+
+    public void SelectPlayer()
+    {
+        isSelected = true;
     }
 }

@@ -22,8 +22,7 @@ public class PlayerEntity : Entity
         clampedPosition = transform.position;
         PlayerCharactersSO so = SO as PlayerCharactersSO;
         if (so != null)
-            unitData = new PlayerCharacterData(so,
-                so.GrowthTable, 1);
+            unitData = new PlayerCharacterData(so, 1);
         _playerController = controller;
 
         moving = false;

@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using Scriptable_Objects.Unit;
 using Units;
 using UnityEngine;
@@ -6,13 +7,13 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     public static event Action<Entity> OnEntityDying;
+    public UnitData unitData;
     
     [SerializeField] protected SpriteRenderer _spriteRenderer;
     [SerializeField] protected Animator _animator;
     [SerializeField] protected BoxCollider2D _boxCollider2D;
     [SerializeField] protected float delayToMove = 1f;
     [field:SerializeField] public UnitSO SO { get; protected set;}
-    [field: SerializeField] public UnitData unitData;
 
     public Direction ForwardDirection { get; protected set; } = Direction.None;
 
@@ -59,14 +60,18 @@ public class Entity : MonoBehaviour
         
         Debug.Log( unitData.GetName() + " Take Damage " + damage + " from " + attacker.GetName());
         unitData.TakeDamage(damage);
+        if (element == Elements.Physical)
+        {
+            transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
+        }
         if (unitData.CurrentHp <= 0)
         {
             Debug.Log(unitData.GetName() + " is dead");
             OnEntityDying?.Invoke(this);
-            Destroy(gameObject, 0.1f);
+            Destroy(gameObject, 0.5f);
             return true;
         }
-        return false;
+        return true;
     }
 
     public void RegenMpDamage(int damage, bool isPourcentDamage = false)
@@ -109,15 +114,25 @@ public class Entity : MonoBehaviour
         _spriteRenderer.material = mat;
     }
 
-    public void Init()
+    public void Init(bool isMonster)
     {
-        unitData = new UnitData(SO);
+        unitData =  (isMonster) ? new MonsterData(SO) : new PlayerCharacterData(SO as PlayerCharactersSO, 1);
         AssignSprite();
     }
     
-    public void Init(UnitSO unitSo)
+    public void Init(UnitSO unitSo, bool isMonster = false)
     {
         SO = unitSo;
-        Init();
+        Init(isMonster);
+    }
+
+    public void SelectEnemy()
+    {
+        _spriteRenderer.color = Color.red;
+    }
+
+    public void DeselectEnemy()
+    {
+        _spriteRenderer.color = Color.white;
     }
 }

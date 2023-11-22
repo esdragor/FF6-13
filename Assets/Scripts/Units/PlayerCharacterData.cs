@@ -24,10 +24,10 @@ namespace Units
         private PlayerCharactersSO playerCharactersSo => (PlayerCharactersSO)unitSo;
         private GrowthRatesSO growthRatesSo;
         
-        public PlayerCharacterData(PlayerCharactersSO unitSo, GrowthRatesSO growthRatesSo, int lvl) : base(unitSo)
+        public PlayerCharacterData(PlayerCharactersSO unitSo, int lvl) : base(unitSo)
         {
             Lvl = lvl;
-            this.growthRatesSo = growthRatesSo;
+            growthRatesSo = unitSo.GrowthTable;
             
             Init();
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Units
 {
-    public class UnitData : UnitInfo
+    public abstract class UnitData : UnitInfo
     {
         protected UnitSO unitSo;
 
@@ -132,7 +132,9 @@ namespace Units
 
         public virtual int Resistance(Elements element)
         {
-            var baseResist = unitSo.Resistances.Find(resistance => resistance.Element == element).Resistance;
+            ElementResistance resist = unitSo.Resistances.Find(resistance => resistance.Element == element);
+            if (resist == null) return 100;
+            var baseResist = resist.Resistance;
             //TODO: Check alteration for resistances
             
             

@@ -12,7 +12,6 @@ namespace Scriptable_Objects.Unit
         [field:SerializeField] public string Name { get; private set; }
         
         [field:Header("Stats")]
-        [field:SerializeField] public int Hp { get; private set; }
         [field:SerializeField] public int Strength { get; private set; }
         [field:SerializeField] public int Agility { get; private set; }
         [field:SerializeField] public int Stamina { get; private set; }
@@ -32,12 +31,6 @@ namespace Scriptable_Objects.Unit
         [field:Space]
         [field:Header("Misc")]
         [field:SerializeField] public Sprite Sprite { get; private set; }
-
-        
-        public UnitSOInstance CreateInstance()
-        {
-            return new UnitSOInstance(this);
-        }
         
         
         [ContextMenu("Init All")]
@@ -67,18 +60,6 @@ namespace Scriptable_Objects.Unit
             {
                 AlterationImmunity.Add(new AlterationImmunity((Alterations)i, false));
             }
-        }
-    }
-    
-    public class UnitSOInstance
-    {
-        public UnitSO So { get;}
-        public int currentHp { get; set; }
-        
-        public UnitSOInstance(UnitSO info)
-        {
-            So = info;
-            currentHp = info.Hp;
         }
     }
     
@@ -181,6 +162,7 @@ namespace Scriptable_Objects.Unit
         Heal,
         Earth,
         Wind,
+        Physical,
         None
     }
 }
