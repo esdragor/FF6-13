@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scriptable_Objects.Spells___Effects;
 using Scriptable_Objects.Unit;
+using Units;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -16,10 +18,11 @@ public enum ActionBattle
 public class BattleManager : MonoBehaviour
 {
     public static event Action OnBattleStarted;
+    public static event Action OnBattleEnded;
     public static event Action<int> OnSelectionChanged;
 
     [SerializeField] private GameObject UIBattle;
-    [SerializeField] private GameObject monsterPrefab;
+    [SerializeField] private MonsterEntity monsterPrefab;
     [SerializeField] private List<MonsterSO> soMonster = new();
     [SerializeField] private List<Transform> monsterPos = new();
     [SerializeField] private List<Transform> heroPos = new();
@@ -37,7 +40,10 @@ public class BattleManager : MonoBehaviour
 
     int indexPlayer = 0;
     int indexTarget = 0;
+    int indexSpells = 0;
     bool selectTarget = false;
+    bool openSpellList = false;
+    List<SpellSO> spells = new();
 
     private void Awake()
     {
@@ -65,15 +71,17 @@ public class BattleManager : MonoBehaviour
         nbMonster = Random.Range(1, 4);
         nbMonster = 3;
         indexPlayer = 0;
+        openSpellList = false;
+        selectTarget = false;
         for (int i = 0; i < nbMonster; i++)
         {
             Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
             if (monster != null)
             {
-                Entity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity)
-                    .GetComponent<Entity>();
+                MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
                 newMonster.transform.position = monsterPos[i].position;
                 newMonster.Init(monster, true);
+                newMonster.ResetValue();
                 monstersSpawned.Add(newMonster);
             }
         }
@@ -84,8 +92,15 @@ public class BattleManager : MonoBehaviour
         InputManager.OnSelect += SelectAction;
         InputManager.OnSelection += SelectionAction;
         InputManager.OnChangeCharacter += ChangeCharacter;
+        MonsterEntity.OnAttacking += RetrieveTarget;
         foreach (var so in soMonster)
             Monsters.Add(so.name, so);
+    }
+
+    public void RetrieveTarget(MonsterEntity monster)
+    {
+        int index = Random.Range(0, playersOnBattle.Count);
+        monster.Attack(playersOnBattle[index]);
     }
 
     private void ChangeCharacter(float axis)
@@ -97,24 +112,10 @@ public class BattleManager : MonoBehaviour
             indexPlayer = 0;
     }
 
-    private void SelectionAction(Direction dir)
-    {
-        if (selectTarget)
-        {
-            SelectionEnemyTarget(dir);
-            return;
-        }
-
-        if (dir == Direction.Up)
-            actionIndex = (actionIndex == ActionBattle.AutoAttack) ? ActionBattle.Items : actionIndex - 1;
-        else if (dir == Direction.Down)
-            actionIndex = (actionIndex == ActionBattle.Items) ? ActionBattle.AutoAttack : actionIndex + 1;
-        OnSelectionChanged?.Invoke((int)actionIndex);
-    }
-
     IEnumerator Victory() // changer par l'ecran de victoire
     {
         yield return new WaitForSeconds(2f);
+        OnBattleEnded?.Invoke();
         UIBattle.SetActive(false);
         exploreCamera.gameObject.SetActive(true);
         combatCamera.gameObject.SetActive(false);
@@ -125,7 +126,6 @@ public class BattleManager : MonoBehaviour
             playerControllerBattle.gameObject.SetActive(false);
             playersOnBattle[i].gameObject.SetActive(false);
         }
-
         GameManager.Instance.GetBackToExplore();
     }
 
@@ -141,16 +141,79 @@ public class BattleManager : MonoBehaviour
     public void SelectionEnemyTarget(Direction dir)
     {
         int oldIndex = indexTarget;
-        if (dir == Direction.Down)
-            indexTarget = (indexTarget == 0) ? monstersSpawned.Count - 1 : indexTarget - 1;
-        else if (dir == Direction.Up)
-            indexTarget = (indexTarget == monstersSpawned.Count - 1) ? 0 : indexTarget + 1;
-        Debug.Log("Target : " + monstersSpawned[indexTarget].name);
-        if (oldIndex != indexTarget)
+        if (openSpellList)
         {
-            monstersSpawned[oldIndex].DeselectEnemy();
-            monstersSpawned[indexTarget].SelectEnemy();
+            //parcours les enemis et les players
         }
+
+        if (dir == Direction.Down)
+        {
+            if (!openSpellList)
+                indexTarget = (indexTarget == 0) ? monstersSpawned.Count - 1 : indexTarget - 1;
+            if (openSpellList)
+                indexTarget = (indexTarget == 0) ? playersOnBattle.Count + monstersSpawned.Count - 1 : indexTarget - 1;
+        }
+        else if (dir == Direction.Up)
+        {
+            if (!openSpellList)
+                indexTarget = (indexTarget == monstersSpawned.Count - 1) ? 0 : indexTarget + 1;
+            if (openSpellList)
+                indexTarget = (indexTarget == playersOnBattle.Count + monstersSpawned.Count - 1) ? 0 : indexTarget + 1;
+        }
+
+        string name = "";
+        
+        if (!openSpellList)
+            name = monstersSpawned[indexTarget].name;
+        else
+            if (indexTarget < monstersSpawned.Count)
+                name = monstersSpawned[indexTarget].name;
+            else
+                name = playersOnBattle[indexTarget - monstersSpawned.Count].name;
+        Debug.Log("Target : " + name);
+        if (!openSpellList && oldIndex != indexTarget)
+        {
+            monstersSpawned[oldIndex].DeselectTarget();
+            monstersSpawned[indexTarget].SelectTarget();
+        }
+        else if (openSpellList && oldIndex != indexTarget)
+        {
+            if (indexTarget < monstersSpawned.Count) monstersSpawned[indexTarget].SelectTarget();
+            else GetPlayerAtIndex(indexTarget - monstersSpawned.Count).SelectTarget();
+            if (oldIndex < monstersSpawned.Count) monstersSpawned[oldIndex].DeselectTarget();
+            else GetPlayerAtIndex(oldIndex - monstersSpawned.Count).DeselectTarget();
+        }
+    }
+
+    private void SelectionAction(Direction dir)
+    {
+        if (selectTarget)
+        {
+            SelectionEnemyTarget(dir);
+            return;
+        }
+
+        if (openSpellList)
+        {
+            SelectionSpell(dir);
+            return;
+        }
+
+
+        if (dir == Direction.Up)
+            actionIndex = (actionIndex == ActionBattle.AutoAttack) ? ActionBattle.Items : actionIndex - 1;
+        else if (dir == Direction.Down)
+            actionIndex = (actionIndex == ActionBattle.Items) ? ActionBattle.AutoAttack : actionIndex + 1;
+        OnSelectionChanged?.Invoke((int)actionIndex);
+    }
+
+    private void SelectionSpell(Direction dir)
+    {
+        if (dir == Direction.Down)
+            indexSpells = (indexSpells == 0) ? spells.Count - 1 : indexSpells - 1;
+        else if (dir == Direction.Up)
+            indexSpells = (indexSpells == spells.Count - 1) ? 0 : indexSpells + 1;
+        Debug.Log("Spell : " + spells[indexSpells].name);
     }
 
     private void SelectAction()
@@ -162,7 +225,7 @@ public class BattleManager : MonoBehaviour
                 if (selectTarget)
                 {
                     PlayerEntityOnBattle player = GetPlayerAtIndex(indexPlayer);
-                    monstersSpawned[indexTarget].DeselectEnemy();
+                    monstersSpawned[indexTarget].DeselectTarget();
                     player.addTarget(monstersSpawned[indexTarget]);
                     player.addActionToQueue(ActionBattle.AutoAttack);
                     selectTarget = false;
@@ -170,18 +233,60 @@ public class BattleManager : MonoBehaviour
                 else
                 {
                     selectTarget = true;
-                    monstersSpawned[indexTarget].SelectEnemy();
+                    indexTarget = 0;
+                    monstersSpawned[indexTarget].SelectTarget();
                 }
+
                 break;
             case ActionBattle.Abilities:
-                Debug.Log("Defend");
+                if (openSpellList == false)
+                {
+                    spells.Clear();
+                    spells = (playersOnBattle[indexPlayer].unitData as PlayerCharacterData)?.getAllSpells();
+                    Debug.Log(spells.Count + " spells found");
+                    if (spells != null)
+                    {
+                        // j'open la liste des spells
+                        openSpellList = true;
+                        indexSpells = 0;
+                    }
+                }
+                else if (openSpellList && !selectTarget)
+                {
+                    selectTarget = true;
+                    // je highlight la target
+                    indexTarget = (spells[0].SpellType == SpellTypes.Heal) ? indexTarget = monstersSpawned.Count : 0;
+                    if (indexTarget < monstersSpawned.Count) monstersSpawned[indexTarget].SelectTarget();
+                    else GetPlayerAtIndex(indexTarget - monstersSpawned.Count).SelectTarget();
+                }
+                else
+                {
+                    // je lance le spell
+                    PlayerEntityOnBattle player = GetPlayerAtIndex(indexPlayer);
+                    if (indexTarget < monstersSpawned.Count) monstersSpawned[indexTarget].DeselectTarget();
+                    else GetPlayerAtIndex(indexTarget - monstersSpawned.Count).DeselectTarget();
+                    if (indexTarget < monstersSpawned.Count)
+                    {
+                        monstersSpawned[indexTarget].DeselectTarget();
+                        player.addTarget(monstersSpawned[indexTarget]);
+                    }
+                    else
+                    {
+                        GetPlayerAtIndex(indexTarget - monstersSpawned.Count).DeselectTarget();
+                        player.addTarget(GetPlayerAtIndex(indexTarget - monstersSpawned.Count));
+                    }
+                    player.addActionToQueue(ActionBattle.Abilities, indexSpells);
+                    selectTarget = false;
+                    openSpellList = false;
+                }
+
+                Debug.Log("Abilities");
                 break;
             case ActionBattle.Items:
-                Debug.Log("Item");
+                Debug.Log("Items");
                 break;
         }
 
-        indexTarget = 0;
     }
 
     private PlayerEntityOnBattle GetPlayerAtIndex(int index)
@@ -213,8 +318,7 @@ public class BattleManager : MonoBehaviour
         else
         {
             PlayerControllerOnBattle controller =
-                Instantiate(playerBattlePrefab.gameObject, heroPos[0].position, Quaternion.identity)
-                    .GetComponent<PlayerControllerOnBattle>();
+                Instantiate(playerBattlePrefab, heroPos[0].position, Quaternion.identity);
             playerControllerBattle = controller;
             playersOnExplore = player;
             controller.InitPlayer();
@@ -229,8 +333,7 @@ public class BattleManager : MonoBehaviour
             //add here creation des autres persos
             for (int i = 0; i < player.companions.Count; i++)
             {
-                PlayerEntityOnBattle companion =
-                    Instantiate(principalPlayer.gameObject).GetComponent<PlayerEntityOnBattle>();
+                PlayerEntityOnBattle companion = Instantiate(principalPlayer);
                 companion.Init(player.companions[i].SO);
                 companion.InitData(player.companions[i].unitData);
                 companion.ResetValues();

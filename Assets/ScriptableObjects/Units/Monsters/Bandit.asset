@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Bandit
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Bandit
-  <Hp>k__BackingField: 0
   <Strength>k__BackingField: 0
   <Agility>k__BackingField: 35
   <Stamina>k__BackingField: 0
@@ -53,6 +52,9 @@ MonoBehaviour:
     <Resistance>k__BackingField: 100
   - <name>k__BackingField: Wind
     <Element>k__BackingField: 9
+    <Resistance>k__BackingField: 100
+  - <name>k__BackingField: Physical
+    <Element>k__BackingField: 10
     <Resistance>k__BackingField: 100
   <AlterationImmunity>k__BackingField:
   - <name>k__BackingField: Darkness
