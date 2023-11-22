@@ -35,7 +35,6 @@ public class PlayerEntity : Entity
         moving = false;
 
         AssignSprite();
-        directions = new List<Direction>();
     }
 
     public void AssignSO(PlayerCharactersSO so)
@@ -59,7 +58,7 @@ public class PlayerEntity : Entity
         
         moving = true;
         
-        if (x == wantedPosition.x && wantedDirection == Vector2.zero /*&& (ForwardDirection == Direction.None | directions.Count <= 0)*/)
+        if (x == wantedPosition.x && wantedDirection == Vector2.zero)
         {
             moving = false;
             return;
@@ -91,7 +90,7 @@ public class PlayerEntity : Entity
         
         moving = true;
         
-        if (y == wantedPosition.y && wantedDirection == Vector2.zero /*&& (ForwardDirection == Direction.None | directions.Count <= 0)*/)
+        if (y == wantedPosition.y && wantedDirection == Vector2.zero)
         {
             moving = false;
             return;
@@ -123,19 +122,6 @@ public class PlayerEntity : Entity
         var speed = delayToMove * Time.deltaTime;
         
         transform.position = Vector3.MoveTowards(transform.position, wantedPosition, speed);
-        
-        return;
-        
-        float distance = Vector3.Distance(transform.position, wantedPosition);
-        if (distance <= toleranceMoving)
-        {
-            directions.RemoveAt(0);
-            ForwardDirection = Direction.None;
-            if (directions.Count > 0)
-            {
-                Turn(directions[0]);
-            }
-        }
     }
 
     public void Cinematic(bool started, bool isExplo)
@@ -149,13 +135,5 @@ public class PlayerEntity : Entity
     public void InitData(UnitData data)
     {
         unitData = data;
-    }
-
-    public void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(transform.position + (Vector3)wantedDirection, 0.1f);
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(wantedPosition, 0.1f);
     }
 }

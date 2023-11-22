@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8851652379486592549}
   - component: {fileID: 529669638004969026}
+  - component: {fileID: 240286092128519740}
   - component: {fileID: 2317830123916161200}
   - component: {fileID: 7509104964156181236}
   - component: {fileID: 8157838382025046460}
@@ -54,9 +55,29 @@ MonoBehaviour:
   delayToMove: 2
   <SO>k__BackingField: {fileID: 11400000, guid: c02e141d82c58e942a8a734104ed920c,
     type: 2}
-  directions: 
   cellSize: 0.5
   toleranceMoving: 0.01
+  wantedDirection: {x: 0, y: 0}
+--- !u!114 &240286092128519740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369101659063960973}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488bb8297a9fd7047bb4aa39f42de770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 7052240609822276024}
+  _animator: {fileID: 2317830123916161200}
+  _boxCollider2D: {fileID: 7509104964156181236}
+  delayToMove: 0.8
+  <SO>k__BackingField: {fileID: 11400000, guid: c02e141d82c58e942a8a734104ed920c,
+    type: 2}
+  cellSize: 0.5
+  delayToMovement: 2
 --- !u!95 &2317830123916161200
 Animator:
   serializedVersion: 5

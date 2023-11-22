@@ -178,4 +178,42 @@ public class InputManager : MonoBehaviour
     {
         OnSelection?.Invoke(checkFourDirection(context));
     }
+
+    public static Vector2 GetVectorDirection(Direction direction)
+    {
+        switch (direction)
+        {
+            case Direction.Up:
+                return Vector2.up;
+            case Direction.Down:
+                return Vector2.down;
+            case Direction.Left:
+                return Vector2.left;
+            case Direction.Right:
+                return Vector2.right;
+            case Direction.UpLeft:
+                return new Vector2(-1, 1);
+            case Direction.UpRight:
+                return new Vector2(1, 1);
+            case Direction.DownLeft:
+                return new Vector2(-1, -1);
+            case Direction.DownRight:
+                return new Vector2(1, -1);
+            default:
+                return Vector2.zero;
+        }
+    }
+
+    public static Direction GetDirection(Vector2 wantedDirection)
+    {
+        if (wantedDirection == Vector2.zero)
+            return Direction.None;
+        if (wantedDirection.x == 0)
+            return wantedDirection.y > 0 ? Direction.Up : Direction.Down;
+        if (wantedDirection.y == 0)
+            return wantedDirection.x > 0 ? Direction.Right : Direction.Left;
+        if (wantedDirection.x > 0)
+            return wantedDirection.y > 0 ? Direction.UpRight : Direction.DownRight;
+        return wantedDirection.y > 0 ? Direction.UpLeft : Direction.DownLeft;
+    }
 }

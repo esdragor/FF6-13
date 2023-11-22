@@ -9,7 +9,6 @@ public class Entity : MonoBehaviour
 {
     public static event Action<Entity> OnEntityDying;
     public UnitData unitData;
-    [HideInInspector] public List<Direction> directions = new ();
 
 
     [SerializeField] protected SpriteRenderer _spriteRenderer;
@@ -44,13 +43,6 @@ public class Entity : MonoBehaviour
                 mat.SetFloat(DirectionProperty, 2f);
                 break;
         }
-    }
-    
-    public void AddDirectionToMove(Direction dir)
-    {
-        if (dir == Direction.None) return;
-        
-        directions.Add(dir);
     }
 
     public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false,
@@ -125,6 +117,7 @@ public class Entity : MonoBehaviour
         if (_spriteRenderer == null) return;
         _spriteRenderer.sprite = unitData.Sprite;
 
+        if (mat != null) return;
         mat = new Material(_spriteRenderer.material);
         _spriteRenderer.material = mat;
     }

@@ -36,7 +36,6 @@ public class PlayerController : BattleController
     {
         InputManager.OnStartedToTurn += TurnEntity;
         //InputManager.OnStoppedToTurn += TurnEntity;
-        InputManager.OnMovingDirection += MoveEntity;
         InputManager.OnVectorDIrection += MoveEntity;
         
         //InputManager.OnMovingX += MoveEntityX;
@@ -47,7 +46,6 @@ public class PlayerController : BattleController
     {
         InputManager.OnStartedToTurn -= TurnEntity;
         //InputManager.OnStoppedToTurn -= TurnEntity;
-        InputManager.OnMovingDirection -= MoveEntity;
         InputManager.OnVectorDIrection -= MoveEntity;
         
         //InputManager.OnMovingX -= MoveEntityX;

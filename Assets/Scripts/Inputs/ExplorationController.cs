@@ -34,24 +34,6 @@ public abstract class ExplorationController : InputController
 
     protected void MoveEntity(Direction dir)
     {
-        var playerEntity = entity as PlayerEntity;
-        if (playerEntity == null) return;
-        if (playerEntity.directions.Count == 0)
-        {
-            entity.Turn(dir);
-            playerEntity.AddDirectionToMove(dir);
-        }
-        else if (playerEntity.directions[0] != dir && dir != Direction.None)
-        {
-            Debug.Log(dir);
-            entity.Turn(dir);
-            playerEntity.directions.Clear();
-            playerEntity.AddDirectionToMove(dir);
-        }
-
-        // if(playerEntity.ForwardDirection != dir) entity.Turn(dir);
-        //
-        // entity.Move();
     }
     
 }
