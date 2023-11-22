@@ -53,6 +53,9 @@ MonoBehaviour:
   - <name>k__BackingField: Wind
     <Element>k__BackingField: 9
     <Resistance>k__BackingField: 100
+  - <name>k__BackingField: Physical
+    <Element>k__BackingField: 10
+    <Resistance>k__BackingField: 100
   <AlterationImmunity>k__BackingField:
   - <name>k__BackingField: Darkness
     <Alteration>k__BackingField: 0

@@ -126,12 +126,12 @@ public class Entity : MonoBehaviour
         Init(isMonster);
     }
 
-    public void SelectEnemy()
+    public void SelectTarget()
     {
         _spriteRenderer.color = Color.red;
     }
 
-    public void DeselectEnemy()
+    public void DeselectTarget()
     {
         _spriteRenderer.color = Color.white;
     }

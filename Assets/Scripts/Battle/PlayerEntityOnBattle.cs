@@ -9,11 +9,23 @@ using Scriptable_Objects.Unit;
 using Units;
 using UnityEngine;
 
+public class ActionToQueue
+{
+    public ActionBattle action;
+    public int index;
+
+    public ActionToQueue(ActionBattle action, int index = 0)
+    {
+        this.action = action;
+        this.index = index;
+    }
+}
+
 public class PlayerEntityOnBattle : PlayerEntity
 {
     public static event Action<float> OnActionBarChanged;
 
-    private List<ActionBattle> actionsQueue = new();
+    private List<ActionToQueue> actionsQueue = new();
     private float costOfActionQueue = 0;
 
     [SerializeField] private float costAttack = 1;
@@ -24,15 +36,15 @@ public class PlayerEntityOnBattle : PlayerEntity
     private float actionBar;
     private float speedActionBar = 1;
     private bool currentlyAttacking = false;
-    private Entity target;
+    private List<Entity> target;
     private bool isSelected = false;
 
-    public bool Attack()
+    public bool Attack(int index)
     {
         Debug.Log("Attack");
         if (target == null)
             return false;
-        return target.TakeDamage(unitData.Attack, Elements.Physical,
+        return target[index].TakeDamage(unitData.Attack, Elements.Physical,
             unitData); //Physical for now, need to check the weapon's element
     }
 
@@ -80,7 +92,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
     public bool UseSpell(SpellSO spell, List<Entity> targets)
     {
-        Debug.Log($"Use {spell.Name} on {targets}");
+        Debug.Log($"Use {spell.Name} on targets");
 
         var effects = spell.SpellEffects.ToList();
         var onehit = false;
@@ -110,7 +122,8 @@ public class PlayerEntityOnBattle : PlayerEntity
                             addOrRemoveAlterationSo.Remove);
                         break;
                     case DamageEffectSO damageEffectSo:
-                        var damage = damageEffectSo.Damage;
+                        var damage = damageEffectSo.Damage ;
+                        if (damageEffectSo.ScaleWithPower) damage *= spell.Power;
                         var element = damageEffectSo.Element;
                         var ignoreDefence = effects.Where(e => e is IgnoreBlockEvadeSO)
                             .Any(e => ((IgnoreBlockEvadeSO)e).IgnoreBlock);
@@ -145,13 +158,15 @@ public class PlayerEntityOnBattle : PlayerEntity
                 nbAction = (int)((nbBarre * ratioBarre) / (costAttack * ratioBarre - costOfActionQueue));
                 for (int i = 0; i < nbAction; i++)
                 {
-                    actionsQueue.Add(action);
+                    actionsQueue.Add(new ActionToQueue(action));
                     costOfActionQueue += costAttack * ratioBarre;
                 }
 
                 break;
             case ActionBattle.Abilities:
-                Debug.Log("Abilities");
+                int cost = (unitData as PlayerCharacterData).getAllSpells()[index].ApCost;
+                costOfActionQueue += cost * ratioBarre;
+                actionsQueue.Add(new ActionToQueue(action, index));
                 break;
             case ActionBattle.Items:
                 Debug.Log("Items");
@@ -179,18 +194,19 @@ public class PlayerEntityOnBattle : PlayerEntity
         bool success = false;
         while (actionsQueue.Count > 0)
         {
-            ActionBattle action = actionsQueue[0];
+            ActionBattle action = actionsQueue[0].action;
+            int index = actionsQueue[0].index;
             actionsQueue.RemoveAt(0);
             switch (action)
             {
                 case ActionBattle.AutoAttack:
                     Vector3 originalPos = transform.position;
-                    if (target)
+                    if (target.Count > 0)
                     {
-                        transform.DOMove(target.transform.position + Vector3.right, 1f);
+                        transform.DOMove(target[index].transform.position + Vector3.right, 1f);
                         yield return new WaitForSeconds(1f);
 
-                        success = Attack();
+                        success = Attack(index);
                         costOfActionQueue -= costAttack * ratioBarre;
                         if (success)
                             SpendActionBar(costAttack * ratioBarre);
@@ -208,8 +224,12 @@ public class PlayerEntityOnBattle : PlayerEntity
 
                     break;
                 case ActionBattle.Abilities:
+
+                    UseSpell((unitData as PlayerCharacterData).getAllSpells()[index], target);
                     Debug.Log("Abilities");
                     break;
+                
+                
                 case ActionBattle.Items:
                     Debug.Log("Item");
                     break;
@@ -240,7 +260,11 @@ public class PlayerEntityOnBattle : PlayerEntity
 
     public void addTarget(Entity entity)
     {
-        target = entity;
+        if (target == null)
+            target = new List<Entity>();
+        else
+            target.Clear();
+        target.Add(entity);
     }
 
     public void SelectPlayer()
