@@ -31,6 +31,275 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7922817238904977592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1582236060175280205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2445471711529551369}
+  - component: {fileID: 2121132602769459453}
+  m_Layer: 0
+  m_Name: Naratives
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2445471711529551369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582236060175280205}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1698554, y: -0.70190823, z: -0.9695269}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055034216536917277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2121132602769459453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582236060175280205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2c2347147547fe899cb5a6e0fafa02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFile: {fileID: 4900000, guid: 09bee29c789f49a6b40cac39f96592e5, type: 3}
+  allDialogs:
+    dialog:
+    - id: Narshe_clif_1
+      title: Wedge
+      dialogTxt: There's the city
+    - id: Narshe_clif_2
+      title: Biggs
+      dialogTxt: Hard to believe an Esper's been found intact there, 1000 years after
+        the War of the Magi...
+    - id: Narshe_clif_3
+      title: Biggs
+      dialogTxt: Bah! Probably just another wild goose chase...
+    - id: Narshe_clif_4
+      title: Wedge
+      dialogTxt: I don't know...
+    - id: Narshe_clif_5
+      title: Wedge
+      dialogTxt: They wouldn't have let us use her unless they were confident that
+        the intel was good.
+    - id: Narshe_clif_6
+      title: Biggs
+      dialogTxt: Ah yes... our witch.
+    - id: Narshe_clif_7
+      title: Biggs
+      dialogTxt: I hear she fried fifty of our Magitek Armored Soldiers in under
+        three minutes... Kinda makes your skin crawl, don't it?
+    - id: Narshe_clif_8
+      title: Wedge
+      dialogTxt: Relax. With that thing on her head, she's a mindless puppet.
+    - id: Narshe_clif_9
+      title: Wedge
+      dialogTxt: The girl won't even breathe unless we tell her to.
+    - id: Narshe_clif_10
+      title: Wedge
+      dialogTxt: We'll approach from the east. Move out!
+    - id: Narshe_entry_1
+      title: Wedge
+      dialogTxt: The girl takes point. And don't waste time on the riffraff! Remember
+        what we're here for. Let's move!
+    - id: Narshe_encounter1_1
+      title: Guard
+      dialogTxt: The Empire's got no buisness here!
+    - id: Narshe_encounter2_1
+      title: Guard
+      dialogTxt: Imperial Magitek Armor! Not even Narshe's safe anymore!
+    - id: Narshe_encounter3_1
+      title: Guard
+      dialogTxt: Stop them! For Narshe!
+    - id: Narshe_encounter4_1
+      title: Guard
+      dialogTxt: We got'em trapped now!
+    - id: Narshe_encounter5_1
+      title: Guard
+      dialogTxt: Defend the mines!
+    - id: Narshe_beforeMines_1
+      title: Wedge
+      dialogTxt: According to our source, some miners unearthed the frozen Esper
+        in a new shaft they were digging...
+    - id: Narshe_beforeMines_2
+      title: Wedge
+      dialogTxt: This must be it.
+    - id: NarsheMines_1f_savepointLearn_1
+      title: 
+      dialogTxt: A strange light fills the air.
+    - id: NarsheMines_1f_savepointLearn_2
+      title: 
+      dialogTxt: Do you want to learn about save points?
+    - id: NarsheMines_1f_savepointLearn_3
+      title: 
+      dialogTxt: At save points, you can use tents and sleeping bags, and also save
+        the game.
+    - id: NarsheMines_1f_savepointLearn_4
+      title: 
+      dialogTxt: You can also use the sae and quick save functions anywhere on the
+        overworld map.
+    - id: NarsheMines_1f_story1_1
+      title: Biggs
+      dialogTxt: I'll handle this. Stand back!
+    - id: NarsheMines_1f_story1_2
+      title: Guard
+      dialogTxt: We're not handing over that esper!
+    - id: NarsheMines_1f_story1_3
+      title: Guard
+      dialogTxt: Ymir! Get them!
+    - id: NarsheMines_1f_story1_inbattle_1
+      title: Biggs
+      dialogTxt: Hold it!
+    - id: NarsheMines_1f_story1_inbattle_2
+      title: Biggs
+      dialogTxt: 'Hold it!
+
+        That thing''s a...! They must have trained it
+        to guard the mines!'
+    - id: NarsheMines_1f_story1_inbattle_3
+      title: Wedge
+      dialogTxt: What are you talking about?
+    - id: NarsheMines_1f_story1_inbattle_4
+      title: Wedge
+      dialogTxt: 'What are you talking about?
+
+        You know what this is?'
+    - id: NarsheMines_1f_story1_inbattle_5
+      title: Biggs
+      dialogTxt: Ever heard of a lightning whelk?
+    - id: NarsheMines_1f_story1_inbattle_6
+      title: Biggs
+      dialogTxt: 'Ever heard of a lightning whelk?
+
+        It''s a monster that
+        absorbs lightning...'
+    - id: NarsheMines_1f_story1_inbattle_7
+      title: Wedge
+      dialogTxt: ...and stores the energy in its shell.
+    - id: NarsheMines_1f_story1_inbattle_8
+      title: Biggs
+      dialogTxt: 'Right.
+
+        So whatever you do, don''t attack the shell!'
+    - id: NarsheMines_1f_story1_inbattle_9
+      title: Wedge
+      dialogTxt: Got it!
+    - id: NarsheMines_2f_story1_1
+      title: 
+      dialogTxt: So...this is the frozen esper?
+    - id: NarsheMines_2f_story1_inbattle_1
+      title: Wedge
+      dialogTxt: This thing's giving me the creeps...
+    - id: NarsheMines_2f_story1_inbattle_2
+      title: Wedge
+      dialogTxt: 'This thing''s giving me the creeps...
+
+        Something''s not
+        right...'
+    - id: NarsheMines_2f_story1_inbattle_3
+      title: Girl
+      dialogTxt: ...
+    - id: NarsheMines_2f_story1_inbattle_4
+      title: 
+      dialogTxt: The frozen creature begins emitting an eerie light...
+    - id: NarsheMines_2f_story1_inbattle_5
+      title: Wedge
+      dialogTxt: Wh-where's that light coming from!?
+    - id: NarsheMines_2f_story1_inbattle_6
+      title: Wedge
+      dialogTxt: 'Wh-where''s that light coming from!?
+
+        Whaaagh!'
+    - id: NarsheMines_2f_story1_inbattle_7
+      title: Biggs
+      dialogTxt: Wh-what was that!? ...Wedge?
+    - id: NarsheMines_2f_story1_inbattle_8
+      title: Biggs
+      dialogTxt: 'Wh-what was that!? ...Wedge?
+
+        Wedge, where are you? H-hey!
+        What''s going on!?'
+    - id: NarsheMines_2f_story1_inbattle_9
+      title: Girl
+      dialogTxt: .........
+    - id: NarsheWakeUp_1
+      title: Girl
+      dialogTxt: Where...am I?
+    - id: NarsheWakeUp_2
+      title: Old Man
+      dialogTxt: My, my! And I only just removed the crown!
+    - id: NarsheWakeUp_3
+      title: Girl
+      dialogTxt: My head...hurts...
+    - id: NarsheWakeUp_4
+      title: Old Man
+      dialogTxt: Easy there! This is a slave crown. The others were using it to control
+        you.
+    - id: NarsheWakeUp_5
+      title: Old Man
+      dialogTxt: It was robbing you of your thoughts-making it so you'd do whatever
+        they told you.
+    - id: NarsheWakeUp_6
+      title: Girl
+      dialogTxt: I can't remember a thing...
+    - id: NarsheWakeUp_7
+      title: Old Man
+      dialogTxt: Don't worry, it'll all come back to you... In time, that is.
+    - id: NarsheWakeUp_8
+      title: Girl
+      dialogTxt: ...
+    - id: NarsheWakeUp_named_1
+      title: Girl
+      dialogTxt: My name is...{Terra_Name}...
+    - id: NarsheWakeUp_named_2
+      title: Old Man
+      dialogTxt: Impressive! I've never heard of anyone recovering this fast. You
+        must be made of tougher stuff than most...
+    - id: NarsheGuardsOpenUp_1
+      title: Guard
+      dialogTxt: Open up!
+    - id: NarsheGuardsOpenUp_2
+      title: Guard
+      dialogTxt: We are here for the Magitek armor pilot!
+    - id: NarsheGuardsOpenUp2_1
+      title: Guard
+      dialogTxt: Open this door right now!
+    - id: NarsheGuardsOpenUp2_2
+      title: Guard
+      dialogTxt: Hand over that girl!
+    - id: NarsheGuardsOpenUp2_3
+      title: Guard
+      dialogTxt: She is an agent of the Empire!
+    - id: NarsheGuardsOpenUp2_4
+      title: '{Terra_Name}'
+      dialogTxt: ...Empire? ...Magitek armor?
+    - id: NarsheGuardsOpenUp2_5
+      title: Old Man
+      dialogTxt: There's no time to explain! You need to get out of here! These fools
+        aren't going to listen to reason...
+    - id: NarsheGuardsOpenUp2_6
+      title: This way! Quickly!
+      dialogTxt: 
+    - id: NarsheGuardsOpenUp2_7
+      title: Old Man
+      dialogTxt: Make your way out of town through the mines! I'll try to buy you
+        some time.
+    - id: NarsheBridge_1
+      title: Guard
+      dialogTxt: Up there!
 --- !u!1 &1781538401444923551
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +402,56 @@ MonoBehaviour:
   combatCamera: {fileID: 0}
   playerBattlePrefab: {fileID: -7508613938992618098, guid: b364bd199fab1c14290104f0220085b0,
     type: 3}
+--- !u!1 &4067916171792693924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2055034216536917277}
+  - component: {fileID: 1752387409908184822}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2055034216536917277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4067916171792693924}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2337030015533189735}
+  - {fileID: 2445471711529551369}
+  m_Father: {fileID: 7017575910847954814}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1752387409908184822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4067916171792693924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3e52d7915749d89b56e12ef736083d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueDisplayer: {fileID: 6677059920767094760}
+  uiSelectionPanel: {fileID: 2490031163573980003}
+  jsonNara: {fileID: 2121132602769459453}
+  storyInteractors: []
 --- !u!1 &4318035243428216676
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +577,7 @@ Transform:
   m_Children:
   - {fileID: 7922817238904977592}
   - {fileID: 4753503399132506507}
+  - {fileID: 2055034216536917277}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7111419650828386748
@@ -274,6 +594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputManager: {fileID: 8132264207612075019}
   _battleManager: {fileID: 8970885710101638728}
+  _uiManager: {fileID: 1752387409908184822}
 --- !u!1 &7080398839585241026
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,3 +701,151 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7922817238904977592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4018581767286608343
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2055034216536917277}
+    m_Modifications:
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184007720864401246, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialogue Displayer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80b95c7d093ea224fa62a5b1dff7f826, type: 3}
+--- !u!224 &2337030015533189735 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1705195997689469872, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+    type: 3}
+  m_PrefabInstance: {fileID: 4018581767286608343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2490031163573980003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1534180417047894708, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+    type: 3}
+  m_PrefabInstance: {fileID: 4018581767286608343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80fe1954b9497b84cb85dfcf5b3a4f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6677059920767094760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7740966807894810175, guid: 80b95c7d093ea224fa62a5b1dff7f826,
+    type: 3}
+  m_PrefabInstance: {fileID: 4018581767286608343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e7023e69100e54d869b0859132c459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

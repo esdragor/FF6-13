@@ -7,6 +7,8 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     public static event Action<Entity> OnEntityDying;
+    
+    public event Action OnMoveEnded;
     public UnitData unitData;
 
     [SerializeField] protected SpriteRenderer _spriteRenderer;
