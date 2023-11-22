@@ -71,7 +71,7 @@ public class Entity : MonoBehaviour
             Destroy(gameObject, 0.5f);
             return true;
         }
-        return false;
+        return true;
     }
 
     public void RegenMpDamage(int damage, bool isPourcentDamage = false)
@@ -124,5 +124,15 @@ public class Entity : MonoBehaviour
     {
         SO = unitSo;
         Init(isMonster);
+    }
+
+    public void SelectEnemy()
+    {
+        _spriteRenderer.color = Color.red;
+    }
+
+    public void DeselectEnemy()
+    {
+        _spriteRenderer.color = Color.white;
     }
 }

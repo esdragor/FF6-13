@@ -16,8 +16,9 @@ public class PlayerEntityOnBattle : PlayerEntity
     private List<ActionBattle> actionsQueue = new();
     private float costOfActionQueue = 0;
 
-    public float costAttack { get; private set; }
-    [SerializeField] private float limitActionBar = 100;
+    [SerializeField] private float costAttack = 1;
+    [SerializeField] private float nbBarre = 2;
+    [SerializeField] private float ratioBarre = 50;
     [SerializeField] private float ratioSpeedActionBar = 1;
 
     private float actionBar;
@@ -129,7 +130,6 @@ public class PlayerEntityOnBattle : PlayerEntity
     public void ResetValues()
     {
         actionBar = 0;
-        costAttack = 50f;
         costOfActionQueue = 0;
         speedActionBar = ratioSpeedActionBar * unitData.Agility;
         currentlyAttacking = false;
@@ -142,26 +142,25 @@ public class PlayerEntityOnBattle : PlayerEntity
         switch (action)
         {
             case ActionBattle.AutoAttack:
-                nbAction = (int)(limitActionBar / costAttack);
+                nbAction = (int)((nbBarre * ratioBarre) / (costAttack * ratioBarre - costOfActionQueue));
                 for (int i = 0; i < nbAction; i++)
                 {
                     actionsQueue.Add(action);
-                    costOfActionQueue += costAttack;
+                    costOfActionQueue += costAttack * ratioBarre;
                 }
 
                 break;
             case ActionBattle.Abilities:
-                Debug.Log("Defend");
+                Debug.Log("Abilities");
                 break;
             case ActionBattle.Items:
-                Debug.Log("Item");
+                Debug.Log("Items");
                 break;
         }
     }
 
     public void SpendActionBar(float value)
     {
-
         actionBar -= value;
         if (actionBar < 0)
             actionBar = 0;
@@ -171,8 +170,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
     public float GetPercentageActionBar()
     {
-        float percentage = actionBar / limitActionBar;
-        return (actionBar / limitActionBar);
+        return (actionBar / (nbBarre * ratioBarre));
     }
 
     IEnumerator DequeueAllAction()
@@ -192,20 +190,19 @@ public class PlayerEntityOnBattle : PlayerEntity
                         transform.DOMove(target.transform.position + Vector3.right, 1f);
                         yield return new WaitForSeconds(1f);
 
-
                         success = Attack();
+                        costOfActionQueue -= costAttack * ratioBarre;
+                        if (success)
+                            SpendActionBar(costAttack * ratioBarre);
 
-                        if (success) yield return new WaitForSeconds(1f); //animation attack
+                        if (success) yield return new WaitForSeconds(0.3f); //animation attack
                         transform.DOMove(originalPos, 1f);
                         yield return new WaitForSeconds(1f);
-                        costOfActionQueue -= costAttack;
-                        if (!success) break;
-                        SpendActionBar(costAttack);
                     }
                     else
                     {
                         Debug.Log("No target");
-                        costOfActionQueue -= costAttack;
+                        costOfActionQueue -= costAttack * ratioBarre;
                         yield return new WaitForSeconds(1f);
                     }
 
@@ -224,15 +221,14 @@ public class PlayerEntityOnBattle : PlayerEntity
 
     private void Update()
     {
-        if (actionBar >= limitActionBar)
+        if (actionBar >= (nbBarre * ratioBarre))
         {
-            actionBar = limitActionBar;
+            actionBar = (nbBarre * ratioBarre);
             //Debug.Log("actionBar is full");
         }
         else
         {
             actionBar += speedActionBar * Time.deltaTime;
-            //Debug.Log("C: " + actionBar + " " + speedActionBar * Time.deltaTime);
             if (isSelected)
                 OnActionBarChanged?.Invoke(GetPercentageActionBar());
         }

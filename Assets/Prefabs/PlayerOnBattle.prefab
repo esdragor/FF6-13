@@ -52,7 +52,10 @@ MonoBehaviour:
   delayToMove: 1
   <SO>k__BackingField: {fileID: 0}
   cellSize: 1
-  limitActionBar: 100
+  toleranceMoving: 0.8
+  costAttack: 1
+  nbBarre: 2
+  ratioBarre: 50
   ratioSpeedActionBar: 0.3
 --- !u!212 &8731512548653332835
 SpriteRenderer:
