@@ -1,0 +1,24 @@
+{
+  "cutscenes": [
+    {
+      "id": "cs_1",
+      "text": "The ancient War of the Magi...\nWhen its flames at last receded, only \nthe charred husk of a world remained. \nEven the power of magic was lost."
+    },
+    {
+      "id": "cs_2",
+      "text": "In the thousand years that followed, \niron, gunpowder, and steam engines \ntook the place of magic, and life \nslowly returned to the barren land..."
+    },
+    {
+      "id": "cs_3",
+      "text": "Yet there now stands one who would \nreawaken the magic of ages past, \nand use its dread power as a means \nby which to conquer all the world..."
+    },
+    {
+      "id": "cs_4",
+      "text": "Could anyone truly \nbe foolish enough \nto repeat that mistake?"
+    },
+    {
+      "id": "cs_NarsheWakeUp",
+      "text": "A mysterious young woman,\nborn with the gift of magic,\nand enslaved by the Gestahlian Empire..."
+    }
+  ]
+}
