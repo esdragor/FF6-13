@@ -162,6 +162,7 @@ namespace Scriptable_Objects.Unit
         Heal,
         Earth,
         Wind,
+        Physical,
         None
     }
 }

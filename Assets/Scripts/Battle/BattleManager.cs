@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Scriptable_Objects.Unit;
 using Unity.VisualScripting;
@@ -69,7 +70,7 @@ public class BattleManager : MonoBehaviour
                 Entity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity)
                     .GetComponent<Entity>();
                 newMonster.transform.position = monsterPos[i].position;
-                newMonster.Init(monster);
+                newMonster.Init(monster, true);
                 monstersSpawned.Add(newMonster);
             }
         }
@@ -102,23 +103,30 @@ public class BattleManager : MonoBehaviour
         OnSelectionChanged?.Invoke((int)actionIndex);
     }
 
+    IEnumerator Victory() // changer par l'ecran de victoire
+    {
+        yield return new WaitForSeconds(2f);
+        UIBattle.SetActive(false);
+        exploreCamera.gameObject.SetActive(true);
+        combatCamera.gameObject.SetActive(false);
+        playersOnExplore.gameObject.SetActive(true);
+        playersOnExplore.getEntity().gameObject.SetActive(true);
+        for (int i = 0; i < playersOnBattle.Count; i++)
+        {
+            playerControllerBattle.gameObject.SetActive(false);
+            playersOnBattle[i].gameObject.SetActive(false);
+        }
+
+        GameManager.Instance.GetBackToExplore();
+    }
+
     private void CheckVictory()
     {
         if (monstersSpawned.Count == 0)
         {
             Debug.Log("Victory");
-            UIBattle.SetActive(false);
-            exploreCamera.gameObject.SetActive(true);
-            combatCamera.gameObject.SetActive(false);
-            playersOnExplore.gameObject.SetActive(true);
-            playersOnExplore.getEntity().gameObject.SetActive(true);
-            for (int i = 0; i < playersOnBattle.Count; i++)
-            {
-                playerControllerBattle.gameObject.SetActive(false);
-                playersOnBattle[i].gameObject.SetActive(false);
-            }
+            StartCoroutine(Victory());
 
-            GameManager.Instance.GetBackToExplore();
         }
     }
 
@@ -161,6 +169,7 @@ public class BattleManager : MonoBehaviour
                 playersOnBattle[i].ResetValues();
                 playersOnBattle[i].transform.position = heroPos[i].position;
             }
+            playersOnBattle[indexPlayer].SelectPlayer();
 
             //on update les data du player
             //PlayerControllerOnBattle controller = playersOnBattle[playersOnBattle.IndexOf(player)];
@@ -194,7 +203,7 @@ public class BattleManager : MonoBehaviour
                 companion.transform.position = heroPos[i + 1].position;
                 playersOnBattle.Add(companion);
             }
-
+            playersOnBattle[indexPlayer].SelectPlayer();
             player.gameObject.SetActive(false);
             player.getEntity().gameObject.SetActive(false);
         }
