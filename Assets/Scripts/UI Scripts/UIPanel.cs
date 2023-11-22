@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIPanel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI mainTextMeshProUGUI;
+    [field:SerializeField] public RectTransform Self { get; private set; }
     [SerializeField] private TextMeshProUGUI nameTextMeshProUGUI;
     [SerializeField] private RectTransform namePanelTr;
     
