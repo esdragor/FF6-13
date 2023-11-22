@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 
 namespace Narative
@@ -11,6 +12,11 @@ namespace Narative
         [Serializable] public class AllDialogs
         {
             public Dialog[] dialog;
+
+            public Dialog GetDialog(string id)
+            {
+                return dialog.First(d => d.id == id);
+            }
         }
         
         [Serializable] public class Dialog

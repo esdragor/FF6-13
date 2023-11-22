@@ -10,6 +10,9 @@ namespace Narative
 {
     public class StoryInteractor : MonoBehaviour, Interactor
     {
+        public event Action<string,bool> DisplayDialogue;
+        public event Action HideDialogue;
+        
         [SerializeField] private InteractionSO interactionSo;
         [SerializeField] private bool destroyAfterInteraction = true;
         [SerializeField] private BoxCollider2D boxCollider2D;
@@ -23,11 +26,6 @@ namespace Narative
         private void OnTriggerEnter2D(Collider2D other) {
             Debug.Log($"Trigger go with {other}");
             Interact(other.GetComponent<Entity>());
-        }
-
-        private void OnCollision2DEnter(Collision2D other)
-        {
-            Debug.Log($"Collision go with {other}");
         }
 
         public void Interact(Entity entity)
@@ -62,6 +60,7 @@ namespace Narative
                 if (interactionAction.timeAfter > 0) yield return new WaitForSeconds(interactionAction.timeAfter);
 
                 if (waitForInteractions) yield return new WaitUntil(() => !waitForInteractions);
+                HideDialogue?.Invoke();
             }
             FinishInteraction();
         }
@@ -93,12 +92,12 @@ namespace Narative
 
         private void SetCinematic(InteractionSetCinematicSO cinematicSo)
         {
-            //entities["player"].SetCinematic(cinematicSo.SetCinematic, !inBattle);
+            ((PlayerEntity)entities["player"]).Cinematic(cinematicSo.SetCinematic, !inBattle);
         }
 
         private void StartBattle(InteractionStartBattleSO battleSo)
         {
-            //Register to battle manager's onBattleEnded
+            BattleManager.OnBattleEnded += ContinueAfterBattle;
         }
 
         private void Spawn(IneractionSpawnSO spawnSO)
@@ -117,14 +116,20 @@ namespace Narative
             if (moveSO.WaitTillFinish)
             {
                 waitForInteractions = true;
-                //entities["player"]. += resumeInteraction;
+                entities["player"].OnMoveEnded += ResumeAfterMove;
             }
         }
         
-        private void resumeInteraction()
+        private void ResumeAfterMove()
         {
             waitForInteractions = false;
-            //entities["player"]. -= resumeInteraction;
+            entities["player"].OnMoveEnded -= ResumeAfterMove;
+        }
+
+        private void ContinueAfterBattle()
+        {
+            waitForInteractions = false;
+            BattleManager.OnBattleEnded -= ContinueAfterBattle;
         }
         
         private void Destroy(InteractionDestroySO destroySo)
@@ -137,7 +142,8 @@ namespace Narative
         
         private void Say(InteractionSaySO saySo)
         {
-            //TODO:
+            HideDialogue?.Invoke();
+            DisplayDialogue?.Invoke(saySo.TextId, saySo.Top);
         }
         
         

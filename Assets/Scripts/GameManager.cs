@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Scriptable_Objects.Unit;
+using UI_Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private InputManager _inputManager;
     [SerializeField] private BattleManager _battleManager;
+    [SerializeField] private UIManager _uiManager;
     
     private State _state;
     private PlayerEntity _player;
