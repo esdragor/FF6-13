@@ -20,12 +20,28 @@ public class CombatUIDisplayer : MonoBehaviour
    [SerializeField] private UIPanel selectionInfoPanel;
    [SerializeField] private GameObject selectionInfoPanelDisabledObj;
    
+   [Header("Main Action Bar")]
+   [SerializeField] private CombatActionBarDisplayer mainActionBarDisplayer;
+   
    [Header("Ability Name")]
    [SerializeField] private UIPanel abilityNamePanel;
    
    [Header("Battle End Panels")]
    [SerializeField] private GameObject endBattleTopPanel; //probably rewards
    [SerializeField] private GameObject endBattleXPPanel;
+   
+   private IReadOnlyList<PlayerEntityOnBattle> playerEntitiesOnBattle;
+   
+   public void Show()
+   {
+      HideEndPanel();
+   }
+   
+   public void SetPlayerEntities(List<PlayerEntityOnBattle> playerEntities)
+   {
+      playerEntitiesOnBattle = playerEntities;
+      mainActionBarDisplayer.CreateActionBars(playerEntitiesOnBattle);
+   }
    
    public void ShowEndPanel()
    {
@@ -38,4 +54,17 @@ public class CombatUIDisplayer : MonoBehaviour
       endBattleTopPanel.SetActive(false);
       endBattleXPPanel.SetActive(false);
    }
+   
+   public void ShowAbilityName(string abilityName)
+   {
+      abilityNamePanel.SetText(abilityName);
+      abilityNamePanel.gameObject.SetActive(true);
+   }
+   
+   public void HideAbilityName()
+   {
+      abilityNamePanel.gameObject.SetActive(false);
+   }
+   
+   
 }
