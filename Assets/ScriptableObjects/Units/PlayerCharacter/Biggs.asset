@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Biggs
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Biggs
+  <Hp>k__BackingField: 0
   <Strength>k__BackingField: 41
   <Agility>k__BackingField: 36
   <Stamina>k__BackingField: 45
@@ -24,11 +25,14 @@ MonoBehaviour:
   <MagicEvasion>k__BackingField: 0
   <Resistances>k__BackingField: []
   <AlterationImmunity>k__BackingField: []
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 1739827823, guid: 8a153618352a72146b2b68dc812dab32,
+    type: 3}
   <InitialHp>k__BackingField: 70
   <InitialMp>k__BackingField: 0
   <EscapeRate>k__BackingField: 4
+  <GrowthTable>k__BackingField: {fileID: 0}
   <RightHandTypes>k__BackingField: 
   <LeftHandTypes>k__BackingField: 
   <HeadTypes>k__BackingField: 
   <BodyTypes>k__BackingField: 
+  <SpellUnlocksList>k__BackingField: []

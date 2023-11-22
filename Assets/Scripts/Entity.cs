@@ -102,6 +102,7 @@ public class Entity : MonoBehaviour
     
     public void AssignSprite()
     {
+        if (_spriteRenderer == null) return;
         _spriteRenderer.sprite = unitData.Sprite;
 
         mat = new Material(_spriteRenderer.material);

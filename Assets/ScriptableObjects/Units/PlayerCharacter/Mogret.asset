@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Mogret
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Mogret
+  <Hp>k__BackingField: 0
   <Strength>k__BackingField: 18
   <Agility>k__BackingField: 14
   <Stamina>k__BackingField: 12
@@ -24,11 +25,14 @@ MonoBehaviour:
   <MagicEvasion>k__BackingField: 5
   <Resistances>k__BackingField: []
   <AlterationImmunity>k__BackingField: []
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: -1064317760, guid: 8a153618352a72146b2b68dc812dab32,
+    type: 3}
   <InitialHp>k__BackingField: 54
   <InitialMp>k__BackingField: 9
   <EscapeRate>k__BackingField: 2
+  <GrowthTable>k__BackingField: {fileID: 0}
   <RightHandTypes>k__BackingField: 
   <LeftHandTypes>k__BackingField: 
   <HeadTypes>k__BackingField: 
   <BodyTypes>k__BackingField: 
+  <SpellUnlocksList>k__BackingField: []

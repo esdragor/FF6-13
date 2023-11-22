@@ -22,7 +22,7 @@ _ColorMask ("Color Mask", Float) = 15
 }
  
 SubShader {
-    Tags {"Queue"="Background"  "IgnoreProjector"="True"}
+    Tags {"Queue"="Background"  "IgnoreProjector"="True" "RenderType"="Transparent"}
     LOD 100
  
     ZWrite On
@@ -65,6 +65,7 @@ SubShader {
             if(tex2D(_MainTex, i.uv).a < 0.1) discard;
             float4 c = i.col;
             c.a = 1;
+            if(tex2D(_MainTex, i.uv).a < 0.1) c.a = 0; //wesh c pas transparent :(
             return c;
         }
             ENDCG

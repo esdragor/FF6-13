@@ -40,6 +40,7 @@ public class PlayerEntity : Entity
     {
         UpdateWantedPosition();
         UpdateMove();
+        if (!mat) return; 
         mat.SetFloat(MovingProperty, moving ? 1.0f : 0.0f);
     }
 

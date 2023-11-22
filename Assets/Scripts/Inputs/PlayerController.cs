@@ -16,15 +16,20 @@ public class PlayerController : BattleController
         OnPlayerSpawned?.Invoke(entity);
         (entity as PlayerEntity)?.InitPlayer(this);
         
+        GameObject go = new GameObject();
+        go.transform.SetParent(transform);
         //create here companions
+        companions = new List<PlayerEntity>();
         foreach (var companion in companionsSo)
         {
-            var companionEntity = new PlayerEntity();
+           
+            var companionEntity = go.AddComponent<PlayerEntity>();
             companionEntity.AssignSO(companion);
             companionEntity.InitPlayer(this);
+            companionEntity.gameObject.SetActive(false);
             companions.Add(companionEntity);
         }
-        
+        go.SetActive(false);
     }
     
     protected override void OnEnable()

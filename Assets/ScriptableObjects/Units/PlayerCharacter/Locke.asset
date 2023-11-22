@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Locke
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Locke
+  <Hp>k__BackingField: 0
   <Strength>k__BackingField: 37
   <Agility>k__BackingField: 40
   <Stamina>k__BackingField: 31
@@ -24,11 +25,14 @@ MonoBehaviour:
   <MagicEvasion>k__BackingField: 2
   <Resistances>k__BackingField: []
   <AlterationImmunity>k__BackingField: []
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: -452498444, guid: 69a4a1f4fdf0cad419eb7b23f73a118e,
+    type: 3}
   <InitialHp>k__BackingField: 48
   <InitialMp>k__BackingField: 7
   <EscapeRate>k__BackingField: 5
+  <GrowthTable>k__BackingField: {fileID: 0}
   <RightHandTypes>k__BackingField: 
   <LeftHandTypes>k__BackingField: 
   <HeadTypes>k__BackingField: 
   <BodyTypes>k__BackingField: 
+  <SpellUnlocksList>k__BackingField: []
