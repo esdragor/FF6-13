@@ -153,8 +153,6 @@ namespace Units
 
         public int TakeDamage(int damage)
         {
-            if (damage <= 0) return 0;
-            
             currentHp -= damage;
             if (currentHp < 0)
             {
@@ -162,22 +160,32 @@ namespace Units
                 currentHp = 0;
                 return amount;
             }
-
-            return 0;
-        }
-
-        public int HealDamage(int heal)
-        {
-            if (heal <= 0) return 0;
-            
-            currentHp += heal;
             if (currentHp > MaxHp)
             {
                 var amount = currentHp - MaxHp;
                 currentHp = MaxHp;
                 return amount;
             }
-            
+
+            return 0;
+        }
+        
+        public int RegenMpDamage(int regen)
+        {
+            currentMp += regen;
+            if (currentMp < 0)
+            {
+                var amount = Math.Abs(currentMp);
+                currentMp = 0;
+                return amount;
+            }
+            if (currentMp > MaxMp)
+            {
+                var amount = currentMp - MaxMp;
+                currentMp = MaxMp;
+                return amount;
+            }
+
             return 0;
         }
         

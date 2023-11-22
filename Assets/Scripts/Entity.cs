@@ -42,8 +42,21 @@ public class Entity : MonoBehaviour
         }
     }
     
-    public bool TakeDamage(int damage, UnitData attacker)
+    public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false, bool isPourcentDamage = false)
     {
+        if (isPourcentDamage) damage = (int) (unitData.MaxHp * damage / 100f);
+        
+        /* TODO:
+         * -Defence
+         * -Elemental Resistance
+         * -Evasion
+         * -Critical
+         * -Miss
+         */
+        
+        if (element != Elements.None) damage = (int) (damage * (unitData.Resistance(element) / 100f));
+        
+        
         Debug.Log( unitData.GetName() + " Take Damage " + damage + " from " + attacker.GetName());
         unitData.TakeDamage(damage);
         if (unitData.CurrentHp <= 0)
@@ -54,6 +67,27 @@ public class Entity : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void RegenMpDamage(int damage, bool isPourcentDamage = false)
+    {
+        if (isPourcentDamage) damage = (int) (unitData.MaxMp * damage / 100f);
+        
+        unitData.RegenMpDamage(damage);
+    }
+    
+    public void ApplyAlteration(Alterations alterations, bool ignoreImmunity, bool remove)
+    {
+        /* TODO:
+         * -Immunity
+         */
+        
+        if (remove)
+        {
+            unitData.RemoveAlteration(alterations, ignoreImmunity);
+            return;
+        }
+        unitData.AddAlteration(alterations, ignoreImmunity);
     }
 
     public void Move()
