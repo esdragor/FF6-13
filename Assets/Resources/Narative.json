@@ -1,0 +1,324 @@
+{
+  "dialog" : [
+    {
+      "id" : "Narshe_clif_1",
+      "title" : "Wedge",
+      "dialogTxt" : "There's the city"
+    },
+    {
+      "id" : "Narshe_clif_2",
+      "title" : "Biggs",
+      "dialogTxt" : "Hard to believe an Esper's been found intact there, 1000 years after the War of the Magi..."
+    },
+    {
+      "id" : "Narshe_clif_3",
+      "title" : "Biggs",
+      "dialogTxt" : "Bah! Probably just another wild goose chase..."
+    },
+    {
+      "id" : "Narshe_clif_4",
+      "title" : "Wedge",
+      "dialogTxt" : "I don't know..."
+    },
+    {
+      "id" : "Narshe_clif_5",
+      "title" : "Wedge",
+      "dialogTxt" : "They wouldn't have let us use her unless they were confident that the intel was good."
+    },
+    {
+      "id" : "Narshe_clif_6",
+      "title" : "Biggs",
+      "dialogTxt" : "Ah yes... our witch."
+    },
+    {
+      "id" : "Narshe_clif_7",
+      "title" : "Biggs",
+      "dialogTxt" : "I hear she fried fifty of our Magitek Armored Soldiers in under three minutes... Kinda makes your skin crawl, don't it?"
+    },
+    {
+      "id" : "Narshe_clif_8",
+      "title" : "Wedge",
+      "dialogTxt" : "Relax. With that thing on her head, she's a mindless puppet."
+    },
+    {
+      "id" : "Narshe_clif_9",
+      "title" : "Wedge",
+      "dialogTxt" : "The girl won't even breathe unless we tell her to."
+    },
+    {
+      "id" : "Narshe_clif_10",
+      "title" : "Wedge",
+      "dialogTxt" : "We'll approach from the east. Move out!"
+    },
+    {
+      "id" : "Narshe_entry_1",
+      "title" : "Wedge",
+      "dialogTxt" : "The girl takes point. And don't waste time on the riffraff! Remember what we're here for. Let's move!"
+    },
+    {
+      "id" : "Narshe_encounter1_1",
+      "title" : "Guard",
+      "dialogTxt" : "The Empire's got no buisness here!"
+    },
+    {
+      "id" : "Narshe_encounter2_1",
+      "title" : "Guard",
+      "dialogTxt" : "Imperial Magitek Armor! Not even Narshe's safe anymore!"
+    },
+    {
+      "id" : "Narshe_encounter3_1",
+      "title" : "Guard",
+      "dialogTxt" : "Stop them! For Narshe!"
+    },
+    {
+      "id" : "Narshe_encounter4_1",
+      "title" : "Guard",
+      "dialogTxt" : "We got'em trapped now!"
+    },
+    {
+      "id" : "Narshe_encounter5_1",
+      "title" : "Guard",
+      "dialogTxt" : "Defend the mines!"
+    },
+    {
+      "id" : "Narshe_beforeMines_1",
+      "title" : "Wedge",
+      "dialogTxt" : "According to our source, some miners unearthed the frozen Esper in a new shaft they were digging..."
+    },
+    {
+      "id" : "Narshe_beforeMines_2",
+      "title" : "Wedge",
+      "dialogTxt" : "This must be it."
+    },
+    {
+      "id" : "NarsheMines_1f_savepointLearn_1",
+      "title" : "",
+      "dialogTxt" : "A strange light fills the air."
+    },
+    {
+      "id" : "NarsheMines_1f_savepointLearn_2",
+      "title" : "",
+      "dialogTxt" : "Do you want to learn about save points?"
+    },
+    {
+      "id" : "NarsheMines_1f_savepointLearn_3",
+      "title" : "",
+      "dialogTxt" : "At save points, you can use tents and sleeping bags, and also save the game."
+    },
+    {
+      "id" : "NarsheMines_1f_savepointLearn_4",
+      "title" : "",
+      "dialogTxt" : "You can also use the sae and quick save functions anywhere on the overworld map."
+    },
+    {
+      "id" : "NarsheMines_1f_story1_1",
+      "title" : "Biggs",
+      "dialogTxt" : "I'll handle this. Stand back!"
+    },
+    {
+      "id" : "NarsheMines_1f_story1_2",
+      "title" : "Guard",
+      "dialogTxt" : "We're not handing over that esper!"
+    },
+    {
+      "id" : "NarsheMines_1f_story1_3",
+      "title" : "Guard",
+      "dialogTxt" : "Ymir! Get them!"
+    },
+    {
+      "id" : "NarsheMines_1f_story1_inbattle_1",
+      "title" : "Biggs",
+      "dialogTxt" : "Hold it!"
+    },
+    {
+      "id" : "NarsheMines_1f_story1_inbattle_2",
+      "title" : "Biggs",
+      "dialogTxt" : "Hold it!\nThat thing's a...! They must have trained it to guard the mines!"
+    },
+    {
+      "id" : "NarsheMines_1f_story1_inbattle_3",
+      "title" : "Wedge",
+      "dialogTxt" : "What are you talking about?"
+    },
+    {
+      "id" : "NarsheMines_1f_story1_inbattle_4",
+      "title" : "Wedge",
+      "dialogTxt" : "What are you talking about?\nYou know what this is?"
+    },
+    {
+      "id" : "NarsheMines_1f_story1_inbattle_5",
+      "title" : "Biggs",
+      "dialogTxt" : "Ever heard of a lightning whelk?"
+    },
+    {
+      "id" : "NarsheMines_1f_story1_inbattle_6",
+      "title" : "Biggs",
+      "dialogTxt" : "Ever heard of a lightning whelk?\nIt's a monster that absorbs lightning..."
+    },
+    {
+      "id" : "NarsheMines_1f_story1_inbattle_7",
+      "title" : "Wedge",
+      "dialogTxt" : "...and stores the energy in its shell."
+    },
+    {
+      "id" : "NarsheMines_1f_story1_inbattle_8",
+      "title" : "Biggs",
+      "dialogTxt" : "Right.\nSo whatever you do, don't attack the shell!"
+    },
+    {
+      "id" : "NarsheMines_1f_story1_inbattle_9",
+      "title" : "Wedge",
+      "dialogTxt" : "Got it!"
+    },
+    {
+      "id" : "NarsheMines_2f_story1_1",
+      "title" : "",
+      "dialogTxt" : "So...this is the frozen esper?"
+    },
+    {
+      "id" : "NarsheMines_2f_story1_inbattle_1",
+      "title" : "Wedge",
+      "dialogTxt" : "This thing's giving me the creeps..."
+    },
+    {
+      "id" : "NarsheMines_2f_story1_inbattle_2",
+      "title" : "Wedge",
+      "dialogTxt" : "This thing's giving me the creeps...\nSomething's not right..."
+    },
+    {
+      "id" : "NarsheMines_2f_story1_inbattle_3",
+      "title" : "Girl",
+      "dialogTxt" : "..."
+    },
+    {
+      "id" : "NarsheMines_2f_story1_inbattle_4",
+      "title" : "",
+      "dialogTxt" : "The frozen creature begins emitting an eerie light..."
+    },
+    {
+      "id" : "NarsheMines_2f_story1_inbattle_5",
+      "title" : "Wedge",
+      "dialogTxt" : "Wh-where's that light coming from!?"
+    },
+    {
+      "id" : "NarsheMines_2f_story1_inbattle_6",
+      "title" : "Wedge",
+      "dialogTxt" : "Wh-where's that light coming from!?\nWhaaagh!"
+    },
+    {
+      "id" : "NarsheMines_2f_story1_inbattle_7",
+      "title" : "Biggs",
+      "dialogTxt" : "Wh-what was that!? ...Wedge?"
+    },
+    {
+      "id" : "NarsheMines_2f_story1_inbattle_8",
+      "title" : "Biggs",
+      "dialogTxt" : "Wh-what was that!? ...Wedge?\nWedge, where are you? H-hey! What's going on!?"
+    },
+    {
+      "id" : "NarsheMines_2f_story1_inbattle_9",
+      "title" : "Girl",
+      "dialogTxt" : "........."
+    },
+    {
+      "id" : "NarsheWakeUp_1",
+      "title" : "Girl",
+      "dialogTxt" : "Where...am I?"
+    },
+    {
+      "id" : "NarsheWakeUp_2",
+      "title" : "Old Man",
+      "dialogTxt" : "My, my! And I only just removed the crown!"
+    },
+    {
+      "id" : "NarsheWakeUp_3",
+      "title" : "Girl",
+      "dialogTxt" : "My head...hurts..."
+    },
+    {
+      "id" : "NarsheWakeUp_4",
+      "title" : "Old Man",
+      "dialogTxt" : "Easy there! This is a slave crown. The others were using it to control you."
+    },
+    {
+      "id" : "NarsheWakeUp_5",
+      "title" : "Old Man",
+      "dialogTxt" : "It was robbing you of your thoughts-making it so you'd do whatever they told you."
+    },
+    {
+      "id" : "NarsheWakeUp_6",
+      "title" : "Girl",
+      "dialogTxt" : "I can't remember a thing..."
+    },
+    {
+      "id" : "NarsheWakeUp_7",
+      "title" : "Old Man",
+      "dialogTxt" : "Don't worry, it'll all come back to you... In time, that is."
+    },
+    {
+      "id" : "NarsheWakeUp_8",
+      "title" : "Girl",
+      "dialogTxt" : "..."
+    },
+    {
+      "id" : "NarsheWakeUp_named_1",
+      "title" : "Girl",
+      "dialogTxt" : "My name is...{Terra_Name}..."
+    },
+    {
+      "id" : "NarsheWakeUp_named_2",
+      "title" : "Old Man",
+      "dialogTxt" : "Impressive! I've never heard of anyone recovering this fast. You must be made of tougher stuff than most..."
+    },
+    {
+      "id" : "NarsheGuardsOpenUp_1",
+      "title" : "Guard",
+      "dialogTxt" : "Open up!"
+    },
+    {
+      "id" : "NarsheGuardsOpenUp_2",
+      "title" : "Guard",
+      "dialogTxt" : "We are here for the Magitek armor pilot!"
+    },
+    {
+      "id" : "NarsheGuardsOpenUp2_1",
+      "title" : "Guard",
+      "dialogTxt" : "Open this door right now!"
+    },
+    {
+      "id" : "NarsheGuardsOpenUp2_2",
+      "title" : "Guard",
+      "dialogTxt" : "Hand over that girl!"
+    },
+    {
+      "id" : "NarsheGuardsOpenUp2_3",
+      "title" : "Guard",
+      "dialogTxt" : "She is an agent of the Empire!"
+    },
+    {
+      "id" : "NarsheGuardsOpenUp2_4",
+      "title" : "{Terra_Name}",
+      "dialogTxt" : "...Empire? ...Magitek armor?"
+    },
+    {
+      "id" : "NarsheGuardsOpenUp2_5",
+      "title" : "Old Man",
+      "dialogTxt" : "There's no time to explain! You need to get out of here! These fools aren't going to listen to reason..."
+    },
+    {
+      "id" : "NarsheGuardsOpenUp2_6",
+      "title" : "This way! Quickly!",
+      "dialogTxt" : ""
+    },
+    {
+      "id" : "NarsheGuardsOpenUp2_7",
+      "title" : "Old Man",
+      "dialogTxt" : "Make your way out of town through the mines! I'll try to buy you some time."
+    },
+    {
+      "id" : "NarsheBridge_1",
+      "title" : "Guard",
+      "dialogTxt" : "Up there!"
+    }
+  ]
+}
