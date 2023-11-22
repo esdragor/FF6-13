@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -28,9 +27,7 @@ public class UIPanel : MonoBehaviour
             yield return null;
             
             var size = nameTextMeshProUGUI.preferredWidth;
-        
-            Debug.Log(size);
-        
+            
             namePanelTr.sizeDelta = new Vector2(size, namePanelTr.sizeDelta.y);
         }
     }

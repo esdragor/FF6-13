@@ -14,7 +14,8 @@ public class DialogueDisplayer : MonoBehaviour
     [SerializeField] private string debugText;
     [SerializeField] private string debugName;
     
-    public bool DisplayingText => currentText != targetText;
+    public bool IsOpen => topDialogueUiPanel.gameObject.activeSelf || botDialogueUiPanel.gameObject.activeSelf;
+    public bool IsDisplayingText => currentText != targetText;
     private string currentText;
     private string targetText;
     private Coroutine displayTextCoroutine;
@@ -30,6 +31,7 @@ public class DialogueDisplayer : MonoBehaviour
         HidePanel();
     }
 
+    [ContextMenu("Hide")]
     public void HidePanel()
     {
         topDialogueUiPanel.gameObject.SetActive(false);
