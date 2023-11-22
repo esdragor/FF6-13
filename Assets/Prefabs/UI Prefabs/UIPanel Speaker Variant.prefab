@@ -33,6 +33,16 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 28
       objectReference: {fileID: 0}
+    - target: {fileID: 4426667396669487449, guid: 46fce6411501e1a4f94f4f69feaa4b65,
+        type: 3}
+      propertyPath: namePanelTr
+      value: 
+      objectReference: {fileID: 379266621335422999}
+    - target: {fileID: 4426667396669487449, guid: 46fce6411501e1a4f94f4f69feaa4b65,
+        type: 3}
+      propertyPath: nameTextMeshProUGUI
+      value: 
+      objectReference: {fileID: 9046575641314178050}
     - target: {fileID: 7070523316374547714, guid: 46fce6411501e1a4f94f4f69feaa4b65,
         type: 3}
       propertyPath: m_Name
@@ -145,45 +155,8 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 379266621335422999}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7070523316374547714, guid: 46fce6411501e1a4f94f4f69feaa4b65,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9101023308988519351}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46fce6411501e1a4f94f4f69feaa4b65, type: 3}
---- !u!114 &260721468427682996 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1403121565649044137, guid: 46fce6411501e1a4f94f4f69feaa4b65,
-    type: 3}
-  m_PrefabInstance: {fileID: 1217844823222961693}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &8284701457012222751 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7070523316374547714, guid: 46fce6411501e1a4f94f4f69feaa4b65,
-    type: 3}
-  m_PrefabInstance: {fileID: 1217844823222961693}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9101023308988519351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8284701457012222751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6724a289578329459e22b501e0cb77e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainTextMeshProUGUI: {fileID: 260721468427682996}
-  nameTextMeshProUGUI: {fileID: 9046575641314178050}
-  namePanelTr: {fileID: 379266621335422999}
 --- !u!224 &8887515961001031841 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7759820663100309180, guid: 46fce6411501e1a4f94f4f69feaa4b65,

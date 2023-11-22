@@ -15,6 +15,7 @@ public class UIPanel : MonoBehaviour
 
     public void SetNameText(string nameText)
     {
+        if(namePanelTr == null) return;
         namePanelTr.gameObject.SetActive(!string.IsNullOrEmpty(nameText));
         StartCoroutine(ResizeNamePanelRoutine());
         

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ControlsDisplayer : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ControlsDisplayer : MonoBehaviour
     [SerializeField] private Transform layout;
     [SerializeField] private UIRefs controlsText;
     [SerializeField] private GameObject separatorPrefab;
+    [SerializeField] private Scrollbar scrollbar;
+    private Selectable returnSelectable;
     
     [Serializable]
     private struct Control
@@ -36,10 +39,14 @@ public class ControlsDisplayer : MonoBehaviour
     }
 
     [ContextMenu("Show")]
-    public void Show()
+    public void Show(Selectable selectable = null)
     {
+        returnSelectable = selectable;
+        
         blurObject.SetActive(true);
         panel.SetActive(true);
+        
+        scrollbar.Select();
         
         // TODO - should pause game
     }
@@ -51,5 +58,7 @@ public class ControlsDisplayer : MonoBehaviour
         panel.SetActive(false);
         
         // TODO - should unpause game
+        
+        if(returnSelectable != null) returnSelectable.Select();
     }
 }

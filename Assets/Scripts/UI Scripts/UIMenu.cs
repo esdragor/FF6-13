@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIMenu : MonoBehaviour
 {
     [SerializeField] private IntroAnimation introAnimation;
-    [SerializeField] private RectTransform menuCursor;
+    [SerializeField] private UICursor menuCursor;
     [SerializeField] private Image fadeImage;
     [Header("Buttons")]
     [SerializeField] private UIButton playButton;
@@ -20,9 +20,9 @@ public class UIMenu : MonoBehaviour
     
     private void Start()
     {
-        playButton.OnButtonSelected += OnButtonSelected;
-        loadButton.OnButtonSelected += OnButtonSelected;
-        quitButton.OnButtonSelected += OnButtonSelected;
+        playButton.OnButtonSelected += menuCursor.SetSelectable;
+        loadButton.OnButtonSelected += menuCursor.SetSelectable;
+        quitButton.OnButtonSelected += menuCursor.SetSelectable;
         
         playButton.Button.onClick.AddListener(StartGame);
         loadButton.Button.onClick.AddListener(LoadGame);
@@ -48,9 +48,9 @@ public class UIMenu : MonoBehaviour
     
     private void StartGame()
     {
-        playButton.OnButtonSelected -= OnButtonSelected;
-        loadButton.OnButtonSelected -= OnButtonSelected;
-        quitButton.OnButtonSelected -= OnButtonSelected;
+        playButton.OnButtonSelected -= menuCursor.SetSelectable;
+        loadButton.OnButtonSelected -= menuCursor.SetSelectable;
+        quitButton.OnButtonSelected -= menuCursor.SetSelectable;
         
         Fade(fadeTime,OnGameStarted);
     }
@@ -72,12 +72,4 @@ public class UIMenu : MonoBehaviour
         gameObject.SetActive(false);
         introAnimation.StartAnimation();
     }
-    
-    private void OnButtonSelected(Component button)
-    {
-        menuCursor.SetParent(button.transform);
-        menuCursor.anchoredPosition = Vector2.zero;
-    }
-    
-    
 }
