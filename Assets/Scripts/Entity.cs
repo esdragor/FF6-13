@@ -8,31 +8,31 @@ public class Entity : MonoBehaviour
 {
     public static event Action<Entity> OnEntityDying;
     public UnitData unitData;
-    
+
     [SerializeField] protected SpriteRenderer _spriteRenderer;
     [SerializeField] protected GameObject selectorObj;
     [SerializeField] protected Animator _animator;
     [SerializeField] protected BoxCollider2D _boxCollider2D;
     [SerializeField] protected float delayToMove = 1f;
-    [field:SerializeField] public UnitSO SO { get; protected set;}
+    [field: SerializeField] public UnitSO SO { get; protected set; }
 
     public Direction ForwardDirection { get; protected set; } = Direction.None;
 
     protected Material mat;
-    
+
     private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
 
     public void Turn(Direction dir)
     {
         ForwardDirection = dir;
-        
+
         if (dir == Direction.None) return;
-        
+
         _spriteRenderer.flipX = dir is Direction.Right or Direction.UpRight or Direction.DownRight;
-        
+
         switch (dir)
         {
-            case Direction.Up :
+            case Direction.Up:
                 mat.SetFloat(DirectionProperty, 0f);
                 break;
             case Direction.Down:
@@ -43,11 +43,12 @@ public class Entity : MonoBehaviour
                 break;
         }
     }
-    
-    public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false, bool isPourcentDamage = false)
+
+    public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false,
+        bool isPourcentDamage = false)
     {
-        if (isPourcentDamage) damage = (int) (unitData.MaxHp * damage / 100f);
-        
+        if (isPourcentDamage) damage = (int)(unitData.MaxHp * damage / 100f);
+
         /* TODO:
          * -Defence
          * -Elemental Resistance
@@ -55,44 +56,48 @@ public class Entity : MonoBehaviour
          * -Critical
          * -Miss
          */
-        
-        if (element != Elements.None) damage = (int) (damage * (unitData.Resistance(element) / 100f));
-        
-        
-        Debug.Log( unitData.GetName() + " Take Damage " + damage + " from " + attacker.GetName());
+
+        if (element != Elements.None) damage = (int)(damage * (unitData.Resistance(element) / 100f));
+
+
+        Debug.Log(unitData.GetName() + " Take Damage " + damage + " from " + attacker.GetName());
         unitData.TakeDamage(damage);
         if (element == Elements.Physical)
         {
             transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
         }
+
         if (unitData.CurrentHp <= 0)
         {
             Debug.Log(unitData.GetName() + " is dead");
             OnEntityDying?.Invoke(this);
-            Destroy(gameObject, 0.5f);
+            if (!(this as PlayerEntity))
+                Destroy(gameObject, 0.5f);
             return true;
         }
+
         return true;
     }
 
     public void RegenMpDamage(int damage, bool isPourcentDamage = false)
     {
-        if (isPourcentDamage) damage = (int) (unitData.MaxMp * damage / 100f);
-        
+        if (isPourcentDamage) damage = (int)(unitData.MaxMp * damage / 100f);
+
         unitData.RegenMpDamage(damage);
     }
-    
+
     public void ApplyAlteration(Alterations alterations, bool ignoreImmunity, bool remove)
     {
         /* TODO:
          * -Immunity
          */
-        
+
         if (remove)
         {
             unitData.RemoveAlteration(alterations, ignoreImmunity);
             return;
         }
+
         unitData.AddAlteration(alterations, ignoreImmunity);
     }
 
@@ -105,7 +110,7 @@ public class Entity : MonoBehaviour
     {
         ForwardDirection = dir;
     }
-    
+
     public void AssignSprite()
     {
         ShowSelector(false);
@@ -119,10 +124,10 @@ public class Entity : MonoBehaviour
 
     public void Init(bool isMonster)
     {
-        unitData =  (isMonster) ? new MonsterData(SO) : new PlayerCharacterData(SO as PlayerCharactersSO, 1);
+        unitData = (isMonster) ? new MonsterData(SO) : new PlayerCharacterData(SO as PlayerCharactersSO, 1);
         AssignSprite();
     }
-    
+
     public void Init(UnitSO unitSo, bool isMonster = false)
     {
         SO = unitSo;

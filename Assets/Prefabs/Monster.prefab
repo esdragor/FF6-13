@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8731512548653332835}
   - component: {fileID: 2317830123916161200}
   - component: {fileID: 7509104964156181236}
-  - component: {fileID: 5267095582099474484}
+  - component: {fileID: 7277767951937992009}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1713875468, guid: 5735a704749448e4d9ac64352658bba3, type: 3}
+  m_Sprite: {fileID: 1964579265, guid: 8a153618352a72146b2b68dc812dab32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.65625, y: 1.90625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -144,8 +144,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.75}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.9375, y: 1.5}
+    newSize: {x: 1.65625, y: 1.90625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -153,7 +153,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.15}
   m_EdgeRadius: 0
---- !u!114 &5267095582099474484
+--- !u!114 &7277767951937992009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,11 +162,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369101659063960973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4660fb8126115764cbae5989944a50a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 89c9ac46bc3626348b2d7cc5a0b6955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 8731512548653332835}
   _animator: {fileID: 2317830123916161200}
   _boxCollider2D: {fileID: 7509104964156181236}
   delayToMove: 1
-  SO: {fileID: 11400000, guid: 283d1bda70651a34fadf665e49c02a1c, type: 2}
+  <SO>k__BackingField: {fileID: 0}
+  costAttack: 100
+  ratioSpeedActionBar: 1

@@ -224,9 +224,10 @@ public class PlayerEntityOnBattle : PlayerEntity
             {
                 case ActionBattle.AutoAttack:
                     Vector3 originalPos = transform.position;
+                    Vector3 targetPos = target[index].transform.position;
                     if (target.Count > 0)
                     {
-                        transform.DOMove(target[index].transform.position + Vector3.right, 1f);
+                        transform.DOMove(targetPos + Vector3.right, 1f);
                         yield return new WaitForSeconds(1f);
 
                         success = Attack(index);
@@ -247,9 +248,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
                     break;
                 case ActionBattle.Abilities:
-
-                    UseSpell((unitData as PlayerCharacterData).getAllSpells()[index], target);
-                    Debug.Log("Abilities");
+                    UseSpell((unitData as PlayerCharacterData)?.getAllSpells()[index], target);
                     break;
                 
                 

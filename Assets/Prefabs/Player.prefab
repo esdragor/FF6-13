@@ -55,7 +55,7 @@ MonoBehaviour:
   <SO>k__BackingField: {fileID: 11400000, guid: c02e141d82c58e942a8a734104ed920c,
     type: 2}
   cellSize: 0.5
-  toleranceMoving: 0.6
+  toleranceMoving: 0.1
 --- !u!95 &2317830123916161200
 Animator:
   serializedVersion: 5
