@@ -67,7 +67,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""5af44752-a008-4a58-b987-579a66459b1f"",
+                    ""id"": ""2a156955-e2b0-4af4-89d9-9f44cd4b3ee7"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -78,8 +78,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""5c0430c0-21c0-46d2-9725-3f800e98ff0f"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""id"": ""b7ab83c6-6f59-46df-90a9-f7c4aaa50327"",
+                    ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Sheme"",
@@ -89,8 +89,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""c3dc1e25-9faf-43bb-937e-4fd387784080"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""id"": ""54f98d43-d455-49ea-b662-950fbf847b64"",
+                    ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Sheme"",
@@ -100,8 +100,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""e990af6d-23f0-459c-bef5-e90a56846408"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""id"": ""9cbd4dff-98cd-44bd-be1d-734bcee91965"",
+                    ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Sheme"",
@@ -111,8 +111,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""339b1286-d329-4b36-80c6-dc4de39ed1f4"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""id"": ""e6e70283-7350-415b-98c1-e4abb875b18c"",
+                    ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Sheme"",
@@ -299,7 +299,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""a86a6cf3-5be1-495c-b1d1-879526b24a09"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Sheme"",
@@ -310,7 +310,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""2909a2ab-72fe-4226-a73e-ed49466e038b"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Sheme"",
@@ -321,7 +321,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""81dc71ff-2f23-4dae-9250-4ced24db3c36"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Sheme"",
@@ -332,7 +332,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""a3d1f6ba-bda0-4310-a5a2-295c046ed63b"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Sheme"",
