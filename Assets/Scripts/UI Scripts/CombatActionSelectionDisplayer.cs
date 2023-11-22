@@ -10,6 +10,8 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     
     private void Cleanup()
     {
+        ShowSelector(false);
+        
         foreach (var actionSelector in characterActionSelectors.Values)
         {
             actionSelector.Cleanup();
@@ -25,10 +27,13 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
         {
             characterActionSelectors.Add(playerEntityOnBattle, CreateCombatActionSelector(playerEntityOnBattle));
         }
+        ShowSelector();
     }
 
-    public void ShowActionSelector(PlayerEntityOnBattle playerEntityOnBattle)
+    public void ShowActionSelector(PlayerEntityOnBattle _,PlayerEntityOnBattle playerEntityOnBattle)
     {
+        ShowSelector();
+        
         foreach (var actionSelector in characterActionSelectors.Values)
         {
             actionSelector.Show(false);
@@ -47,7 +52,13 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     private UICombatActionSelector CreateCombatActionSelector(PlayerEntityOnBattle playerEntityOnBattle)
     {
         var combatActionSelector = Instantiate(combatActionSelectorPrefab, combatActionSelectorParent);
+        combatActionSelector.name = $"CombatActionSelector {playerEntityOnBattle.SO.name}";
         combatActionSelector.SetPlayerEntity(playerEntityOnBattle);
         return combatActionSelector;
+    }
+    
+    public void ShowSelector(bool value = true)
+    {
+        combatActionSelectorParent.gameObject.SetActive(value);
     }
 }

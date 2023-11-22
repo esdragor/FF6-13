@@ -166,3 +166,4 @@ MonoBehaviour:
   - <Spell>k__BackingField: {fileID: 11400000, guid: b2bb0e02ed88031429859e11ccfcc50f,
       type: 2}
     <Level>k__BackingField: 1
+  possibleActions: 000000000100000002000000030000000500000006000000

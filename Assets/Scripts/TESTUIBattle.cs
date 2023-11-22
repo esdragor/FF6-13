@@ -18,6 +18,8 @@ public class TESTUIBattle : MonoBehaviour
 
     private void Awake()
     {
+        return;
+        
         BattleManager.OnSelectionChanged += SelectionAction;
         PlayerEntityOnBattle.OnActionBarChanged += UpdateActionBar;
     }

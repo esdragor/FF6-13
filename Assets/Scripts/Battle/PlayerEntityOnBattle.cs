@@ -46,6 +46,8 @@ public class PlayerEntityOnBattle : PlayerEntity
     private bool currentlyAttacking = false;
     private List<Entity> target;
     private bool isSelected = false;
+    
+    
 
     public bool Attack(int index)
     {

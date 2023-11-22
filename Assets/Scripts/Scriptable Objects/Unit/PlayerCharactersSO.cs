@@ -25,6 +25,9 @@ namespace Scriptable_Objects.Unit
         [field:Space]
         [field:Header("Spells")]
         [field:SerializeField] public List<SpellUnlocks> SpellUnlocksList { get; private set; }
+
+        [SerializeField] private List<ActionBattle> possibleActions;
+        public IReadOnlyList<ActionBattle> PossibleActions => possibleActions;
         
         
         [Serializable] public struct SpellUnlocks

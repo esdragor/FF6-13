@@ -39,6 +39,8 @@ public class CombatUIDisplayer : MonoBehaviour
       BattleManager.OnPlayerUpdated += SetPlayerEntities;
       BattleManager.OnCharacterSelected += PlayerEntityOnBattle.TrySelectPlayer;
       BattleManager.OnCharacterSelected += mainActionBarDisplayer.ShowActionBar;
+      BattleManager.OnCharacterSelected += combatActionSelectionDisplayer.ShowActionSelector;
+
    }
 
    private void OnDisable()
@@ -46,6 +48,7 @@ public class CombatUIDisplayer : MonoBehaviour
       BattleManager.OnBattleStarted -= Show;
       BattleManager.OnPlayerUpdated -= SetPlayerEntities;
       BattleManager.OnCharacterSelected -= PlayerEntityOnBattle.TrySelectPlayer;
+      BattleManager.OnCharacterSelected -= combatActionSelectionDisplayer.ShowActionSelector;
    }
 
    public void Show()

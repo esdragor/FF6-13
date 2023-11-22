@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleActionSelectionPanel: {fileID: 5405998678868832182}
-  gridSelectionPanel: {fileID: 0}
-  selectionDescriptionPanel: {fileID: 0}
+  gridSelectionPanel: {fileID: 5206468064154502171}
+  selectionDescriptionPanel: {fileID: 6410645004409111750}
 --- !u!1 &2863947784659193551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,6 +1452,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Selection Panel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7796663323842694852, guid: 9bc0eca7fee68ec4d9799767f085a3e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8851821987459688265, guid: 9bc0eca7fee68ec4d9799767f085a3e0,
         type: 3}
       propertyPath: m_Enabled
@@ -1497,6 +1502,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 3
+--- !u!114 &5206468064154502171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8124225964509832171, guid: 9bc0eca7fee68ec4d9799767f085a3e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4106750035306571760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80fe1954b9497b84cb85dfcf5b3a4f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6729138856089352842 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7321919805399670138, guid: 9bc0eca7fee68ec4d9799767f085a3e0,
@@ -2044,6 +2061,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7321024650848877983}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6410645004409111750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4426667396669487449, guid: 46fce6411501e1a4f94f4f69feaa4b65,
+    type: 3}
+  m_PrefabInstance: {fileID: 7321024650848877983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6724a289578329459e22b501e0cb77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7722100451759006740
 PrefabInstance:
   m_ObjectHideFlags: 0

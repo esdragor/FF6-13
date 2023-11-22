@@ -39,7 +39,7 @@ public class CombatActionBarDisplayer : MonoBehaviour
             for (int i = 0; i < count; i++)
             {
                 var actionBar = Instantiate(actionBarPrefab, mainActionBarLayout);
-                actionBar.gameObject.name = $"Action Bar {{i}} ({playerEntityOnBattle.SO.Name})";
+                actionBar.gameObject.name = $"Action Bar {i} ({playerEntityOnBattle.SO.Name})";
                 ActionBars.Add(actionBar);
             }
         }
@@ -123,12 +123,12 @@ public class CombatActionBarDisplayer : MonoBehaviour
         {
             ShowActionBar(null,playerEntityOnBattle);
         }
-        ShowBar(true);
+        ShowBar();
     }
 
     public void ShowActionBar(PlayerEntityOnBattle _,PlayerEntityOnBattle playerEntityOnBattle)
     {
-        ShowBar(true);
+        ShowBar();
         
         foreach (var actionBar in characterActionBars.Values)
         {
@@ -146,7 +146,7 @@ public class CombatActionBarDisplayer : MonoBehaviour
         characterActionBars.Add(playerEntityOnBattle, new CharacterActionBar(playerEntityOnBattle,actionBarPrefab,mainActionBarLayout));
     }
 
-    public void ShowBar(bool value)
+    public void ShowBar(bool value = true)
     {
         mainActionBarLayout.gameObject.SetActive(value);
     }

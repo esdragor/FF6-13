@@ -18,6 +18,13 @@ public class UISelectionPanel : MonoBehaviour
     {
         [field: SerializeField] public string Name { get; private set; }
         [field: SerializeField] public UnityEvent Callback { get; private set; }
+        
+        public SelectionOption(string name, Action callback)
+        {
+            Name = name;
+            Callback = new UnityEvent();
+            Callback.AddListener(callback.Invoke);
+        }
     }
 
     [ContextMenu("Update Selection Options")]

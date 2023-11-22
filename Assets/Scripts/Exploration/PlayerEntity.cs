@@ -10,6 +10,8 @@ public class PlayerEntity : Entity
     public static event Action OnCinematicStarted;
     public static event Action<bool> OnCinematicEnded;
     
+    public PlayerCharactersSO PlayerCharactersSo => (PlayerCharactersSO) SO;
+    
     public PlayerController _playerController { get; private set; }
 
     [SerializeField] private float cellSize = 1f;
