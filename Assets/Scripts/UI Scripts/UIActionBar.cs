@@ -9,10 +9,14 @@ public class UIActionBar : MonoBehaviour
     [SerializeField] private RectTransform self;
     [field: SerializeField] public Image FillImage { get; private set; }
     [SerializeField] private UIPanel actionPanel;
+    [Header("Settings")]
+    [SerializeField] private Color completeColor = Color.yellow;
+    [SerializeField] private Color incompleteColor = Color.gray;
     
     public void SetFill(float fill)
     {
         FillImage.fillAmount = fill;
+        FillImage.color = fill >= 1 ? completeColor : incompleteColor;
     }
 
     public void SetAction(string text,int size)
