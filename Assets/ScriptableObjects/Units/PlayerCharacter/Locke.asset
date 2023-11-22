@@ -152,6 +152,7 @@ MonoBehaviour:
     <Immunity>k__BackingField: 0
   <Sprite>k__BackingField: {fileID: -452498444, guid: 69a4a1f4fdf0cad419eb7b23f73a118e,
     type: 3}
+  <ArrowCursorHeight>k__BackingField: 0.6
   <InitialHp>k__BackingField: 48
   <InitialMp>k__BackingField: 7
   <EscapeRate>k__BackingField: 5

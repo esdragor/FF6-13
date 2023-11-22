@@ -104,7 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6146e71b364d1de4da6afcbdbe2d1a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillImage: {fileID: 0}
+  self: {fileID: 6266908247329678854}
+  <FillImage>k__BackingField: {fileID: 7687164959410078076}
   actionPanel: {fileID: 3541987583198831264}
 --- !u!1 &7665813013885919493
 GameObject:

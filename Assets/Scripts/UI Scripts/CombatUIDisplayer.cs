@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CombatUIDisplayer : MonoBehaviour
 {
+   [Header("General")]
    [SerializeField] private UICursor cursor;
    [SerializeField] private UIRefs controlsControls;
    [SerializeField] private UIRefs nextControls;
@@ -30,14 +32,32 @@ public class CombatUIDisplayer : MonoBehaviour
    [SerializeField] private GameObject endBattleXPPanel;
    
    private IReadOnlyList<PlayerEntityOnBattle> playerEntitiesOnBattle;
-   
+
+   private void OnEnable()
+   {
+      BattleManager.OnBattleStarted += Show;
+      BattleManager.OnPlayerUpdated += SetPlayerEntities;
+      BattleManager.OnCharacterSelected += PlayerEntityOnBattle.TrySelectPlayer;
+      BattleManager.OnCharacterSelected += mainActionBarDisplayer.ShowActionBar;
+   }
+
+   private void OnDisable()
+   {
+      BattleManager.OnBattleStarted -= Show;
+      BattleManager.OnPlayerUpdated -= SetPlayerEntities;
+      BattleManager.OnCharacterSelected -= PlayerEntityOnBattle.TrySelectPlayer;
+   }
+
    public void Show()
    {
       HideEndPanel();
+      teamPanelObj.SetActive(true);
+      enemyPanelObj.SetActive(true);
    }
    
-   public void SetPlayerEntities(List<PlayerEntityOnBattle> playerEntities)
+   public void SetPlayerEntities(IReadOnlyList<PlayerEntityOnBattle> playerEntities)
    {
+      Debug.Log($"Settings {playerEntities.Count} player entities on battle");
       playerEntitiesOnBattle = playerEntities;
       mainActionBarDisplayer.CreateActionBars(playerEntitiesOnBattle);
       combatActionSelectionDisplayer.CreateSelectors(playerEntitiesOnBattle);

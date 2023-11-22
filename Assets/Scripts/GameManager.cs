@@ -26,19 +26,22 @@ public class GameManager : MonoBehaviour
     
     private bool DebugBattle = false;
     
-    private IEnumerator LaunchBattle()
+    private IEnumerator TryLaunchBattle()
     {
         yield return new WaitForSeconds(0.1f);
         int random = Random.Range(0, 100);
         if ((random < 20 && _state != State.Dialog && _state != State.Battle) || DebugBattle)
         {
-            Debug.Log("Battle");
-            _state = State.Battle;
-            _inputManager.OnBattle();
-            _battleManager.StartBattle();
+            LaunchBattle();
         }
-        else if (_state != State.Battle)
-            StartCoroutine(LaunchBattle());
+    }
+
+    private void LaunchBattle()
+    {
+        Debug.Log("Battle");
+        _state = State.Battle;
+        _inputManager.OnBattle();
+        _battleManager.StartBattle(_player._playerController);
     }
 
     public void GetBackToExplore()
@@ -71,10 +74,12 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _state = State.Battle;
-            _inputManager.OnBattle();
-            _battleManager.UpdatePlayer(_player._playerController);
-            _battleManager.StartBattle();
+            LaunchBattle();
+            
+            // _state = State.Battle;
+            // _inputManager.OnBattle();
+            // _battleManager.UpdatePlayer(_player._playerController);
+            // _battleManager.StartBattle();
         }
     }
 }

@@ -471,8 +471,8 @@ MonoBehaviour:
   cursor: {fileID: 4013894027936489074}
   controlsControls: {fileID: 5850464158524797804}
   nextControls: {fileID: 3550119731373113856}
-  teamPanelObj: {fileID: 0}
-  enemyPanelObj: {fileID: 0}
+  teamPanelObj: {fileID: 3400202242299564498}
+  enemyPanelObj: {fileID: 5217482344229184707}
   combatActionSelectionDisplayer: {fileID: 8078538272639910800}
   selectionInfoPanel: {fileID: 2634182231876549799}
   selectionInfoPanelDisabledObj: {fileID: 4095468844867469818}
@@ -507,7 +507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5fa45766cf4573459144173cf55962f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combatActionSelectorPrefab: {fileID: 0}
+  combatActionSelectorPrefab: {fileID: 9169523342342704333, guid: c04a718913d53b74ab2e5beb1c4467ed,
+    type: 3}
   combatActionSelectorParent: {fileID: 7484948518228298333}
 --- !u!1001 &257301244636203904
 PrefabInstance:
@@ -823,6 +824,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3060112327228000705}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5217482344229184707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7070523316374547714, guid: 46fce6411501e1a4f94f4f69feaa4b65,
+    type: 3}
+  m_PrefabInstance: {fileID: 3060112327228000705}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3644989711700065294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1112,6 +1119,12 @@ PrefabInstance:
 --- !u!224 &2774236430326284908 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7759820663100309180, guid: 46fce6411501e1a4f94f4f69feaa4b65,
+    type: 3}
+  m_PrefabInstance: {fileID: 5562080307695303888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3400202242299564498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7070523316374547714, guid: 46fce6411501e1a4f94f4f69feaa4b65,
     type: 3}
   m_PrefabInstance: {fileID: 5562080307695303888}
   m_PrefabAsset: {fileID: 0}
@@ -1719,6 +1732,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI Combat Action Selector
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639722937916199937, guid: c04a718913d53b74ab2e5beb1c4467ed,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

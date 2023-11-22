@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu Cursor
+      name: HandCursor
       rect:
         serializedVersion: 2
         x: 0
@@ -131,97 +131,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 312
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d42167425a019c142b6dc10b59a052b1
-      internalID: -261431677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_3
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 312
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fc919395b90ead4a93889c71fa5f33c
-      internalID: -415329760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 312
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 126e934d37f0c404cb04103b24f19266
-      internalID: 1943332720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_5
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 312
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b75d9847440a70488f69b3d5ea60a94
-      internalID: 820277463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_13
+      name: ArrowCursorDown
       rect:
         serializedVersion: 2
         x: 16
         y: 304
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,34 +152,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_14
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 304
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aba9dd654f379bc419ad716b3e8da3ac
-      internalID: 27867568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_15
+      name: ArrowCursorSide
       rect:
         serializedVersion: 2
         x: 32
         y: 304
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,27 +168,6 @@ TextureImporter:
       bones: []
       spriteID: 215a1445c8043f640a47d13020489f18
       internalID: 103622196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_16
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 304
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cd1664ab787b4a47ac58b6a2553d0be
-      internalID: 805623959
       vertices: []
       indices: 
       edges: []
@@ -2063,139 +1937,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_154
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 232
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89c1d0e5797b9c04ea34fabdd9b3850d
-      internalID: 1064099316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_155
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 232
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32f9c42e9d6397c468e5c56b93116daa
-      internalID: -1403415111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_156
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 232
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 289fa222fe4b0b549b13faa209bec1a7
-      internalID: -1032331336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_157
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 232
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83d0f9d4de1d7d24992f670386118b40
-      internalID: 1724057568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_158
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 232
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a52130c7f590fbd4e9c585c963926fbc
-      internalID: -1192615747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_159
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 232
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1525d80880efc294793fe23f03376c6d
-      internalID: 1346802174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_179
+      name: CombatSelectorArrow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 224
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2210,34 +1958,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_180
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 224
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 641a1ca7359c8fc40bfc5ae874e87bbc
-      internalID: 197209266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_181
+      name: CombatSelectorArrow_1
       rect:
         serializedVersion: 2
         x: 16
         y: 224
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2252,34 +1979,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_182
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 224
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 221621a55f033f14e97a2f03ecd06fad
-      internalID: -1304407753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_183
+      name: CombatSelectorArrow_2
       rect:
         serializedVersion: 2
         x: 32
         y: 224
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2289,27 +1995,6 @@ TextureImporter:
       bones: []
       spriteID: 398c1e548d7dcd447a99da56d9197c49
       internalID: -1318558743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Icons Font & Menu_184
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 224
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4c4172e002af9842a3980190d017520
-      internalID: 1186900424
       vertices: []
       indices: 
       edges: []
@@ -11397,7 +11082,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Menu Cursor: -1242723623
+      ArrowCursorDown: 1132343432
+      ArrowCursorSide: 103622196
+      CombatSelectorArrow_0: 843478913
+      CombatSelectorArrow_1: 1721704516
+      CombatSelectorArrow_2: -1318558743
+      HandCursor: -1242723623
       SNES - Final Fantasy 6 - Icons Font & Menu_1: 1588208566
       SNES - Final Fantasy 6 - Icons Font & Menu_10: 483355439
       SNES - Final Fantasy 6 - Icons Font & Menu_100: 207979338
@@ -11432,7 +11122,6 @@ TextureImporter:
       SNES - Final Fantasy 6 - Icons Font & Menu_127: -1693587227
       SNES - Final Fantasy 6 - Icons Font & Menu_128: -1152980553
       SNES - Final Fantasy 6 - Icons Font & Menu_129: 129987967
-      SNES - Final Fantasy 6 - Icons Font & Menu_13: 1132343432
       SNES - Final Fantasy 6 - Icons Font & Menu_130: -860364150
       SNES - Final Fantasy 6 - Icons Font & Menu_131: 1580419836
       SNES - Final Fantasy 6 - Icons Font & Menu_132: 714636290
@@ -11454,7 +11143,6 @@ TextureImporter:
       SNES - Final Fantasy 6 - Icons Font & Menu_147: 1474400253
       SNES - Final Fantasy 6 - Icons Font & Menu_148: -724574889
       SNES - Final Fantasy 6 - Icons Font & Menu_149: -658888468
-      SNES - Final Fantasy 6 - Icons Font & Menu_15: 103622196
       SNES - Final Fantasy 6 - Icons Font & Menu_150: -1529888795
       SNES - Final Fantasy 6 - Icons Font & Menu_151: -1648319385
       SNES - Final Fantasy 6 - Icons Font & Menu_152: 1115059441
@@ -11486,12 +11174,9 @@ TextureImporter:
       SNES - Final Fantasy 6 - Icons Font & Menu_176: -253564028
       SNES - Final Fantasy 6 - Icons Font & Menu_177: 1401472113
       SNES - Final Fantasy 6 - Icons Font & Menu_178: -1985462800
-      SNES - Final Fantasy 6 - Icons Font & Menu_179: 843478913
       SNES - Final Fantasy 6 - Icons Font & Menu_18: -1857304516
       SNES - Final Fantasy 6 - Icons Font & Menu_180: 197209266
-      SNES - Final Fantasy 6 - Icons Font & Menu_181: 1721704516
       SNES - Final Fantasy 6 - Icons Font & Menu_182: -1304407753
-      SNES - Final Fantasy 6 - Icons Font & Menu_183: -1318558743
       SNES - Final Fantasy 6 - Icons Font & Menu_184: 1186900424
       SNES - Final Fantasy 6 - Icons Font & Menu_185: -1698067588
       SNES - Final Fantasy 6 - Icons Font & Menu_186: 601766984

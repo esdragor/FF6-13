@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
     public UnitData unitData;
     
     [SerializeField] protected SpriteRenderer _spriteRenderer;
+    [SerializeField] protected GameObject selectorObj;
     [SerializeField] protected Animator _animator;
     [SerializeField] protected BoxCollider2D _boxCollider2D;
     [SerializeField] protected float delayToMove = 1f;
@@ -107,6 +108,8 @@ public class Entity : MonoBehaviour
     
     public void AssignSprite()
     {
+        ShowSelector(false);
+        
         if (_spriteRenderer == null) return;
         _spriteRenderer.sprite = unitData.Sprite;
 
@@ -134,5 +137,13 @@ public class Entity : MonoBehaviour
     public void DeselectTarget()
     {
         _spriteRenderer.color = Color.white;
+    }
+
+    public void ShowSelector(bool value)
+    {
+        if (selectorObj == null) return;
+        
+        selectorObj.transform.localPosition = new Vector3(0, SO.ArrowCursorHeight, 0);
+        selectorObj.SetActive(value);
     }
 }

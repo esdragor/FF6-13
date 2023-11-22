@@ -151,6 +151,7 @@ MonoBehaviour:
     <Alteration>k__BackingField: 30
     <Immunity>k__BackingField: 0
   <Sprite>k__BackingField: {fileID: 0}
+  <ArrowCursorHeight>k__BackingField: 0.6
   <InitialHp>k__BackingField: 50
   <InitialMp>k__BackingField: 9
   <EscapeRate>k__BackingField: 2

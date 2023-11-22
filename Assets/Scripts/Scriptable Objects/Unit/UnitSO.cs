@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Units;
 using UnityEngine;
 
 namespace Scriptable_Objects.Unit
@@ -31,6 +32,7 @@ namespace Scriptable_Objects.Unit
         [field:Space]
         [field:Header("Misc")]
         [field:SerializeField] public Sprite Sprite { get; private set; }
+        [field: SerializeField] public float ArrowCursorHeight { get; private set; } = 0.6f;
         
         
         [ContextMenu("Init All")]
@@ -60,6 +62,11 @@ namespace Scriptable_Objects.Unit
             {
                 AlterationImmunity.Add(new AlterationImmunity((Alterations)i, false));
             }
+        }
+        
+        public virtual int GetAttack(UnitData data)
+        {
+            return 0;
         }
     }
     
