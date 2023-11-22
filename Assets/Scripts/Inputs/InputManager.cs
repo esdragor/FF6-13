@@ -42,6 +42,9 @@ public class InputManager : MonoBehaviour
         _input.Battle.Selection.started += Selection;
         _input.Battle.ChangeCharacter.started += ChangeCharacter;
         OnExploration();
+        PlayerEntity.OnCinematicStarted += OnCinematic;
+        PlayerEntity.OnCinematicEnded += OnEndCinematic;
+        
     }
 
     public void OnExploration()
@@ -54,6 +57,20 @@ public class InputManager : MonoBehaviour
     {
         _input.Exploration.Disable();
         _input.Battle.Enable();
+    }
+    
+    public void OnCinematic()
+    {
+        _input.Exploration.Disable();
+        _input.Battle.Disable();
+    }
+    
+    public void OnEndCinematic(bool isExplo)
+    {
+        if (isExplo)
+            OnExploration();
+        else
+            OnBattle();
     }
     
     private void ChangeCharacter(InputAction.CallbackContext context)

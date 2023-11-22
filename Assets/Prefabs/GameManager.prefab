@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIBattle: {fileID: 0}
-  monsterPrefab: {fileID: 1369101659063960973, guid: a705e93902f34b041bed3c18af477a8e,
+  monsterPrefab: {fileID: 7277767951937992009, guid: a705e93902f34b041bed3c18af477a8e,
     type: 3}
   soMonster:
   - {fileID: 11400000, guid: 75efbb19ad18abc4e920e09daf85b14d, type: 2}

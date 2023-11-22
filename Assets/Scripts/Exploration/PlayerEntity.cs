@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using Scriptable_Objects.Unit;
 using Units;
@@ -6,6 +7,9 @@ using UnityEngine;
 
 public class PlayerEntity : Entity
 {
+    public static event Action OnCinematicStarted;
+    public static event Action<bool> OnCinematicEnded;
+    
     public PlayerController _playerController { get; private set; }
 
     [SerializeField] private float cellSize = 1f;
@@ -16,6 +20,8 @@ public class PlayerEntity : Entity
     private bool moving = false;
     private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
     private static readonly int MovingProperty = Shader.PropertyToID("_Moving");
+    
+    private List<Direction> directions = new ();
 
     public void InitPlayer(PlayerController controller)
     {
@@ -28,6 +34,7 @@ public class PlayerEntity : Entity
         moving = false;
 
         AssignSprite();
+        directions = new List<Direction>();
     }
 
     public void AssignSO(PlayerCharactersSO so)
@@ -41,6 +48,13 @@ public class PlayerEntity : Entity
         UpdateMove();
         if (!mat) return; 
         mat.SetFloat(MovingProperty, moving ? 1.0f : 0.0f);
+    }
+    
+    public void AddDirectionToMove(Direction dir)
+    {
+        if (dir == Direction.None) return;
+        
+        directions.Add(dir);
     }
 
     private void UpdateWantedPosition()
@@ -106,6 +120,23 @@ public class PlayerEntity : Entity
         var speed = delayToMove * Time.deltaTime;
         
         transform.position = Vector3.MoveTowards(transform.position, wantedPosition, speed);
+        // float distance = Vector3.Distance(transform.position, wantedPosition);
+        // if (distance <= toleranceMoving)
+        // {
+        //     if (directions.Count > 0)
+        //     {
+        //         Turn(directions[0]);
+        //         directions.RemoveAt(0);
+        //     }
+        // }
+    }
+
+    public void Cinematic(bool started, bool isExplo)
+    {
+        if(started)
+            OnCinematicStarted?.Invoke();
+        else
+            OnCinematicEnded?.Invoke(isExplo);
     }
     
     public void InitData(UnitData data)

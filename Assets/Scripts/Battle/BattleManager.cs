@@ -18,10 +18,11 @@ public enum ActionBattle
 public class BattleManager : MonoBehaviour
 {
     public static event Action OnBattleStarted;
+    public static event Action OnBattleEnded;
     public static event Action<int> OnSelectionChanged;
 
     [SerializeField] private GameObject UIBattle;
-    [SerializeField] private GameObject monsterPrefab;
+    [SerializeField] private MonsterEntity monsterPrefab;
     [SerializeField] private List<MonsterSO> soMonster = new();
     [SerializeField] private List<Transform> monsterPos = new();
     [SerializeField] private List<Transform> heroPos = new();
@@ -77,10 +78,10 @@ public class BattleManager : MonoBehaviour
             Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
             if (monster != null)
             {
-                Entity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity)
-                    .GetComponent<Entity>();
+                MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
                 newMonster.transform.position = monsterPos[i].position;
                 newMonster.Init(monster, true);
+                newMonster.ResetValue();
                 monstersSpawned.Add(newMonster);
             }
         }
@@ -91,8 +92,15 @@ public class BattleManager : MonoBehaviour
         InputManager.OnSelect += SelectAction;
         InputManager.OnSelection += SelectionAction;
         InputManager.OnChangeCharacter += ChangeCharacter;
+        MonsterEntity.OnAttacking += RetrieveTarget;
         foreach (var so in soMonster)
             Monsters.Add(so.name, so);
+    }
+
+    public void RetrieveTarget(MonsterEntity monster)
+    {
+        int index = Random.Range(0, playersOnBattle.Count);
+        monster.Attack(playersOnBattle[index]);
     }
 
     private void ChangeCharacter(float axis)
@@ -107,6 +115,7 @@ public class BattleManager : MonoBehaviour
     IEnumerator Victory() // changer par l'ecran de victoire
     {
         yield return new WaitForSeconds(2f);
+        OnBattleEnded?.Invoke();
         UIBattle.SetActive(false);
         exploreCamera.gameObject.SetActive(true);
         combatCamera.gameObject.SetActive(false);
@@ -117,7 +126,6 @@ public class BattleManager : MonoBehaviour
             playerControllerBattle.gameObject.SetActive(false);
             playersOnBattle[i].gameObject.SetActive(false);
         }
-
         GameManager.Instance.GetBackToExplore();
     }
 
@@ -310,8 +318,7 @@ public class BattleManager : MonoBehaviour
         else
         {
             PlayerControllerOnBattle controller =
-                Instantiate(playerBattlePrefab.gameObject, heroPos[0].position, Quaternion.identity)
-                    .GetComponent<PlayerControllerOnBattle>();
+                Instantiate(playerBattlePrefab, heroPos[0].position, Quaternion.identity);
             playerControllerBattle = controller;
             playersOnExplore = player;
             controller.InitPlayer();
@@ -326,8 +333,7 @@ public class BattleManager : MonoBehaviour
             //add here creation des autres persos
             for (int i = 0; i < player.companions.Count; i++)
             {
-                PlayerEntityOnBattle companion =
-                    Instantiate(principalPlayer.gameObject).GetComponent<PlayerEntityOnBattle>();
+                PlayerEntityOnBattle companion = Instantiate(principalPlayer);
                 companion.Init(player.companions[i].SO);
                 companion.InitData(player.companions[i].unitData);
                 companion.ResetValues();
