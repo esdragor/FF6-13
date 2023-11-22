@@ -13,8 +13,7 @@ public class CombatUIDisplayer : MonoBehaviour
    [SerializeField] private GameObject enemyPanelObj;
    
    [Header("Selection Panels")]
-   [SerializeField] private GameObject selectionPanelObj;
-   [SerializeField] private GameObject fullSelectionPanelObj;
+   [SerializeField] private CombatActionSelectionDisplayer combatActionSelectionDisplayer;
    
    [Header("Selection Info")]
    [SerializeField] private UIPanel selectionInfoPanel;
@@ -41,6 +40,7 @@ public class CombatUIDisplayer : MonoBehaviour
    {
       playerEntitiesOnBattle = playerEntities;
       mainActionBarDisplayer.CreateActionBars(playerEntitiesOnBattle);
+      combatActionSelectionDisplayer.CreateSelectors(playerEntitiesOnBattle);
    }
    
    public void ShowEndPanel()

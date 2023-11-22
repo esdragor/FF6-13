@@ -81,6 +81,7 @@ public class CombatActionBarDisplayer : MonoBehaviour
         if(characterActionBars.TryGetValue(playerEntityOnBattle, out var characterActionBar))
         {
             characterActionBar.UpdateActionBars();
+            characterActionBar.ShowActionBars(true);
             return;
         }
       

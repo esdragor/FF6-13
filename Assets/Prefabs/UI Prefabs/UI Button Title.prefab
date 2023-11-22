@@ -271,3 +271,5 @@ MonoBehaviour:
   <Button>k__BackingField: {fileID: 87916057078966054}
   <Image>k__BackingField: {fileID: 4951278119664659218}
   <TextMeshProUGUI>k__BackingField: {fileID: 5220924007013929421}
+  selectedColor: {r: 0.8862745, g: 0.89411765, b: 0, a: 1}
+  deselectedColor: {r: 0, g: 0, b: 0, a: 1}
