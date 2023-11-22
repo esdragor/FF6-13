@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using Scriptable_Objects.Unit;
 using Units;
@@ -8,6 +9,8 @@ public class Entity : MonoBehaviour
 {
     public static event Action<Entity> OnEntityDying;
     public UnitData unitData;
+    [HideInInspector] public List<Direction> directions = new ();
+
 
     [SerializeField] protected SpriteRenderer _spriteRenderer;
     [SerializeField] protected Animator _animator;
@@ -41,6 +44,13 @@ public class Entity : MonoBehaviour
                 mat.SetFloat(DirectionProperty, 2f);
                 break;
         }
+    }
+    
+    public void AddDirectionToMove(Direction dir)
+    {
+        if (dir == Direction.None) return;
+        
+        directions.Add(dir);
     }
 
     public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false,
@@ -100,15 +110,15 @@ public class Entity : MonoBehaviour
         unitData.AddAlteration(alterations, ignoreImmunity);
     }
 
-    public void Move()
-    {
-        Move(ForwardDirection);
-    }
-    
-    public void Move(Direction dir)
-    {
-        ForwardDirection = dir;
-    }
+    // public void Move()
+    // {
+    //     Move(ForwardDirection);
+    // }
+    //
+    // public void Move(Direction dir)
+    // {
+    //     ForwardDirection = dir;
+    // }
 
     public void AssignSprite()
     {

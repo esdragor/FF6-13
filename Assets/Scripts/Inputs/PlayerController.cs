@@ -37,6 +37,10 @@ public class PlayerController : BattleController
         InputManager.OnStartedToTurn += TurnEntity;
         //InputManager.OnStoppedToTurn += TurnEntity;
         InputManager.OnMovingDirection += MoveEntity;
+        InputManager.OnVectorDIrection += MoveEntity;
+        
+        //InputManager.OnMovingX += MoveEntityX;
+        //InputManager.OnMovingY += MoveEntityY;
     }
 
     protected override void OnDisable()
@@ -44,6 +48,10 @@ public class PlayerController : BattleController
         InputManager.OnStartedToTurn -= TurnEntity;
         //InputManager.OnStoppedToTurn -= TurnEntity;
         InputManager.OnMovingDirection -= MoveEntity;
+        InputManager.OnVectorDIrection -= MoveEntity;
+        
+        //InputManager.OnMovingX -= MoveEntityX;
+        //InputManager.OnMovingY -= MoveEntityY;
     }
     
     public new PlayerEntity getEntity()

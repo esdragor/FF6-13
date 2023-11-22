@@ -54,8 +54,9 @@ MonoBehaviour:
   delayToMove: 2
   <SO>k__BackingField: {fileID: 11400000, guid: c02e141d82c58e942a8a734104ed920c,
     type: 2}
+  directions: 
   cellSize: 0.5
-  toleranceMoving: 0.1
+  toleranceMoving: 0.01
 --- !u!95 &2317830123916161200
 Animator:
   serializedVersion: 5

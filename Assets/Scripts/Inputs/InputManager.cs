@@ -19,6 +19,8 @@ public class InputManager : MonoBehaviour
 {
     public static event Action<Direction> OnStartedToTurn;
     public static event Action<Direction> OnMovingDirection;
+    public static event Action<Vector2> OnVectorDIrection;
+    
     public static event Action<float> OnChangeCharacter;
     
     public static event Action OnSelect;
@@ -152,6 +154,8 @@ public class InputManager : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        OnVectorDIrection?.Invoke(context.ReadValue<Vector2>());
+        
         OnMovingDirection?.Invoke(CheckEightDirection(context));
     }
 
