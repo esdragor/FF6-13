@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using Scriptable_Objects.Unit;
 using Units;
@@ -10,6 +11,7 @@ public class Entity : MonoBehaviour
     
     public event Action OnMoveEnded;
     public UnitData unitData;
+
 
     [SerializeField] protected SpriteRenderer _spriteRenderer;
     [SerializeField] protected GameObject selectorObj;
@@ -103,15 +105,15 @@ public class Entity : MonoBehaviour
         unitData.AddAlteration(alterations, ignoreImmunity);
     }
 
-    public void Move()
-    {
-        Move(ForwardDirection);
-    }
-    
-    public void Move(Direction dir)
-    {
-        ForwardDirection = dir;
-    }
+    // public void Move()
+    // {
+    //     Move(ForwardDirection);
+    // }
+    //
+    // public void Move(Direction dir)
+    // {
+    //     ForwardDirection = dir;
+    // }
 
     public void AssignSprite()
     {
@@ -120,6 +122,7 @@ public class Entity : MonoBehaviour
         if (_spriteRenderer == null) return;
         _spriteRenderer.sprite = unitData.Sprite;
 
+        if (mat != null) return;
         mat = new Material(_spriteRenderer.material);
         _spriteRenderer.material = mat;
     }

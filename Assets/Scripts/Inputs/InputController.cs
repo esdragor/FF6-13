@@ -6,6 +6,7 @@ using UnityEngine;
 public abstract class InputController : MonoBehaviour
 {
     [SerializeField] protected Entity EntityPrefab;
+    
     protected Entity entity;
 
     protected abstract void OnEnable();
@@ -20,12 +21,16 @@ public abstract class InputController : MonoBehaviour
     private void Start()
     {
         InstantiateEntity();
+        // entity.AddDirectionToMove(Direction.Up);
+        // entity.AddDirectionToMove(Direction.Up);
+        // entity.AddDirectionToMove(Direction.Up);
+        // entity.AddDirectionToMove(Direction.Right);
     }
     
     public virtual Entity getEntity()
     {
         return entity;
     }
-
+    
 
 }

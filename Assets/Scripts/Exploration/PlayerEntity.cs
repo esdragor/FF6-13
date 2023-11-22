@@ -17,13 +17,14 @@ public class PlayerEntity : Entity
     [SerializeField] private float cellSize = 1f;
     [SerializeField] private float toleranceMoving = 0.8f;
 
+    public Vector2 wantedDirection;
     private Vector3 clampedPosition;
     private Vector3 wantedPosition;
     private bool moving = false;
     private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
     private static readonly int MovingProperty = Shader.PropertyToID("_Moving");
     
-    private List<Direction> directions = new ();
+    
 
     public void InitPlayer(PlayerController controller)
     {
@@ -36,7 +37,6 @@ public class PlayerEntity : Entity
         moving = false;
 
         AssignSprite();
-        directions = new List<Direction>();
     }
 
     public void AssignSO(PlayerCharactersSO so)
@@ -46,91 +46,84 @@ public class PlayerEntity : Entity
 
     private void Update()
     {
-        UpdateWantedPosition();
+        UpdateWantedPositionX();
+        UpdateWantedPositionY();
+        
         UpdateMove();
         if (!mat) return; 
         mat.SetFloat(MovingProperty, moving ? 1.0f : 0.0f);
     }
-    
-    public void AddDirectionToMove(Direction dir)
-    {
-        if (dir == Direction.None) return;
-        
-        directions.Add(dir);
-    }
 
-    private void UpdateWantedPosition()
+    private void UpdateWantedPositionX()
     {
-        var position = transform.position;
+        var x  = transform.position.x;
         
         moving = true;
         
-        if (position == wantedPosition && ForwardDirection == Direction.None)
+        if (x == wantedPosition.x && wantedDirection == Vector2.zero)
         {
             moving = false;
             return;
         }
         
-        wantedPosition = clampedPosition;
+        wantedPosition.x = clampedPosition.x;
         
-        if (ForwardDirection == Direction.None) return;
+        if (wantedDirection.x == 0) return;
         
-        var targetDir = Vector3.zero;
-        clampedPosition.y = (position.y - position.y % cellSize);
-        clampedPosition.x = (position.x - position.x % cellSize);
-        
-        if (ForwardDirection == Direction.Up || ForwardDirection == Direction.UpRight ||
-            ForwardDirection == Direction.UpLeft)
-        {
-            mat.SetFloat(DirectionProperty, 0f);
-            
-            clampedPosition.y += cellSize;
-            
-            targetDir.y = 1;
-        }
+        clampedPosition.x = (x - x % cellSize);
 
-        else if (ForwardDirection == Direction.Down || ForwardDirection == Direction.DownLeft ||
-                 ForwardDirection == Direction.DownRight)
-        {
-            mat.SetFloat(DirectionProperty, 1f);
-            
-            targetDir.y = -1;
-        }
-
-        if (ForwardDirection == Direction.Left || ForwardDirection == Direction.DownLeft ||
-            ForwardDirection == Direction.UpLeft)
+        if (wantedDirection.x < 0)
         {
             mat.SetFloat(DirectionProperty, 2f);
-            
-            targetDir.x = -1;
         }
-        else if (ForwardDirection == Direction.Right || ForwardDirection == Direction.UpRight ||
-                 ForwardDirection == Direction.DownRight)
+        else if (wantedDirection.x > 0)
         {
             mat.SetFloat(DirectionProperty, 2f);
 
             clampedPosition.x += cellSize;
-            
-            targetDir.x = 1;
         }
 
-        wantedPosition = position + (targetDir.normalized) * cellSize;
+        wantedPosition.x = x + (wantedDirection.normalized).x * cellSize;
+    }
+
+    private void UpdateWantedPositionY()
+    {
+        var y = transform.position.y;
+        
+        moving = true;
+        
+        if (y == wantedPosition.y && wantedDirection == Vector2.zero)
+        {
+            moving = false;
+            return;
+        }
+        
+        wantedPosition.y = clampedPosition.y;
+        
+        if (wantedDirection.y == 0) return;
+        
+        clampedPosition.y = (y - y % cellSize);
+        
+        if (wantedDirection.y < 0)
+        {
+            mat.SetFloat(DirectionProperty, 1f);
+        }
+        else if (wantedDirection.y > 0)
+        {
+            mat.SetFloat(DirectionProperty, 0f);
+
+            clampedPosition.y += cellSize;
+        }
+        
+        wantedPosition.y = y + (wantedDirection.normalized).y * cellSize;
     }
 
     private void UpdateMove()
     {
+        //if (directions.Count <= 0) return;
         var speed = delayToMove * Time.deltaTime;
         
         transform.position = Vector3.MoveTowards(transform.position, wantedPosition, speed);
-        // float distance = Vector3.Distance(transform.position, wantedPosition);
-        // if (distance <= toleranceMoving)
-        // {
-        //     if (directions.Count > 0)
-        //     {
-        //         Turn(directions[0]);
-        //         directions.RemoveAt(0);
-        //     }
-        // }
     }
 
     public void Cinematic(bool started, bool isExplo)

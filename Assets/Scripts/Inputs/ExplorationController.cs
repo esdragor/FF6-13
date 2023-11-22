@@ -8,11 +8,32 @@ public abstract class ExplorationController : InputController
     {
         entity.Turn(dir);
     }
+
+    private Vector2 targetDir = new Vector2();
+
+    protected void MoveEntityX(float value)
+    {
+        targetDir.x = value;
+        
+        //MoveEntity(InputManager.GetDirection(targetDir));
+    }
     
+    protected void MoveEntityY(float value)
+    {
+        targetDir.y = value;
+        
+        //MoveEntity(InputManager.GetDirection(targetDir));
+    }
+    
+    protected void MoveEntity(Vector2 value)
+    {
+        var playerEntity = entity as PlayerEntity;
+
+        playerEntity.wantedDirection = value;
+    }
+
     protected void MoveEntity(Direction dir)
     {
-        if(entity.ForwardDirection != dir) entity.Turn(dir);
-        
-        entity.Move();
     }
+    
 }
