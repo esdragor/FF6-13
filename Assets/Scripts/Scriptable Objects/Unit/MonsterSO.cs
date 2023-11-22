@@ -8,7 +8,7 @@ namespace Scriptable_Objects.Unit
     [CreateAssetMenu(fileName = "new MonsterSO", menuName = "ScriptableObjects/Units/MonsterSO", order = 0)]
     [Serializable]public class MonsterSO : UnitSO
     {
-        [field:Header("---PlayerCharactersSO---")]
+        [field:Header("---MonsterSO---")]
         [field:SerializeField] public int Level { get; private set; }
         [field:SerializeField] public int MaxHp { get; private set; }
         [field:SerializeField] public int MaxMp { get; private set; }

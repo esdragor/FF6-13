@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Units
 {
-    public class UnitData : UnitInfo
+    public abstract class UnitData : UnitInfo
     {
         protected UnitSO unitSo;
 

@@ -109,15 +109,15 @@ public class Entity : MonoBehaviour
         _spriteRenderer.material = mat;
     }
 
-    public void Init()
+    public void Init(bool isMonster)
     {
-        unitData = new UnitData(SO);
+        unitData =  (isMonster) ? new MonsterData(SO) : new PlayerCharacterData(SO as PlayerCharactersSO, 1);
         AssignSprite();
     }
     
-    public void Init(UnitSO unitSo)
+    public void Init(UnitSO unitSo, bool isMonster = false)
     {
         SO = unitSo;
-        Init();
+        Init(isMonster);
     }
 }
