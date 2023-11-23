@@ -153,6 +153,19 @@ MonoBehaviour:
   <Sprite>k__BackingField: {fileID: -1064317760, guid: 8a153618352a72146b2b68dc812dab32,
     type: 3}
   <ArrowCursorHeight>k__BackingField: 0.6
+  characterMaterial: {fileID: -876546973899608171, guid: 3c549ea7ccbb13e42ae2d94561021851,
+    type: 3}
+  sprite: {fileID: 0}
+  spriteSize: {x: 0, y: 0}
+  spriteSheetSize: {x: 0, y: 0}
+  spriteSheetOffset: {x: 0, y: 0}
+  spriteSheetPadding: {x: 0, y: 0}
+  startWithDown: 0
+  verticalRead: 0
+  startIndex: 0
+  animationIndexOffset: 0
+  idleFrame: 0
+  framesPerState: 0
   <InitialHp>k__BackingField: 54
   <InitialMp>k__BackingField: 9
   <EscapeRate>k__BackingField: 2

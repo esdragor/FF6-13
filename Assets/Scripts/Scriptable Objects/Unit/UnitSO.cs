@@ -34,6 +34,49 @@ namespace Scriptable_Objects.Unit
         [field:SerializeField] public Sprite Sprite { get; private set; }
         [field: SerializeField] public float ArrowCursorHeight { get; private set; } = 0.6f;
         
+        [Header("Character Material")]
+        [SerializeField] private Material characterMaterial;
+        [SerializeField] private Sprite sprite;
+        [SerializeField] private Vector2Int spriteSize;
+        [SerializeField] private Vector2Int spriteSheetSize;
+        [SerializeField] private Vector2Int spriteSheetOffset;
+        [SerializeField] private Vector2Int spriteSheetPadding;
+        [SerializeField] private bool startWithDown;
+        [SerializeField] private bool verticalRead;
+        [SerializeField] private int startIndex;
+        [SerializeField] private int animationIndexOffset;
+        [SerializeField] private int idleFrame;
+        [SerializeField] private int framesPerState;
+        
+        public void ApplyMaterialToEntity(SpriteRenderer renderer,int direction = 0)
+        {
+            var mat = new Material(characterMaterial);
+            
+            mat.SetTexture("_MainTex", sprite.texture);
+            
+            mat.SetVector("_SpriteSize", (Vector2)spriteSize);
+            mat.SetVector("_SpriteSheetSize", (Vector2)spriteSheetSize);
+            mat.SetVector("_SpriteSheetOffset", (Vector2)spriteSheetOffset);
+            mat.SetVector("_SpreadsheetPadding", (Vector2)spriteSheetPadding);
+            
+            mat.SetFloat("_StartWithDown", startWithDown ? 1.0f : 0.0f);
+            mat.SetFloat("_VerticalRead", verticalRead ? 1.0f : 0.0f);
+            mat.SetFloat("_StartIndex", startIndex);
+            mat.SetFloat("_Animation_Index_Offset", animationIndexOffset);
+            mat.SetFloat("_IdleFrame", idleFrame);
+            mat.SetFloat("_FramesPerState", framesPerState);
+            
+            mat.SetFloat("_Direction", direction);
+            
+            renderer.material = mat;
+            renderer.sprite = sprite;
+            
+            var transform = renderer.transform;
+            var scale = transform.localScale;
+            if(spriteSheetSize.x != 0) scale.x = spriteSize.x / (float)spriteSheetSize.x;
+            if(spriteSheetSize.y != 0) scale.y = spriteSize.y / (float)spriteSheetSize.y;
+            transform.localScale = scale;
+        }
         
         [ContextMenu("Init All")]
         public void InitAll()
