@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8851652379486592549}
+  - component: {fileID: -6751037394242374308}
   - component: {fileID: 529669638004969026}
   - component: {fileID: 240286092128519740}
   - component: {fileID: 2317830123916161200}
@@ -38,6 +39,20 @@ Transform:
   - {fileID: 3551249969671878130}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6751037394242374308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369101659063960973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee416aaef6d049158818164de9cea50b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <PnjMovement>k__BackingField: {fileID: 240286092128519740}
+  <Entity>k__BackingField: {fileID: 529669638004969026}
 --- !u!114 &529669638004969026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,6 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 7052240609822276024}
+  selectorObj: {fileID: 0}
   _animator: {fileID: 2317830123916161200}
   _boxCollider2D: {fileID: 7509104964156181236}
   delayToMove: 2
@@ -72,6 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 7052240609822276024}
+  selectorObj: {fileID: 0}
   _animator: {fileID: 2317830123916161200}
   _boxCollider2D: {fileID: 7509104964156181236}
   delayToMove: 0.8

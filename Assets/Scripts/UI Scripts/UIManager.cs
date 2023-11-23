@@ -13,7 +13,8 @@ namespace UI_Scripts
         [SerializeField] private ReadJsonNara jsonNara;
         
         [SerializeField] private List<StoryInteractor> storyInteractors;
-
+        private StoryInteractor subscribedStoryInteractor;
+        
         private void Start()
         {
             HideDialogues();
@@ -38,12 +39,21 @@ namespace UI_Scripts
             }
         }
         
-        private void DisplayDialogue(string id, bool top)
+        private void DisplayDialogue(StoryInteractor storyInteractor, string id, bool top)
         {
             var dialog = jsonNara.allDialogs.GetDialog(id);
             if (dialog == null) return;
 
             dialogueDisplayer.DisplayText(dialog.dialogTxt, dialog.title, false, top);
+            
+            subscribedStoryInteractor = storyInteractor;
+            dialogueDisplayer.OnDialogueFullyDisplayed += ResumeStoryInteractor;
+        }
+        
+        private void ResumeStoryInteractor()
+        {
+            subscribedStoryInteractor.ResumeAfterDialogue();
+            dialogueDisplayer.OnDialogueFullyDisplayed -= ResumeStoryInteractor;
         }
 
         private void HideDialogues()

@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class DialogueDisplayer : MonoBehaviour
 {
+    public event Action OnDialogueFullyDisplayed; 
+    
     [Header("Components")]
     [SerializeField] private UIPanel topDialogueUiPanel;
     [SerializeField] private UIPanel botDialogueUiPanel;
@@ -58,6 +61,7 @@ public class DialogueDisplayer : MonoBehaviour
         if (instant)
         {
             panel.SetText(targetText);
+            OnDialogueFullyDisplayed?.Invoke();
             return;
         }
         
@@ -76,5 +80,6 @@ public class DialogueDisplayer : MonoBehaviour
         }
         
         panel.SetText(targetText);
+        OnDialogueFullyDisplayed?.Invoke();
     }
 }
