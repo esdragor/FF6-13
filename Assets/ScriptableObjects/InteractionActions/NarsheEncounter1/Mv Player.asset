@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Mv Player
   m_EditorClassIdentifier: 
   <UnitId>k__BackingField: player
-  <Directions>k__BackingField: 0000000005000000030000000000000003000000
+  <Directions>k__BackingField: 000000000000000005000000030000000000000003000000
   <WaitTillFinish>k__BackingField: 1

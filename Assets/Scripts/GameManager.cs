@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scriptable_Objects.Encounters;
 using Scriptable_Objects.Unit;
 using UI_Scripts;
 using UnityEngine;
@@ -52,6 +53,21 @@ public class GameManager : MonoBehaviour
         _state = State.Battle;
         _inputManager.OnBattle();
         _battleManager.StartBattle(_player._playerController, monsters);
+    }
+    
+    public void LaunchBattleScriptedEncounter(EncounterSO encounterSo)
+    {
+        List<MonsterSO> monsters = new List<MonsterSO>();
+
+        foreach (var monstersSO in encounterSo.Monsters)
+        {
+            for (int i = 0; i < monstersSO.MonsterCount; i++)
+            {
+                monsters.Add(monstersSO.Monster);
+            }
+        }
+        
+        LaunchBattleScripted(monsters);
     }
 
     public void GetBackToExplore()
