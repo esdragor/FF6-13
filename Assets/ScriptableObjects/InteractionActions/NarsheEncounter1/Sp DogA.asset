@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39dfa8b2dcda4ebaa9b1646d35399a32, type: 3}
-  m_Name: Sp GuardA
+  m_Name: Sp DogA
   m_EditorClassIdentifier: 
-  <UnitToSpawn>k__BackingField: {fileID: 11400000, guid: 283d1bda70651a34fadf665e49c02a1c,
+  <UnitToSpawn>k__BackingField: {fileID: 11400000, guid: 045a6a410979a274e896d77c59c41224,
     type: 2}
-  <StoreUnitAsId>k__BackingField: GuardA
+  <StoreUnitAsId>k__BackingField: DogA
   <SpawnPos>k__BackingField: {x: 24.5, y: 17}

@@ -38,6 +38,13 @@ public class PlayerEntity : Entity
 
         AssignSprite();
     }
+    
+    public void ResetWantedPosition()
+    {
+        var position = transform.position;
+        wantedPosition = position;
+        clampedPosition = position;
+    }
 
     public void AssignSO(PlayerCharactersSO so)
     {

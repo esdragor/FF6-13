@@ -47,6 +47,11 @@ public class Entity : MonoBehaviour
         }
     }
 
+    public void ResetMat()
+    {
+        mat = _spriteRenderer.material;
+    }
+
     public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false,
         bool isPourcentDamage = false)
     {

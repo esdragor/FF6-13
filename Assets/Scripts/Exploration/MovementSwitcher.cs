@@ -12,12 +12,17 @@ namespace Exploration
         {
             Entity.enabled = false;
             PnjMovement.enabled = true;
+            PnjMovement.ResetMat();
         }
         
         public void SwitchToPlayerMode()
         {
             PnjMovement.enabled = false;
             Entity.enabled = true;
+            
+            if (Entity as PlayerEntity) ((PlayerEntity)Entity).ResetWantedPosition();
+            
+            Entity.ResetMat();
         }
     }
 }

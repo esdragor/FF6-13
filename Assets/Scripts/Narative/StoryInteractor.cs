@@ -21,7 +21,7 @@ namespace Narative
 
         private Dictionary<string, MovementSwitcher> entities = new();
         private List<InteractionAction> interactionActionsRemaining = new();
-        private bool waitForInteractions = false;
+        [SerializeField] private bool waitForInteractions = false;
         private bool inBattle = false;
         private string waitingFor = "";
 
@@ -47,6 +47,7 @@ namespace Narative
         {
             Debug.Log("Interact");
             entities.Add("player", player.gameObject.GetComponent<MovementSwitcher>());
+            entities["player"].PnjMovement.ClearDirections();
             
             interactionActionsRemaining = new List<InteractionAction>(interactionSo.InteractionActions);
             
@@ -63,9 +64,10 @@ namespace Narative
             {
                 if (interactionAction.timeBefore > 0) yield return new WaitForSeconds(interactionAction.timeBefore);
                 ResolveInteraction(interactionAction.interaction);
-                if (interactionAction.timeAfter > 0) yield return new WaitForSeconds(interactionAction.timeAfter);
-            
+                
                 if (waitForInteractions) yield return new WaitUntil(() => !waitForInteractions);
+                if (interactionAction.timeAfter > 0) yield return new WaitForSeconds(interactionAction.timeAfter);
+                
                 HideDialogue?.Invoke();
             }
             FinishInteraction();
@@ -158,6 +160,11 @@ namespace Narative
 
         private void StartBattle(InteractionStartBattleSO battleSo)
         {
+            waitForInteractions = true;
+            //TODO: start battle
+            inBattle = true;
+            //battleSo.Encounter.Monsters;
+            
             BattleManager.OnBattleEnded += ContinueAfterBattle;
         }
 
@@ -191,13 +198,14 @@ namespace Narative
         
         private void ResumeAfterMove()
         {
-            waitForInteractions = false;
             entities[waitingFor].PnjMovement.OnMovementEnded -= ResumeAfterMove;
+            waitForInteractions = false;
         }
 
         private void ContinueAfterBattle()
         {
             waitForInteractions = false;
+            inBattle = false;
             BattleManager.OnBattleEnded -= ContinueAfterBattle;
         }
         

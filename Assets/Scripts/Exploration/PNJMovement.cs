@@ -37,14 +37,7 @@ public class PNJMovement : Entity
     void OnEnable()
     {
         directions.Clear();
-        // AddDirectionToMove(Direction.Up);
-        // AddDirectionToMove(Direction.Up);
-        // AddDirectionToMove(Direction.Up);
-        // AddDirectionToMove(Direction.Right);
-        // AddDirectionToMove(Direction.Down);
-        // AddDirectionToMove(Direction.Down);
-        // AddDirectionToMove(Direction.Left);
-
+        
         wantedDirection = Vector2.zero;
         clampedPosition = transform.position;
     }

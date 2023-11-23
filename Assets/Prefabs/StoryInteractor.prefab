@@ -93,5 +93,5 @@ MonoBehaviour:
   interactionSo: {fileID: 0}
   destroyAfterInteraction: 1
   boxCollider2D: {fileID: 1258325443038288671}
-  monsterPrefab: {fileID: 7277767951937992009, guid: a705e93902f34b041bed3c18af477a8e,
+  monsterPrefab: {fileID: -7038169161646566065, guid: a705e93902f34b041bed3c18af477a8e,
     type: 3}
