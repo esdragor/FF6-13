@@ -109,6 +109,31 @@ namespace Units
         {
             get => unitSo.Attack;
         }
+        
+        public virtual int Strenght2
+        {
+            get {
+                int strenght2 = unitSo.Strength * 2;
+                return strenght2 > 128 ? 128 : strenght2;
+            }
+        }
+        
+        public virtual int Level
+        {
+            get => 1;
+        }
+        
+        public virtual int Attack2
+        {
+            get => this.Attack + this.Strenght2;
+        }
+
+        public virtual int Damage
+        {
+            get => Attack + ((Level * Level * Attack2) / 256) * (3 / 2);
+        }
+        
+        
 
         public virtual int Defence
         {

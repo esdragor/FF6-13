@@ -54,7 +54,7 @@ public class PlayerEntityOnBattle : PlayerEntity
         Debug.Log("Attack");
         if (target == null)
             return false;
-        return target[index].TakeDamage(unitData.Attack, Elements.Physical,
+        return target[index].TakeDamage(unitData.Damage, Elements.Physical,
             unitData); //Physical for now, need to check the weapon's element
     }
 

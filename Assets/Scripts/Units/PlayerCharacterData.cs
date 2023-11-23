@@ -156,6 +156,8 @@ namespace Units
             return playerCharactersSo.SpellUnlocksList.FindAll(spellUnlock => spellUnlock.Level <= Lvl)
                 .ConvertAll(spellUnlock => spellUnlock.Spell);
         }
+        
+        public override int Level => Lvl;
 
         public override int Attack
         {
@@ -222,5 +224,6 @@ namespace Units
             //TODO Check if the unit is immune to the alteration in his equipment
             return unitSo.AlterationImmunity.Exists(immunity => immunity.Alteration == alteration && immunity.Immunity);
         }
+        
     }
 }
