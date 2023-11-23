@@ -8,7 +8,7 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     public static event Action<Entity> OnEntityDying;
-    
+
     public UnitData unitData;
 
 
@@ -72,7 +72,8 @@ public class Entity : MonoBehaviour
         unitData.TakeDamage(damage);
         if (element == Elements.Physical)
         {
-            transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
+            if (transform != null)
+                transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
         }
 
         if (unitData.CurrentHp <= 0)
@@ -122,7 +123,7 @@ public class Entity : MonoBehaviour
     public void AssignSprite()
     {
         ShowSelector(false);
-        
+
         if (_spriteRenderer == null) return;
         _spriteRenderer.sprite = unitData.Sprite;
 
@@ -156,8 +157,13 @@ public class Entity : MonoBehaviour
     public void ShowSelector(bool value)
     {
         if (selectorObj == null) return;
-        
+
         selectorObj.transform.localPosition = new Vector3(0, SO.ArrowCursorHeight, 0);
         selectorObj.SetActive(value);
+    }
+
+    private void OnDestroy()
+    {
+        transform.DOKill();
     }
 }
