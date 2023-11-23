@@ -23,13 +23,6 @@ public class PlayerEntity : Entity
     private bool moving = false;
     private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
     private static readonly int MovingProperty = Shader.PropertyToID("_Moving");
-
-
-    [ContextMenu("Test")]
-    private void Test()
-    {
-        PlayerCharactersSo.ApplyMaterialToEntity(_spriteRenderer);
-    }
     
     public void InitPlayer(PlayerController controller)
     {
