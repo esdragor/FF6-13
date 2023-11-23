@@ -32,7 +32,7 @@ public class MonsterEntity : Entity
         yield return new WaitForSeconds(0.1f);
         _spriteRenderer.color = Color.white;
         
-        target.TakeDamage(unitData.Attack, Elements.None, unitData);
+        target.TakeDamage(unitData.Damage, Elements.None, unitData);
         actionBar = 0;
         currentlyAttacking = false;
     }
