@@ -165,9 +165,8 @@ namespace Narative
         private void StartBattle(InteractionStartBattleSO battleSo)
         {
             waitForInteractions = true;
-            //TODO: start battle
             inBattle = true;
-            //battleSo.Encounter.Monsters;
+            GameManager.Instance.LaunchBattleScriptedEncounter(battleSo.Encounter);
 
             BattleManager.OnBattleEnded += ContinueAfterBattle;
         }
