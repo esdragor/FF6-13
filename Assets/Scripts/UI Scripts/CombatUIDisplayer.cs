@@ -6,7 +6,6 @@ using UnityEngine;
 public class CombatUIDisplayer : MonoBehaviour
 {
    [Header("General")]
-   [SerializeField] private UICursor cursor;
    [SerializeField] private UIRefs controlsControls;
    [SerializeField] private UIRefs nextControls;
    

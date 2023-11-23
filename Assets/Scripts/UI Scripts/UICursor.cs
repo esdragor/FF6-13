@@ -1,21 +1,41 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UICursor : MonoBehaviour
 {
     [SerializeField] private RectTransform self;
-    private Selectable currentSelectable;
+    private static Selectable currentSelectable;
 
-    public void SetSelectable(Selectable selectable)
+    private static UICursor instance;
+
+    private void Awake()
     {
-        gameObject.SetActive(true);
-        currentSelectable = selectable;
-        
-        self.SetParent(currentSelectable.transform);
-        self.anchoredPosition = Vector2.zero;
+        if (instance != null)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+        instance = this;
+        gameObject.SetActive(false);
+        DontDestroyOnLoad(this);
+    }
+
+    public static void Hide()
+    {
+        instance.gameObject.SetActive(false);
     }
     
-    public void SetSelectable(UIButton uiButton)
+    public static void SetSelectable(Selectable selectable)
+    {
+        instance.gameObject.SetActive(true);
+        currentSelectable = selectable;
+        
+        instance.self.SetParent(currentSelectable.transform);
+        instance.self.anchoredPosition = Vector2.zero;
+    }
+    
+    public static void SetSelectable(UIButton uiButton)
     {
         SetSelectable(uiButton.Button);
     }

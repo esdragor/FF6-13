@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class UIMenu : MonoBehaviour
 {
     [SerializeField] private IntroAnimation introAnimation;
-    [SerializeField] private UICursor menuCursor;
     [SerializeField] private Image fadeImage;
     [Header("Buttons")]
     [SerializeField] private UIButton playButton;
@@ -20,9 +19,9 @@ public class UIMenu : MonoBehaviour
     
     private void Start()
     {
-        playButton.OnButtonSelected += menuCursor.SetSelectable;
-        loadButton.OnButtonSelected += menuCursor.SetSelectable;
-        quitButton.OnButtonSelected += menuCursor.SetSelectable;
+        playButton.OnButtonSelected += UICursor.SetSelectable;
+        loadButton.OnButtonSelected += UICursor.SetSelectable;
+        quitButton.OnButtonSelected += UICursor.SetSelectable;
         
         playButton.Button.onClick.AddListener(StartGame);
         loadButton.Button.onClick.AddListener(LoadGame);
@@ -48,9 +47,9 @@ public class UIMenu : MonoBehaviour
     
     private void StartGame()
     {
-        playButton.OnButtonSelected -= menuCursor.SetSelectable;
-        loadButton.OnButtonSelected -= menuCursor.SetSelectable;
-        quitButton.OnButtonSelected -= menuCursor.SetSelectable;
+        playButton.OnButtonSelected -= UICursor.SetSelectable;
+        loadButton.OnButtonSelected -= UICursor.SetSelectable;
+        quitButton.OnButtonSelected -= UICursor.SetSelectable;
         
         Fade(fadeTime,OnGameStarted);
     }

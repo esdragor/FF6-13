@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class UISelectionPanel : MonoBehaviour
 {
@@ -9,9 +10,9 @@ public class UISelectionPanel : MonoBehaviour
     [SerializeField] private Transform layout;
     [SerializeField] private List<SelectionOption> selectionOptions;
     [SerializeField] private UIButton uiButtonPrefab;
-    [SerializeField] private UICursor cursor;
     
     private List<UIButton> uiButtons = new List<UIButton>();
+    public IReadOnlyList<UIButton> UIButtons => uiButtons;
     
     [Serializable]
     public struct SelectionOption
@@ -41,7 +42,24 @@ public class UISelectionPanel : MonoBehaviour
             var button = Instantiate(uiButtonPrefab, layout);
             button.TextMeshProUGUI.text = selectionOption.Name;
             button.Button.onClick.AddListener(() => selectionOption.Callback.Invoke());
-            button.OnButtonSelected += cursor.SetSelectable;
+            button.OnButtonSelected += UICursor.SetSelectable;
+            uiButtons.Add(button);
+        }
+
+        var count = uiButtons.Count;
+
+        if(count <= 1) return;
+        
+        for (int i = 0; i < count; i++)
+        {
+            var nav = new Navigation
+            {
+                mode = Navigation.Mode.Explicit,
+            };
+            if (i - 1 >= 0) nav.selectOnUp = uiButtons[i - 1].Button;
+            if (i + 1 <= count - 1) nav.selectOnDown = uiButtons[i + 1].Button;
+
+            uiButtons[i].Button.navigation = nav;
         }
     }
 
