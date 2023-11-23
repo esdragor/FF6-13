@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,16 +43,13 @@ public class UICombatActionSelector : MonoBehaviour
     public void UpdateSelectableActions()
     {
         var selectableActions = associatedPlayerEntityOnBattle.PlayerCharactersSo.PossibleActions;
-        var count = selectableActions.Count;
         
         var list1 = new List<UISelectionPanel.SelectionOption>();
         var list2 = new List<UISelectionPanel.SelectionOption>();
         
-        
-        
         foreach (var actionBattle in selectableActions)
         {
-            var selectionOption = new UISelectionPanel.SelectionOption($"{actionBattle}", () => Debug.Log($"Clicked {actionBattle}({(int)actionBattle})"));
+            var selectionOption = new UISelectionPanel.SelectionOption($"{actionBattle}", GetAction(actionBattle));
             var list = list1.Count < maxSelectionOptions ? list1 : list2;
             list.Add(selectionOption);
         }
@@ -62,6 +60,21 @@ public class UICombatActionSelector : MonoBehaviour
         battleActionSelectionPanel2.UpdateSelectionOptions();
 
         if (list2.Count <= 0) battleActionSelectionPanel2.transform.SetSiblingIndex(0);
+    }
+    
+    private Action GetAction(ActionBattle actionBattle)
+    {
+        return actionBattle switch
+        {
+            ActionBattle.AutoAttack => () => Debug.Log("Auto Attack"), //la methode de baudouin la
+            ActionBattle.Attack => () => Debug.Log("Attack"), // la methode de baudouin la mais non
+            ActionBattle.Abilities => () => Debug.Log("Abilities"), // ability panel
+            ActionBattle.Items => () => Debug.Log("Items"), // items panel
+            ActionBattle.Summon => () => Debug.Log("Summon"), // lol non
+            ActionBattle.Defend => () => Debug.Log("Defend"), // jsp
+            ActionBattle.Row => () => Debug.Log("Row"), // jsp
+            _ => () => Debug.Log("Wat")
+        };
     }
 
     [ContextMenu("Cycle Selection Panel")]
@@ -77,4 +90,6 @@ public class UICombatActionSelector : MonoBehaviour
         
         panel.UIButtons[0].Button.Select();
     }
+    
+    
 }
