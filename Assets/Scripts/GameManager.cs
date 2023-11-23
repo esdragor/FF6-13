@@ -34,16 +34,24 @@ public class GameManager : MonoBehaviour
         int random = Random.Range(0, 100);
         if ((random < 20 && _state != State.Dialog && _state != State.Battle) || DebugBattle)
         {
-            LaunchBattle();
+            LaunchBattleRandom();
         }
     }
 
-    private void LaunchBattle()
+    private void LaunchBattleRandom()
     {
         Debug.Log("Battle");
         _state = State.Battle;
         _inputManager.OnBattle();
         _battleManager.StartBattle(_player._playerController);
+    }
+    
+    public void LaunchBattleScripted(List<MonsterSO> monsters)
+    {
+        Debug.Log("Battle");
+        _state = State.Battle;
+        _inputManager.OnBattle();
+        _battleManager.StartBattle(_player._playerController, monsters);
     }
 
     public void GetBackToExplore()
@@ -76,7 +84,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            LaunchBattle();
+            LaunchBattleRandom();
             
             // _state = State.Battle;
             // _inputManager.OnBattle();

@@ -68,13 +68,35 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    public void StartBattle(PlayerController playerController, List<MonsterSO> monsters)
+    {
+        UIBattle.SetActive(true);
+        exploreCamera.gameObject.SetActive(false);
+        combatCamera.gameObject.SetActive(true);
+        nbMonster = monsters.Count;
+        indexPlayer = 0;
+        openSpellList = false;
+        selectTarget = false;
+        for (int i = 0; i < nbMonster; i++)
+        {
+            MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
+            newMonster.transform.position = monsterPos[i].position;
+            newMonster.Init(monsters[i], true);
+            newMonster.ResetValue();
+            monstersSpawned.Add(newMonster);
+        }
+        
+        OnBattleStarted?.Invoke();
+        
+        UpdatePlayer(playerController);
+    }
+    
     public void StartBattle(PlayerController playerController)
     {
         UIBattle.SetActive(true);
         exploreCamera.gameObject.SetActive(false);
         combatCamera.gameObject.SetActive(true);
         nbMonster = Random.Range(1, 4);
-        nbMonster = 3;
         indexPlayer = 0;
         openSpellList = false;
         selectTarget = false;

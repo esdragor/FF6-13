@@ -11,7 +11,6 @@ public class PNJMovement : Entity
     public event Action OnMovementEnded;
     
     [SerializeField] private float cellSize = 0.5f;
-    [SerializeField] private float delayToMovement = 0.8f;
 
     private List<Direction> directions = new List<Direction>();
     private Vector2 wantedDirection = new Vector2();
@@ -59,7 +58,7 @@ public class PNJMovement : Entity
         }
         else if (wantedDirection != Vector2.zero)
         {
-            var speed = delayToMovement * Time.deltaTime;
+            var speed = delayToMove * Time.deltaTime;
 
             transform.position = Vector3.MoveTowards(transform.position, clampedPosition, speed);
             var dist = Vector3.Distance(transform.position, clampedPosition);

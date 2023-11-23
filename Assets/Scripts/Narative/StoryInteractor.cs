@@ -11,9 +11,9 @@ namespace Narative
 {
     public class StoryInteractor : MonoBehaviour, Interactor
     {
-        public event Action<StoryInteractor, string,bool> DisplayDialogue;
+        public event Action<StoryInteractor, string, bool> DisplayDialogue;
         public event Action HideDialogue;
-        
+
         [SerializeField] private InteractionSO interactionSo;
         [SerializeField] private bool destroyAfterInteraction = true;
         [SerializeField] private BoxCollider2D boxCollider2D;
@@ -25,7 +25,8 @@ namespace Narative
         private bool inBattle = false;
         private string waitingFor = "";
 
-        private void OnTriggerEnter2D(Collider2D other) {
+        private void OnTriggerEnter2D(Collider2D other)
+        {
             Debug.Log($"Trigger go with {other}");
             Interact(other.GetComponent<Entity>());
         }
@@ -33,11 +34,11 @@ namespace Narative
         public void Interact(Entity entity)
         {
             if (entity == null || !boxCollider2D.enabled) return;
-            
+
             var player = (PlayerEntity)entity;
-            
+
             if (player == null) return;
-            
+
             boxCollider2D.enabled = false;
             //Remove controle from player
             StartPlayerInteraction(player);
@@ -48,10 +49,10 @@ namespace Narative
             Debug.Log("Interact");
             entities.Add("player", player.gameObject.GetComponent<MovementSwitcher>());
             entities["player"].PnjMovement.ClearDirections();
-            
+
             interactionActionsRemaining = new List<InteractionAction>(interactionSo.InteractionActions);
-            
-            StartCoroutine( DoInteractions(interactionActionsRemaining) );
+
+            StartCoroutine(DoInteractions(interactionActionsRemaining));
         }
 
         private IEnumerator DoInteractions(List<InteractionAction> interactionActions)
@@ -59,24 +60,25 @@ namespace Narative
             // First, we move to the interactors' middle
             MovePlayerToInteractor();
             if (waitForInteractions) yield return new WaitUntil(() => !waitForInteractions);
-            
+
             foreach (var interactionAction in interactionActions)
             {
                 if (interactionAction.timeBefore > 0) yield return new WaitForSeconds(interactionAction.timeBefore);
                 ResolveInteraction(interactionAction.interaction);
-                
+
                 if (waitForInteractions) yield return new WaitUntil(() => !waitForInteractions);
                 if (interactionAction.timeAfter > 0) yield return new WaitForSeconds(interactionAction.timeAfter);
-                
+
                 HideDialogue?.Invoke();
             }
+
             FinishInteraction();
         }
-        
+
         private void MovePlayerToInteractor()
         {
             var cellSize = 0.5f; //TODO: not fix
-            
+
             var player = entities["player"];
             var playerPos = player.transform.position;
             var interactorPos = transform.position;
@@ -97,6 +99,7 @@ namespace Narative
                     dirs.Add(Direction.Left);
                     fictivePos.x -= cellSize;
                 }
+
                 if (fictivePos.y < interactorPos.y)
                 {
                     dirs.Add(Direction.Up);
@@ -108,16 +111,17 @@ namespace Narative
                     fictivePos.y -= cellSize;
                 }
             }
-            
-            
-            
-            
+
+
             var playerMovement = player.PnjMovement;
             player.SwitchToPNJMode();
             playerMovement.ClearDirections();
+            if (dirs.Count == 0) return;
+
             waitingFor = "player";
             playerMovement.OnMovementEnded += ResumeAfterMove;
             waitForInteractions = true;
+
             foreach (var direction in dirs)
             {
                 playerMovement.AddDirectionToMove(direction);
@@ -164,20 +168,20 @@ namespace Narative
             //TODO: start battle
             inBattle = true;
             //battleSo.Encounter.Monsters;
-            
+
             BattleManager.OnBattleEnded += ContinueAfterBattle;
         }
 
         private void Spawn(IneractionSpawnSO spawnSO)
         {
             if (spawnSO.StoreUnitAsId is "player" or "" || entities.ContainsKey(spawnSO.StoreUnitAsId)) return;
-            
+
             MovementSwitcher newMonster = Instantiate(monsterPrefab, spawnSO.SpawnPos, Quaternion.identity);
-            
+
             newMonster.Entity.Init(spawnSO.UnitToSpawn, true);
             entities.Add(spawnSO.StoreUnitAsId, newMonster);
         }
-        
+
         private void Move(InteractionMoveSO moveSO)
         {
             if (moveSO.UnitId is "" || !entities.ContainsKey(moveSO.UnitId)) return;
@@ -195,7 +199,7 @@ namespace Narative
                 entities[moveSO.UnitId].PnjMovement.AddDirectionToMove(direction);
             }
         }
-        
+
         private void ResumeAfterMove()
         {
             entities[waitingFor].PnjMovement.OnMovementEnded -= ResumeAfterMove;
@@ -208,7 +212,7 @@ namespace Narative
             inBattle = false;
             BattleManager.OnBattleEnded -= ContinueAfterBattle;
         }
-        
+
         private void Destroy(InteractionDestroySO destroySo)
         {
             if (destroySo.DestroyId is "player" or "" || !entities.ContainsKey(destroySo.DestroyId)) return;
@@ -216,28 +220,27 @@ namespace Narative
             Destroy(entities[destroySo.DestroyId].gameObject);
             entities.Remove(destroySo.DestroyId);
         }
-        
+
         private void Say(InteractionSaySO saySo)
         {
             HideDialogue?.Invoke();
             DisplayDialogue?.Invoke(this, saySo.TextId, saySo.Top);
             waitForInteractions = true;
         }
-        
+
         private void Turn(InteractionTurnSO turnSo)
         {
             if (turnSo.UnitId is "" || !entities.ContainsKey(turnSo.UnitId)) return;
-            
+
             entities[turnSo.UnitId].PnjMovement.Turn(turnSo.Direction);
         }
-        
-        
+
+
         public void ResumeAfterDialogue()
         {
             waitForInteractions = false;
         }
-        
-        
+
 
         private void FinishInteraction()
         {
@@ -245,7 +248,7 @@ namespace Narative
             if (destroyAfterInteraction) Destroy(gameObject);
         }
     }
-    
+
     public interface Interactor
     {
         void Interact(Entity entity);
