@@ -39,6 +39,7 @@ public class CombatUIDisplayer : MonoBehaviour
       BattleManager.OnCharacterSelected += PlayerEntityOnBattle.TrySelectPlayer;
       BattleManager.OnCharacterSelected += mainActionBarDisplayer.ShowActionBar;
       BattleManager.OnCharacterSelected += combatActionSelectionDisplayer.ShowActionSelector;
+      BattleManager.OnBattleEnded += Hide;
 
    }
 
@@ -48,6 +49,7 @@ public class CombatUIDisplayer : MonoBehaviour
       BattleManager.OnPlayerUpdated -= SetPlayerEntities;
       BattleManager.OnCharacterSelected -= PlayerEntityOnBattle.TrySelectPlayer;
       BattleManager.OnCharacterSelected -= combatActionSelectionDisplayer.ShowActionSelector;
+      BattleManager.OnBattleEnded -= Hide;
    }
 
    private void Start()
@@ -66,6 +68,8 @@ public class CombatUIDisplayer : MonoBehaviour
       
       HideEndPanel();
       HideAbilityName();
+      mainActionBarDisplayer.Hide();
+      combatActionSelectionDisplayer.Hide();
    }
 
    public void Show()

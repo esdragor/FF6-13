@@ -30,7 +30,7 @@ public class MonsterEntity : Entity
         yield return new WaitForSeconds(0.1f);
         _spriteRenderer.color = Color.black;
         yield return new WaitForSeconds(0.1f);
-        _spriteRenderer.color = Color.white;
+        _spriteRenderer.color = selectTarget ? selectTargetColor : Color.white;
         
         target.TakeDamage(unitData.Damage, Elements.None, unitData);
         actionBar = 0;

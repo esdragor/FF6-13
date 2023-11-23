@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIMenu : MonoBehaviour
@@ -71,4 +72,5 @@ public class UIMenu : MonoBehaviour
         gameObject.SetActive(false);
         introAnimation.StartAnimation();
     }
+
 }

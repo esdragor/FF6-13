@@ -66,6 +66,11 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     {
         combatActionSelectorParent.gameObject.SetActive(value);
     }
+
+    public void Hide()
+    {
+        ShowSelector(false);
+    }
 }
 
 public interface InterBattle

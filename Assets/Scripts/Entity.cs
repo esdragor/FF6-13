@@ -22,6 +22,8 @@ public class Entity : MonoBehaviour
     public Direction ForwardDirection { get; protected set; } = Direction.None;
 
     protected Material mat;
+    protected bool selectTarget;
+    protected Color selectTargetColor = Color.red;
 
     private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
 
@@ -146,12 +148,14 @@ public class Entity : MonoBehaviour
 
     public void SelectTarget()
     {
-        _spriteRenderer.color = Color.red;
+        _spriteRenderer.color = selectTargetColor;
+        selectTarget = true;
     }
 
     public void DeselectTarget()
     {
         _spriteRenderer.color = Color.white;
+        selectTarget = false;
     }
 
     public void ShowSelector(bool value)

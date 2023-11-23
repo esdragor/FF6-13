@@ -13,16 +13,19 @@ using UnityEngine.Serialization;
 public class ActionToStack
 {
     public ActionBattle action;
+    public List<Entity> target;
     public int index;
     public int Cost;
     public string Name;
 
-    public ActionToStack(ActionBattle action, int cost, string name, int index = 0)
+    public ActionToStack(ActionBattle action, int cost, string name, List<Entity> t, int index = 0)
     {
         this.action = action;
         this.index = index;
         Cost = cost;
         Name = name;
+        target = new List<Entity>();
+        target.AddRange(t);
     }
 }
 
@@ -44,17 +47,20 @@ public class PlayerEntityOnBattle : PlayerEntity
     private float actionBar;
     private float speedActionBar = 1;
     private bool currentlyAttacking = false;
-    private List<Entity> target;
     private bool isSelected = false;
 
 
-    public bool Attack(int index)
+    public bool Attack(List<Entity> targets)
     {
-        Debug.Log("Attack");
-        if (target == null)
-            return false;
-        return target[index].TakeDamage(unitData.Damage, Elements.Physical,
-            unitData); //Physical for now, need to check the weapon's element
+        for (int i = 0; i < targets.Count; i++)
+        {
+            if (targets[i] == null)
+                return false;
+            targets[i].TakeDamage(unitData.Damage, Elements.Physical,
+                unitData); //Physical for now, need to check the weapon's element
+        }
+
+        return true;
     }
 
     public bool UseItem(UsableItemSo item, List<Entity> targets)
@@ -172,7 +178,7 @@ public class PlayerEntityOnBattle : PlayerEntity
         isSelected = false;
     }
 
-    public void AddActionToQueue(ActionBattle action, int index = 0)
+    public void AddActionToQueue(ActionBattle action, List<Entity> target, int index = 0)
     {
         int nbAction = 0;
         switch (action)
@@ -181,20 +187,21 @@ public class PlayerEntityOnBattle : PlayerEntity
                 nbAction = (int)((NbBarre * ratioBarre) / (costAttack * ratioBarre - costOfActionQueue));
                 for (int i = 0; i < nbAction; i++)
                 {
-                    actionsStack.Add(new ActionToStack(action, (int)costAttack, "Attack"));
+                    actionsStack.Add(new ActionToStack(action, (int)costAttack, "Attack", target));
                     costOfActionQueue += costAttack * ratioBarre;
                 }
+
                 break;
             case ActionBattle.Attack:
                 if ((NbBarre * ratioBarre) < (costAttack * ratioBarre + costOfActionQueue)) break;
-                    actionsStack.Add(new ActionToStack(action, (int)costAttack, "Attack")); 
-                    costOfActionQueue += costAttack * ratioBarre;
+                actionsStack.Add(new ActionToStack(action, (int)costAttack, "Attack", target));
+                costOfActionQueue += costAttack * ratioBarre;
                 break;
             case ActionBattle.Abilities:
                 var ability = ((PlayerCharacterData)unitData).getAllSpells()[index];
                 int cost = ability.ApCost;
                 costOfActionQueue += cost * ratioBarre;
-                actionsStack.Add(new ActionToStack(action, cost, ability.Name, index));
+                actionsStack.Add(new ActionToStack(action, cost, ability.Name, target, index));
                 break;
             case ActionBattle.Items:
                 Debug.Log("Items");
@@ -219,51 +226,53 @@ public class PlayerEntityOnBattle : PlayerEntity
     {
         currentlyAttacking = true;
         bool success = false;
-            ActionBattle action = actionsStack[0].action;
-            int index = actionsStack[0].index;
-            actionsStack.RemoveAt(0);
-            OnActonQueueUpdated?.Invoke(actionsStack);
-            switch (action)
-            {
-                case ActionBattle.AutoAttack or ActionBattle.Attack:
-                    Vector3 targetPos = Vector3.zero;
-                    Vector3 originalPos = transform.position;
-                    if (target[index] != null)
-                    {
-                        targetPos = target[index].transform.position;
-                        
-                    }
-                    if (target.Count > 0)
-                    {
-                        transform.DOMove(targetPos + Vector3.right, 1f);
-                        yield return new WaitForSeconds(1f);
+        ActionBattle action = actionsStack[0].action;
+        int index = actionsStack[0].index;
+        List<Entity> target = actionsStack[0].target;
+        actionsStack.RemoveAt(0);
+        OnActonQueueUpdated?.Invoke(actionsStack);
+        switch (action)
+        {
+            case ActionBattle.AutoAttack or ActionBattle.Attack:
+                Vector3 targetPos = Vector3.zero;
+                Vector3 originalPos = transform.position;
+                if (target[index] != null)
+                {
+                    targetPos = target[index].transform.position;
+                }
 
-                        success = Attack(index);
-                        costOfActionQueue -= costAttack * ratioBarre;
-                        if (success)
-                            SpendActionBar(costAttack * ratioBarre);
+                if (target.Count > 0)
+                {
+                    transform.DOMove(targetPos + Vector3.right, 1f);
+                    yield return new WaitForSeconds(1f);
 
-                        if (success) yield return new WaitForSeconds(0.3f); //animation attack
-                        transform.DOMove(originalPos, 1f);
-                        yield return new WaitForSeconds(1f);
-                    }
-                    else
-                    {
-                        Debug.Log("No target");
-                        costOfActionQueue -= costAttack * ratioBarre;
-                        yield return new WaitForSeconds(1f);
-                    }
+                    success = Attack(target);
+                    costOfActionQueue -= costAttack * ratioBarre;
+                    if (success)
+                        SpendActionBar(costAttack * ratioBarre);
 
-                    break;
-                case ActionBattle.Abilities:
-                    UseSpell((unitData as PlayerCharacterData)?.getAllSpells()[index], target);
-                    break;
+                    if (success) yield return new WaitForSeconds(0.3f); //animation attack
+                    transform.DOMove(originalPos, 1f);
+                    yield return new WaitForSeconds(1f);
+                }
+                else
+                {
+                    Debug.Log("No target");
+                    costOfActionQueue -= costAttack * ratioBarre;
+                    yield return new WaitForSeconds(1f);
+                }
+
+                break;
+            case ActionBattle.Abilities:
+                UseSpell((unitData as PlayerCharacterData)?.getAllSpells()[index], target);
+                break;
 
 
-                case ActionBattle.Items:
-                    Debug.Log("Item");
-                    break;
-            }
+            case ActionBattle.Items:
+                Debug.Log("Item");
+                break;
+        }
+
         OnActonQueueUpdated?.Invoke(actionsStack);
 
         currentlyAttacking = false;
@@ -291,15 +300,6 @@ public class PlayerEntityOnBattle : PlayerEntity
             Debug.Log("Action: " + actionBar);
             StartCoroutine(DequeueAction());
         }
-    }
-
-    public void addTarget(Entity entity)
-    {
-        if (target == null)
-            target = new List<Entity>();
-        else
-            target.Clear();
-        target.Add(entity);
     }
 
     public void SelectPlayer()

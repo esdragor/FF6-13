@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Scriptable_Objects.Spells___Effects;
 using Scriptable_Objects.Unit;
 using Units;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -195,8 +194,9 @@ public class BattleManager : MonoBehaviour, InterBattle
             //currentAction = ActionBattle.AutoAttack;
             PlayerEntityOnBattle MyPlayer = GetPlayerAtIndex(indexPlayer);
             monstersSpawned[indexTarget].DeselectTarget();
-            MyPlayer.addTarget(monstersSpawned[indexTarget]);
-            MyPlayer.AddActionToQueue(single ? ActionBattle.Attack : ActionBattle.AutoAttack);
+            List<Entity> targets = new List<Entity>();
+            targets.Add(monstersSpawned[indexTarget]);
+            MyPlayer.AddActionToQueue(single ? ActionBattle.Attack : ActionBattle.AutoAttack, targets);
             selectTarget = false;
             OnStartSelectionUI?.Invoke();
         }
@@ -283,59 +283,59 @@ public class BattleManager : MonoBehaviour, InterBattle
     {
         if (!selectTarget) return;
         return;
-        switch (currentAction)
-        {
-            case ActionBattle.AutoAttack:
-
-            case ActionBattle.Abilities:
-                if (openSpellList == false)
-                {
-                    spells.Clear();
-                    spells = (playersOnBattle[indexPlayer].unitData as PlayerCharacterData)?.getAllSpells();
-                    Debug.Log(spells.Count + " spells found");
-                    if (spells != null)
-                    {
-                        // j'open la liste des spells
-                        openSpellList = true;
-                        indexSpells = 0;
-                    }
-                }
-                else if (openSpellList && !selectTarget)
-                {
-                    selectTarget = true;
-                    // je highlight la target
-                    indexTarget = (spells[0].SpellType == SpellTypes.Heal) ? indexTarget = monstersSpawned.Count : 0;
-                    if (indexTarget < monstersSpawned.Count) monstersSpawned[indexTarget].SelectTarget();
-                    else GetPlayerAtIndex(indexTarget - monstersSpawned.Count).SelectTarget();
-                }
-                else
-                {
-                    // je lance le spell
-                    PlayerEntityOnBattle player = GetPlayerAtIndex(indexPlayer);
-                    if (indexTarget < monstersSpawned.Count) monstersSpawned[indexTarget].DeselectTarget();
-                    else GetPlayerAtIndex(indexTarget - monstersSpawned.Count).DeselectTarget();
-                    if (indexTarget < monstersSpawned.Count)
-                    {
-                        monstersSpawned[indexTarget].DeselectTarget();
-                        player.addTarget(monstersSpawned[indexTarget]);
-                    }
-                    else
-                    {
-                        GetPlayerAtIndex(indexTarget - monstersSpawned.Count).DeselectTarget();
-                        player.addTarget(GetPlayerAtIndex(indexTarget - monstersSpawned.Count));
-                    }
-
-                    player.AddActionToQueue(ActionBattle.Abilities, indexSpells);
-                    selectTarget = false;
-                    openSpellList = false;
-                }
-
-                Debug.Log("Abilities");
-                break;
-            case ActionBattle.Items:
-                Debug.Log("Items");
-                break;
-        }
+        // switch (currentAction)
+        // {
+        //     case ActionBattle.AutoAttack:
+        //
+        //     case ActionBattle.Abilities:
+        //         if (openSpellList == false)
+        //         {
+        //             spells.Clear();
+        //             spells = (playersOnBattle[indexPlayer].unitData as PlayerCharacterData)?.getAllSpells();
+        //             Debug.Log(spells.Count + " spells found");
+        //             if (spells != null)
+        //             {
+        //                 // j'open la liste des spells
+        //                 openSpellList = true;
+        //                 indexSpells = 0;
+        //             }
+        //         }
+        //         else if (openSpellList && !selectTarget)
+        //         {
+        //             selectTarget = true;
+        //             // je highlight la target
+        //             indexTarget = (spells[0].SpellType == SpellTypes.Heal) ? indexTarget = monstersSpawned.Count : 0;
+        //             if (indexTarget < monstersSpawned.Count) monstersSpawned[indexTarget].SelectTarget();
+        //             else GetPlayerAtIndex(indexTarget - monstersSpawned.Count).SelectTarget();
+        //         }
+        //         else
+        //         {
+        //             // je lance le spell
+        //             PlayerEntityOnBattle player = GetPlayerAtIndex(indexPlayer);
+        //             if (indexTarget < monstersSpawned.Count) monstersSpawned[indexTarget].DeselectTarget();
+        //             else GetPlayerAtIndex(indexTarget - monstersSpawned.Count).DeselectTarget();
+        //             if (indexTarget < monstersSpawned.Count)
+        //             {
+        //                 monstersSpawned[indexTarget].DeselectTarget();
+        //                 player.addTarget(monstersSpawned[indexTarget]);
+        //             }
+        //             else
+        //             {
+        //                 GetPlayerAtIndex(indexTarget - monstersSpawned.Count).DeselectTarget();
+        //                 player.addTarget(GetPlayerAtIndex(indexTarget - monstersSpawned.Count));
+        //             }
+        //
+        //             player.AddActionToQueue(ActionBattle.Abilities, indexSpells);
+        //             selectTarget = false;
+        //             openSpellList = false;
+        //         }
+        //
+        //         Debug.Log("Abilities");
+        //         break;
+        //     case ActionBattle.Items:
+        //         Debug.Log("Items");
+        //         break;
+        // }
     }
     
     
