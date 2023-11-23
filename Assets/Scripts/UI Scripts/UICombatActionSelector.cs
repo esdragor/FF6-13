@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class UICombatActionSelector : MonoBehaviour
 {
+    public static event Action OnAutoAttackSelected;
+    
     [SerializeField] private UISelectionPanel battleActionSelectionPanel;
     [SerializeField] private UISelectionPanel battleActionSelectionPanel2;
     [SerializeField] private int maxSelectionOptions = 4;
@@ -40,7 +42,7 @@ public class UICombatActionSelector : MonoBehaviour
         if(hasButton) battleActionSelectionPanel.UIButtons[0].Button.Select();
     }
     
-    public void UpdateSelectableActions()
+    public void UpdateSelectableActions(InterBattle actionner)
     {
         var selectableActions = associatedPlayerEntityOnBattle.PlayerCharactersSo.PossibleActions;
         
@@ -49,7 +51,7 @@ public class UICombatActionSelector : MonoBehaviour
         
         foreach (var actionBattle in selectableActions)
         {
-            var selectionOption = new UISelectionPanel.SelectionOption($"{actionBattle}", GetAction(actionBattle));
+            var selectionOption = new UISelectionPanel.SelectionOption($"{actionBattle}", actionner.GetAction(actionBattle));
             var list = list1.Count < maxSelectionOptions ? list1 : list2;
             list.Add(selectionOption);
         }
@@ -62,21 +64,6 @@ public class UICombatActionSelector : MonoBehaviour
         if (list2.Count <= 0) battleActionSelectionPanel2.transform.SetSiblingIndex(0);
     }
     
-    private Action GetAction(ActionBattle actionBattle)
-    {
-        return actionBattle switch
-        {
-            ActionBattle.AutoAttack => () => Debug.Log("Auto Attack"), //la methode de baudouin la
-            ActionBattle.Attack => () => Debug.Log("Attack"), // la methode de baudouin la mais non
-            ActionBattle.Abilities => () => Debug.Log("Abilities"), // ability panel
-            ActionBattle.Items => () => Debug.Log("Items"), // items panel
-            ActionBattle.Summon => () => Debug.Log("Summon"), // lol non
-            ActionBattle.Defend => () => Debug.Log("Defend"), // jsp
-            ActionBattle.Row => () => Debug.Log("Row"), // jsp
-            _ => () => Debug.Log("Wat")
-        };
-    }
-
     [ContextMenu("Cycle Selection Panel")]
     public void CycleSelectionPanel()
     {

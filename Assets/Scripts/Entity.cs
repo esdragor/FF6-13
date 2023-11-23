@@ -8,7 +8,7 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     public static event Action<Entity> OnEntityDying;
-    
+
     public UnitData unitData;
 
 
@@ -22,6 +22,8 @@ public class Entity : MonoBehaviour
     public Direction ForwardDirection { get; protected set; } = Direction.None;
 
     protected Material mat;
+    protected bool selectTarget;
+    protected Color selectTargetColor = Color.red;
 
     private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
 
@@ -72,7 +74,8 @@ public class Entity : MonoBehaviour
         unitData.TakeDamage(damage);
         if (element == Elements.Physical)
         {
-            transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
+            if (transform != null)
+                transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
         }
 
         if (unitData.CurrentHp <= 0)
@@ -122,7 +125,7 @@ public class Entity : MonoBehaviour
     public void AssignSprite()
     {
         ShowSelector(false);
-        
+
         if (_spriteRenderer == null) return;
         _spriteRenderer.sprite = unitData.Sprite;
 
@@ -145,19 +148,26 @@ public class Entity : MonoBehaviour
 
     public void SelectTarget()
     {
-        _spriteRenderer.color = Color.red;
+        _spriteRenderer.color = selectTargetColor;
+        selectTarget = true;
     }
 
     public void DeselectTarget()
     {
         _spriteRenderer.color = Color.white;
+        selectTarget = false;
     }
 
     public void ShowSelector(bool value)
     {
         if (selectorObj == null) return;
-        
+
         selectorObj.transform.localPosition = new Vector3(0, SO.ArrowCursorHeight, 0);
         selectorObj.SetActive(value);
+    }
+
+    private void OnDestroy()
+    {
+        transform.DOKill();
     }
 }

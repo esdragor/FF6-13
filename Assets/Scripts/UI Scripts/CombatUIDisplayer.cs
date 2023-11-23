@@ -39,6 +39,7 @@ public class CombatUIDisplayer : MonoBehaviour
       BattleManager.OnCharacterSelected += PlayerEntityOnBattle.TrySelectPlayer;
       BattleManager.OnCharacterSelected += mainActionBarDisplayer.ShowActionBar;
       BattleManager.OnCharacterSelected += combatActionSelectionDisplayer.ShowActionSelector;
+      BattleManager.OnBattleEnded += Hide;
 
    }
 
@@ -48,6 +49,27 @@ public class CombatUIDisplayer : MonoBehaviour
       BattleManager.OnPlayerUpdated -= SetPlayerEntities;
       BattleManager.OnCharacterSelected -= PlayerEntityOnBattle.TrySelectPlayer;
       BattleManager.OnCharacterSelected -= combatActionSelectionDisplayer.ShowActionSelector;
+      BattleManager.OnBattleEnded -= Hide;
+   }
+
+   private void Start()
+   {
+      Hide();
+   }
+
+   private void Hide()
+   {
+      teamPanelObj.SetActive(false);
+      enemyPanelObj.SetActive(false);
+      selectionInfoPanel.gameObject.SetActive(false);
+      selectionInfoPanelDisabledObj.SetActive(true);
+      endBattleTopPanel.SetActive(false);
+      endBattleXPPanel.SetActive(false);
+      
+      HideEndPanel();
+      HideAbilityName();
+      mainActionBarDisplayer.Hide();
+      combatActionSelectionDisplayer.Hide();
    }
 
    public void Show()
@@ -57,12 +79,12 @@ public class CombatUIDisplayer : MonoBehaviour
       enemyPanelObj.SetActive(true);
    }
    
-   public void SetPlayerEntities(IReadOnlyList<PlayerEntityOnBattle> playerEntities)
+   public void SetPlayerEntities(IReadOnlyList<PlayerEntityOnBattle> playerEntities, InterBattle manager)
    {
       Debug.Log($"Settings {playerEntities.Count} player entities on battle");
       playerEntitiesOnBattle = playerEntities;
       mainActionBarDisplayer.CreateActionBars(playerEntitiesOnBattle);
-      combatActionSelectionDisplayer.CreateSelectors(playerEntitiesOnBattle);
+      combatActionSelectionDisplayer.CreateSelectors(playerEntitiesOnBattle, manager);
    }
    
    public void ShowEndPanel()

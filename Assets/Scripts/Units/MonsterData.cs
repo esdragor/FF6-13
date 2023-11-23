@@ -25,5 +25,9 @@ namespace Units
         public int HitRate { get => monsterSo.HitRate; }
         
         public (int,int) Rewards { get => (monsterSo.XpReward, monsterSo.GilReward); }
+        
+        public override int Level { get => monsterSo.Level; }
+
+        public override int Damage => Level * Level * (Attack * 4 + Strength) / 256;
     }
 }

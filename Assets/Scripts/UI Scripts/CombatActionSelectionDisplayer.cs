@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     [SerializeField] private Transform combatActionSelectorParent;
     
     private Dictionary<PlayerEntityOnBattle,UICombatActionSelector> characterActionSelectors = new ();
+
+    private InterBattle GetActionsMethod;
     
     private void Cleanup()
     {
@@ -20,8 +23,10 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
       
     }
    
-    public void CreateSelectors(IReadOnlyList<PlayerEntityOnBattle> playerEntitiesOnBattle)
+    public void CreateSelectors(IReadOnlyList<PlayerEntityOnBattle> playerEntitiesOnBattle,InterBattle getActionsMethod)
     {
+        GetActionsMethod = getActionsMethod;
+        
         Cleanup();
         foreach (var playerEntityOnBattle in playerEntitiesOnBattle)
         {
@@ -41,7 +46,7 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
       
         if(characterActionSelectors.TryGetValue(playerEntityOnBattle, out var characterActionSelector))
         {
-            characterActionSelector.UpdateSelectableActions();
+            characterActionSelector.UpdateSelectableActions(GetActionsMethod);
             characterActionSelector.Show(true);
             return;
         }
@@ -61,4 +66,14 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     {
         combatActionSelectorParent.gameObject.SetActive(value);
     }
+
+    public void Hide()
+    {
+        ShowSelector(false);
+    }
+}
+
+public interface InterBattle
+{
+    public Action GetAction(ActionBattle actionBattle);
 }

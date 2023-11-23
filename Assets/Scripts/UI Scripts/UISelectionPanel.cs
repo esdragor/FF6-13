@@ -46,6 +46,11 @@ public class UISelectionPanel : MonoBehaviour
             uiButtons.Add(button);
         }
 
+        ApplyNavigation();
+    }
+
+    public void ApplyNavigation()
+    {
         var count = uiButtons.Count;
 
         if(count <= 1) return;
@@ -63,6 +68,19 @@ public class UISelectionPanel : MonoBehaviour
         }
     }
 
+    public void RemoveNavigation()
+    {
+        var nav = new Navigation
+        {
+            mode = Navigation.Mode.None,
+        };
+        
+        foreach (var uiButton in uiButtons)
+        {
+            uiButton.Button.navigation = nav;
+        }
+    }
+
     public void SetSelectionOptions(IReadOnlyList<SelectionOption> options) 
     {
         selectionOptions = new List<SelectionOption>(options);
@@ -72,5 +90,10 @@ public class UISelectionPanel : MonoBehaviour
     {
         Debug.Log("Test");
     }
-    
+
+    private void Awake()
+    {
+        BattleManager.OnStartSelectionUI += ApplyNavigation;
+        BattleManager.OnEndSelectionUI += RemoveNavigation;
+    }
 }

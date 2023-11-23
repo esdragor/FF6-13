@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Vector3 offset;
 
     [SerializeField] private Transform target;
+    [SerializeField] private bool followPlayer = true;
 
     private void Awake()
     {
-        PlayerController.OnPlayerSpawned += SetTarget;
+        if (followPlayer)
+            PlayerController.OnPlayerSpawned += SetTarget;
     }
 
     private void SetTarget(Entity entity)

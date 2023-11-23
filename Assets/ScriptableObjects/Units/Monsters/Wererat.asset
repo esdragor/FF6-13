@@ -150,7 +150,9 @@ MonoBehaviour:
   - <name>k__BackingField: Death
     <Alteration>k__BackingField: 30
     <Immunity>k__BackingField: 0
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 1143196104, guid: 8a153618352a72146b2b68dc812dab32,
+    type: 3}
+  <ArrowCursorHeight>k__BackingField: 0.6
   <Level>k__BackingField: 4
   <MaxHp>k__BackingField: 24
   <MaxMp>k__BackingField: 0

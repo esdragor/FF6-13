@@ -150,4 +150,9 @@ public class CombatActionBarDisplayer : MonoBehaviour
     {
         mainActionBarLayout.gameObject.SetActive(value);
     }
+
+    public void Hide()
+    {
+        ShowBar(false);
+    }
 }

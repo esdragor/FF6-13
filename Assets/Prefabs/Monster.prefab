@@ -205,7 +205,6 @@ MonoBehaviour:
   selectorObj: {fileID: 0}
   _animator: {fileID: 0}
   _boxCollider2D: {fileID: 7509104964156181236}
-  delayToMove: 1
+  delayToMove: 3
   <SO>k__BackingField: {fileID: 0}
   cellSize: 0.5
-  delayToMovement: 0.8

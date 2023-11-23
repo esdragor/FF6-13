@@ -44,6 +44,7 @@ public class PlayerEntity : Entity
         var position = transform.position;
         wantedPosition = position;
         clampedPosition = position;
+        wantedDirection = Vector2.zero;
     }
 
     public void AssignSO(PlayerCharactersSO so)
