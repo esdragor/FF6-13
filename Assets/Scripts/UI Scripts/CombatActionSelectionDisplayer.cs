@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Scriptable_Objects.Spells___Effects;
 using UnityEngine;
 
 public class CombatActionSelectionDisplayer : MonoBehaviour
@@ -10,7 +11,19 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     private Dictionary<PlayerEntityOnBattle,UICombatActionSelector> characterActionSelectors = new ();
 
     private InterBattle GetActionsMethod;
+
+    private void OnEnable()
+    {
+        BattleManager.OnCharacterSelected += HideOldSelectorNotCurrent;
+        BattleManager.OnShowSpellList += PrintSpells;
+    }
     
+    private void OnDisable()
+    {
+        BattleManager.OnCharacterSelected -= HideOldSelectorNotCurrent;
+        BattleManager.OnShowSpellList -= PrintSpells;
+    }
+
     private void Cleanup()
     {
         ShowSelector(false);
@@ -59,6 +72,7 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
         var combatActionSelector = Instantiate(combatActionSelectorPrefab, combatActionSelectorParent);
         combatActionSelector.name = $"CombatActionSelector {playerEntityOnBattle.SO.name}";
         combatActionSelector.SetPlayerEntity(playerEntityOnBattle);
+        combatActionSelector.gameObject.SetActive(false);
         return combatActionSelector;
     }
     
@@ -66,6 +80,18 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     {
         combatActionSelectorParent.gameObject.SetActive(value);
     }
+    
+    public void HideOldSelectorNotCurrent(PlayerEntityOnBattle old, PlayerEntityOnBattle current)
+    {
+        characterActionSelectors[old].gameObject.SetActive(false);
+        characterActionSelectors[current].gameObject.SetActive(true);
+    }
+    
+    private void PrintSpells(PlayerEntityOnBattle playerEntityOnBattle)
+    {
+        characterActionSelectors[playerEntityOnBattle].PrintSpells();
+    }
+    
 
     public void Hide()
     {
@@ -77,3 +103,4 @@ public interface InterBattle
 {
     public Action GetAction(ActionBattle actionBattle);
 }
+

@@ -157,6 +157,11 @@ namespace Units
                 .ConvertAll(spellUnlock => spellUnlock.Spell);
         }
         
+        public int getIndexOfSpell(SpellSO spell)
+        {
+            return playerCharactersSo.SpellUnlocksList.FindIndex(spellUnlock => spellUnlock.Spell == spell);
+        }
+        
         public override int Level => Lvl;
 
         public override int Attack

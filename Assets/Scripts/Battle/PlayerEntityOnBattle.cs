@@ -248,8 +248,6 @@ public class PlayerEntityOnBattle : PlayerEntity
                     yield return new WaitForSeconds(1f);
 
                     success = Attack(target);
-                    if (success)
-                        SpendActionBar(costAttack * ratioBarre);
 
                     if (success) yield return new WaitForSeconds(0.3f); //animation attack
                     transform.DOMove(originalPos, 1f);
@@ -263,7 +261,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
                 break;
             case ActionBattle.Abilities:
-                UseSpell((unitData as PlayerCharacterData)?.getAllSpells()[index], target);
+                success = UseSpell((unitData as PlayerCharacterData)?.getAllSpells()[index], target);
                 break;
 
 
@@ -271,8 +269,12 @@ public class PlayerEntityOnBattle : PlayerEntity
                 Debug.Log("Item");
                 break;
         }
+        if (success)
+            SpendActionBar(cost * ratioBarre);
         costOfActionQueue -= cost * ratioBarre;
         OnActonQueueUpdated?.Invoke(actionsStack);
+        
+        yield return new WaitForSeconds(1.0f); // animation delay between actions
 
         currentlyAttacking = false;
     }

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scriptable_Objects.Spells___Effects;
+using Units;
 using UnityEngine;
 
 public class UICombatActionSelector : MonoBehaviour
@@ -11,6 +13,7 @@ public class UICombatActionSelector : MonoBehaviour
     [SerializeField] private UISelectionPanel battleActionSelectionPanel2;
     [SerializeField] private int maxSelectionOptions = 4;
     [SerializeField] private UISelectionPanel gridSelectionPanel;
+    [SerializeField] private UISelectionPanel fullSelectionPanel;
     [SerializeField] private UIPanel selectionDescriptionPanel;
     private PlayerEntityOnBattle associatedPlayerEntityOnBattle;
     private bool hasSecondPanel;
@@ -18,6 +21,7 @@ public class UICombatActionSelector : MonoBehaviour
     public void SetPlayerEntity(PlayerEntityOnBattle playerEntityOnBattle)
     {
         associatedPlayerEntityOnBattle = playerEntityOnBattle;
+        InitSpells();
     }
     
     public void Cleanup()
@@ -77,6 +81,42 @@ public class UICombatActionSelector : MonoBehaviour
         
         panel.UIButtons[0].Button.Select();
     }
+
     
+    private void selectedSpell(SpellSO spell)
+    {
+        battleActionSelectionPanel.gameObject.SetActive(true);
+        battleActionSelectionPanel2.gameObject.SetActive(true);
+        
+        fullSelectionPanel.gameObject.SetActive(false);
+        int indexOfSpell = ((PlayerCharacterData)associatedPlayerEntityOnBattle.unitData).getIndexOfSpell(spell);
+        BattleManager.NeedToSelectSpellTarget(true, indexOfSpell);
+        battleActionSelectionPanel.UIButtons[2].Button.Select();
+        Debug.Log($"Selected {spell.Name} Bitch");
+    }
     
+    private void InitSpells()
+    {
+        var spells = (associatedPlayerEntityOnBattle.unitData as PlayerCharacterData)?.getAllSpells();
+        
+        List<UISelectionPanel.SelectionOption> selectionOptions = new List<UISelectionPanel.SelectionOption>();
+        foreach (var spell in spells)
+        {
+            selectionOptions.Add(new UISelectionPanel.SelectionOption(spell.Name,
+                () => { selectedSpell(spell); }));
+            Debug.Log(spell);
+        }
+        fullSelectionPanel.SetSelectionOptions(selectionOptions);
+        fullSelectionPanel.UpdateSelectionOptions();
+    }
+
+    public void PrintSpells()
+    {
+        battleActionSelectionPanel.gameObject.SetActive(false);
+        battleActionSelectionPanel2.gameObject.SetActive(false);
+        
+        fullSelectionPanel.gameObject.SetActive(true);
+        
+        fullSelectionPanel.UIButtons[0].Button.Select();
+    }
 }
