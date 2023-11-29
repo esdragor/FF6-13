@@ -24,8 +24,6 @@ public class PlayerEntity : Entity
     private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
     private static readonly int MovingProperty = Shader.PropertyToID("_Moving");
     
-    
-
     public void InitPlayer(PlayerController controller)
     {
         clampedPosition = transform.position;
@@ -37,6 +35,8 @@ public class PlayerEntity : Entity
         moving = false;
 
         AssignSprite();
+        
+        PlayerCharactersSo.ApplyMaterialToEntity(_spriteRenderer);
     }
     
     public void ResetWantedPosition()
