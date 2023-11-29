@@ -229,6 +229,7 @@ public class PlayerEntityOnBattle : PlayerEntity
         ActionBattle action = actionsStack[0].action;
         int index = actionsStack[0].index;
         List<Entity> target = actionsStack[0].target;
+        int cost = actionsStack[0].Cost;
         actionsStack.RemoveAt(0);
         OnActonQueueUpdated?.Invoke(actionsStack);
         switch (action)
@@ -247,7 +248,6 @@ public class PlayerEntityOnBattle : PlayerEntity
                     yield return new WaitForSeconds(1f);
 
                     success = Attack(target);
-                    costOfActionQueue -= costAttack * ratioBarre;
                     if (success)
                         SpendActionBar(costAttack * ratioBarre);
 
@@ -258,7 +258,6 @@ public class PlayerEntityOnBattle : PlayerEntity
                 else
                 {
                     Debug.Log("No target");
-                    costOfActionQueue -= costAttack * ratioBarre;
                     yield return new WaitForSeconds(1f);
                 }
 
@@ -272,7 +271,7 @@ public class PlayerEntityOnBattle : PlayerEntity
                 Debug.Log("Item");
                 break;
         }
-
+        costOfActionQueue -= cost * ratioBarre;
         OnActonQueueUpdated?.Invoke(actionsStack);
 
         currentlyAttacking = false;

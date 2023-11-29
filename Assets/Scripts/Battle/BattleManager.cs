@@ -25,7 +25,7 @@ public class BattleManager : MonoBehaviour, InterBattle
     public static event Action OnBattleEnded;
     public static event Action<int> OnSelectionChanged;
     public static event Action<PlayerEntityOnBattle, PlayerEntityOnBattle> OnCharacterSelected;
-    
+
     public static event Action OnStartSelectionUI;
     public static event Action OnEndSelectionUI;
 
@@ -202,6 +202,55 @@ public class BattleManager : MonoBehaviour, InterBattle
         }
     }
 
+    private void LaunchAbilities()
+    {
+        if (!openSpellList)
+        {
+            spells.Clear();
+            spells = (playersOnBattle[indexPlayer].unitData as PlayerCharacterData)?.getAllSpells();
+            Debug.Log(spells.Count + " spells found");
+            if (spells != null)
+            {
+                // j'open la liste des spells
+                openSpellList = true;
+                indexSpells = 0;
+                //TODO: update UI
+                OnEndSelectionUI?.Invoke();
+            }
+        }
+        else if (openSpellList && !selectTarget)
+        {
+            selectTarget = true;
+            indexTarget = 0;
+            indexTarget = (spells[0].SpellType == SpellTypes.Heal) ? indexTarget = monstersSpawned.Count : 0;
+            if (indexTarget < monstersSpawned.Count) monstersSpawned[indexTarget].SelectTarget();
+            else GetPlayerAtIndex(indexTarget - monstersSpawned.Count).SelectTarget();
+        }
+        else
+        {
+            // je lance le spell
+            PlayerEntityOnBattle player = GetPlayerAtIndex(indexPlayer);
+            if (indexTarget < monstersSpawned.Count) monstersSpawned[indexTarget].DeselectTarget();
+            else GetPlayerAtIndex(indexTarget - monstersSpawned.Count).DeselectTarget();
+            List<Entity> target = new List<Entity>();
+            if (indexTarget < monstersSpawned.Count)
+            {
+                monstersSpawned[indexTarget].DeselectTarget();
+                target.Add(monstersSpawned[indexTarget]);
+            }
+            else
+            {
+                GetPlayerAtIndex(indexTarget - monstersSpawned.Count).DeselectTarget();
+                target.Add(GetPlayerAtIndex(indexTarget - monstersSpawned.Count));
+            }
+            
+            player.AddActionToQueue(ActionBattle.Abilities, target, indexSpells);
+            selectTarget = false;
+            openSpellList = false;
+            OnStartSelectionUI?.Invoke();
+        }
+    }
+
     public void SelectionEnemyTarget(Direction dir)
     {
         int oldIndex = indexTarget;
@@ -337,9 +386,8 @@ public class BattleManager : MonoBehaviour, InterBattle
         //         break;
         // }
     }
-    
-    
-    
+
+
     private PlayerEntityOnBattle GetPlayerAtIndex(int index)
     {
         return playersOnBattle[index];
@@ -358,13 +406,6 @@ public class BattleManager : MonoBehaviour, InterBattle
                 playersOnBattle[i].InitForBattle();
                 playersOnBattle[i].transform.position = heroPos[i].position;
             }
-
-            //playersOnBattle[indexPlayer].SelectPlayer();
-
-            //on update les data du player
-            //PlayerControllerOnBattle controller = playersOnBattle[playersOnBattle.IndexOf(player)];
-            //player.getEntity().InitData(player.getEntity().unitData);
-            //controller.getEntity().gameObject.SetActive(true);
         }
         else
         {
@@ -406,7 +447,7 @@ public class BattleManager : MonoBehaviour, InterBattle
         {
             ActionBattle.AutoAttack => () => LaunchAttack(false), //la methode de baudouin la
             ActionBattle.Attack => () => LaunchAttack(true), // la methode de baudouin la mais non
-            ActionBattle.Abilities => () => Debug.Log("Abilities"), // ability panel
+            ActionBattle.Abilities => LaunchAbilities, // ability panel
             ActionBattle.Items => () => Debug.Log("Items"), // items panel
             ActionBattle.Summon => () => Debug.Log("Summon"), // lol non
             ActionBattle.Defend => () => Debug.Log("Defend"), // jsp
