@@ -36,7 +36,7 @@ public class PlayerEntity : Entity
 
         AssignSprite();
         
-        //PlayerCharactersSo.ApplyMaterialToEntity(_spriteRenderer); a remettre
+        PlayerCharactersSo.ApplyMaterialToEntity(_spriteRenderer);
     }
     
     public void ResetWantedPosition()

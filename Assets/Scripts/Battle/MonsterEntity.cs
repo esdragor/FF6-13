@@ -44,7 +44,6 @@ public class MonsterEntity : Entity
 
     private void Update()
     {
-        return;
         if (actionBar >= costAttack && !currentlyAttacking)
         {
             OnAttacking?.Invoke(this);
