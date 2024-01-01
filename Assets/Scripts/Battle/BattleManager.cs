@@ -266,7 +266,7 @@ public class BattleManager : MonoBehaviour, InterBattle
          Debug.Log("Items");
         if (!openItemList)
         {
-            items.Clear();
+            // items.Clear();
             items = (playersOnBattle[indexPlayer].unitData as PlayerCharacterData)?.getAllItems();
             Debug.Log(items.Count + " items found");
             if (items != null)
@@ -303,7 +303,7 @@ public class BattleManager : MonoBehaviour, InterBattle
             }
             player.AddActionToQueue(ActionBattle.Items, target, indexItems);
             selectTarget = false;
-            openSpellList = false;
+            openItemList = false;
             NeedToSelectItemTarget(false, -1);
         }
     }
