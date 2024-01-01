@@ -65,7 +65,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
     public bool UseItem(UsableItemSo item, List<Entity> targets)
     {
-        Debug.Log($"Use {item.Name} on {targets}");
+        Debug.Log($"Use {item.Name} on targets");
         // TODO: Should remove the item from the inventory
 
         var effects = item.Effects.ToList();
@@ -205,6 +205,10 @@ public class PlayerEntityOnBattle : PlayerEntity
                 break;
             case ActionBattle.Items:
                 Debug.Log("Items");
+                var item = ((PlayerCharacterData)unitData).getAllItems()[index];
+                int costItem = 1;
+                costOfActionQueue += costItem * ratioBarre;
+                actionsStack.Add(new ActionToStack(action, costItem, item.Name, target, index));
                 break;
         }
 
@@ -266,7 +270,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
 
             case ActionBattle.Items:
-                Debug.Log("Item");
+                success = UseItem((unitData as PlayerCharacterData)?.getAllItems()[index], target);
                 break;
         }
         if (success)

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Items;
+using Scriptable_Objects.Items;
 using Scriptable_Objects.Spells___Effects;
 using Scriptable_Objects.Unit;
 
@@ -151,15 +152,22 @@ namespace Units
 
         public List<SpellSO> getAllSpells()
         {
-            List<SpellSO> spells = new List<SpellSO>();
-
             return playerCharactersSo.SpellUnlocksList.FindAll(spellUnlock => spellUnlock.Level <= Lvl)
                 .ConvertAll(spellUnlock => spellUnlock.Spell);
+        }
+        public List<UsableItemSo> getAllItems()
+        {
+            return playerCharactersSo.Inventory;
         }
         
         public int getIndexOfSpell(SpellSO spell)
         {
             return playerCharactersSo.SpellUnlocksList.FindIndex(spellUnlock => spellUnlock.Spell == spell);
+        }
+        
+        public int getIndexOfItem(ItemSO item)
+        {
+            return playerCharactersSo.Inventory.FindIndex(itemSelected => itemSelected == item);
         }
         
         public override int Level => Lvl;

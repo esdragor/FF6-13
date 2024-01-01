@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scriptable_Objects.Items;
 using Scriptable_Objects.Spells___Effects;
 using Units;
 using UnityEngine;
@@ -13,7 +14,8 @@ public class UICombatActionSelector : MonoBehaviour
     [SerializeField] private UISelectionPanel battleActionSelectionPanel2;
     [SerializeField] private int maxSelectionOptions = 4;
     [SerializeField] private UISelectionPanel gridSelectionPanel;
-    [SerializeField] private UISelectionPanel fullSelectionPanel;
+    [SerializeField] private UISelectionPanel SelectionSpellPanel;
+    [SerializeField] private UISelectionPanel SelectionItemPanel;
     [SerializeField] private UIPanel selectionDescriptionPanel;
     private PlayerEntityOnBattle associatedPlayerEntityOnBattle;
     private bool hasSecondPanel;
@@ -22,6 +24,7 @@ public class UICombatActionSelector : MonoBehaviour
     {
         associatedPlayerEntityOnBattle = playerEntityOnBattle;
         InitSpells();
+        InitItems();
     }
     
     public void Cleanup()
@@ -88,11 +91,23 @@ public class UICombatActionSelector : MonoBehaviour
         battleActionSelectionPanel.gameObject.SetActive(true);
         battleActionSelectionPanel2.gameObject.SetActive(true);
         
-        fullSelectionPanel.gameObject.SetActive(false);
+        SelectionSpellPanel.gameObject.SetActive(false);
         int indexOfSpell = ((PlayerCharacterData)associatedPlayerEntityOnBattle.unitData).getIndexOfSpell(spell);
         BattleManager.NeedToSelectSpellTarget(true, indexOfSpell);
         battleActionSelectionPanel.UIButtons[2].Button.Select();
-        Debug.Log($"Selected {spell.Name} Bitch");
+        Debug.Log($"Selected {spell.Name}");
+    }
+    
+    private void SelectedItem(ItemSO item)
+    {
+        battleActionSelectionPanel.gameObject.SetActive(true);
+        battleActionSelectionPanel2.gameObject.SetActive(true);
+        
+        SelectionItemPanel.gameObject.SetActive(false);
+        int indexOfItem = ((PlayerCharacterData)associatedPlayerEntityOnBattle.unitData).getIndexOfItem(item);
+        BattleManager.NeedToSelectItemTarget(true, indexOfItem);
+        battleActionSelectionPanel.UIButtons[3].Button.Select();
+        Debug.Log($"Selected {item.Name}");
     }
     
     private void InitSpells()
@@ -106,8 +121,22 @@ public class UICombatActionSelector : MonoBehaviour
                 () => { selectedSpell(spell); }));
             Debug.Log(spell);
         }
-        fullSelectionPanel.SetSelectionOptions(selectionOptions);
-        fullSelectionPanel.UpdateSelectionOptions();
+        SelectionSpellPanel.SetSelectionOptions(selectionOptions);
+        SelectionSpellPanel.UpdateSelectionOptions();
+    }
+
+    private void InitItems()
+    {
+        var items = (associatedPlayerEntityOnBattle.unitData as PlayerCharacterData)?.getAllItems();
+        List<UISelectionPanel.SelectionOption> selectionOptions = new List<UISelectionPanel.SelectionOption>();
+        foreach (var item in items)
+        {
+            selectionOptions.Add(new UISelectionPanel.SelectionOption(item.Name,
+                () => { SelectedItem(item); }));
+            Debug.Log(item);
+        }
+        SelectionItemPanel.SetSelectionOptions(selectionOptions);
+        SelectionItemPanel.UpdateSelectionOptions();
     }
 
     public void PrintSpells()
@@ -115,8 +144,18 @@ public class UICombatActionSelector : MonoBehaviour
         battleActionSelectionPanel.gameObject.SetActive(false);
         battleActionSelectionPanel2.gameObject.SetActive(false);
         
-        fullSelectionPanel.gameObject.SetActive(true);
+        SelectionSpellPanel.gameObject.SetActive(true);
         
-        fullSelectionPanel.UIButtons[0].Button.Select();
+        SelectionSpellPanel.UIButtons[0].Button.Select();
+    }
+    
+    public void PrintItems()
+    {
+        battleActionSelectionPanel.gameObject.SetActive(false);
+        battleActionSelectionPanel2.gameObject.SetActive(false);
+        
+        SelectionItemPanel.gameObject.SetActive(true);
+        
+        SelectionItemPanel.UIButtons[0].Button.Select();
     }
 }

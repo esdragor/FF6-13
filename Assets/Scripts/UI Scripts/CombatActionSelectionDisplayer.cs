@@ -16,12 +16,14 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     {
         BattleManager.OnCharacterSelected += HideOldSelectorNotCurrent;
         BattleManager.OnShowSpellList += PrintSpells;
+        BattleManager.OnShowItemList += PrintItems;
     }
     
     private void OnDisable()
     {
         BattleManager.OnCharacterSelected -= HideOldSelectorNotCurrent;
         BattleManager.OnShowSpellList -= PrintSpells;
+        BattleManager.OnShowItemList += PrintItems;
     }
 
     private void Cleanup()
@@ -90,6 +92,11 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     private void PrintSpells(PlayerEntityOnBattle playerEntityOnBattle)
     {
         characterActionSelectors[playerEntityOnBattle].PrintSpells();
+    }
+    
+    private void PrintItems(PlayerEntityOnBattle playerEntityOnBattle)
+    {
+        characterActionSelectors[playerEntityOnBattle].PrintItems();
     }
     
 
