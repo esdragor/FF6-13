@@ -48,8 +48,10 @@ public class PlayerEntityOnBattle : PlayerEntity
     private float speedActionBar = 1;
     private bool currentlyAttacking = false;
     private bool isSelected = false;
+    private Inventory inventory;
 
 
+    public Inventory Inventory => inventory;
     public bool Attack(List<Entity> targets)
     {
         for (int i = 0; i < targets.Count; i++)
@@ -65,8 +67,18 @@ public class PlayerEntityOnBattle : PlayerEntity
 
     public bool UseItem(UsableItemSo item, List<Entity> targets)
     {
+        if (inventory == null)
+        {
+            Debug.Log("Inventory is null");
+            return false;
+        }
+        if (inventory.HasItem(item) == false)
+        {
+            Debug.Log("Item not in inventory");
+            return false;
+        }
+        inventory.RemoveItem(item, 1);
         Debug.Log($"Use {item.Name} on targets");
-        // TODO: Should remove the item from the inventory
 
         var effects = item.Effects.ToList();
 
@@ -155,10 +167,16 @@ public class PlayerEntityOnBattle : PlayerEntity
         return hit;
     }
 
-    public void InitForBattle()
+    public void InitForBattle(Inventory _inventory)
     {
         ResetValues();
-
+        if (_inventory.Items == null) return;
+        
+        inventory = new Inventory();
+        foreach (var item in _inventory.Items)
+        {
+            inventory.AddItem(item.Item, item.Quantity);
+        }
         ShowSelector(false);
     }
 
@@ -167,6 +185,8 @@ public class PlayerEntityOnBattle : PlayerEntity
         ResetValues();
 
         ShowSelector(false);
+        
+        //TODO : Update inventory
     }
 
     public void ResetValues()
@@ -205,7 +225,7 @@ public class PlayerEntityOnBattle : PlayerEntity
                 break;
             case ActionBattle.Items:
                 Debug.Log("Items");
-                var item = ((PlayerCharacterData)unitData).getAllItems()[index];
+                var item = inventory.Items[index].Item;
                 int costItem = 1;
                 costOfActionQueue += costItem * ratioBarre;
                 actionsStack.Add(new ActionToStack(action, costItem, item.Name, target, index));
@@ -270,7 +290,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
 
             case ActionBattle.Items:
-                success = UseItem((unitData as PlayerCharacterData)?.getAllItems()[index], target);
+                success = UseItem(inventory.Items[index].Item, target);
                 break;
         }
         if (success)
