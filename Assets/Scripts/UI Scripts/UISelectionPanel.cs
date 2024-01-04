@@ -33,8 +33,9 @@ public class UISelectionPanel : MonoBehaviour
     {
         foreach (var uiButton in uiButtons)
         {
-            Destroy(uiButton);
+            Destroy(uiButton.gameObject);
         }
+        
         uiButtons.Clear();
 
         foreach (var selectionOption in selectionOptions)
@@ -45,6 +46,7 @@ public class UISelectionPanel : MonoBehaviour
             button.OnButtonSelected += UICursor.SetSelectable;
             uiButtons.Add(button);
         }
+
 
         ApplyNavigation();
     }

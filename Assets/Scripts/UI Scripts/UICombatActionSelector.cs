@@ -104,7 +104,7 @@ public class UICombatActionSelector : MonoBehaviour
         battleActionSelectionPanel2.gameObject.SetActive(true);
         
         SelectionItemPanel.gameObject.SetActive(false);
-        int indexOfItem = ((PlayerCharacterData)associatedPlayerEntityOnBattle.unitData).getIndexOfItem(item);
+        int indexOfItem = associatedPlayerEntityOnBattle.Inventory.getIndexOfItem(item);
         BattleManager.NeedToSelectItemTarget(true, indexOfItem);
         battleActionSelectionPanel.UIButtons[3].Button.Select();
         Debug.Log($"Selected {item.Name}");
@@ -125,22 +125,30 @@ public class UICombatActionSelector : MonoBehaviour
         SelectionSpellPanel.UpdateSelectionOptions();
     }
 
-    private void InitItems()
+    private bool InitItems()
     {
-        var items = (associatedPlayerEntityOnBattle.unitData as PlayerCharacterData)?.getAllItems();
+        if (associatedPlayerEntityOnBattle.Inventory == null) return false;
+        var items = associatedPlayerEntityOnBattle.Inventory.Items;
+        if (items == null) return false;
         List<UISelectionPanel.SelectionOption> selectionOptions = new List<UISelectionPanel.SelectionOption>();
         foreach (var item in items)
         {
-            selectionOptions.Add(new UISelectionPanel.SelectionOption(item.Name,
-                () => { SelectedItem(item); }));
-            Debug.Log(item);
+            selectionOptions.Add(new UISelectionPanel.SelectionOption(item.Item.Name,
+                () => { SelectedItem(item.Item); }));
+            Debug.Log(item.Item);
         }
         SelectionItemPanel.SetSelectionOptions(selectionOptions);
         SelectionItemPanel.UpdateSelectionOptions();
+        return true;
     }
 
     public void PrintSpells()
     {
+        if (SelectionSpellPanel.UIButtons.Count <= 0)
+        {
+            BattleManager.AbortSpellSelection();
+            return;
+        }
         battleActionSelectionPanel.gameObject.SetActive(false);
         battleActionSelectionPanel2.gameObject.SetActive(false);
         
@@ -151,6 +159,12 @@ public class UICombatActionSelector : MonoBehaviour
     
     public void PrintItems()
     {
+        if (!InitItems() || SelectionItemPanel.UIButtons.Count <= 0)
+        {
+            BattleManager.AbortItemSelection();
+            return;
+        }
+        if (SelectionItemPanel.UIButtons.Count <= 0) return;
         battleActionSelectionPanel.gameObject.SetActive(false);
         battleActionSelectionPanel2.gameObject.SetActive(false);
         

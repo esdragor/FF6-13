@@ -180,3 +180,6 @@ MonoBehaviour:
       type: 2}
     <Level>k__BackingField: 1
   possibleActions: 000000000100000002000000030000000500000006000000
+  <Inventory>k__BackingField:
+  - {fileID: 11400000, guid: 86c1b9ea8fff5e54d91e355883f41e3d, type: 2}
+  - {fileID: 11400000, guid: 48f22588807c73144acdc2c964b801be, type: 2}

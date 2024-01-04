@@ -55,10 +55,9 @@ public class BattleManager : MonoBehaviour, InterBattle
     static int indexSpells = 0;
     static int indexItems = 0;
     static bool selectTarget = false;
-    bool openSpellList = false;
-    bool openItemList = false;
+    static bool openSpellList = false;
+    static bool openItemList = false;
     List<SpellSO> spells = new();
-    List<UsableItemSo> items = new();
     ActionBattle currentAction = ActionBattle.AutoAttack;
 
     private void Awake()
@@ -134,7 +133,7 @@ public class BattleManager : MonoBehaviour, InterBattle
         exploreCamera.gameObject.SetActive(false);
         combatCamera.gameObject.SetActive(true);
         nbMonster = Random.Range(1, 4);
-        nbMonster = 3;
+        nbMonster = 1;
         indexPlayer = 0;
         openSpellList = false;
         selectTarget = false;
@@ -198,7 +197,9 @@ public class BattleManager : MonoBehaviour, InterBattle
         {
             playerControllerBattle.gameObject.SetActive(false);
             playersOnBattle[i].gameObject.SetActive(false);
+        playersOnExplore.UpdateInventory(playersOnBattle[i].Inventory, i);
         }
+        
 
         GameManager.Instance.GetBackToExplore();
     }
@@ -214,11 +215,13 @@ public class BattleManager : MonoBehaviour, InterBattle
 
     private void LaunchAttack(bool single)
     {
+        
         if (!selectTarget)
         {
             //currentAction = ActionBattle.AutoAttack;
             selectTarget = true;
             indexTarget = 0;
+            if (indexTarget >= monstersSpawned.Count) return;
             monstersSpawned[indexTarget].SelectTarget();
             OnEndSelectionUI?.Invoke();
         }
@@ -226,6 +229,7 @@ public class BattleManager : MonoBehaviour, InterBattle
         {
             //currentAction = ActionBattle.AutoAttack;
             PlayerEntityOnBattle MyPlayer = GetPlayerAtIndex(indexPlayer);
+            if (indexTarget >= monstersSpawned.Count) return;
             monstersSpawned[indexTarget].DeselectTarget();
             List<Entity> targets = new List<Entity>();
             targets.Add(monstersSpawned[indexTarget]);
@@ -260,6 +264,24 @@ public class BattleManager : MonoBehaviour, InterBattle
         selectTarget = need;
         indexItems = _indexItem;
     }
+    
+    public static void AbortItemSelection()
+    {
+        if (openItemList)
+        {
+            openItemList = false;
+            selectTarget = false;
+        }
+    }
+    
+    public static void AbortSpellSelection()
+    {
+        if (openSpellList)
+        {
+            openSpellList = false;
+            selectTarget = false;
+        }
+    }
 
     private void LaunchItems()
     {
@@ -267,8 +289,7 @@ public class BattleManager : MonoBehaviour, InterBattle
         if (!openItemList)
         {
             // items.Clear();
-            items = (playersOnBattle[indexPlayer].unitData as PlayerCharacterData)?.getAllItems();
-            Debug.Log(items.Count + " items found");
+            Inventory items = playersOnBattle[indexPlayer].Inventory;
             if (items != null)
             {
                 // j'open la liste des Items
@@ -417,7 +438,7 @@ public class BattleManager : MonoBehaviour, InterBattle
                 //controller.getEntity().UpdateData(player.getEntity().unitData);
                 playersOnBattle[i].InitData(player.getEntity().unitData);
                 playersOnBattle[i].gameObject.SetActive(true);
-                playersOnBattle[i].InitForBattle();
+                playersOnBattle[i].InitForBattle(player.inventoryItems[i]);
                 playersOnBattle[i].transform.position = heroPos[i].position;
             }
         }
@@ -430,7 +451,7 @@ public class BattleManager : MonoBehaviour, InterBattle
             PlayerEntityOnBattle principalPlayer = playerControllerBattle.getEntity();
             principalPlayer.Init(player.getEntity().SO);
             principalPlayer.InitData(player.getEntity().unitData);
-            principalPlayer.InitForBattle();
+            principalPlayer.InitForBattle(player.inventoryItems[0]);
 
             playersOnBattle.Add(principalPlayer);
 
@@ -440,7 +461,7 @@ public class BattleManager : MonoBehaviour, InterBattle
                 PlayerEntityOnBattle companion = Instantiate(principalPlayer);
                 companion.Init(player.companions[i].SO);
                 companion.InitData(player.companions[i].unitData);
-                companion.InitForBattle();
+                companion.InitForBattle(player.inventoryItems[i + 1]);
                 companion.transform.position = heroPos[i + 1].position;
                 playersOnBattle.Add(companion);
             }
