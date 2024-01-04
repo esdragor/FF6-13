@@ -250,6 +250,9 @@ public class PlayerEntityOnBattle : PlayerEntity
     {
         currentlyAttacking = true;
         bool success = false;
+        
+        
+        
         ActionBattle action = actionsStack[0].action;
         int index = actionsStack[0].index;
         List<Entity> target = actionsStack[0].target;

@@ -133,7 +133,7 @@ public class BattleManager : MonoBehaviour, InterBattle
         exploreCamera.gameObject.SetActive(false);
         combatCamera.gameObject.SetActive(true);
         nbMonster = Random.Range(1, 4);
-        nbMonster = 3;
+        nbMonster = 1;
         indexPlayer = 0;
         openSpellList = false;
         selectTarget = false;
@@ -197,7 +197,9 @@ public class BattleManager : MonoBehaviour, InterBattle
         {
             playerControllerBattle.gameObject.SetActive(false);
             playersOnBattle[i].gameObject.SetActive(false);
+        playersOnExplore.UpdateInventory(playersOnBattle[i].Inventory, i);
         }
+        
 
         GameManager.Instance.GetBackToExplore();
     }
@@ -213,11 +215,13 @@ public class BattleManager : MonoBehaviour, InterBattle
 
     private void LaunchAttack(bool single)
     {
+        
         if (!selectTarget)
         {
             //currentAction = ActionBattle.AutoAttack;
             selectTarget = true;
             indexTarget = 0;
+            if (indexTarget >= monstersSpawned.Count) return;
             monstersSpawned[indexTarget].SelectTarget();
             OnEndSelectionUI?.Invoke();
         }
@@ -225,6 +229,7 @@ public class BattleManager : MonoBehaviour, InterBattle
         {
             //currentAction = ActionBattle.AutoAttack;
             PlayerEntityOnBattle MyPlayer = GetPlayerAtIndex(indexPlayer);
+            if (indexTarget >= monstersSpawned.Count) return;
             monstersSpawned[indexTarget].DeselectTarget();
             List<Entity> targets = new List<Entity>();
             targets.Add(monstersSpawned[indexTarget]);
