@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Exploration;
 using Scriptable_Objects.Interaction;
 using Scriptable_Objects.Interaction.IneractionActions;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Narative
@@ -86,7 +85,6 @@ namespace Narative
             List<Direction> dirs = new List<Direction>();
             Vector3 fictivePos = playerPos;
 
-
             while (fictivePos.x != interactorPos.x && fictivePos.y != interactorPos.y)
             {
                 if (fictivePos.x < interactorPos.x)
@@ -110,6 +108,10 @@ namespace Narative
                     dirs.Add(Direction.Down);
                     fictivePos.y -= cellSize;
                 }
+                
+                // Normalize pos to mult of cellSize
+                fictivePos.x = (float) Math.Round(fictivePos.x / cellSize) * cellSize;
+                fictivePos.y = (float) Math.Round(fictivePos.y / cellSize) * cellSize;
             }
 
 
