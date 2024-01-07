@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b26bd1acf644abafbc579d987bf929, type: 3}
+  m_Name: 1_NarsheEncouter2
+  m_EditorClassIdentifier: 
+  InteractionActions:
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: 7f5828abe04811245abe979e8d8f755b, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: 58f1dd2b9df98654bbfe353e47ff80a8, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: 9ce9efa4e7bb69141ab597b2ac190465, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: ca41df50f03b3eb47a8990a398d282e0, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: fb267a2adec85df40abed6d63d1ee664, type: 2}
+    timeAfter: 0
+  - timeBefore: 0.3
+    interaction: {fileID: 11400000, guid: 81d3387e910424e458334fbc00f62039, type: 2}
+    timeAfter: 1
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: 619c8e38e12b05e488e4a5980c0b6561, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: 89557e34cf5fd7e4aa70fffb6ae76695, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: ec67103068f5b764098219e0bd52998f, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: 3dba458401b153542a568c2d339e1658, type: 2}
+    timeAfter: 0.5
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: 4555813542803564fa3b62e2c661dad7, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: b294d799694688d4ca4fcf6bfb827533, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: b294d799694688d4ca4fcf6bfb827533, type: 2}
+    timeAfter: 0
+  - timeBefore: 0
+    interaction: {fileID: 11400000, guid: b294d799694688d4ca4fcf6bfb827533, type: 2}
+    timeAfter: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Mv GuardA 1
   m_EditorClassIdentifier: 
   <UnitId>k__BackingField: GuardA
-  <Directions>k__BackingField: 00000000000000000000000000000000
+  <Directions>k__BackingField: 000000000000000000000000000000000000000000000000000000000000000000000000
   <WaitTillFinish>k__BackingField: 1

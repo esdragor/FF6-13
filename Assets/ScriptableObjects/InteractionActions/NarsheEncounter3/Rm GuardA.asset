@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c27a866ebd3424bbf49b26d1bdf86c5, type: 3}
-  m_Name: Mv GuardA
+  m_Script: {fileID: 11500000, guid: 153504255cd54dd29292679348eb816e, type: 3}
+  m_Name: Rm GuardA
   m_EditorClassIdentifier: 
-  <UnitId>k__BackingField: GuardA
-  <Directions>k__BackingField: 0100000001000000010000000100000002000000010000000200000001000000010000000100000001000000
-  <WaitTillFinish>k__BackingField: 0
+  <DestroyId>k__BackingField: GuardA
