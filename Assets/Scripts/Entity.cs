@@ -35,6 +35,8 @@ public class Entity : MonoBehaviour
 
         _spriteRenderer.flipX = dir is Direction.Right or Direction.UpRight or Direction.DownRight;
 
+        if (mat == null) ResetMat();
+        
         switch (dir)
         {
             case Direction.Up:
