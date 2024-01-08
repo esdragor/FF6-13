@@ -6,6 +6,7 @@ using Scriptable_Objects.Spells___Effects;
 using Scriptable_Objects.Unit;
 using Units;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public enum ActionBattle
@@ -280,7 +281,7 @@ public class BattleManager : MonoBehaviour, InterBattle
         }
         if (defeat)
         {
-            //defeat
+            SceneManager.LoadScene(0);
         }
         return defeat;
     }
