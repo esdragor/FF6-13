@@ -47,6 +47,7 @@ namespace Scriptable_Objects.Unit
         [SerializeField] private Vector2Int spriteSheetSize;
         [SerializeField] private Vector2Int spriteSheetOffset;
         [SerializeField] private Vector2Int spriteSheetPadding;
+        [SerializeField] private int framesPerSecond = 24;
         [SerializeField] private bool startWithDown;
         [SerializeField] private bool verticalRead;
         [SerializeField] private int startIndex;
@@ -54,9 +55,13 @@ namespace Scriptable_Objects.Unit
         [SerializeField] private int idleFrame;
         [SerializeField] private int framesPerState;
 
-        public void ApplyMaterialToEntity(SpriteRenderer renderer, int direction = 0)
+        public Material ApplyMaterialToEntity(SpriteRenderer renderer, int direction = 0)
         {
-            var mat = new Material(characterMaterial);
+            Debug.Log($"Applying {name} unit material",renderer);
+            var mat = new Material(characterMaterial)
+            {
+                name = $"{name} Character Material"
+            };
 
             mat.SetTexture("_MainTex", sprite.texture);
 
@@ -64,6 +69,8 @@ namespace Scriptable_Objects.Unit
             mat.SetVector("_SpriteSheetSize", (Vector2)spriteSheetSize);
             mat.SetVector("_SpriteSheetOffset", (Vector2)spriteSheetOffset);
             mat.SetVector("_SpreadsheetPadding", (Vector2)spriteSheetPadding);
+            
+            mat.SetFloat("_FramesPerSecond", framesPerSecond);
 
             mat.SetFloat("_StartWithDown", startWithDown ? 1.0f : 0.0f);
             mat.SetFloat("_VerticalRead", verticalRead ? 1.0f : 0.0f);
@@ -74,7 +81,7 @@ namespace Scriptable_Objects.Unit
 
             mat.SetFloat("_Direction", direction);
 
-            if (!renderer) return;
+            if (!renderer) return mat;
             
             renderer.material = mat;
             renderer.sprite = sprite;
@@ -83,6 +90,8 @@ namespace Scriptable_Objects.Unit
             if (spriteSheetSize.x != 0) scale.x = spriteSize.x / (float)spriteSheetSize.x;
             if (spriteSheetSize.y != 0) scale.y = spriteSize.y / (float)spriteSheetSize.y;
             transform.localScale = scale;
+
+            return mat;
         }
 
         [ContextMenu("Init All")]

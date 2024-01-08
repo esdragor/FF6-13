@@ -10,8 +10,7 @@ public class Entity : MonoBehaviour
     public static event Action<Entity> OnEntityDying;
 
     public UnitData unitData;
-
-
+    
     [SerializeField] protected SpriteRenderer _spriteRenderer;
     [SerializeField] protected GameObject selectorObj;
     [SerializeField] protected Animator _animator;
@@ -21,11 +20,11 @@ public class Entity : MonoBehaviour
 
     public Direction ForwardDirection { get; protected set; } = Direction.None;
 
-    protected Material mat;
+    [SerializeField] protected Material mat;
     protected bool selectTarget;
     protected Color selectTargetColor = Color.red;
 
-    private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
+    protected static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
 
     public void Turn(Direction dir)
     {
@@ -40,10 +39,10 @@ public class Entity : MonoBehaviour
         switch (dir)
         {
             case Direction.Up:
-                mat.SetFloat(DirectionProperty, 0f);
+                mat.SetFloat(DirectionProperty, 1f);
                 break;
             case Direction.Down:
-                mat.SetFloat(DirectionProperty, 1f);
+                mat.SetFloat(DirectionProperty, 0f);
                 break;
             case Direction.Left or Direction.Right:
                 mat.SetFloat(DirectionProperty, 2f);
@@ -51,8 +50,10 @@ public class Entity : MonoBehaviour
         }
     }
 
+    [ContextMenu("ResetMat")]
     public void ResetMat()
     {
+        Debug.Log("Reset mat");
         mat = _spriteRenderer.material;
     }
 
@@ -132,7 +133,12 @@ public class Entity : MonoBehaviour
         _spriteRenderer.sprite = unitData.Sprite;
 
         if (mat != null) return;
-        mat = new Material(_spriteRenderer.material);
+        
+        Debug.Log("Changing mat");
+        mat = new Material(_spriteRenderer.material)
+        {
+            name = $"{unitData.GetName()} Entity Material"
+        };
         _spriteRenderer.material = mat;
     }
 
