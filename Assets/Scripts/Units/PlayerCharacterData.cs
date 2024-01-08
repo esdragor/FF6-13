@@ -9,6 +9,7 @@ namespace Units
     public class PlayerCharacterData : UnitData
     {
         public int Lvl { get; private set; }
+        public int xp { get; private set; }
 
         public EquipableData RightHand { get; private set; } = null;
         public EquipableData LeftHand { get; private set; } = null;
@@ -30,6 +31,7 @@ namespace Units
         public PlayerCharacterData(PlayerCharactersSO unitSo, int lvl) : base(unitSo)
         {
             Lvl = lvl;
+            xp = 0;
             growthRatesSo = unitSo.GrowthTable;
 
             Init();
@@ -236,6 +238,17 @@ namespace Units
         {
             //TODO Check if the unit is immune to the alteration in his equipment
             return unitSo.AlterationImmunity.Exists(immunity => immunity.Alteration == alteration && immunity.Immunity);
+        }
+        
+        public bool GainXp(int amount)
+        {
+            xp += amount;
+            if (xp >= playerCharactersSo.GrowthTable.GrowthRates[Lvl - 1].Xp)
+            {
+                Lvl++;
+                return true;
+            }
+            return false;
         }
         
     }

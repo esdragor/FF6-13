@@ -59,8 +59,6 @@ public class CombatActionBarDisplayer : MonoBehaviour
         
         public void UpdateActionBarsActions(IReadOnlyList<ActionToStack> actionsToQueue)
         {
-            Debug.Log($"Updating actions ({actionsToQueue.Count})");
-            
             foreach (var actionBar in ActionBars)
             {
                 actionBar.ShowAction(false);

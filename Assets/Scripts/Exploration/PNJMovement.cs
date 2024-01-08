@@ -75,4 +75,9 @@ public class PNJMovement : Entity
 
         UpdateAnimation();
     }
+
+    protected override void OnDying()
+    {
+        Debug.Log("PNJ is dead ?!");
+    }
 }

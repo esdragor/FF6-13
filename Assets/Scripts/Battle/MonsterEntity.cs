@@ -54,4 +54,11 @@ public class MonsterEntity : Entity
             actionBar += speedActionBar * Time.deltaTime;
         }
     }
+
+    protected override void OnDying()
+    {
+        //add here XP and gold
+        BattleManager.AddGilsAndXpToLoot(((MonsterSO)SO).GilReward , ((MonsterSO)SO).XpReward);
+            Destroy(gameObject, 0.5f);
+    }
 }

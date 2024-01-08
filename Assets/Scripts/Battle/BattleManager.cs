@@ -24,7 +24,7 @@ public class BattleManager : MonoBehaviour, InterBattle
     public static event Action<List<PlayerEntityOnBattle>, BattleManager> OnPlayerUpdated;
     public static event Action OnBattleStarted;
     public static event Action OnBattleEnded;
-    
+    public static event Action OnBattleFinished;
     public static event Action<string> OnActionWasLaunched;
     
     public static event Action<int> OnSelectionChanged;
@@ -33,6 +33,7 @@ public class BattleManager : MonoBehaviour, InterBattle
 
     public static event Action OnStartSelectionUI;
     public static event Action OnEndSelectionUI;
+    public static event Action<string> OnGainXP;
     public static event Action<PlayerEntityOnBattle> OnShowSpellList;
     public static event Action<PlayerEntityOnBattle> OnShowItemList;
 
@@ -55,12 +56,16 @@ public class BattleManager : MonoBehaviour, InterBattle
 
     int indexPlayer = 0;
     int indexTarget = 0;
+    static int gilsReward = 0;
+    static int xpReward = 0;
     static int indexSpells = 0;
     static int indexItems = 0;
     static bool selectTarget = false;
     static bool openSpellList = false;
     static bool openItemList = false;
     private bool multiTarget = false;
+    private bool endBattle = false;
+    private string LevelUp = "";
     List<SpellSO> spells = new();
     ActionBattle currentAction = ActionBattle.AutoAttack;
 
@@ -68,6 +73,16 @@ public class BattleManager : MonoBehaviour, InterBattle
     {
         Entity.OnEntityDying += RemoveEntity;
         OnSelectAction += ActionSelected;
+    }
+    
+    private void Start()
+    {
+        InputManager.OnSelect += SelectionPressed;
+        InputManager.OnSelection += SelectionAction;
+        InputManager.OnChangeCharacter += ChangeCharacter;
+        MonsterEntity.OnAttacking += RetrieveTarget;
+        foreach (var so in soMonster)
+            Monsters.Add(so.name, so);
     }
 
     private void RemoveEntity(Entity entity)
@@ -81,6 +96,12 @@ public class BattleManager : MonoBehaviour, InterBattle
         {
             //one player is dead
         }
+    }
+
+    private void SelectionPressed()
+    {
+        if (!endBattle) return;
+        GetBackToWorld();
     }
     
     public static void ActionLaunched(string name)
@@ -122,6 +143,9 @@ public class BattleManager : MonoBehaviour, InterBattle
         indexPlayer = 0;
         openSpellList = false;
         selectTarget = false;
+        gilsReward = 0;
+        xpReward = 0;
+        endBattle = false;
         for (int i = 0; i < nbMonster; i++)
         {
             MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
@@ -142,10 +166,13 @@ public class BattleManager : MonoBehaviour, InterBattle
         exploreCamera.gameObject.SetActive(false);
         combatCamera.gameObject.SetActive(true);
         nbMonster = Random.Range(1, 4);
-        //nbMonster = 1;
+        nbMonster = 1;
         indexPlayer = 0;
         openSpellList = false;
         selectTarget = false;
+        gilsReward = 0;
+        xpReward = 0;
+        endBattle = false;
         for (int i = 0; i < nbMonster; i++)
         {
             Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
@@ -162,16 +189,6 @@ public class BattleManager : MonoBehaviour, InterBattle
         OnBattleStarted?.Invoke();
 
         UpdatePlayer(playerController);
-    }
-
-    private void Start()
-    {
-        //InputManager.OnSelect += SelectAction;
-        InputManager.OnSelection += SelectionAction;
-        InputManager.OnChangeCharacter += ChangeCharacter;
-        MonsterEntity.OnAttacking += RetrieveTarget;
-        foreach (var so in soMonster)
-            Monsters.Add(so.name, so);
     }
 
     public void RetrieveTarget(MonsterEntity monster)
@@ -193,40 +210,81 @@ public class BattleManager : MonoBehaviour, InterBattle
         OnCharacterSelected?.Invoke(previous, playersOnBattle[indexPlayer]);
     }
 
-    IEnumerator Victory() // changer par l'ecran de victoire
+    private void GetBackToWorld()
     {
-        yield return new WaitForSeconds(2f);
-        OnBattleEnded?.Invoke();
-        //UIBattle.SetActive(false);
+        OnBattleFinished?.Invoke();
+        for (int i = 0; i < playersOnBattle.Count; i++)
+        {
+            playersOnBattle[i].gameObject.SetActive(false);
+        }
+        playerControllerBattle.gameObject.SetActive(false);
         exploreCamera.gameObject.SetActive(true);
         combatCamera.gameObject.SetActive(false);
         playersOnExplore.gameObject.SetActive(true);
         playersOnExplore.getEntity().gameObject.SetActive(true);
+        GameManager.Instance.GetBackToExplore();
+        //HideScore();
+
+    }
+    
+    IEnumerator Victory() // changer par l'ecran de victoire
+    {
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Victory");
+        endBattle = true;
+        OnBattleEnded?.Invoke();
+        
         for (int i = 0; i < playersOnBattle.Count; i++)
         {
-            playerControllerBattle.gameObject.SetActive(false);
-            playersOnBattle[i].gameObject.SetActive(false);
-            playersOnExplore.UpdateInventory(playersOnBattle[i].Inventory, i);
+            playersOnBattle[i].ClearAllActions();
         }
-
-
-        GameManager.Instance.GetBackToExplore();
+        playersOnExplore.AddGils(gilsReward);
+        LevelUp = playersOnExplore.AddXP(xpReward);
+        OnGainXP?.Invoke(LevelUp);
+        playersOnExplore.UpdateInventory(playersOnBattle[0].Inventory);
     }
 
     private void CheckVictory()
     {
         if (monstersSpawned.Count == 0)
         {
-            Debug.Log("Victory");
             StartCoroutine(Victory());
         }
+    }
+    
+    public static void AddXPToLoot(int xp)
+    {
+        xpReward += xp;
+    }
+    
+    public static void AddGilsToLoot(int gils)
+    {
+        //add gils to the player
+        gilsReward += gils;
+    }
+    
+    public static void AddGilsAndXpToLoot(int gils, int xp)
+    {
+        AddGilsToLoot(gils);
+        AddXPToLoot(xp);
+    }
+    
+    public static void AddItemToLoot(ItemSO item, int quantity)
+    {
+        //add item to the player
+    }
+    
+    public static void GetLoot(out int gils, out int xp, out List<ItemSO> items)
+    {
+        gils = gilsReward;
+        xp = xpReward;
+        items = new List<ItemSO>();
     }
 
     private void LaunchAttack(bool single)
     {
         if (!selectTarget)
         {
-            //currentAction = ActionBattle.AutoAttack;
             selectTarget = true;
             indexTarget = 0;
             if (indexTarget >= monstersSpawned.Count) return;
@@ -235,7 +293,6 @@ public class BattleManager : MonoBehaviour, InterBattle
         }
         else
         {
-            //currentAction = ActionBattle.AutoAttack;
             PlayerEntityOnBattle MyPlayer = GetPlayerAtIndex(indexPlayer);
             if (indexTarget >= monstersSpawned.Count) return;
             monstersSpawned[indexTarget].DeselectTarget();
@@ -425,7 +482,7 @@ public class BattleManager : MonoBehaviour, InterBattle
                 //controller.getEntity().UpdateData(player.getEntity().unitData);
                 playersOnBattle[i].InitData(player.getEntity().unitData);
                 playersOnBattle[i].gameObject.SetActive(true);
-                playersOnBattle[i].InitForBattle(player.inventoryItems[i]);
+                playersOnBattle[i].InitForBattle(player.inventoryItems);
                 playersOnBattle[i].transform.position = heroPos[i].position;
             }
         }
@@ -438,7 +495,7 @@ public class BattleManager : MonoBehaviour, InterBattle
             PlayerEntityOnBattle principalPlayer = playerControllerBattle.getEntity();
             principalPlayer.Init(player.getEntity().SO);
             principalPlayer.InitData(player.getEntity().unitData);
-            principalPlayer.InitForBattle(player.inventoryItems[0]);
+            principalPlayer.InitForBattle(player.inventoryItems);
 
             playersOnBattle.Add(principalPlayer);
 
@@ -448,7 +505,7 @@ public class BattleManager : MonoBehaviour, InterBattle
                 PlayerEntityOnBattle companion = Instantiate(principalPlayer);
                 companion.Init(player.companions[i].SO);
                 companion.InitData(player.companions[i].unitData);
-                companion.InitForBattle(player.inventoryItems[i + 1]);
+                companion.InitForBattle(player.inventoryItems);
                 companion.transform.position = heroPos[i + 1].position;
                 playersOnBattle.Add(companion);
             }

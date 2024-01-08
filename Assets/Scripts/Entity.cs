@@ -5,7 +5,7 @@ using Scriptable_Objects.Unit;
 using Units;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+public abstract class Entity : MonoBehaviour
 {
     public static event Action<Entity> OnEntityDying;
 
@@ -55,6 +55,8 @@ public class Entity : MonoBehaviour
     {
         mat = _spriteRenderer.material;
     }
+    
+    protected abstract void OnDying();
 
     public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false,
         bool isPourcentDamage = false)
@@ -84,8 +86,7 @@ public class Entity : MonoBehaviour
         {
             Debug.Log(unitData.GetName() + " is dead");
             OnEntityDying?.Invoke(this);
-            if (!(this as PlayerEntity))
-                Destroy(gameObject, 0.5f);
+            OnDying();
             return true;
         }
 

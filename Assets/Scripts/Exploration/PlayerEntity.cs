@@ -146,4 +146,9 @@ public class PlayerEntity : Entity
     {
         unitData = data;
     }
+
+    protected override void OnDying()
+    {
+        Debug.Log("Player is dead");
+    }
 }

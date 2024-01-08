@@ -169,10 +169,12 @@ MonoBehaviour:
   <InitialHp>k__BackingField: 48
   <InitialMp>k__BackingField: 9
   <EscapeRate>k__BackingField: 2
-  <GrowthTable>k__BackingField: {fileID: 0}
+  <GrowthTable>k__BackingField: {fileID: 11400000, guid: 909acd1faa8ee7249945807f49ed41ca,
+    type: 2}
   <RightHandTypes>k__BackingField: 
   <LeftHandTypes>k__BackingField: 
   <HeadTypes>k__BackingField: 
   <BodyTypes>k__BackingField: 
   <SpellUnlocksList>k__BackingField: []
   possibleActions: 000000000100000002000000030000000500000006000000
+  <Inventory>k__BackingField: []
