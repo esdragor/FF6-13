@@ -15,6 +15,8 @@ public class UIIGMenu : MonoBehaviour
     [SerializeField] private UIRefs uiControlFormation;
     [SerializeField] private UIRefs uiControlConfirm;
     [SerializeField] private UIRefs uiControlBack;
+    [Space]
+    [SerializeField] private UICharacterInfoBasic[] uiCharacterInfoBasics;
     
     
     private void Start()
@@ -33,8 +35,12 @@ public class UIIGMenu : MonoBehaviour
         };
 
         menuSelectionPanel.SetSelectionOptions(selectionOptions);
-        
         menuSelectionPanel.UpdateSelectionOptions();
+        
+        menuSelectionPanel.UIButtons[6].SetInteractable(false);
+        menuSelectionPanel.UIButtons[7].SetInteractable(false);
+        
+        menuSelectionPanel.ApplyNavigation();
         
         timeTextPair.MainText.text = "Time";
         stepsTextPair.MainText.text = "Steps";
@@ -45,5 +51,10 @@ public class UIIGMenu : MonoBehaviour
         uiControlFormation.SetSprite(settingsSo.GetSpriteForAction(uiControlFormation.InputActionReference));
         uiControlConfirm.SetSprite(settingsSo.GetSpriteForAction(uiControlConfirm.InputActionReference));
         uiControlBack.SetSprite(settingsSo.GetSpriteForAction(uiControlBack.InputActionReference));
+
+        foreach (var characterInfoBasic in uiCharacterInfoBasics)
+        {
+            characterInfoBasic.Change(null);
+        }
     }
 }
