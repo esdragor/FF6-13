@@ -92,7 +92,14 @@ public class BattleManager : MonoBehaviour, InterBattle
         }
         else
         {
-            //one player is dead
+            if (CheckDefeat()) return;
+            if (entity is PlayerEntityOnBattle player)
+            {
+                if (playersOnBattle[indexPlayer] == player)
+                {
+                    ChangeCharacter(1);
+                }
+            }
         }
     }
 
@@ -205,12 +212,15 @@ public class BattleManager : MonoBehaviour, InterBattle
     private void ChangeCharacter(float axis)
     {
         var previous = playersOnBattle[indexPlayer];
-
-        indexPlayer += (int)axis;
-        if (indexPlayer < 0)
-            indexPlayer = playersOnBattle.Count - 1;
-        else if (indexPlayer >= playersOnBattle.Count)
-            indexPlayer = 0;
+        
+        do
+        {
+            indexPlayer += (int)axis;
+            if (indexPlayer < 0)
+                indexPlayer = playersOnBattle.Count - 1;
+            else if (indexPlayer >= playersOnBattle.Count)
+                indexPlayer = 0;
+        } while (playersOnBattle[indexPlayer].unitData.CurrentHp <= 0 && previous != playersOnBattle[indexPlayer]);
 
         OnCharacterSelected?.Invoke(previous, playersOnBattle[indexPlayer]);
     }
@@ -255,6 +265,24 @@ public class BattleManager : MonoBehaviour, InterBattle
         {
             StartCoroutine(Victory());
         }
+    }
+    
+    private bool CheckDefeat()
+    {
+        bool defeat = true;
+        foreach (var player in playersOnBattle)
+        {
+            if (player.unitData.CurrentHp > 0)
+            {
+                defeat = false;
+                break;
+            }
+        }
+        if (defeat)
+        {
+            //defeat
+        }
+        return defeat;
     }
     
     public static void AddXPToLoot(int xp)
@@ -490,6 +518,7 @@ public class BattleManager : MonoBehaviour, InterBattle
                 playersOnBattle[i].InitForBattle(player.inventoryItems);
                 playersOnBattle[i].transform.position = heroPos[i].position;
             }
+            if (playersOnBattle[indexPlayer].unitData.CurrentHp <= 0) ChangeCharacter(1);
         }
         else
         {
