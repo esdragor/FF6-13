@@ -53,6 +53,14 @@ public class Inventory
         var itemInInventory = Items.Find(i => i.Item == item);
         return Items.IndexOf(itemInInventory);
     }
+
+    public void AddItems(Inventory initInventory)
+    {
+        foreach (var item in initInventory.Items)
+        {
+            AddItem(item.Item, item.Quantity);
+        }
+    }
 }
 
 public class InventoryItems

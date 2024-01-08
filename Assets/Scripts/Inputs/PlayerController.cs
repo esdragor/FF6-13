@@ -3,14 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using Scriptable_Objects.Items;
 using Scriptable_Objects.Unit;
+using Units;
 using UnityEngine;
 
 public class PlayerController : BattleController
 {
     public static event Action<Entity> OnPlayerSpawned;
-    public List<Inventory> inventoryItems { get; private set; }
+    public Inventory inventoryItems { get; private set; }
 
     [SerializeField] private List<PlayerCharactersSO> companionsSo = new();
+
+    private int nbGils = 0;
 
 
     private static Inventory InitInventory(PlayerCharactersSO data)
@@ -24,6 +27,11 @@ public class PlayerController : BattleController
         return inventory;
     }
 
+    public void AddGils(int amount)
+    {
+        nbGils += amount;
+    }
+
     protected override void InstantiateEntity()
     {
         base.InstantiateEntity();
@@ -34,9 +42,9 @@ public class PlayerController : BattleController
         go.transform.SetParent(transform);
         //create here companions
         companions = new List<PlayerEntity>();
-        inventoryItems = new List<Inventory>();
+        inventoryItems = InitInventory(entity.SO as PlayerCharactersSO);
+        nbGils = 100;
 
-        inventoryItems.Add(InitInventory(entity.SO as PlayerCharactersSO));
         foreach (var companion in companionsSo)
         {
             var companionEntity = go.AddComponent<PlayerEntity>();
@@ -44,7 +52,7 @@ public class PlayerController : BattleController
             companionEntity.InitPlayer(this);
             companionEntity.gameObject.SetActive(false);
             companions.Add(companionEntity);
-            inventoryItems.Add(InitInventory(companion));
+            inventoryItems.AddItems(InitInventory(companion));
         }
 
         go.SetActive(false);
@@ -75,14 +83,26 @@ public class PlayerController : BattleController
         return entity as PlayerEntity;
     }
 
-    public void UpdateInventory(Inventory inventory, int i)
+    public void UpdateInventory(Inventory inventory)
     {
-        inventoryItems[i] = null;
-        inventoryItems[i] = new Inventory();
-        foreach (var item in inventory.Items)
+        inventoryItems = new Inventory();
+        inventoryItems.AddItems(inventory);
+    }
+    
+    public string AddXP(int amount)
+    {
+        string result = "";
+        if (((PlayerCharacterData)entity.unitData).GainXp(amount))
         {
-            inventoryItems[i].AddItem(item.Item, item.Quantity);
+            result += $"{entity.SO.Name} leveled up to {entity.unitData.Level}\n";
         }
-        //inventoryItems[i] = inventory;
+        foreach (var companion in companions)
+        {
+            if (((PlayerCharacterData)companion.unitData).GainXp(amount))
+            {
+                result += $"{companion.SO.Name} leveled up to {companion.unitData.Level}\n";
+            }
+        }
+        return result;
     }
 }

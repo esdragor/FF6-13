@@ -52,6 +52,13 @@ public class PlayerEntityOnBattle : PlayerEntity
 
 
     public Inventory Inventory => inventory;
+    
+    public void ClearAllActions()
+    {
+        actionsStack.Clear();
+        costOfActionQueue = 0;
+        OnActonQueueUpdated?.Invoke(actionsStack);
+    }
 
     public bool Attack(List<Entity> targets)
     {

@@ -43,7 +43,6 @@ public class UICombatActionSelector : MonoBehaviour
         
         var count = battleActionSelectionPanel.UIButtons.Count;
         
-        Debug.Log($"Has {count} buttons");
         
         var hasButton =  count > 0;
         if(hasButton) battleActionSelectionPanel.UIButtons[0].Button.Select();
@@ -119,7 +118,6 @@ public class UICombatActionSelector : MonoBehaviour
         {
             selectionOptions.Add(new UISelectionPanel.SelectionOption(spell.Name,
                 () => { selectedSpell(spell); }));
-            Debug.Log(spell);
         }
         SelectionSpellPanel.SetSelectionOptions(selectionOptions);
         SelectionSpellPanel.UpdateSelectionOptions();
@@ -135,7 +133,6 @@ public class UICombatActionSelector : MonoBehaviour
         {
             selectionOptions.Add(new UISelectionPanel.SelectionOption(item.Item.Name,
                 () => { SelectedItem(item.Item); }));
-            Debug.Log(item.Item);
         }
         SelectionItemPanel.SetSelectionOptions(selectionOptions);
         SelectionItemPanel.UpdateSelectionOptions();

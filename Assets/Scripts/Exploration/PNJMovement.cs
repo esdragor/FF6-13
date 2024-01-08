@@ -75,4 +75,14 @@ public class PNJMovement : Entity
 
         UpdateAnimation();
     }
+
+    protected override void OnDying()
+    {
+        Debug.Log("PNJ is dead ?!");
+    }
+
+    public override void OnTakeDamage()
+    {
+        Debug.Log("PNJ take damage ?!");
+    }
 }

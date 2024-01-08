@@ -7,6 +7,7 @@ public class PlayerEntity : Entity
 {
     public static event Action OnCinematicStarted;
     public static event Action<bool> OnCinematicEnded;
+    public static event Action OnPlayerLifeUpdated;
     
     public PlayerCharactersSO PlayerCharactersSo => (PlayerCharactersSO) SO;
     public PlayerController _playerController { get; private set; }
@@ -179,5 +180,15 @@ public class PlayerEntity : Entity
     public void InitData(UnitData data)
     {
         unitData = data;
+    }
+
+    protected override void OnDying()
+    {
+        Debug.Log("Player is dead");
+    }
+
+    public override void OnTakeDamage()
+    {
+        OnPlayerLifeUpdated?.Invoke();
     }
 }
