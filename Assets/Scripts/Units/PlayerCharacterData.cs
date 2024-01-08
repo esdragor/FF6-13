@@ -25,7 +25,7 @@ namespace Units
         private bool itemEquippedAccessory1 => Accessory1 != null;
         private bool itemEquippedAccessory2 => Accessory2 != null;
 
-        private PlayerCharactersSO playerCharactersSo => (PlayerCharactersSO)UnitSo;
+        public PlayerCharactersSO PlayerCharactersSo => (PlayerCharactersSO)UnitSo;
         private GrowthRatesSO growthRatesSo;
 
         public PlayerCharacterData(PlayerCharactersSO unitSo, int lvl) : base(unitSo)
@@ -47,8 +47,8 @@ namespace Units
         {
             get
             {
-                if (Lvl <= 1) return playerCharactersSo.InitialHp;
-                return playerCharactersSo.InitialHp + growthRatesSo.GrowthRates[Lvl - 2].Health;
+                if (Lvl <= 1) return PlayerCharactersSo.InitialHp;
+                return PlayerCharactersSo.InitialHp + growthRatesSo.GrowthRates[Lvl - 2].Health;
             }
         }
 
@@ -56,8 +56,8 @@ namespace Units
         {
             get
             {
-                if (Lvl <= 1) return playerCharactersSo.InitialMp;
-                return playerCharactersSo.InitialMp + growthRatesSo.GrowthRates[Lvl - 2].Mp;
+                if (Lvl <= 1) return PlayerCharactersSo.InitialMp;
+                return PlayerCharactersSo.InitialMp + growthRatesSo.GrowthRates[Lvl - 2].Mp;
             }
         }
 
@@ -154,22 +154,22 @@ namespace Units
 
         public List<SpellSO> getAllSpells()
         {
-            return playerCharactersSo.SpellUnlocksList.FindAll(spellUnlock => spellUnlock.Level <= Lvl)
+            return PlayerCharactersSo.SpellUnlocksList.FindAll(spellUnlock => spellUnlock.Level <= Lvl)
                 .ConvertAll(spellUnlock => spellUnlock.Spell);
         }
         public List<UsableItemSo> getAllItems()
         {
-            return playerCharactersSo.Inventory;
+            return PlayerCharactersSo.Inventory;
         }
         
         public int getIndexOfSpell(SpellSO spell)
         {
-            return playerCharactersSo.SpellUnlocksList.FindIndex(spellUnlock => spellUnlock.Spell == spell);
+            return PlayerCharactersSo.SpellUnlocksList.FindIndex(spellUnlock => spellUnlock.Spell == spell);
         }
         
         public int getIndexOfItem(ItemSO item)
         {
-            return playerCharactersSo.Inventory.FindIndex(itemSelected => itemSelected == item);
+            return PlayerCharactersSo.Inventory.FindIndex(itemSelected => itemSelected == item);
         }
         
         public override int Level => Lvl;
@@ -243,12 +243,17 @@ namespace Units
         public bool GainXp(int amount)
         {
             xp += amount;
-            if (xp >= playerCharactersSo.GrowthTable.GrowthRates[Lvl - 1].Xp)
+            if (xp >= PlayerCharactersSo.GrowthTable.GrowthRates[Lvl - 1].Xp)
             {
                 Lvl++;
                 return true;
             }
             return false;
+        }
+        
+        public int GetXpToNextLevel()
+        {
+            return PlayerCharactersSo.GrowthTable.GrowthRates[Lvl - 1].Xp - xp;
         }
         
     }
