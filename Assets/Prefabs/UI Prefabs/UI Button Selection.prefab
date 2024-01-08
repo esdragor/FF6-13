@@ -274,3 +274,4 @@ MonoBehaviour:
   <TextMeshProUGUI>k__BackingField: {fileID: 1234123087515529444}
   selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   deselectedColor: {r: 1, g: 1, b: 1, a: 1}
+  unInteractableColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}

@@ -26,6 +26,7 @@ public class PNJMovement : Entity
     public void ClearDirections()
     {
         directions.Clear();
+        wantedDirection = Vector2.zero;
     }
 
     void Start()
