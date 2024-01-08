@@ -18,10 +18,10 @@ public class ActionToStack
     public int Cost;
     public string Name;
 
-    public ActionToStack(ActionBattle action, int cost, string name, List<Entity> t, int index = 0)
+    public ActionToStack(ActionBattle _action, int cost, string name, List<Entity> t, int _index = 0)
     {
-        this.action = action;
-        this.index = index;
+        action = _action;
+        index = _index;
         Cost = cost;
         Name = name;
         target = new List<Entity>();
@@ -52,6 +52,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
 
     public Inventory Inventory => inventory;
+
     public bool Attack(List<Entity> targets)
     {
         for (int i = 0; i < targets.Count; i++)
@@ -72,11 +73,13 @@ public class PlayerEntityOnBattle : PlayerEntity
             Debug.Log("Inventory is null");
             return false;
         }
+
         if (inventory.HasItem(item) == false)
         {
             Debug.Log("Item not in inventory");
             return false;
         }
+
         inventory.RemoveItem(item, 1);
         Debug.Log($"Use {item.Name} on targets");
 
@@ -171,12 +174,13 @@ public class PlayerEntityOnBattle : PlayerEntity
     {
         ResetValues();
         if (_inventory.Items == null) return;
-        
+
         inventory = new Inventory();
         foreach (var item in _inventory.Items)
         {
             inventory.AddItem(item.Item, item.Quantity);
         }
+
         ShowSelector(false);
     }
 
@@ -185,7 +189,7 @@ public class PlayerEntityOnBattle : PlayerEntity
         ResetValues();
 
         ShowSelector(false);
-        
+
         //TODO : Update inventory
     }
 
@@ -250,9 +254,8 @@ public class PlayerEntityOnBattle : PlayerEntity
     {
         currentlyAttacking = true;
         bool success = false;
-        
-        
-        
+
+
         ActionBattle action = actionsStack[0].action;
         int index = actionsStack[0].index;
         List<Entity> target = actionsStack[0].target;
@@ -275,6 +278,8 @@ public class PlayerEntityOnBattle : PlayerEntity
                     yield return new WaitForSeconds(1f);
 
                     success = Attack(target);
+                    if (success)
+                        SpendActionBar(cost * ratioBarre);
 
                     if (success) yield return new WaitForSeconds(0.3f); //animation attack
                     transform.DOMove(originalPos, 1f);
@@ -288,19 +293,20 @@ public class PlayerEntityOnBattle : PlayerEntity
 
                 break;
             case ActionBattle.Abilities:
-                success = UseSpell((unitData as PlayerCharacterData)?.getAllSpells()[index], target);
+                if (UseSpell((unitData as PlayerCharacterData)?.getAllSpells()[index], target))
+                    SpendActionBar(cost * ratioBarre);
                 break;
 
 
             case ActionBattle.Items:
-                success = UseItem(inventory.Items[index].Item, target);
+                if (UseItem(inventory.Items[index].Item, target))
+                    SpendActionBar(cost * ratioBarre);
                 break;
         }
-        if (success)
-            SpendActionBar(cost * ratioBarre);
+
         costOfActionQueue -= cost * ratioBarre;
         OnActonQueueUpdated?.Invoke(actionsStack);
-        
+
         yield return new WaitForSeconds(1.0f); // animation delay between actions
 
         currentlyAttacking = false;

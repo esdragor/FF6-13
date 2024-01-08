@@ -67,9 +67,11 @@ public class CombatActionBarDisplayer : MonoBehaviour
             }
 
             var index = 0;
+            if (ActionBars.Count <= index) return;
             foreach (var t in actionsToQueue)
             {
                 var cost = t.Cost;
+                
                 var actionBar = ActionBars[index];
                 actionBar.SetAction(t.Name,cost);
                 actionBar.ShowAction(true);
