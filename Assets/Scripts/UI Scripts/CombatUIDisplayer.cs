@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Scriptable_Objects.Items;
+using Units;
 using UnityEngine;
 
 public class CombatUIDisplayer : MonoBehaviour
@@ -40,7 +41,7 @@ public class CombatUIDisplayer : MonoBehaviour
     {
         BattleManager.OnBattleStarted += Show;
         BattleManager.OnPlayerUpdated += SetPlayerEntities;
-        PlayerEntity.OnPlayerLifeUpdated += UpdateCharactersInfo;
+        UnitData.OnCurrentHpUpdated += UpdateCharactersInfo;
         BattleManager.OnCharacterSelected += PlayerEntityOnBattle.TrySelectPlayer;
         BattleManager.OnCharacterSelected += mainActionBarDisplayer.ShowActionBar;
         BattleManager.OnCharacterSelected += combatActionSelectionDisplayer.ShowActionSelector;
@@ -62,7 +63,7 @@ public class CombatUIDisplayer : MonoBehaviour
         BattleManager.OnBattleEnded -= ShowEndPanel;
         BattleManager.OnBattleFinished -= Hide;
         BattleManager.OnGainXP -= UpdateLevelUp;
-        PlayerEntity.OnPlayerLifeUpdated -= UpdateCharactersInfo;
+        UnitData.OnCurrentHpUpdated -= UpdateCharactersInfo;
 
     }
 

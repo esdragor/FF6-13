@@ -11,6 +11,7 @@ namespace Units
         public UnitSO UnitSo { get; protected set; }
 
         protected int currentHp;
+        public static event Action OnCurrentHpUpdated;
         protected int currentMp;
         
         private List<Alterations> alterations = new List<Alterations>();
@@ -240,7 +241,11 @@ namespace Units
             
             alterations.Remove(alteration);
         }
-
+        
+        public void HPNeedToBeUpdated()
+        {
+            OnCurrentHpUpdated?.Invoke();
+        }
     }
     
     public interface UnitInfo

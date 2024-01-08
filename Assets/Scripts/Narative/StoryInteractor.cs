@@ -179,7 +179,7 @@ namespace Narative
 
             MovementSwitcher newMonster = Instantiate(monsterPrefab, spawnSO.SpawnPos, Quaternion.identity);
 
-            newMonster.Entity.Init(spawnSO.UnitToSpawn, true);
+            newMonster.Entity.InitExplorer(spawnSO.UnitToSpawn, true);
             entities.Add(spawnSO.StoreUnitAsId, newMonster);
         }
 
