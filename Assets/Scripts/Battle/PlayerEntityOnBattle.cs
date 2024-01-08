@@ -52,7 +52,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
 
     public Inventory Inventory => inventory;
-    
+
     public void ClearAllActions()
     {
         actionsStack.Clear();
@@ -213,12 +213,15 @@ public class PlayerEntityOnBattle : PlayerEntity
         switch (action)
         {
             case ActionBattle.AutoAttack:
-                nbAction = (int)((NbBarre * ratioBarre) / (costAttack * ratioBarre - costOfActionQueue));
+                nbAction = (costAttack * ratioBarre - costOfActionQueue) == 0
+                    ? 1
+                    : (int)((NbBarre * ratioBarre) / (costAttack * ratioBarre - costOfActionQueue));
                 for (int i = 0; i < nbAction; i++)
                 {
                     actionsStack.Add(new ActionToStack(action, (int)costAttack, "Attack", target));
                     costOfActionQueue += costAttack * ratioBarre;
                 }
+
                 break;
             case ActionBattle.Attack:
                 if ((NbBarre * ratioBarre) < (costAttack * ratioBarre + costOfActionQueue)) break;
@@ -247,6 +250,7 @@ public class PlayerEntityOnBattle : PlayerEntity
     {
         actionBar -= value;
         costOfActionQueue -= value;
+
         if (actionBar < 0)
             actionBar = 0;
         OnActionBarValueChanged?.Invoke(PercentageActionBar);
