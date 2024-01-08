@@ -30,7 +30,7 @@ MonoBehaviour:
     timeAfter: 0
   - timeBefore: 0.3
     interaction: {fileID: 11400000, guid: 81d3387e910424e458334fbc00f62039, type: 2}
-    timeAfter: 1
+    timeAfter: 0.5
   - timeBefore: 0
     interaction: {fileID: 11400000, guid: 619c8e38e12b05e488e4a5980c0b6561, type: 2}
     timeAfter: 0

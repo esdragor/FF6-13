@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - TileColliders
+  - Units
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Front
     uniqueID: 303700275
+    locked: 0
+  - name: Colliders
+    uniqueID: 1617820283
     locked: 0

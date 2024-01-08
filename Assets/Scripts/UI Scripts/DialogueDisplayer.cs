@@ -12,6 +12,7 @@ public class DialogueDisplayer : MonoBehaviour
     
     [Header("Settings")]
     [SerializeField] private float textSpeed = 0.1f;
+    [SerializeField] private float baseTextSpeed = 0.1f;
     
     [Header("Debug")]
     [SerializeField] private string debugText;
@@ -22,7 +23,7 @@ public class DialogueDisplayer : MonoBehaviour
     private string currentText;
     private string targetText;
     private Coroutine displayTextCoroutine;
-
+    
     [ContextMenu("Test")]
     private void Test()
     {
@@ -32,6 +33,16 @@ public class DialogueDisplayer : MonoBehaviour
     private void Start()
     {
         HidePanel();
+    }
+
+    private void OnEnable()
+    {
+        InputManager.SkipText += ShowTextInstant;
+    }
+    
+    private void OnDisable()
+    {
+        InputManager.SkipText -= ShowTextInstant;
     }
 
     [ContextMenu("Hide")]
@@ -81,5 +92,22 @@ public class DialogueDisplayer : MonoBehaviour
         
         panel.SetText(targetText);
         OnDialogueFullyDisplayed?.Invoke();
+    }
+
+    private void ShowTextInstant()
+    {
+        if (displayTextCoroutine == null) return;
+        
+        baseTextSpeed = textSpeed;
+        textSpeed = 0;
+        
+        OnDialogueFullyDisplayed += RevertTextSpeed;
+    }
+    
+    private void RevertTextSpeed()
+    {
+        
+        textSpeed = baseTextSpeed;
+        OnDialogueFullyDisplayed -= RevertTextSpeed;
     }
 }

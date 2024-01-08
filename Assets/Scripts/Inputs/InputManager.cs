@@ -26,6 +26,10 @@ public class InputManager : MonoBehaviour
     public static event Action OnSelect;
     public static event Action<Direction> OnSelection;
     public static event Action OnCancel;
+    
+    public static event Action OnTalk;
+
+    public static event Action SkipText;
 
     private Controls _input;
 
@@ -47,24 +51,29 @@ public class InputManager : MonoBehaviour
         PlayerEntity.OnCinematicStarted += OnCinematic;
         PlayerEntity.OnCinematicEnded += OnEndCinematic;
         
+        _input.Interaction.SkipText.started += Skip;
+        
     }
 
     public void OnExploration()
     {
         _input.Exploration.Enable();
         _input.Battle.Disable();
+        _input.Interaction.Disable();
     }
 
     public void OnBattle()
     {
         _input.Exploration.Disable();
         _input.Battle.Enable();
+        _input.Interaction.Disable();
     }
     
     public void OnCinematic()
     {
         _input.Exploration.Disable();
         _input.Battle.Disable();
+        _input.Interaction.Enable();
     }
     
     public void OnEndCinematic(bool isExplo)
@@ -82,7 +91,12 @@ public class InputManager : MonoBehaviour
 
     private void Talk(InputAction.CallbackContext obj)
     {
-        Debug.Log("Talk");
+        OnTalk?.Invoke();
+    }
+    
+    private void Skip(InputAction.CallbackContext cbc)
+    {
+        SkipText?.Invoke();
     }
 
     private Direction CheckEightDirection(InputAction.CallbackContext context)
