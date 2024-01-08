@@ -11,6 +11,8 @@ namespace Scriptable_Objects.Unit
         [field: Header("---UnitSO---")]
         [field: SerializeField]
         public string Name { get; private set; }
+        public string Title { get; private set; }
+        public Sprite Portrait { get; private set; }
 
         [field: Header("Stats")]
         [field: SerializeField]

@@ -53,10 +53,13 @@ MonoBehaviour:
   _boxCollider2D: {fileID: 0}
   delayToMove: 1
   <SO>k__BackingField: {fileID: 0}
+  mat: {fileID: 0}
   cellSize: 1
   toleranceMoving: 0.8
+  colliderPos: {fileID: 0}
+  wantedDirection: {x: 0, y: 0}
   costAttack: 1
-  nbBarre: 2
+  <NbBarre>k__BackingField: 2
   ratioBarre: 50
   ratioSpeedActionBar: 0.3
 --- !u!212 &8731512548653332835

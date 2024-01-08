@@ -485,7 +485,7 @@ public class BattleManager : MonoBehaviour, InterBattle
             for (int i = 0; i < playersOnBattle.Count; i++)
             {
                 //controller.getEntity().UpdateData(player.getEntity().unitData);
-                playersOnBattle[i].InitData(player.getEntity().unitData);
+                playersOnBattle[i].InitData((i == 0) ? player.getEntity().unitData : player.companions[i - 1].unitData);
                 playersOnBattle[i].gameObject.SetActive(true);
                 playersOnBattle[i].InitForBattle(player.inventoryItems);
                 playersOnBattle[i].transform.position = heroPos[i].position;
