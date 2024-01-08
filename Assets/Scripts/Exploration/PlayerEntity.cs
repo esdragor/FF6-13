@@ -9,11 +9,11 @@ public class PlayerEntity : Entity
     public static event Action<bool> OnCinematicEnded;
     
     public PlayerCharactersSO PlayerCharactersSo => (PlayerCharactersSO) SO;
-    
     public PlayerController _playerController { get; private set; }
 
     [SerializeField] private float cellSize = 1f;
     [SerializeField] private float toleranceMoving = 0.8f;
+    [SerializeField] private Transform colliderPos;
 
     public Vector2 wantedDirection;
     private Vector3 clampedPosition;
@@ -75,7 +75,7 @@ public class PlayerEntity : Entity
         if (wantedDirection.x == 0) return;
         
         var dirX = wantedDirection.x;
-        var raycastHit2D = Physics2D.BoxCast(transform.position, new Vector2(cellSize*0.4f, cellSize*0.4f), 0, new Vector2(dirX, 0), Mathf.Abs(cellSize*0.4f), LayerMask.GetMask("Units", "TileColliders"));
+        var raycastHit2D = Physics2D.BoxCast(colliderPos.position, _boxCollider2D.size, 0, new Vector2(dirX, 0), Mathf.Abs(cellSize*0.4f), LayerMask.GetMask("Units", "TileColliders"));
         
         if (raycastHit2D) {
             wantedDirection.x = 0;
@@ -117,7 +117,7 @@ public class PlayerEntity : Entity
         if (wantedDirection.y == 0) return;
         
         var dirY = wantedDirection.y;
-        var raycastHit2D = Physics2D.BoxCast(transform.position, new Vector2(cellSize*0.4f, cellSize*0.4f), 0, new Vector2(0, dirY), Mathf.Abs(cellSize*0.4f), LayerMask.GetMask("Units", "TileColliders"));
+        var raycastHit2D = Physics2D.BoxCast(colliderPos.position, _boxCollider2D.size, 0, new Vector2(0, dirY), Mathf.Abs(cellSize*0.4f), LayerMask.GetMask("Units", "TileColliders"));
         
         if (raycastHit2D) {
             wantedDirection.y = 0;
