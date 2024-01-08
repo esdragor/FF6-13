@@ -24,8 +24,9 @@ public class UISelectionPanel : MonoBehaviour
         {
             Name = name;
             Callback = new UnityEvent();
-            Callback.AddListener(callback.Invoke);
+            if(callback != null) Callback.AddListener(callback.Invoke);
         }
+        
     }
 
     [ContextMenu("Update Selection Options")]

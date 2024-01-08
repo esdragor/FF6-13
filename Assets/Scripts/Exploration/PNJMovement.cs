@@ -30,7 +30,7 @@ public class PNJMovement : Entity
 
     void Start()
     {
-        mat = _spriteRenderer.material;
+        //Mat = _spriteRenderer.material;
     }
 
     void OnEnable()

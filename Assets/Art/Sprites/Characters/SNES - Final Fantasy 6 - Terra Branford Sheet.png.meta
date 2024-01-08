@@ -1034,7 +1034,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Final Fantasy 6 - Terra Branford_44
+      name: portrait
       rect:
         serializedVersion: 2
         x: 62
@@ -1243,7 +1243,6 @@ TextureImporter:
       SNES - Final Fantasy 6 - Terra Branford_41: 241427464
       SNES - Final Fantasy 6 - Terra Branford_42: 1734088972
       SNES - Final Fantasy 6 - Terra Branford_43: -702464202
-      SNES - Final Fantasy 6 - Terra Branford_44: -111197817
       SNES - Final Fantasy 6 - Terra Branford_45: 1713875468
       SNES - Final Fantasy 6 - Terra Branford_46: 836278807
       SNES - Final Fantasy 6 - Terra Branford_47: -446205805
@@ -1260,6 +1259,7 @@ TextureImporter:
       down_0: 1266524867
       down_1: 1208239122
       down_2: -1091810780
+      portrait: -111197817
       side_0: 333042637
       side_1: -602350771
       side_2: -95016180
