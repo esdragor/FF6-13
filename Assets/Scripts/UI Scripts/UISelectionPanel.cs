@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -42,7 +43,9 @@ public class UISelectionPanel : MonoBehaviour
         foreach (var selectionOption in selectionOptions)
         {
             var button = Instantiate(uiButtonPrefab, layout);
-            button.TextMeshProUGUI.text = selectionOption.Name;
+            var text = selectionOption.Name;
+            button.gameObject.name = $"{text} (Button)";
+            button.TextMeshProUGUI.text = text;
             button.Button.onClick.AddListener(() => selectionOption.Callback.Invoke());
             button.OnButtonSelected += UICursor.SetSelectable;
             uiButtons.Add(button);
@@ -54,7 +57,9 @@ public class UISelectionPanel : MonoBehaviour
 
     public void ApplyNavigation()
     {
-        var count = uiButtons.Count;
+        var interactableButtons = uiButtons.Where(x => x.Button.interactable).ToList();
+        
+        var count = interactableButtons.Count;
 
         if(count <= 1) return;
         
@@ -64,10 +69,10 @@ public class UISelectionPanel : MonoBehaviour
             {
                 mode = Navigation.Mode.Explicit,
             };
-            if (i - 1 >= 0) nav.selectOnUp = uiButtons[i - 1].Button;
-            if (i + 1 <= count - 1) nav.selectOnDown = uiButtons[i + 1].Button;
+            if (i - 1 >= 0) nav.selectOnUp = interactableButtons[i - 1].Button;
+            if (i + 1 <= count - 1) nav.selectOnDown = interactableButtons[i + 1].Button;
 
-            uiButtons[i].Button.navigation = nav;
+            interactableButtons[i].Button.navigation = nav;
         }
     }
 

@@ -13,9 +13,16 @@ public class UIButton : MonoBehaviour, ISelectHandler, IDeselectHandler
     
     [SerializeField] private Color selectedColor = Color.yellow;
     [SerializeField] private Color deselectedColor = Color.black;
+    [SerializeField] private Color unInteractableColor = Color.black;
     public event Action<UIButton> OnButtonSelected;
     public event Action<UIButton> OnButtonDeSelected;
 
+    public void SetInteractable(bool interactable)
+    {
+        Button.interactable = interactable;
+        TextMeshProUGUI.color = interactable ? deselectedColor : unInteractableColor;
+    }
+    
     public void OnSelect(BaseEventData eventData)
     {
         TextMeshProUGUI.color = selectedColor;
