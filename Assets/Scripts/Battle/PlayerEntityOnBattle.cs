@@ -317,7 +317,6 @@ public class PlayerEntityOnBattle : PlayerEntity
         if (actionBar >= (NbBarre * ratioBarre))
         {
             actionBar = (NbBarre * ratioBarre);
-            //Debug.Log("actionBar is full");
         }
         else
         {
@@ -326,12 +325,8 @@ public class PlayerEntityOnBattle : PlayerEntity
             if (isSelected) OnActionBarChanged?.Invoke(PercentageActionBar);
         }
 
-        //Debug.Log("D: " + actionBar);
         if (costOfActionQueue > 0 && actionBar >= costOfActionQueue && !currentlyAttacking)
         {
-            Debug.Log("Dequeue");
-            Debug.Log("Cost: " + costOfActionQueue);
-            Debug.Log("Action: " + actionBar);
             StartCoroutine(DequeueAction());
         }
     }
