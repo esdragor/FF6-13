@@ -197,6 +197,12 @@ public class PlayerEntityOnBattle : PlayerEntity
 
         ShowSelector(false);
     }
+    
+    protected override void OnDying()
+    {
+        base.OnDying();
+        ClearAllActions();
+    }
 
     public void ResetValues()
     {

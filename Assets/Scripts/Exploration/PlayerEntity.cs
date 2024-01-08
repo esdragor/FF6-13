@@ -56,10 +56,22 @@ public class PlayerEntity : Entity
     {
         UpdateWantedPositionX();
         UpdateWantedPositionY();
+        CheckDiagonalMovement();
         
         UpdateMove();
         if (!mat) return; 
         mat.SetFloat(MovingProperty, moving ? 1.0f : 0.0f);
+    }
+
+    private void CheckDiagonalMovement()
+    {
+        if (wantedDirection.x == 0 || wantedDirection.y == 0) return;
+        
+        var raycastHit2D = Physics2D.BoxCast(colliderPos.position, _boxCollider2D.size, 0, wantedDirection, Mathf.Abs(cellSize*0.4f) * Mathf.Sqrt(2), LayerMask.GetMask("Units", "TileColliders"));
+
+        if (!raycastHit2D) return;
+        
+        wantedDirection = Vector2.zero;
     }
 
     private void UpdateWantedPositionX()
