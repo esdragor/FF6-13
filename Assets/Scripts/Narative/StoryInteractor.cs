@@ -17,6 +17,7 @@ namespace Narative
         [SerializeField] private bool destroyAfterInteraction = true;
         [SerializeField] private BoxCollider2D boxCollider2D;
         [SerializeField] private MovementSwitcher monsterPrefab;
+        [SerializeField] private Transform initialPos;
 
         private Dictionary<string, MovementSwitcher> entities = new();
         private List<InteractionAction> interactionActionsRemaining = new();
@@ -57,6 +58,7 @@ namespace Narative
         private IEnumerator DoInteractions(List<InteractionAction> interactionActions)
         {
             // First, we move to the interactors' middle
+            SetCinematic(true);
             MovePlayerToInteractor();
             if (waitForInteractions) yield return new WaitUntil(() => !waitForInteractions);
 
@@ -79,13 +81,23 @@ namespace Narative
             var cellSize = 0.5f; //TODO: not fix
 
             var player = entities["player"];
+            var playerMovement = player.PnjMovement;
+            player.SwitchToPNJMode();
+            playerMovement.ClearDirections();
+            
             var playerPos = player.transform.position;
-            var interactorPos = transform.position;
+            var interactorPos = initialPos.transform.position;
+            
 
             List<Direction> dirs = new List<Direction>();
             Vector3 fictivePos = playerPos;
+            
+            // Normalize pos to mult of cellSize
+            fictivePos.x = (float) Math.Round(fictivePos.x / cellSize) * cellSize;
+            fictivePos.y = (float) Math.Round(fictivePos.y / cellSize) * cellSize;
 
-            while (fictivePos.x != interactorPos.x && fictivePos.y != interactorPos.y)
+            
+            while (Mathf.Abs(fictivePos.x - interactorPos.x) > 0.01 || Mathf.Abs(fictivePos.y - interactorPos.y) > 0.01)
             {
                 if (fictivePos.x < interactorPos.x)
                 {
@@ -113,11 +125,7 @@ namespace Narative
                 fictivePos.x = (float) Math.Round(fictivePos.x / cellSize) * cellSize;
                 fictivePos.y = (float) Math.Round(fictivePos.y / cellSize) * cellSize;
             }
-
-
-            var playerMovement = player.PnjMovement;
-            player.SwitchToPNJMode();
-            playerMovement.ClearDirections();
+            
             if (dirs.Count == 0) return;
 
             waitingFor = "player";
@@ -162,6 +170,11 @@ namespace Narative
         private void SetCinematic(InteractionSetCinematicSO cinematicSo)
         {
             ((PlayerEntity)entities["player"].Entity).Cinematic(cinematicSo.SetCinematic, !inBattle);
+        }
+        
+        private void SetCinematic(bool cinematic)
+        {
+            ((PlayerEntity)entities["player"].Entity).Cinematic(cinematic, !inBattle);
         }
 
         private void StartBattle(InteractionStartBattleSO battleSo)
