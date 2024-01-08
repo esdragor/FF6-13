@@ -8,6 +8,7 @@ namespace Units
 {
     public abstract class UnitData : UnitInfo
     {
+        public static event Action OnPlayerLifeUpdated;
         protected UnitSO unitSo;
 
         protected int currentHp;
@@ -240,7 +241,11 @@ namespace Units
             
             alterations.Remove(alteration);
         }
-
+        
+        public void HPNeedToBeUpdated()
+        {
+            OnPlayerLifeUpdated?.Invoke();
+        }
     }
     
     public interface UnitInfo
