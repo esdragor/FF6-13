@@ -48,6 +48,8 @@ public class Entity : MonoBehaviour
                 mat.SetFloat(DirectionProperty, 2f);
                 break;
         }
+
+        Debug.Log($"changed to {dir}");
     }
 
     [ContextMenu("ResetMat")]
@@ -142,6 +144,12 @@ public class Entity : MonoBehaviour
         _spriteRenderer.material = mat;
     }
 
+    [ContextMenu("Init monster")]
+    public void InitMonster()
+    {
+        Init(true);
+    }
+    
     public void Init(bool isMonster)
     {
         unitData = (isMonster) ? new MonsterData(SO) : new PlayerCharacterData(SO as PlayerCharactersSO, 1);
@@ -152,6 +160,14 @@ public class Entity : MonoBehaviour
     {
         SO = unitSo;
         Init(isMonster);
+    }
+
+    public void InitExplorer(UnitSO unitSo, bool isMonster = false)
+    {
+        SO = unitSo;
+        unitData = (isMonster) ? new MonsterData(SO) : new PlayerCharacterData(SO as PlayerCharactersSO, 1);
+
+        mat = SO.ApplyMaterialToEntity(_spriteRenderer);
     }
 
     public void SelectTarget()
