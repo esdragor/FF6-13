@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 75344e6e882f4f00b4bc493123bf1cb2, type: 3}
   m_Name: Rm-Zombie-a
   m_EditorClassIdentifier: Assembly-CSharp:Scriptable_Objects.Spells___Effects:AddOrRemoveAlterationSO
   <Alteration>k__BackingField: 1
   <Remove>k__BackingField: 1
-  <SingleTarget>k__BackingField: 1
+  <SingleTarget>k__BackingField: 0

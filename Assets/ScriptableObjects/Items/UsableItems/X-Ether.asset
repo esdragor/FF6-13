@@ -19,3 +19,4 @@ MonoBehaviour:
   <Sprite>k__BackingField: {fileID: 0}
   <Effects>k__BackingField:
   - {fileID: 11400000, guid: 4d36e584fc8122f4cb1c459cc3787886, type: 2}
+  <UsedOutsideCombat>k__BackingField: 0
