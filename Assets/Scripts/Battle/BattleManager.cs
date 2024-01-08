@@ -191,8 +191,15 @@ public class BattleManager : MonoBehaviour, InterBattle
 
     public void RetrieveTarget(MonsterEntity monster)
     {
-        int index = Random.Range(0, playersOnBattle.Count);
-        monster.Attack(playersOnBattle[index]);
+        List<PlayerEntityOnBattle> potentialTarget = new List<PlayerEntityOnBattle>();
+        foreach (var player in playersOnBattle)
+        {
+            if (player.unitData.CurrentHp > 0)
+                potentialTarget.Add(player);
+        }
+        if (potentialTarget.Count == 0) return;
+        int index = Random.Range(0, potentialTarget.Count);
+        monster.Attack(potentialTarget[index]);
     }
 
     private void ChangeCharacter(float axis)

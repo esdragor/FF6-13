@@ -110,7 +110,6 @@ public class CombatUIDisplayer : MonoBehaviour
 
     public void SetPlayerEntities(IReadOnlyList<PlayerEntityOnBattle> playerEntities, InterBattle manager)
     {
-        Debug.Log($"Settings {playerEntities.Count} player entities on battle");
         playerEntitiesOnBattle = playerEntities;
         mainActionBarDisplayer.CreateActionBars(playerEntitiesOnBattle);
         combatActionSelectionDisplayer.CreateSelectors(playerEntitiesOnBattle, manager);
