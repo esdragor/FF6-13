@@ -180,6 +180,15 @@ MonoBehaviour:
   - <Spell>k__BackingField: {fileID: 11400000, guid: b2bb0e02ed88031429859e11ccfcc50f,
       type: 2}
     <Level>k__BackingField: 1
+  - <Spell>k__BackingField: {fileID: 11400000, guid: 1cd5a25e00db14a42b0d5f26d9acf3cf,
+      type: 2}
+    <Level>k__BackingField: 1
+  - <Spell>k__BackingField: {fileID: 11400000, guid: b2bb0e02ed88031429859e11ccfcc50f,
+      type: 2}
+    <Level>k__BackingField: 1
+  - <Spell>k__BackingField: {fileID: 11400000, guid: 347a0456df2baa044af743abceda3094,
+      type: 2}
+    <Level>k__BackingField: 1
   possibleActions: 000000000100000002000000030000000500000006000000
   <Inventory>k__BackingField:
   - {fileID: 11400000, guid: 86c1b9ea8fff5e54d91e355883f41e3d, type: 2}
