@@ -10,7 +10,7 @@ public class CombatUIDisplayer : MonoBehaviour
     [SerializeField] private UIRefs nextControls;
 
     [Header("Main Panels")] [SerializeField]
-    private GameObject teamPanelObj;
+    private UIPanel teamPanelObj;
 
     [SerializeField] private GameObject enemyPanelObj;
 
@@ -34,11 +34,13 @@ public class CombatUIDisplayer : MonoBehaviour
     [SerializeField] private UIPanel endBattleXPPanel;
 
     private IReadOnlyList<PlayerEntityOnBattle> playerEntitiesOnBattle;
+    
 
     private void OnEnable()
     {
         BattleManager.OnBattleStarted += Show;
         BattleManager.OnPlayerUpdated += SetPlayerEntities;
+        PlayerEntity.OnPlayerLifeUpdated += UpdateCharactersInfo;
         BattleManager.OnCharacterSelected += PlayerEntityOnBattle.TrySelectPlayer;
         BattleManager.OnCharacterSelected += mainActionBarDisplayer.ShowActionBar;
         BattleManager.OnCharacterSelected += combatActionSelectionDisplayer.ShowActionSelector;
@@ -60,6 +62,8 @@ public class CombatUIDisplayer : MonoBehaviour
         BattleManager.OnBattleEnded -= ShowEndPanel;
         BattleManager.OnBattleFinished -= Hide;
         BattleManager.OnGainXP -= UpdateLevelUp;
+        PlayerEntity.OnPlayerLifeUpdated -= UpdateCharactersInfo;
+
     }
 
     private void Start()
@@ -69,7 +73,7 @@ public class CombatUIDisplayer : MonoBehaviour
 
     private void Hide()
     {
-        teamPanelObj.SetActive(false);
+        teamPanelObj.gameObject.SetActive(false);
         enemyPanelObj.SetActive(false);
         selectionInfoPanel.gameObject.SetActive(false);
         selectionInfoPanelDisabledObj.SetActive(true);
@@ -82,10 +86,25 @@ public class CombatUIDisplayer : MonoBehaviour
         combatActionSelectionDisplayer.Hide();
     }
 
+    public void UpdateCharactersInfo()
+    {
+        string text = "";
+        foreach (var entity in playerEntitiesOnBattle)
+        {
+            text += entity.PlayerCharactersSo.Name
+                    + "  "
+                    + entity.unitData.CurrentHp
+                    + "/"
+                    + entity.unitData.MaxHp
+                    + "\n";
+        }
+        teamPanelObj.SetText(text);
+    }
+
     public void Show()
     {
         HideEndPanel();
-        teamPanelObj.SetActive(true);
+        teamPanelObj.gameObject.SetActive(true);
         enemyPanelObj.SetActive(true);
     }
 
@@ -104,7 +123,7 @@ public class CombatUIDisplayer : MonoBehaviour
         BattleManager.GetLoot(out var gils, out var xp, out List<ItemSO> items);
         endBattleTopPanel.SetText("Gil " + gils + "\nEXP " + xp);
     }
-
+    
     private void UpdateLevelUp(string lvlUp)
     {
         endBattleXPPanel.SetText(lvlUp);

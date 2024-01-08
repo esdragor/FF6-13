@@ -26,11 +26,9 @@ public class BattleManager : MonoBehaviour, InterBattle
     public static event Action OnBattleEnded;
     public static event Action OnBattleFinished;
     public static event Action<string> OnActionWasLaunched;
-    
     public static event Action<int> OnSelectionChanged;
     public static event Action<PlayerEntityOnBattle, PlayerEntityOnBattle> OnCharacterSelected;
     public static event Action<ActionBattle> OnSelectAction;
-
     public static event Action OnStartSelectionUI;
     public static event Action OnEndSelectionUI;
     public static event Action<string> OnGainXP;
@@ -518,6 +516,7 @@ public class BattleManager : MonoBehaviour, InterBattle
         OnPlayerUpdated?.Invoke(playersOnBattle, this);
 
         ChangeCharacter(0);
+        playersOnBattle[0].OnTakeDamage();
     }
 
     public Action GetAction(ActionBattle actionBattle)
@@ -534,4 +533,6 @@ public class BattleManager : MonoBehaviour, InterBattle
             _ => () => Debug.Log("Wat")
         };
     }
+
+    
 }

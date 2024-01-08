@@ -61,4 +61,9 @@ public class MonsterEntity : Entity
         BattleManager.AddGilsAndXpToLoot(((MonsterSO)SO).GilReward , ((MonsterSO)SO).XpReward);
             Destroy(gameObject, 0.5f);
     }
+
+    public override void OnTakeDamage()
+    {
+        
+    }
 }

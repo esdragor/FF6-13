@@ -80,4 +80,9 @@ public class PNJMovement : Entity
     {
         Debug.Log("PNJ is dead ?!");
     }
+
+    public override void OnTakeDamage()
+    {
+        Debug.Log("PNJ take damage ?!");
+    }
 }

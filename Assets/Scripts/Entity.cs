@@ -59,6 +59,8 @@ public abstract class Entity : MonoBehaviour
     
     protected abstract void OnDying();
 
+    public abstract void OnTakeDamage();
+
     public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false,
         bool isPourcentDamage = false)
     {
@@ -82,7 +84,7 @@ public abstract class Entity : MonoBehaviour
             if (transform != null)
                 transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
         }
-
+        OnTakeDamage();
         if (unitData.CurrentHp <= 0)
         {
             Debug.Log(unitData.GetName() + " is dead");
@@ -90,6 +92,8 @@ public abstract class Entity : MonoBehaviour
             OnDying();
             return true;
         }
+        
+        
 
         return true;
     }
