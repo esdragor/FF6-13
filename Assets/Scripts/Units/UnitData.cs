@@ -8,7 +8,7 @@ namespace Units
 {
     public abstract class UnitData : UnitInfo
     {
-        protected UnitSO unitSo;
+        public UnitSO UnitSo { get; protected set; }
 
         protected int currentHp;
         protected int currentMp;
@@ -27,7 +27,7 @@ namespace Units
 
         public UnitData(UnitSO unitSo)
         {
-            this.unitSo = unitSo;
+            this.UnitSo = unitSo;
             Init();
         }
 
@@ -36,23 +36,23 @@ namespace Units
             switch (stat)
             {
                 case Stats.Strength:
-                    return unitSo.Strength;
+                    return UnitSo.Strength;
                 case Stats.Agility:
-                    return unitSo.Agility;
+                    return UnitSo.Agility;
                 case Stats.Stamina:
-                    return unitSo.Stamina;
+                    return UnitSo.Stamina;
                 case Stats.Magic:
-                    return unitSo.Magic;
+                    return UnitSo.Magic;
                 case Stats.Attack:
-                    return unitSo.Attack;
+                    return UnitSo.Attack;
                 case Stats.Defence:
-                    return unitSo.Defence;
+                    return UnitSo.Defence;
                 case Stats.MagicDefence:
-                    return unitSo.MagicDefence;
+                    return UnitSo.MagicDefence;
                 case Stats.Evasion:
-                    return unitSo.Evasion;
+                    return UnitSo.Evasion;
                 case Stats.MagicEvasion:
-                    return unitSo.MagicEvasion;
+                    return UnitSo.MagicEvasion;
                 default:
                     return 0;
             }
@@ -68,7 +68,7 @@ namespace Units
         
         public virtual string GetName()
         {
-            return unitSo.Name;
+            return UnitSo.Name;
         }
 
         public virtual int CurrentMp
@@ -88,33 +88,33 @@ namespace Units
 
         public virtual int Strength
         {
-            get => unitSo.Strength;
+            get => UnitSo.Strength;
         }
 
         public virtual int Agility
         {
-            get => unitSo.Agility;
+            get => UnitSo.Agility;
         }
 
         public virtual int Stamina
         {
-            get => unitSo.Stamina;
+            get => UnitSo.Stamina;
         }
 
         public virtual int Magic
         {
-            get => unitSo.Magic;
+            get => UnitSo.Magic;
         }
 
         public virtual int Attack
         {
-            get => unitSo.Attack;
+            get => UnitSo.Attack;
         }
         
         public virtual int Strenght2
         {
             get {
-                int strenght2 = unitSo.Strength * 2;
+                int strenght2 = UnitSo.Strength * 2;
                 return strenght2 > 128 ? 128 : strenght2;
             }
         }
@@ -138,27 +138,27 @@ namespace Units
 
         public virtual int Defence
         {
-            get => unitSo.Defence;
+            get => UnitSo.Defence;
         }
 
         public virtual int MagicDefence
         {
-            get => unitSo.MagicDefence;
+            get => UnitSo.MagicDefence;
         }
 
         public virtual int Evasion
         {
-            get => unitSo.Evasion;
+            get => UnitSo.Evasion;
         }
 
         public virtual int MagicEvasion
         {
-            get => unitSo.MagicEvasion;
+            get => UnitSo.MagicEvasion;
         }
 
         public virtual int Resistance(Elements element)
         {
-            ElementResistance resist = unitSo.Resistances.Find(resistance => resistance.Element == element);
+            ElementResistance resist = UnitSo.Resistances.Find(resistance => resistance.Element == element);
             if (resist == null) return 100;
             var baseResist = resist.Resistance;
             //TODO: Check alteration for resistances
@@ -171,12 +171,12 @@ namespace Units
 
         public virtual bool IsImmuneTo(Alterations alteration)
         {
-            return unitSo.AlterationImmunity.Exists( immunity => immunity.Alteration == alteration && immunity.Immunity);
+            return UnitSo.AlterationImmunity.Exists( immunity => immunity.Alteration == alteration && immunity.Immunity);
         }
 
         public virtual Sprite Sprite
         {
-            get => unitSo.Sprite;
+            get => UnitSo.Sprite;
         }
 
         public int TakeDamage(int damage)

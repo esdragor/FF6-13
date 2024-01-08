@@ -24,7 +24,7 @@ namespace Units
         private bool itemEquippedAccessory1 => Accessory1 != null;
         private bool itemEquippedAccessory2 => Accessory2 != null;
 
-        private PlayerCharactersSO playerCharactersSo => (PlayerCharactersSO)unitSo;
+        private PlayerCharactersSO playerCharactersSo => (PlayerCharactersSO)UnitSo;
         private GrowthRatesSO growthRatesSo;
 
         public PlayerCharacterData(PlayerCharactersSO unitSo, int lvl) : base(unitSo)
@@ -235,7 +235,7 @@ namespace Units
         public override bool IsImmuneTo(Alterations alteration)
         {
             //TODO Check if the unit is immune to the alteration in his equipment
-            return unitSo.AlterationImmunity.Exists(immunity => immunity.Alteration == alteration && immunity.Immunity);
+            return UnitSo.AlterationImmunity.Exists(immunity => immunity.Alteration == alteration && immunity.Immunity);
         }
         
     }

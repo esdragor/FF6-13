@@ -5,7 +5,7 @@ namespace Units
 {
     public class MonsterData : UnitData
     {
-        private MonsterSO monsterSo => (MonsterSO) unitSo;
+        private MonsterSO monsterSo => (MonsterSO) UnitSo;
         
         public MonsterData(UnitSO unitSo) : base(unitSo)
         {
