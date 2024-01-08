@@ -18,5 +18,5 @@ MonoBehaviour:
   <Price>k__BackingField: 1500
   <Sprite>k__BackingField: {fileID: 0}
   <Effects>k__BackingField:
-  - {fileID: 11400000, guid: 47214324494d7884c8c41398d499c222, type: 2}
+  - {fileID: 11400000, guid: 1504e630c2fae7843aa83d5a37228413, type: 2}
   <UsedOutsideCombat>k__BackingField: 0
