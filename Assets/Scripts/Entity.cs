@@ -48,8 +48,6 @@ public abstract class Entity : MonoBehaviour
                 mat.SetFloat(DirectionProperty, 2f);
                 break;
         }
-
-        Debug.Log($"changed to {dir}");
     }
 
     [ContextMenu("ResetMat")]

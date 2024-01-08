@@ -13,6 +13,8 @@ namespace Exploration
             Entity.enabled = false;
             PnjMovement.enabled = true;
             PnjMovement.ResetMat();
+            
+            if (Entity as PlayerEntity) ((PlayerEntity)Entity).ResetWantedPosition();
         }
         
         public void SwitchToPlayerMode()

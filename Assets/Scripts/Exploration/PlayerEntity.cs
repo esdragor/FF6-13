@@ -12,7 +12,7 @@ public class PlayerEntity : Entity
     public PlayerCharactersSO PlayerCharactersSo => (PlayerCharactersSO) SO;
     public PlayerController _playerController { get; private set; }
 
-    [SerializeField] private float cellSize = 1f;
+    [SerializeField] private float cellSize = 0.5f;
     [SerializeField] private float toleranceMoving = 0.8f;
     [SerializeField] private Transform colliderPos;
 
@@ -39,6 +39,10 @@ public class PlayerEntity : Entity
     public void ResetWantedPosition()
     {
         var position = transform.position;
+        position.x = Mathf.Round(position.x / cellSize) * cellSize;
+        position.y = Mathf.Round(position.y / cellSize) * cellSize;
+        
+        transform.position = position;
         wantedPosition = position;
         clampedPosition = position;
         wantedDirection = Vector2.zero;
