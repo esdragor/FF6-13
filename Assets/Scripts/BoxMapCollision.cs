@@ -1,24 +1,28 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BoxMapCollision : MonoBehaviour
 {
-    private PlayerEntity _playerEntity = null;
+    [SerializeField] private Direction direction;
+    
+    public static event Action<Direction> CameraStop;
+    public static event Action<Direction> CameraStart;
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (_playerEntity == null)
-        {
-            _playerEntity = other.gameObject.GetComponent<PlayerEntity>();
-        }
-        if (_playerEntity == null) return;
-        _playerEntity.ResetWantedPosition();
-        _playerEntity.ResetMat();
-        var position = other.transform.position;
-        Vector3 direction = position - transform.position;
-        position += direction.normalized * 0.1f;
-        other.transform.position = position;
+        var player = other.GetComponent<PlayerEntity>();
+        if (player == null) return;
+
+        Debug.Log("Stop camera on " + direction);
+        CameraStop?.Invoke(direction);
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        var player = other.GetComponent<PlayerEntity>();
+        if (player == null) return;
+
+        Debug.Log("Start camera on " + direction);
+        CameraStart?.Invoke(direction);
     }
 }
