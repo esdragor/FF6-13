@@ -196,8 +196,6 @@ public class PlayerEntityOnBattle : PlayerEntity
         ResetValues();
 
         ShowSelector(false);
-
-        //TODO : Update inventory
     }
 
     public void ResetValues()
@@ -221,7 +219,6 @@ public class PlayerEntityOnBattle : PlayerEntity
                     actionsStack.Add(new ActionToStack(action, (int)costAttack, "Attack", target));
                     costOfActionQueue += costAttack * ratioBarre;
                 }
-
                 break;
             case ActionBattle.Attack:
                 if ((NbBarre * ratioBarre) < (costAttack * ratioBarre + costOfActionQueue)) break;
@@ -249,6 +246,7 @@ public class PlayerEntityOnBattle : PlayerEntity
     public void SpendActionBar(float value)
     {
         actionBar -= value;
+        costOfActionQueue -= value;
         if (actionBar < 0)
             actionBar = 0;
         OnActionBarValueChanged?.Invoke(PercentageActionBar);
@@ -261,7 +259,6 @@ public class PlayerEntityOnBattle : PlayerEntity
     {
         currentlyAttacking = true;
         bool success = false;
-
 
         ActionBattle action = actionsStack[0].action;
         int index = actionsStack[0].index;
@@ -321,7 +318,6 @@ public class PlayerEntityOnBattle : PlayerEntity
                 break;
         }
 
-        costOfActionQueue -= cost * ratioBarre;
         OnActonQueueUpdated?.Invoke(actionsStack);
 
         yield return new WaitForSeconds(1.0f); // animation delay between actions
