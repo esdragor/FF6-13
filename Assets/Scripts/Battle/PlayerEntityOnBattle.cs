@@ -293,14 +293,24 @@ public class PlayerEntityOnBattle : PlayerEntity
 
                 break;
             case ActionBattle.Abilities:
-                if (UseSpell((unitData as PlayerCharacterData)?.getAllSpells()[index], target))
+                SpellSO spell = ((PlayerCharacterData)unitData).getAllSpells()[index];
+                if (UseSpell(spell, target))
+                {
                     SpendActionBar(cost * ratioBarre);
+                    BattleManager.ActionLaunched(spell.Name);
+                }
+
                 break;
 
 
             case ActionBattle.Items:
-                if (UseItem(inventory.Items[index].Item, target))
+                UsableItemSo item = inventory.Items[index].Item;
+                if (UseItem(item, target))
+                {
                     SpendActionBar(cost * ratioBarre);
+                    BattleManager.ActionLaunched(item.Name);
+                }
+
                 break;
         }
 
@@ -317,7 +327,6 @@ public class PlayerEntityOnBattle : PlayerEntity
         if (actionBar >= (NbBarre * ratioBarre))
         {
             actionBar = (NbBarre * ratioBarre);
-            //Debug.Log("actionBar is full");
         }
         else
         {
@@ -326,12 +335,8 @@ public class PlayerEntityOnBattle : PlayerEntity
             if (isSelected) OnActionBarChanged?.Invoke(PercentageActionBar);
         }
 
-        //Debug.Log("D: " + actionBar);
         if (costOfActionQueue > 0 && actionBar >= costOfActionQueue && !currentlyAttacking)
         {
-            Debug.Log("Dequeue");
-            Debug.Log("Cost: " + costOfActionQueue);
-            Debug.Log("Action: " + actionBar);
             StartCoroutine(DequeueAction());
         }
     }

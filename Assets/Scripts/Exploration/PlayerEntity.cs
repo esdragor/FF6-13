@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using DG.Tweening;
 using Scriptable_Objects.Unit;
 using Units;
 using UnityEngine;
@@ -21,22 +19,20 @@ public class PlayerEntity : Entity
     private Vector3 clampedPosition;
     private Vector3 wantedPosition;
     private bool moving = false;
-    private static readonly int DirectionProperty = Shader.PropertyToID("_Direction");
     private static readonly int MovingProperty = Shader.PropertyToID("_Moving");
     
     public void InitPlayer(PlayerController controller)
     {
         clampedPosition = transform.position;
         PlayerCharactersSO so = SO as PlayerCharactersSO;
-        if (so != null)
-            unitData = new PlayerCharacterData(so, 1);
+        if (so != null) unitData = new PlayerCharacterData(so, 1);
         _playerController = controller;
 
         moving = false;
 
         AssignSprite();
         
-        PlayerCharactersSo.ApplyMaterialToEntity(_spriteRenderer);
+        mat = PlayerCharactersSo.ApplyMaterialToEntity(_spriteRenderer);
     }
     
     public void ResetWantedPosition()
@@ -132,11 +128,11 @@ public class PlayerEntity : Entity
         
         if (wantedDirection.y < 0)
         {
-            mat.SetFloat(DirectionProperty, 1f);
+            mat.SetFloat(DirectionProperty, 0f);
         }
         else if (wantedDirection.y > 0)
         {
-            mat.SetFloat(DirectionProperty, 0f);
+            mat.SetFloat(DirectionProperty, 1f);
 
             clampedPosition.y += cellSize;
         }
