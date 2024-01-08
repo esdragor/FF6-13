@@ -39,6 +39,7 @@ public class CombatUIDisplayer : MonoBehaviour
       BattleManager.OnCharacterSelected += PlayerEntityOnBattle.TrySelectPlayer;
       BattleManager.OnCharacterSelected += mainActionBarDisplayer.ShowActionBar;
       BattleManager.OnCharacterSelected += combatActionSelectionDisplayer.ShowActionSelector;
+      BattleManager.OnActionWasLaunched += ShowAbilityName;
       BattleManager.OnBattleEnded += Hide;
 
    }
@@ -50,6 +51,7 @@ public class CombatUIDisplayer : MonoBehaviour
       BattleManager.OnCharacterSelected -= PlayerEntityOnBattle.TrySelectPlayer;
       BattleManager.OnCharacterSelected -= combatActionSelectionDisplayer.ShowActionSelector;
       BattleManager.OnBattleEnded -= Hide;
+      BattleManager.OnActionWasLaunched -= ShowAbilityName;
    }
 
    private void Start()
@@ -99,10 +101,17 @@ public class CombatUIDisplayer : MonoBehaviour
       endBattleXPPanel.SetActive(false);
    }
    
+   private IEnumerator HideAbilityNameAfterSeconds(float seconds)
+   {
+      yield return new WaitForSeconds(seconds);
+      HideAbilityName();
+   }
+   
    public void ShowAbilityName(string abilityName)
    {
       abilityNamePanel.SetText(abilityName);
       abilityNamePanel.gameObject.SetActive(true);
+      StartCoroutine(HideAbilityNameAfterSeconds(1f));
    }
    
    public void HideAbilityName()

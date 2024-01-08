@@ -24,6 +24,9 @@ public class BattleManager : MonoBehaviour, InterBattle
     public static event Action<List<PlayerEntityOnBattle>, BattleManager> OnPlayerUpdated;
     public static event Action OnBattleStarted;
     public static event Action OnBattleEnded;
+    
+    public static event Action<string> OnActionWasLaunched;
+    
     public static event Action<int> OnSelectionChanged;
     public static event Action<PlayerEntityOnBattle, PlayerEntityOnBattle> OnCharacterSelected;
     public static event Action<ActionBattle> OnSelectAction;
@@ -78,6 +81,11 @@ public class BattleManager : MonoBehaviour, InterBattle
         {
             //one player is dead
         }
+    }
+    
+    public static void ActionLaunched(string name)
+    {
+        OnActionWasLaunched?.Invoke(name);
     }
 
     private void ActionSelected(ActionBattle action)

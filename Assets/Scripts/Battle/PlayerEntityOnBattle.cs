@@ -293,14 +293,24 @@ public class PlayerEntityOnBattle : PlayerEntity
 
                 break;
             case ActionBattle.Abilities:
-                if (UseSpell((unitData as PlayerCharacterData)?.getAllSpells()[index], target))
+                SpellSO spell = ((PlayerCharacterData)unitData).getAllSpells()[index];
+                if (UseSpell(spell, target))
+                {
                     SpendActionBar(cost * ratioBarre);
+                    BattleManager.ActionLaunched(spell.Name);
+                }
+
                 break;
 
 
             case ActionBattle.Items:
-                if (UseItem(inventory.Items[index].Item, target))
+                UsableItemSo item = inventory.Items[index].Item;
+                if (UseItem(item, target))
+                {
                     SpendActionBar(cost * ratioBarre);
+                    BattleManager.ActionLaunched(item.Name);
+                }
+
                 break;
         }
 
