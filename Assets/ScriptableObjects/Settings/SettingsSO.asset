@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef195eda12d1fe249bef69fd0180f3bf, type: 3}
+  m_Name: SettingsSO
+  m_EditorClassIdentifier: 
+  illustratedActions:
+  - <Sprite>k__BackingField: {fileID: 0}
+    <Action>k__BackingField: {fileID: 6580681994462755119, guid: a3cad61616c55b64f91845ada2f0b4b4,
+      type: 3}
+  - <Sprite>k__BackingField: {fileID: 0}
+    <Action>k__BackingField: {fileID: 6558365613746824423, guid: a3cad61616c55b64f91845ada2f0b4b4,
+      type: 3}
+  - <Sprite>k__BackingField: {fileID: 0}
+    <Action>k__BackingField: {fileID: 1117027741841279110, guid: a3cad61616c55b64f91845ada2f0b4b4,
+      type: 3}
+  - <Sprite>k__BackingField: {fileID: 0}
+    <Action>k__BackingField: {fileID: 3529619617238978322, guid: a3cad61616c55b64f91845ada2f0b4b4,
+      type: 3}
+  - <Sprite>k__BackingField: {fileID: 0}
+    <Action>k__BackingField: {fileID: -2799069246050500006, guid: a3cad61616c55b64f91845ada2f0b4b4,
+      type: 3}
+  - <Sprite>k__BackingField: {fileID: 0}
+    <Action>k__BackingField: {fileID: 3341966038106397831, guid: a3cad61616c55b64f91845ada2f0b4b4,
+      type: 3}
+  - <Sprite>k__BackingField: {fileID: 0}
+    <Action>k__BackingField: {fileID: -833023096686280197, guid: a3cad61616c55b64f91845ada2f0b4b4,
+      type: 3}
+  - <Sprite>k__BackingField: {fileID: 0}
+    <Action>k__BackingField: {fileID: -4508948411964947732, guid: a3cad61616c55b64f91845ada2f0b4b4,
+      type: 3}
+  inputActionAsset: {fileID: -944628639613478452, guid: a3cad61616c55b64f91845ada2f0b4b4,
+    type: 3}
