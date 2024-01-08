@@ -1,0 +1,7057 @@
+fileFormatVersion: 2
+guid: 171f2b8c93162b6459aca69bf408d9bb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 842
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834a23c09e99f644f943640cc56a8ad2
+      internalID: 625562534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab59cb944ed043b49983f0d4db009dfd
+      internalID: 1014982246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e98562ffcc5f54b986e6ff0b6036fe
+      internalID: -2034520424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_3
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150ae3ea285bbfe42a97aa477b5ff7db
+      internalID: 1965632202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcc580066cdb27479d84afeb9f0bc63
+      internalID: -733901324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4acc3746bca704c98757593ae2fb4e
+      internalID: 1876487392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e285de2d297a845bd9b75b46f6fe12
+      internalID: 832656064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_7
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e889da9117d68459ef9629b39d40f4
+      internalID: 1185895529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f425db7e1581fa549afc52a961aefb91
+      internalID: 575627441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353f09c74857848428e610a9da77e40e
+      internalID: 382326204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b47b673cdfd9a4682810d0ada86579
+      internalID: 1313670876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_11
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37db39058a6980d409b42c8b980ac459
+      internalID: 528909198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_12
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be570a55b6b997d47b2e01bd6d208bbc
+      internalID: 1496501233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca353eb62a70c9449b7ecfc24517f1d
+      internalID: -613194140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_14
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 842
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b696bf47fd0664eab646362dd041d8
+      internalID: 1187317592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145330896c795aa47be75d8274ed2551
+      internalID: -2065420257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_16
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8ff7ce45689d94f8abdd66705f767c
+      internalID: -1505763656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_17
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93773ef0b55fae74e89cc150f52febbf
+      internalID: -1509868073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_18
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea3352aa7ab88a4c8b62831c95b52c3
+      internalID: -241794482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_19
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fd7fc7424a2d64f8b27955980faa3a
+      internalID: 2132753609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_20
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66651dc28b41de47b410eb142a9a84c
+      internalID: -1166653767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_21
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedda560baa0b6b4e9990218717b9795
+      internalID: 815802985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_22
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d88022cae6b6414791fb2898d89cb32
+      internalID: -1339873387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_23
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa454210dfc1c04e852eacd41a0d1ba
+      internalID: -1110084836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_24
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b125e3e3e94489e4590a1cc1711b355d
+      internalID: 1174952559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_25
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3899ccf80bcc3348939655a7d8e9fa2
+      internalID: 556269420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_26
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddeeda3123268f4a8c56de0de311317
+      internalID: -1046482387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_27
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 812
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5c09774daace740ab46d630ead0b70
+      internalID: -1843339513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2b5b886cb46c547956ec795585dd3e
+      internalID: 519078679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_29
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6552c63b7bd6cb4193b62b09a3eb38c
+      internalID: 1983483755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42df42d5c80d3ac46b2d13f29bc23db7
+      internalID: 397917647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_31
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffe9eeef210255498818c286e57ea76
+      internalID: 1500888808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_32
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6565929b25951264e8a3ec2f6ad05467
+      internalID: -1383674804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_33
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d6e56db4660be458286cbd4970d422
+      internalID: -1190528511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_34
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd58074bbb89eb46bf47bbf613368a5
+      internalID: 1410046542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_35
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302b0091ff112644a954dbe2ed99fadf
+      internalID: 637484452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_36
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f374d5fee198c64da0f9907a1953750
+      internalID: -1011714497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_37
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847122c542e978e4ca192d6b60712488
+      internalID: 1450077174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_38
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c424a468b78d5f4aababb8870c3cf80
+      internalID: -1197300338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_39
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 782
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9bb85c46add134981c628eaac8c2e3
+      internalID: 1058590193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235b62faab6f88e4daa56d0708d6d50f
+      internalID: -1414499527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_41
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682b5b33928799548846092da460fe25
+      internalID: 1391175389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_42
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b46e735ccec88047acdd44ceb951fda
+      internalID: 885175289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_43
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471daff0921b953478e893bc9c0c6bd4
+      internalID: -618021281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_44
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7dbfea131115b42a6defbdaea7ad97
+      internalID: -1302731236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_45
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76fd9afb028206041a443dd3c677f85d
+      internalID: -986718070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_46
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b216952edac95e4993aa07f8354b7be
+      internalID: 935514756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_47
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e9f228ad89b5842a16055d53bb1199
+      internalID: 48650439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_48
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8c59e6663b91f478216cda59c8b47f
+      internalID: -169823641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_49
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 752
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544278690ca9bfb439a43fce153100bb
+      internalID: 1239414039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 722
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacc3dd4733ae294797f99791411c819
+      internalID: -2006054916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_51
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 722
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d54e2a66c144e4181dbf54ade0ab51
+      internalID: 1349901925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_52
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 722
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577e6541944307d44b6d93572d5d5d13
+      internalID: -2043787602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_53
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 722
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfd2346faa001143b14b4540585e03e
+      internalID: -1380218423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_54
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 722
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b19718f5b079914d88a17f87143551e
+      internalID: -619332601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_55
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 722
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111ab343c8adc754e82ba225457b4fe8
+      internalID: -814607965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_56
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 722
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e8545cf29d54a4eb1cd574e317e9f6
+      internalID: 1501331820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_57
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 722
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e9b4815d9510d4ea8a9a4f76cb87cc
+      internalID: 2009733275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_58
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 692
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642299bc101c1cc43b314eec6d944bd9
+      internalID: -551553690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_59
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 692
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df8060c9c0abdf459ddfcc4d95bc6bf
+      internalID: 1460875092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_60
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 692
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81be25354f22a34582979878d3bab27
+      internalID: -1935157891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_61
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 692
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf6b7da2fba48e49b54d2427607abca
+      internalID: -913418494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_62
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 692
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5418f839a52ef76478e6c8d68bf8b518
+      internalID: -331061504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_63
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 692
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b831ab0b07bc4448e15105a93857f1
+      internalID: 1651869311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_64
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 692
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbff109b9ec0f1a4faffe69b3ed20506
+      internalID: -2139791714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_65
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 662
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9466ef59c3ab847926e46ef44acde6
+      internalID: 1870209448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_66
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 662
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235addd6b93a6204eac324bd0708458c
+      internalID: -298095705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_67
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 662
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f38f10193bacee4eaf65c0ee906af89
+      internalID: -645192880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_68
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 662
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced036494ba8fe3408a5be29a6fd825e
+      internalID: 1622512738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_69
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 662
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd0cbd574ba9fb4ea76a27ae3a753c9
+      internalID: -1533405013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_70
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 662
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bca2aa14e4c4e4c8199a114273ac9c
+      internalID: -1206345678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_71
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 662
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b3b710a50beee47876a94e6ff58119
+      internalID: -876533574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d636725b38eff4ba5d90d0b16b4ad2
+      internalID: 497486285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_73
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66312365ed27e344a8f0321b947dfd0c
+      internalID: 71374651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_74
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3deae9fcd845f4988c009213728db1
+      internalID: 831250863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_75
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f9002c88f799441ab2013c58a67cd2
+      internalID: -124888373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_76
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fd71094f22822489f74b63f1a8655d
+      internalID: 1159339998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_77
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99f3967c7637424f9e603e5473aba82
+      internalID: 997460914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_78
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ec78d9972a17345bb8262b9c31e1e4
+      internalID: 413744032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_79
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faab2888c45b1ad4b94ba94dc2b43be4
+      internalID: -1798145740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_80
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38a66b50f68c604093b1e709f11941a
+      internalID: 1938207503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_81
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ae3a497fe581b4da346897af30fd9a
+      internalID: -188586698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_82
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5caff3eb1e20c1f4cb0c273603ee83f1
+      internalID: 1609807260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_83
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d37ed51fd969d43a0a7cbcdccf1c94
+      internalID: -496615311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_84
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f376af97621010740bc361891830a0c4
+      internalID: -492165588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_85
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77402ce1186d294459552f3478dc5210
+      internalID: -918181332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_86
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 632
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4b5f0099734724988594d5f1283fc8
+      internalID: 135963691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_87
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b7cf0bf36fbf64e837ae5b7c83d38c
+      internalID: 1355454420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_88
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f243340d0e57946a68f80f9e6d5162
+      internalID: -1114997781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_89
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef42891316284f4592f69223145727e
+      internalID: 934874383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_90
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f39595820d972a4d85c85f64e84a941
+      internalID: 1101453308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_91
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7675a94c9b1fb66419e3b7c22b33d961
+      internalID: -519860163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_92
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f70827e3041664db048333111f7636
+      internalID: 2074334229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_93
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eac3f3658b51684bbee6e9b2c672c65
+      internalID: -952506682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_94
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f8c6268c3923c418ca6669994d1067
+      internalID: 1030246384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_95
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca203d30a3399e41b3830922388758e
+      internalID: -1311670391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_96
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f143565bfcaf900488941f62a6a20cb3
+      internalID: -444837314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_97
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3d73ee6b6a5754887acca4aca2101a
+      internalID: -1362331552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_98
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57b5cc84525f974682e5dcb95dbf36a
+      internalID: 1358007007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_99
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1e3f559fbe2c048a5ddad976617b7e
+      internalID: -1193704039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_100
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3515d2d46870c2b4d94f3f038cf5498b
+      internalID: 1554200104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_101
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 602
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe180fc6b2f522d429761f869899aa98
+      internalID: -328476741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14af24835a7d5a40afb1711b5601c4c
+      internalID: 315192210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_103
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a607274e5f45b69439482bbda9c2c802
+      internalID: 211853250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_104
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f33114d9b556548ad1ee1811903d05
+      internalID: -113000209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_105
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6d64efaa9a0d34fa8815ecd9114fff
+      internalID: 621343014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_106
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46b9d8d4cc835b47ba389fddbfb8aa6
+      internalID: -778672293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_107
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d069ad8b6824da048a605841d0c7624b
+      internalID: 2103239618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_108
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a261a70eaed59f94189b9ef82c51c5ce
+      internalID: 1055018711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_109
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3060dbd0af1bb4099e2e7be404ebca
+      internalID: 1846586586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_110
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a9b887dbc3581469e911f1cb21d8a7
+      internalID: 92230389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_111
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9086efdc45c44f4ab3688213fded10c
+      internalID: -533736577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_112
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f415651147cc8dc478bd2e0f6c0ae305
+      internalID: 538966746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_113
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0534c638a0b2741897148ea90f99ee
+      internalID: 2079821839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_114
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18337631a430e234bac0e015c5365b14
+      internalID: 953273772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_115
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5771ab7bd651025459ea25902476f05b
+      internalID: -1410110617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_116
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 572
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4875d256a5e16b14fa53491dafb11d6d
+      internalID: -1735217633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459011cf2b347054e98c71627325f438
+      internalID: 2057364055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_118
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9fdabd5146ba6c478715f4aef7c3e35
+      internalID: -1450863282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_119
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804ad1502e9dd6c4ca466aa26e444c5b
+      internalID: -1702779856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_120
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e06d33a312c2949a023df3b2a0f74c
+      internalID: 1985221960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_121
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad085a1b260cb9e4e81bcf7d6e2f09b8
+      internalID: 900644032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_122
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa4cb618d2596341be88947f3113645
+      internalID: -2131183712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_123
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed6116fe683bee4bbcbff56a5e4d49d
+      internalID: -458946634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_124
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fe9b5979ccb8a4eadef8170d23c76e
+      internalID: -589231468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_125
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b894cd36c37dcf048997f397737baef4
+      internalID: 865187700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_126
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d915f3ebf9a6844b2da9850a2e3b85
+      internalID: 1064757976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_127
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d5bce983fb3b04b9ba8f70013559c2
+      internalID: 579577065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_128
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966b727399eb2ac47b22457f91acfa64
+      internalID: 1010016502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_129
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 542
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69236a9550ebfbd4abb463401dd653e2
+      internalID: 2072204272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cf3a85097b2d543a07dff70f863347
+      internalID: 814592242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_131
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924cd04c92552944d9f589ebbd633855
+      internalID: -1710168442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_132
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbf2172e3eb8784797ef906bc2619c1
+      internalID: 294726725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_133
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6430e4db758c7548b9f6f020fb83973
+      internalID: 926826236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_134
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2e7458aac7af849b2ae709760ced85
+      internalID: 1242185469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_135
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d186876fd6d9b8438563a7d2266f9d8
+      internalID: 1910638297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_136
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef8f5ce4e9654f46b98c0d95ac5fb4e
+      internalID: 1690066924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_137
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0823c88e17478cb4089c1babdbb89aa8
+      internalID: 1644778788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_138
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9f7263d0d457b4a9d2b63866cf8bf3
+      internalID: -110605479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_139
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 512
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d5d178a7195c746805b8b158c0c69d
+      internalID: 260488206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_140
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 482
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63345ece540a2b498949c9ec2d91584
+      internalID: -1089155475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_141
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 482
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8862c41db6c8bbf4aa1f57f63fa7188b
+      internalID: 1579172442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_142
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 482
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23844e937abf1624cb23e319524a404e
+      internalID: 288476756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_143
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 482
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de477064dce51242904c3c4880e43a4
+      internalID: 1854270963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_144
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 482
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6388a000cd5947c4e8411697e3ca60fb
+      internalID: 1850275034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_145
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 482
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83b83a0f868811438ce50e275eb4b4a
+      internalID: 134607876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_146
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 482
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ca439b86f2ecd4497309cf8c694e42
+      internalID: -1985588122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_147
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 452
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29a99d05283c18458d2087349c7197f
+      internalID: 2082829780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_148
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 452
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abd1865b322e4f43a384fa8835dcb3a
+      internalID: 466592027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_149
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 452
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ae80c9c644daf429f55f4b212d27ca
+      internalID: 213638402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_150
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 452
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4206c0884c389664fa85cb13a167e4f9
+      internalID: -900477207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_151
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 452
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56a66dd2914cb9409c4a4a53f7ba12c
+      internalID: 2029710135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_152
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 452
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d83153db6b59c47a98cef30b931aae
+      internalID: -257376989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_153
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 452
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095fcbe2a5667a6479aab7a6349485ee
+      internalID: -1611918638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 30
+        height: 488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a5ad9abad471240bf8f9ecbde24560
+      internalID: -226049009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_155
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2018b52c0f298cc4eab8cbea3feb65dd
+      internalID: -1482783185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_156
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453777607b6ea3d47be9085d7cd3050e
+      internalID: -1074825177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_157
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea653b657c6b424e85223430dd52ec8
+      internalID: 1469849234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_158
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f572002454acaa49810a1521a7671a6
+      internalID: -719437342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_159
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2ffc70e7845414eb395e1155ec2445
+      internalID: 254142134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_160
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816f201c7ba54b14f9a25bf78177bde1
+      internalID: -1008016972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_161
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7952eb727f66ac9449a890fe53695447
+      internalID: 931346285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_162
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce583ab3d6e70c4c8000622a26a0944
+      internalID: -303468016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_163
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899bf236fd450d84fa04b6a4c4f9c35a
+      internalID: -575338168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_164
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f417058a6dce0dc4db3a21b7ac775216
+      internalID: -1088863306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_165
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6da911241adb14ba51659669a3fc01
+      internalID: -729805642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_166
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b0d327ce808c148928beb1595dc725
+      internalID: 448840983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_167
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24345e30be3efb04f9b2303119c5a794
+      internalID: 1246271979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_168
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 422
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f1eeba4325de74b9082f50bf8b6ec8
+      internalID: -1973093008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_169
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a65f05d7b966df4792931229be850ca
+      internalID: 1739341677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_170
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 402
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac67295ade6cdd49ba780a43d632554
+      internalID: -563299969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_171
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4feca183e69e14f9dfe8d79c4b65d8
+      internalID: -1285713016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_172
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f66b35013bee54192858f42274beab
+      internalID: 1128619904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_173
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b03a79143992e4c8d1cf8fdab6040e
+      internalID: 1277564474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_174
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4883244ca76d4594bb67f220f1fc3f63
+      internalID: 1231159286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_175
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0f73fbd1846434bb4c0c8f5fd9bd25
+      internalID: -158198195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_176
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37afc1665978a64191379bdd65d2fdd
+      internalID: -1753004992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_177
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f649a270bf7120144a1eabe976b3704c
+      internalID: -1392988725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_178
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7087ee88ac8410f45b0b31dec903c346
+      internalID: 1843131220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_179
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3a0c3ef89e1744f9d30ac6432abd00
+      internalID: -1742132160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_180
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf86b471ef3a22548aa2204f18227829
+      internalID: -1161977285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_181
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d28f09df70dc734e8da09b9ec942192
+      internalID: -346536697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_182
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b93577875fe3a43be35ae67649185c
+      internalID: 1941637914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_183
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 392
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4890dccba476af5468d9f29df8266042
+      internalID: -354511761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_184
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c02e862046f1e4eba9c111cbf3250f
+      internalID: 2143297498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_185
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7a02a0db28e5f46b3d5ef24cfbf14e
+      internalID: -609486968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_186
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1c9c70519a532468264b822a2af559
+      internalID: 714075042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_187
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaeaa03d184a01e4c83b31634cd98615
+      internalID: 297934603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_188
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2091c48abf2fca4da15e867db8cdf62
+      internalID: 1244032433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_189
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe69d8747903e849a8663f412145376
+      internalID: -500838067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_190
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b4128f6f3d5fb4196009747e9dd3f8
+      internalID: -683271123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_191
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d770c30ceb3fab24483fb233685f8a98
+      internalID: 1564126005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_192
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518c1067c514782468937de5e95f89c7
+      internalID: -2016588099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_193
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c76f819cf9b2b40b17a96979be0d47
+      internalID: 1768807367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_194
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25021f71876a62b42b2ae02a5b3c163a
+      internalID: 925121037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_195
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed34a978c8005c49b7302060825fb93
+      internalID: -786464550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_196
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb282cc07662064c855db478771c636
+      internalID: -504259085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_197
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af20475f39f9b14a8c268438cf72747
+      internalID: -1999576512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_198
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 362
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b69bae28ed86641944b392e6457601
+      internalID: 853403767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_199
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0949564b89e0d84ab95ca9fa60b80fe
+      internalID: 1516872668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_200
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d487c391b2a1d8c43bb36698e13804a1
+      internalID: 214419019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_201
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22eab290b404bfd41a60dfa0e917ff2f
+      internalID: -1119856142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_202
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498eebfc40759f141981f27f582724b0
+      internalID: -2097772328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_203
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b95d8607411d941b5a093ee48de9b1
+      internalID: -1524143806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_204
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1a08cd917cfb941b56530ed13a003c
+      internalID: 1616979789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_205
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae526229606f1fe44a714a9781573410
+      internalID: 1944888936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_206
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfe3cd7f9289854f9c65279dbaac877
+      internalID: 219033855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_207
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0018b1f41fd0a3b44b1be31912b2c0b9
+      internalID: 1101540052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_208
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ffd3359baa35544bff91ab31b95a1f
+      internalID: 514396885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_209
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e257cddf2bfee1e4680d2ed613832ac1
+      internalID: -384483365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_210
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556de8b2c45dc9b4fa72281158ba82df
+      internalID: 933171291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_211
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 332
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b347079df81f934aa97220591b45754
+      internalID: 179898942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_212
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab2af07007944a4bb23a52a3536f5f5
+      internalID: 115513587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_213
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f7039ad8512704d9e27bd4c75661bc
+      internalID: 176385960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_214
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0f659070b760f48b4eebee421bd22d
+      internalID: -1815869807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_215
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578a9917c9ef51f409218f107cb39843
+      internalID: -404020990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_216
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b131ad43f6a79a9418287a3a8101419a
+      internalID: 1657986853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_217
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0ef546df6e0a24ca0f6bd3901c7e82
+      internalID: -1772648675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_218
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae16190f79391a4ea4abaedaf90585c
+      internalID: -218112892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_219
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f88616274e1f234a966547b76435089
+      internalID: 482930287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_220
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb905cc03b94f74e82e4d59b7604466
+      internalID: -1729487395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_221
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 302
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf92e4f9571f4714fb8cb32ccfb292af
+      internalID: -1952350939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_222
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 272
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903304d64bfdc1249b6ba5929bc95aa1
+      internalID: 1068161117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_223
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 272
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c551d59875399743afec120c6ecf1f5
+      internalID: 28018473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_224
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 272
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b601df05cdacfee41af34fc17754d394
+      internalID: -1278577079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_225
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 272
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f46e64d211a474180972545bfca3d7
+      internalID: -340114684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_226
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 272
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64fe1bedc60eeb4295b19e9c7e507df
+      internalID: 1002929089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_227
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 272
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e9196e232d86140b7264224f957e70
+      internalID: -967878397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_228
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 272
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d392af8286faf4cb5eda0b089d7cc5
+      internalID: -2037406070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_229
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 242
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e7244f08e023c44b6d91f305ecad43
+      internalID: 1106097387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_230
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 242
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce774c1822cbde04093a2fd3d4667881
+      internalID: 245500051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_231
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 242
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3d71790f757da46be5a9b6cff2bfe1
+      internalID: -1880620707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_232
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 242
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a652a2fdf1d5e41adf3d26ee246d0a
+      internalID: -798535231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_233
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 242
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6d0ae9f2c731d40b51e218f43e63c5
+      internalID: 2077312189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_234
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 242
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211781771af803d43b8e0b1e1c2bad79
+      internalID: 224682765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_235
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 242
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d40b40d8c2728a4bbf895e7cc4f3d74
+      internalID: 203785062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_236
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 212
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4677a68ca8587444d95f3430e01eb64e
+      internalID: -1572879279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_237
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 212
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b5bd0a3e6137140ad829b30c21713f
+      internalID: 1345264570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_238
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 212
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11baf7bc5f5eb34eae111a1e74a3f16
+      internalID: 1499857720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_239
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 212
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a48ccaef45fb7545a529581b0910552
+      internalID: 281887068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_240
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 212
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92de8ead23330e04e851cc9184dbfed9
+      internalID: -1091288007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_241
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 212
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80b9180d4492ae4893a83cb04e51b8a
+      internalID: 19789850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_242
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 212
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee2386c6d2144f4fb41bb8af76c8725
+      internalID: -1312641015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_243
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d41dceb4d7cdd4ebcbf451a8ae3c56
+      internalID: 1371295280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_244
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bfa2a74118af2d41b55b31c409ba58e
+      internalID: -326913616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_245
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe6d65b348ea33429fe40a4716de1fd
+      internalID: 1268214656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_246
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b956a268182b94680dad19943b1592
+      internalID: -2053981654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_247
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57583c607dfdff4a9ddc4042a296c60
+      internalID: -12958693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_248
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6ee69e092c7a549ba25cd065e7870a
+      internalID: 1115260791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_249
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a28e591e1ffca468a39ed49fcdc255
+      internalID: 1265330123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_250
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5e0305932933f47a0b715c2852f702
+      internalID: -31107807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_251
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094bb4f13acb9e94a99055ce4fe17436
+      internalID: 2100998045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_252
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824513acdb7f1554aa6bbb0c8d1d3d0c
+      internalID: 1207897351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_253
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a41c00d6b62fc45835cace4aef3631
+      internalID: -1379569718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_254
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6668c30ad5f3749b08d283f98895b4
+      internalID: -228692599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_255
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ddc5806d6026945b97ca14e2c61465
+      internalID: -774162789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_256
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef32bd3424e9954a84c315e114322db
+      internalID: -544046831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_257
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 182
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b66d34ad8dd4e4b93d0a7b7d4116f3
+      internalID: -26229607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_258
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb5f187b8481ec4fb2cc0930bdecdfa
+      internalID: -2090342824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_259
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dd2f001eafadc4cbab8f0ac962f6a2
+      internalID: 1595758537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_260
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b3a6e84c18a5042977788b6fc7e682
+      internalID: -2143875814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_261
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5124806e33a1643a5ec059d43e648b
+      internalID: 1033716703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_262
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b4c5135098d8642af6565d1806caa9
+      internalID: 152609133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_263
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1666b17bbed52d7439aeca85ceee6b3a
+      internalID: 1079351509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_264
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d0470481848124fbe8b5a6d794e364
+      internalID: 1891797650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_265
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972b42b6a422b72409c4a97a8ce56a32
+      internalID: 2113364703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_266
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6208365ebe03f8f49bef0e5193da1931
+      internalID: 572418081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_267
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03eff54a3c847a147919fc57637cc381
+      internalID: 685853494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_268
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b89e39054a7e649bf269d7585eaee5
+      internalID: 1937714487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_269
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f64b71cb7c69dc42a7fe5acfd1a9ae8
+      internalID: 1960451275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_270
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 152
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba025b28bb6326a40aa3f2f09f833e27
+      internalID: -1409898195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_271
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f187d85aec6748a4c9a04fe9dd6cb480
+      internalID: -608898628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_272
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d143564d83675644b7757ebf9fa1d8b
+      internalID: -1782117346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_273
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce4b393c3e386e42bde57b90d12a3cb
+      internalID: -996009478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_274
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0e25d11e8337848b76d888d97aca0f
+      internalID: -685181556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_275
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3eb8db0e9e424b4886a021cb6c4c83a
+      internalID: 348917194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_276
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab916fa8ef6c504a83c5b92a49cc38c
+      internalID: 2066008971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_277
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0410d9f71c4229944941761a5f023bfe
+      internalID: 794396080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_278
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc969ef3a57ece4dbec603fa874830b
+      internalID: -236462610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_279
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649c9af93c9b7284e8df46b5323851d1
+      internalID: 1534890776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_280
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4d6e5388c872045b367af03eb7174e
+      internalID: -2025566443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_281
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a4da709b3670747aa88951ff8ceb58
+      internalID: -1254144906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_282
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 122
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b946918e7d3605f4bbbc8badc50e4d4d
+      internalID: -1558515989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_283
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153944af31f1b154095432e7e3ea7452
+      internalID: -1594582704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_284
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064819699a8bd8046999e609794d02c5
+      internalID: -196870064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_285
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47b3aca0e048284b8b17cb6678311a5
+      internalID: 1596319722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_286
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3260522a3e3ba54da81596dba30269a
+      internalID: -422926874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_287
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafecf96afb29db489d6d05a6df85581
+      internalID: -776613789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_288
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6dc5d752063c245be75a7d13ff3de6
+      internalID: 25544736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_289
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110ff45cb663df84ab28b7729e3f9ce7
+      internalID: -1319629603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_290
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10ad1d208c8c0f44bc4638a608052c0
+      internalID: 1046779776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_291
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae60516f683a0d4db0aa77889c2a395
+      internalID: 922668725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_292
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 92
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e4c27c1c63cf242896668df8028b2f
+      internalID: 513895403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_293
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8ed23463b543149a706a60ec4f58e1
+      internalID: -28760677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_294
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3373a0a541f1ab644a7266d1547ab94e
+      internalID: -594585118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_295
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3992c35b9175ccb458794a7798075cfa
+      internalID: 872430206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_296
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891260274a3c1214d8cbaaa3b8ed2c89
+      internalID: -1553300378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_297
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd37c3bc474bf0d43b34836cf7b607c3
+      internalID: 2093517783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_298
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695551a05140a484c9cd9a8655457b9a
+      internalID: -1697247966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_299
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2caab7ddfc0792941870a7ba1af8912f
+      internalID: -1818170767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_300
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410983a2859d62f419fa8ebe0382f10a
+      internalID: -1263284823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_301
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 32
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965ad5496314ea744bf2af585fed8339
+      internalID: -539985822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_302
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 32
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fff156eb0255d2418290fb6a8be8b5e
+      internalID: 1186375354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_303
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 32
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127ae598c3242b246aab7d18b2233e5a
+      internalID: 2049045268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_304
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 32
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf54e0421f181de43944da8d4752f170
+      internalID: 2077225718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_305
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 32
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c110c9255e3348498f8442921e3d814
+      internalID: 989259178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_306
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 32
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce2d4d2f4a53d6439bc885f8a4f33eb
+      internalID: -1419822798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_307
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 32
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89711763df63afd43b73af1ef8516651
+      internalID: -1475627643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_308
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 2
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4072514c73af7c4f84af0cdeb772ba3
+      internalID: 1003476486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_309
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 2
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5811a5f6d3d58b549bb038569b33de18
+      internalID: -1392238776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_310
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 2
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee46fdfe6e21994baa565741ffbcba7
+      internalID: 743799142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_311
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 2
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5344504c3fdb88945bef74127a53adb1
+      internalID: -736294780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_312
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4346d1d3f40fc742a13ca33f6b9bd15
+      internalID: 337764328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_313
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 2
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c50d79c3620162478cddb14bb77b175
+      internalID: -868686015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Final Fantasy 6 - Soldier Vicks Wedge_314
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf233f611e515f49aa74ad908e805df
+      internalID: -735871271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_0: 625562534
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_1: 1014982246
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_10: 1313670876
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_100: 1554200104
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_101: -328476741
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_102: 315192210
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_103: 211853250
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_104: -113000209
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_105: 621343014
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_106: -778672293
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_107: 2103239618
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_108: 1055018711
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_109: 1846586586
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_11: 528909198
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_110: 92230389
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_111: -533736577
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_112: 538966746
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_113: 2079821839
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_114: 953273772
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_115: -1410110617
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_116: -1735217633
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_117: 2057364055
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_118: -1450863282
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_119: -1702779856
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_12: 1496501233
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_120: 1985221960
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_121: 900644032
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_122: -2131183712
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_123: -458946634
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_124: -589231468
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_125: 865187700
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_126: 1064757976
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_127: 579577065
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_128: 1010016502
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_129: 2072204272
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_13: -613194140
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_130: 814592242
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_131: -1710168442
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_132: 294726725
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_133: 926826236
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_134: 1242185469
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_135: 1910638297
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_136: 1690066924
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_137: 1644778788
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_138: -110605479
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_139: 260488206
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_14: 1187317592
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_140: -1089155475
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_141: 1579172442
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_142: 288476756
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_143: 1854270963
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_144: 1850275034
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_145: 134607876
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_146: -1985588122
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_147: 2082829780
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_148: 466592027
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_149: 213638402
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_15: -2065420257
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_150: -900477207
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_151: 2029710135
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_152: -257376989
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_153: -1611918638
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_154: -226049009
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_155: -1482783185
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_156: -1074825177
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_157: 1469849234
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_158: -719437342
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_159: 254142134
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_16: -1505763656
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_160: -1008016972
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_161: 931346285
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_162: -303468016
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_163: -575338168
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_164: -1088863306
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_165: -729805642
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_166: 448840983
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_167: 1246271979
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_168: -1973093008
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_169: 1739341677
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_17: -1509868073
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_170: -563299969
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_171: -1285713016
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_172: 1128619904
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_173: 1277564474
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_174: 1231159286
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_175: -158198195
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_176: -1753004992
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_177: -1392988725
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_178: 1843131220
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_179: -1742132160
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_18: -241794482
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_180: -1161977285
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_181: -346536697
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_182: 1941637914
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_183: -354511761
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_184: 2143297498
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_185: -609486968
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_186: 714075042
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_187: 297934603
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_188: 1244032433
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_189: -500838067
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_19: 2132753609
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_190: -683271123
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_191: 1564126005
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_192: -2016588099
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_193: 1768807367
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_194: 925121037
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_195: -786464550
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_196: -504259085
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_197: -1999576512
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_198: 853403767
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_199: 1516872668
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_2: -2034520424
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_20: -1166653767
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_200: 214419019
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_201: -1119856142
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_202: -2097772328
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_203: -1524143806
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_204: 1616979789
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_205: 1944888936
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_206: 219033855
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_207: 1101540052
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_208: 514396885
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_209: -384483365
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_21: 815802985
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_210: 933171291
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_211: 179898942
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_212: 115513587
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_213: 176385960
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_214: -1815869807
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_215: -404020990
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_216: 1657986853
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_217: -1772648675
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_218: -218112892
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_219: 482930287
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_22: -1339873387
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_220: -1729487395
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_221: -1952350939
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_222: 1068161117
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_223: 28018473
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_224: -1278577079
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_225: -340114684
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_226: 1002929089
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_227: -967878397
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_228: -2037406070
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_229: 1106097387
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_23: -1110084836
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_230: 245500051
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_231: -1880620707
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_232: -798535231
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_233: 2077312189
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_234: 224682765
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_235: 203785062
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_236: -1572879279
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_237: 1345264570
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_238: 1499857720
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_239: 281887068
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_24: 1174952559
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_240: -1091288007
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_241: 19789850
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_242: -1312641015
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_243: 1371295280
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_244: -326913616
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_245: 1268214656
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_246: -2053981654
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_247: -12958693
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_248: 1115260791
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_249: 1265330123
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_25: 556269420
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_250: -31107807
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_251: 2100998045
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_252: 1207897351
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_253: -1379569718
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_254: -228692599
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_255: -774162789
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_256: -544046831
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_257: -26229607
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_258: -2090342824
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_259: 1595758537
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_26: -1046482387
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_260: -2143875814
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_261: 1033716703
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_262: 152609133
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_263: 1079351509
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_264: 1891797650
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_265: 2113364703
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_266: 572418081
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_267: 685853494
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_268: 1937714487
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_269: 1960451275
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_27: -1843339513
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_270: -1409898195
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_271: -608898628
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_272: -1782117346
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_273: -996009478
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_274: -685181556
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_275: 348917194
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_276: 2066008971
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_277: 794396080
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_278: -236462610
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_279: 1534890776
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_28: 519078679
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_280: -2025566443
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_281: -1254144906
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_282: -1558515989
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_283: -1594582704
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_284: -196870064
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_285: 1596319722
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_286: -422926874
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_287: -776613789
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_288: 25544736
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_289: -1319629603
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_29: 1983483755
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_290: 1046779776
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_291: 922668725
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_292: 513895403
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_293: -28760677
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_294: -594585118
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_295: 872430206
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_296: -1553300378
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_297: 2093517783
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_298: -1697247966
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_299: -1818170767
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_3: 1965632202
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_30: 397917647
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_300: -1263284823
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_301: -539985822
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_302: 1186375354
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_303: 2049045268
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_304: 2077225718
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_305: 989259178
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_306: -1419822798
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_307: -1475627643
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_308: 1003476486
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_309: -1392238776
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_31: 1500888808
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_310: 743799142
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_311: -736294780
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_312: 337764328
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_313: -868686015
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_314: -735871271
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_32: -1383674804
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_33: -1190528511
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_34: 1410046542
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_35: 637484452
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_36: -1011714497
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_37: 1450077174
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_38: -1197300338
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_39: 1058590193
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_4: -733901324
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_40: -1414499527
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_41: 1391175389
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_42: 885175289
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_43: -618021281
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_44: -1302731236
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_45: -986718070
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_46: 935514756
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_47: 48650439
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_48: -169823641
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_49: 1239414039
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_5: 1876487392
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_50: -2006054916
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_51: 1349901925
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_52: -2043787602
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_53: -1380218423
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_54: -619332601
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_55: -814607965
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_56: 1501331820
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_57: 2009733275
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_58: -551553690
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_59: 1460875092
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_6: 832656064
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_60: -1935157891
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_61: -913418494
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_62: -331061504
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_63: 1651869311
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_64: -2139791714
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_65: 1870209448
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_66: -298095705
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_67: -645192880
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_68: 1622512738
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_69: -1533405013
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_7: 1185895529
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_70: -1206345678
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_71: -876533574
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_72: 497486285
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_73: 71374651
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_74: 831250863
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_75: -124888373
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_76: 1159339998
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_77: 997460914
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_78: 413744032
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_79: -1798145740
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_8: 575627441
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_80: 1938207503
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_81: -188586698
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_82: 1609807260
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_83: -496615311
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_84: -492165588
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_85: -918181332
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_86: 135963691
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_87: 1355454420
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_88: -1114997781
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_89: 934874383
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_9: 382326204
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_90: 1101453308
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_91: -519860163
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_92: 2074334229
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_93: -952506682
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_94: 1030246384
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_95: -1311670391
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_96: -444837314
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_97: -1362331552
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_98: 1358007007
+      SNES - Final Fantasy 6 - Soldier Vicks Wedge_99: -1193704039
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
