@@ -23,15 +23,15 @@ public class UIIGMenu : MonoBehaviour
     {
         var selectionOptions = new List<UISelectionPanel.SelectionOption>
         {
-            new ("Items", null),
-            new ("Abilities", null),
-            new ("Equip",null),
-            new ("Status",null),
-            new ("Formation",null),
-            new ("Configuration",null),
-            new ("Quick Save",null),
-            new ("Save",null),
-            new ("Back",null)
+            new ("Items", ()=>Debug.Log("Items")),
+            new ("Abilities", ()=>Debug.Log("Abilities")),
+            new ("Equip",()=>Debug.Log("Equip")),
+            new ("Status",()=>Debug.Log("Status")),
+            new ("Formation",()=>Debug.Log("Formation")),
+            new ("Configuration",()=>Debug.Log("Configuration")),
+            new ("Quick Save",()=>Debug.Log("Quick Save")),
+            new ("Save",()=>Debug.Log("Save")),
+            new ("Back",()=>Debug.Log("Back"))
         };
 
         menuSelectionPanel.SetSelectionOptions(selectionOptions);
@@ -56,5 +56,7 @@ public class UIIGMenu : MonoBehaviour
         {
             characterInfoBasic.Change(null);
         }
+        
+        menuSelectionPanel.UIButtons[0].Button.Select();
     }
 }
