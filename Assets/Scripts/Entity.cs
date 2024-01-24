@@ -10,7 +10,7 @@ public abstract class Entity : MonoBehaviour
     public static event Action<Entity> OnEntityDying;
 
     public UnitData unitData;
-    
+
     [SerializeField] protected SpriteRenderer _spriteRenderer;
     [SerializeField] protected GameObject selectorObj;
     [SerializeField] protected Animator _animator;
@@ -37,7 +37,7 @@ public abstract class Entity : MonoBehaviour
         _spriteRenderer.flipX = dir is Direction.Right or Direction.UpRight or Direction.DownRight;
 
         if (mat == null) ResetMat();
-        
+
         switch (dir)
         {
             case Direction.Up:
@@ -55,15 +55,14 @@ public abstract class Entity : MonoBehaviour
     [ContextMenu("ResetMat")]
     public void ResetMat()
     {
-        Debug.Log("Reset mat");
+        //Debug.Log("Reset mat");
         mat = _spriteRenderer.material;
     }
-    
+
     protected abstract void OnDying();
 
     public abstract void OnTakeDamage();
-    
-    
+
 
     public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false,
         bool isPourcentDamage = false)
@@ -88,8 +87,10 @@ public abstract class Entity : MonoBehaviour
             if (transform != null)
                 transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
         }
+
         OnTakeDamage();
-        animDamageCharacter.TakeDamageAnim(damage);
+        if (animDamageCharacter != null)
+            animDamageCharacter.TakeDamageAnim(damage);
         if (unitData.CurrentHp <= 0)
         {
             Debug.Log(unitData.GetName() + " is dead");
@@ -97,8 +98,7 @@ public abstract class Entity : MonoBehaviour
             OnDying();
             return true;
         }
-        
-        
+
 
         return true;
     }
@@ -143,7 +143,7 @@ public abstract class Entity : MonoBehaviour
         _spriteRenderer.sprite = unitData.Sprite;
 
         if (mat != null) return;
-        
+
         Debug.Log("Changing mat");
         mat = new Material(_spriteRenderer.material)
         {
@@ -157,7 +157,7 @@ public abstract class Entity : MonoBehaviour
     {
         Init(true);
     }
-    
+
     public void Init(bool isMonster)
     {
         unitData = (isMonster) ? new MonsterData(SO) : new PlayerCharacterData(SO as PlayerCharactersSO, 1);

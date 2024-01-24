@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Scriptable_Objects.Items;
 using Scriptable_Objects.Unit;
 using Units;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : BattleController
@@ -61,21 +62,13 @@ public class PlayerController : BattleController
     protected override void OnEnable()
     {
         InputManager.OnStartedToTurn += TurnEntity;
-        //InputManager.OnStoppedToTurn += TurnEntity;
         InputManager.OnVectorDIrection += MoveEntity;
-
-        //InputManager.OnMovingX += MoveEntityX;
-        //InputManager.OnMovingY += MoveEntityY;
     }
 
     protected override void OnDisable()
     {
         InputManager.OnStartedToTurn -= TurnEntity;
-        //InputManager.OnStoppedToTurn -= TurnEntity;
         InputManager.OnVectorDIrection -= MoveEntity;
-
-        //InputManager.OnMovingX -= MoveEntityX;
-        //InputManager.OnMovingY -= MoveEntityY;
     }
 
     public new PlayerEntity getEntity()
@@ -87,6 +80,19 @@ public class PlayerController : BattleController
     {
         inventoryItems = new Inventory();
         inventoryItems.AddItems(inventory);
+    }
+    
+    public void UseItemIndexOnEntity(int index, Entity target)
+    {
+        UseItemOnEntity(inventoryItems.Items[index].Item, target);
+    }
+    
+    public void UseItemOnEntity(UsableItemSo item, Entity target)
+    {
+        if (inventoryItems.HasItem(item))
+        {
+            inventoryItems.Use(item, new List<Entity> {target}, entity.unitData);
+        }
     }
     
     public string AddXP(int amount)
@@ -104,5 +110,14 @@ public class PlayerController : BattleController
             }
         }
         return result;
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Debug.Log("Open Inventory");
+           UseItemIndexOnEntity(1, entity);
+        }
     }
 }

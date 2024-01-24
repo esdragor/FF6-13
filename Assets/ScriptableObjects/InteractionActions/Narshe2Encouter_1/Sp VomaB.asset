@@ -15,4 +15,4 @@ MonoBehaviour:
   <UnitToSpawn>k__BackingField: {fileID: 11400000, guid: 608e5ab2747b5c84ca88ac7f14057e5c,
     type: 2}
   <StoreUnitAsId>k__BackingField: VomaB
-  <SpawnPos>k__BackingField: {x: 21, y: 22.5}
+  <SpawnPos>k__BackingField: {x: 17, y: 68.5}
