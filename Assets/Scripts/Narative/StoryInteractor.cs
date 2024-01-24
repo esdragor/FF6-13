@@ -12,6 +12,8 @@ namespace Narative
     {
         public event Action<StoryInteractor, string, bool> DisplayDialogue;
         public event Action HideDialogue;
+        public static event Action<float, bool> FadeToBlack;
+        public static event Action<Vector2, List<Direction>> MoveCameraTO;
 
         [SerializeField] private InteractionSO interactionSo;
         [SerializeField] private bool destroyAfterInteraction = true;
@@ -65,8 +67,10 @@ namespace Narative
             foreach (var interactionAction in interactionActions)
             {
                 if (interactionAction.timeBefore > 0) yield return new WaitForSeconds(interactionAction.timeBefore);
-                ResolveInteraction(interactionAction.interaction);
+                var wait = ResolveInteraction(interactionAction.interaction);
 
+                if (wait > 0) yield return new WaitForSeconds(wait);
+                
                 if (waitForInteractions) yield return new WaitUntil(() => !waitForInteractions);
                 if (interactionAction.timeAfter > 0) yield return new WaitForSeconds(interactionAction.timeAfter);
 
@@ -88,6 +92,9 @@ namespace Narative
             var playerPos = player.transform.position;
             var interactorPos = initialPos.transform.position;
             
+            
+            interactorPos.x = (float) Math.Round(interactorPos.x / cellSize) * cellSize;
+            interactorPos.y = (float) Math.Round(interactorPos.y / cellSize) * cellSize;
 
             List<Direction> dirs = new List<Direction>();
             Vector3 fictivePos = playerPos;
@@ -96,9 +103,13 @@ namespace Narative
             fictivePos.x = (float) Math.Round(fictivePos.x / cellSize) * cellSize;
             fictivePos.y = (float) Math.Round(fictivePos.y / cellSize) * cellSize;
 
+            var safety = 0;
             
-            while (Mathf.Abs(fictivePos.x - interactorPos.x) > 0.01 || Mathf.Abs(fictivePos.y - interactorPos.y) > 0.01)
+            while ((Mathf.Abs(fictivePos.x - interactorPos.x) > 0.01 || Mathf.Abs(fictivePos.y - interactorPos.y) > 0.01) && safety < 10)
             {
+                safety++;
+                Debug.Log($"{fictivePos.x} - {interactorPos.x} = {Mathf.Abs(fictivePos.x - interactorPos.x)} || {fictivePos.y} - {interactorPos.y} = {Mathf.Abs(fictivePos.y - interactorPos.y)}");
+                
                 if (fictivePos.x < interactorPos.x)
                 {
                     dirs.Add(Direction.Right);
@@ -138,9 +149,11 @@ namespace Narative
             }
         }
 
-        private void ResolveInteraction(InteractionActionSO interactionAction)
+        private float ResolveInteraction(InteractionActionSO interactionAction)
         {
             Debug.Log($"Resolve {interactionAction.name}");
+            var wait = 0f;
+            
             switch (interactionAction)
             {
                 case IneractionSpawnSO spawnSO:
@@ -164,7 +177,33 @@ namespace Narative
                 case InteractionTurnSO turnSo:
                     Turn(turnSo);
                     break;
+                case InteractionFadeToBlackSO fadeSo:
+                    wait = fadeSo.FadeDuration;
+                    FadeToBlackAndBack(fadeSo);
+                    break;
+                case InteractionTPSO tpSo:
+                    TP(tpSo);
+                    break;
+                case InteractionTpCamSO tpCamSo:
+                    MoveCameraTO?.Invoke(tpCamSo.TargetPos, tpCamSo.BlockedDirections);
+                    break;
             }
+
+            return wait;
+        }
+
+        private void TP(InteractionTPSO tpSo)
+        {
+            if (tpSo.UnitID is "" || !entities.ContainsKey(tpSo.UnitID)) return;
+
+            entities[tpSo.UnitID].SwitchToPNJMode();
+            entities[tpSo.UnitID].PnjMovement.ClearDirections();
+            entities[tpSo.UnitID].transform.position = tpSo.TargetPos;
+        }
+        
+        private void FadeToBlackAndBack(InteractionFadeToBlackSO fadeSo)
+        {
+            FadeToBlack?.Invoke(fadeSo.FadeDuration, fadeSo.FadeIn);
         }
 
         private void SetCinematic(InteractionSetCinematicSO cinematicSo)

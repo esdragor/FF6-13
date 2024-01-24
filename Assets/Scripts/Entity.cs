@@ -53,7 +53,7 @@ public abstract class Entity : MonoBehaviour
     [ContextMenu("ResetMat")]
     public void ResetMat()
     {
-        Debug.Log("Reset mat");
+        //Debug.Log("Reset mat");
         mat = _spriteRenderer.material;
     }
     
