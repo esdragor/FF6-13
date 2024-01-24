@@ -17,6 +17,8 @@ public abstract class Entity : MonoBehaviour
     [SerializeField] protected BoxCollider2D _boxCollider2D;
     [SerializeField] protected float delayToMove = 1f;
     [field: SerializeField] public UnitSO SO { get; protected set; }
+    [SerializeField] private AnimDamageCharacter animDamageCharacter;
+
 
     public Direction ForwardDirection { get; protected set; } = Direction.None;
 
@@ -60,6 +62,8 @@ public abstract class Entity : MonoBehaviour
     protected abstract void OnDying();
 
     public abstract void OnTakeDamage();
+    
+    
 
     public bool TakeDamage(int damage, Elements element, UnitData attacker, bool ignoreDefence = false,
         bool isPourcentDamage = false)
@@ -85,6 +89,7 @@ public abstract class Entity : MonoBehaviour
                 transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
         }
         OnTakeDamage();
+        animDamageCharacter.TakeDamageAnim(damage);
         if (unitData.CurrentHp <= 0)
         {
             Debug.Log(unitData.GetName() + " is dead");
