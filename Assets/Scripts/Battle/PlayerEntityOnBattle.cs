@@ -79,49 +79,15 @@ public class PlayerEntityOnBattle : PlayerEntity
             Debug.Log("Inventory is null");
             return false;
         }
-
-        if (inventory.HasItem(item) == false)
+        
+        if (!inventory.HasItem(item))
         {
-            Debug.Log("Item not in inventory");
+            Debug.Log("Item not found in inventory");
             return false;
         }
-
-        inventory.RemoveItem(item, 1);
-        Debug.Log($"Use {item.Name} on targets");
-
-        var effects = item.Effects.ToList();
-
-        // Items can't miss, so we can do all effects
-        foreach (var effect in effects)
-        {
-            // Check if the effects possess a ignore immunity
-
-            foreach (var tgt in targets)
-            {
-                switch (effect)
-                {
-                    case AddOrRemoveAlterationSO addOrRemoveAlterationSo:
-                        var ignoreAlteration = effects.Where(e => e is IgnoreAlterationSO).Any(e =>
-                            ((IgnoreAlterationSO)e).Alteration == addOrRemoveAlterationSo.Alteration &&
-                            ((IgnoreAlterationSO)e).IsPositive);
-
-                        tgt.ApplyAlteration(addOrRemoveAlterationSo.Alteration, ignoreAlteration,
-                            addOrRemoveAlterationSo.Remove);
-                        break;
-                    case DamageEffectSO damageEffectSo:
-                        var damage = damageEffectSo.Damage;
-                        var element = damageEffectSo.Element;
-                        var ignoreDefence = effects.Where(e => e is IgnoreBlockEvadeSO)
-                            .Any(e => ((IgnoreBlockEvadeSO)e).IgnoreBlock);
-                        var isPourcentDamage = !damageEffectSo.FlatValue;
-                        tgt.TakeDamage(damage, element, unitData, ignoreDefence, isPourcentDamage);
-                        break;
-                    case MpRegenSO mpRegenSo:
-                        tgt.RegenMpDamage(mpRegenSo.Regen, !mpRegenSo.FlatValue);
-                        break;
-                }
-            }
-        }
+        
+        Inventory.Use(item, targets, unitData);
+        
 
         return true;
     }
@@ -269,6 +235,11 @@ public class PlayerEntityOnBattle : PlayerEntity
         currentlyAttacking = true;
         bool success = false;
 
+        if (actionsStack.Count == 0)
+        {
+            currentlyAttacking = false;
+            yield break;
+        }
         ActionBattle action = actionsStack[0].action;
         int index = actionsStack[0].index;
         List<Entity> target = actionsStack[0].target;
