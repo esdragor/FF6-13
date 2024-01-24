@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Narative;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -24,12 +26,42 @@ public class CameraFollow : MonoBehaviour
     {
         BoxMapCollision.CameraStop += StopCamera;
         BoxMapCollision.CameraStart += StartCamera;
+        
+        StoryInteractor.MoveCameraTO += TPCamTo;
     }
     
     private void OnDisable()
     {
         BoxMapCollision.CameraStop -= StopCamera;
         BoxMapCollision.CameraStart -= StartCamera;
+        
+        StoryInteractor.MoveCameraTO -= TPCamTo;
+    }
+    
+    private void TPCamTo(Vector2 position, List<Direction> directions)
+    {
+        transform.position = new Vector3(position.x, position.y, transform.position.z);
+        
+        foreach (var direction in directions)
+        {
+            switch (direction)
+            {
+                case Direction.Up:
+                    isBlockedUp = true;
+                    break;
+                case Direction.Down:
+                    isBlockedDown = true;
+                    break;
+                case Direction.Left:
+                    isBlockedLeft = true;
+                    break;
+                case Direction.Right:
+                    isBlockedRight = true;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+            }
+        }
     }
     
     private void StopCamera(Direction direction)
@@ -48,8 +80,6 @@ public class CameraFollow : MonoBehaviour
             case Direction.Right:
                 isBlockedRight = true;
                 break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
         }
     }
     
