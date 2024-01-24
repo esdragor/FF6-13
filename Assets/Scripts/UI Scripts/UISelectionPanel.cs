@@ -101,7 +101,7 @@ public class UISelectionPanel : MonoBehaviour
 
     private void Awake()
     {
-        BattleManager.OnStartSelectionUI += ApplyNavigation;
-        BattleManager.OnEndSelectionUI += RemoveNavigation;
+        BattleLoop.OnStartSelectionUI += ApplyNavigation;
+        BattleLoop.OnEndSelectionUI += RemoveNavigation;
     }
 }

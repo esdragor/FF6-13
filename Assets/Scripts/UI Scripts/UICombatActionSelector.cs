@@ -92,7 +92,7 @@ public class UICombatActionSelector : MonoBehaviour
         
         SelectionSpellPanel.gameObject.SetActive(false);
         int indexOfSpell = ((PlayerCharacterData)associatedPlayerEntityOnBattle.unitData).getIndexOfSpell(spell);
-        BattleManager.NeedToSelectSpellTarget(true, indexOfSpell);
+        BattleLoop.NeedToSelectSpellTarget(true, indexOfSpell);
         battleActionSelectionPanel.UIButtons[2].Button.Select();
         Debug.Log($"Selected {spell.Name}");
     }
@@ -104,7 +104,7 @@ public class UICombatActionSelector : MonoBehaviour
         
         SelectionItemPanel.gameObject.SetActive(false);
         int indexOfItem = associatedPlayerEntityOnBattle.Inventory.getIndexOfItem(item);
-        BattleManager.NeedToSelectItemTarget(true, indexOfItem);
+        BattleLoop.NeedToSelectItemTarget(true, indexOfItem);
         battleActionSelectionPanel.UIButtons[3].Button.Select();
         Debug.Log($"Selected {item.Name}");
     }
@@ -143,7 +143,7 @@ public class UICombatActionSelector : MonoBehaviour
     {
         if (SelectionSpellPanel.UIButtons.Count <= 0)
         {
-            BattleManager.AbortSpellSelection();
+            BattleLoop.AbortSpellSelection();
             return;
         }
         battleActionSelectionPanel.gameObject.SetActive(false);

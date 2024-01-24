@@ -14,15 +14,15 @@ public class CombatActionSelectionDisplayer : MonoBehaviour
     private void OnEnable()
     {
         BattleManager.OnCharacterSelected += HideOldSelectorNotCurrent;
-        BattleManager.OnShowSpellList += PrintSpells;
-        BattleManager.OnShowItemList += PrintItems;
+        BattleLoop.OnShowSpellList += PrintSpells;
+        BattleLoop.OnShowItemList += PrintItems;
     }
     
     private void OnDisable()
     {
         BattleManager.OnCharacterSelected -= HideOldSelectorNotCurrent;
-        BattleManager.OnShowSpellList -= PrintSpells;
-        BattleManager.OnShowItemList += PrintItems;
+        BattleLoop.OnShowSpellList -= PrintSpells;
+        BattleLoop.OnShowItemList += PrintItems;
     }
 
     private void Cleanup()
