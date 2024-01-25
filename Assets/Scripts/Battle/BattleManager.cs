@@ -53,7 +53,7 @@ public class BattleManager : MonoBehaviour
     private bool endBattle = false;
     private string LevelUp = "";
     private ActionBattle currentAction = ActionBattle.AutoAttack;
-    private bool debugMode = true;
+    private bool debugMode = false;
     private BattleLoop battleLoop;
 
     private void Awake()
