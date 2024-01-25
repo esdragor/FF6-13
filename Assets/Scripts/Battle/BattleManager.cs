@@ -29,7 +29,7 @@ public class BattleManager : MonoBehaviour
     public static event Action<int> OnSelectionChanged;
     public static event Action<PlayerEntityOnBattle, PlayerEntityOnBattle> OnCharacterSelected;
     public static event Action<string> OnGainXP;
-    
+
     [SerializeField] private MonsterEntity monsterPrefab;
     [SerializeField] private List<MonsterSO> soMonster = new();
     [SerializeField] private List<Transform> monsterPos = new();
@@ -44,7 +44,7 @@ public class BattleManager : MonoBehaviour
     public List<Entity> monstersSpawned { get; private set; } = new();
     private ActionBattle actionIndex = ActionBattle.AutoAttack;
     private PlayerControllerOnBattle playerControllerBattle;
-    public List<PlayerEntityOnBattle> playersOnBattle { get; private set; } = new ();
+    public List<PlayerEntityOnBattle> playersOnBattle { get; private set; } = new();
     private PlayerController playersOnExplore;
 
     static int gilsReward = 0;
@@ -53,14 +53,14 @@ public class BattleManager : MonoBehaviour
     private bool endBattle = false;
     private string LevelUp = "";
     private ActionBattle currentAction = ActionBattle.AutoAttack;
-    private bool debugMode = false;
+    private bool debugMode = true;
     private BattleLoop battleLoop;
 
     private void Awake()
     {
         Entity.OnEntityDying += RemoveEntity;
     }
-    
+
     private void Start()
     {
         battleLoop = new BattleLoop(this);
@@ -75,6 +75,7 @@ public class BattleManager : MonoBehaviour
     {
         if (monstersSpawned.Contains(entity))
         {
+            Destroy(entity.gameObject, 5f);
             monstersSpawned.Remove(entity);
             CheckVictory();
         }
@@ -96,7 +97,7 @@ public class BattleManager : MonoBehaviour
         if (!endBattle) return;
         GetBackToWorld();
     }
-    
+
     public static void ActionLaunched(string name)
     {
         OnActionWasLaunched?.Invoke(name);
@@ -122,7 +123,7 @@ public class BattleManager : MonoBehaviour
         }
 
         backgroundRenderer.sprite = encounterSo.Background;
-        
+
         OnBattleStarted?.Invoke();
 
         UpdatePlayer(playerController);
@@ -134,8 +135,8 @@ public class BattleManager : MonoBehaviour
         exploreCamera.gameObject.SetActive(false);
         combatCamera.gameObject.SetActive(true);
         nbMonster = Random.Range(1, 4);
-        if(debugMode)
-        nbMonster = 1;
+        if (debugMode)
+            nbMonster = 3;
         gilsReward = 0;
         xpReward = 0;
         endBattle = false;
@@ -166,6 +167,7 @@ public class BattleManager : MonoBehaviour
             if (player.unitData.CurrentHp > 0)
                 potentialTarget.Add(player);
         }
+
         if (potentialTarget.Count == 0) return;
         int index = Random.Range(0, potentialTarget.Count);
         monster.Attack(potentialTarget[index]);
@@ -174,7 +176,7 @@ public class BattleManager : MonoBehaviour
     private void ChangeCharacter(float axis)
     {
         var previous = playersOnBattle[battleLoop.indexPlayer];
-        
+
         do
         {
             battleLoop.indexPlayer += (int)axis;
@@ -182,7 +184,8 @@ public class BattleManager : MonoBehaviour
                 battleLoop.indexPlayer = playersOnBattle.Count - 1;
             else if (battleLoop.indexPlayer >= playersOnBattle.Count)
                 battleLoop.indexPlayer = 0;
-        } while (playersOnBattle[battleLoop.indexPlayer].unitData.CurrentHp <= 0 && previous != playersOnBattle[battleLoop.indexPlayer]);
+        } while (playersOnBattle[battleLoop.indexPlayer].unitData.CurrentHp <= 0 &&
+                 previous != playersOnBattle[battleLoop.indexPlayer]);
 
         OnCharacterSelected?.Invoke(previous, playersOnBattle[battleLoop.indexPlayer]);
     }
@@ -194,6 +197,7 @@ public class BattleManager : MonoBehaviour
         {
             playersOnBattle[i].gameObject.SetActive(false);
         }
+
         playerControllerBattle.gameObject.SetActive(false);
         exploreCamera.gameObject.SetActive(true);
         combatCamera.gameObject.SetActive(false);
@@ -201,26 +205,25 @@ public class BattleManager : MonoBehaviour
         playersOnExplore.getEntity().gameObject.SetActive(true);
         GameManager.Instance.GetBackToExplore();
         //HideScore();
-
     }
-    
+
     IEnumerator Victory()
     {
         yield return new WaitForSeconds(1f);
         Debug.Log("Victory");
         endBattle = true;
         OnBattleEnded?.Invoke();
-        
+
         for (int i = 0; i < playersOnBattle.Count; i++)
         {
             playersOnBattle[i].ClearAllActions();
         }
+
         playersOnExplore.AddGils(gilsReward);
         LevelUp = playersOnExplore.AddXP(xpReward);
         OnGainXP?.Invoke(LevelUp);
         playersOnExplore.UpdateInventory(playersOnBattle[0].Inventory);
         playersOnExplore.UpdateTeam();
-        
     }
 
     private void CheckVictory()
@@ -230,7 +233,7 @@ public class BattleManager : MonoBehaviour
             StartCoroutine(Victory());
         }
     }
-    
+
     private bool CheckDefeat()
     {
         bool defeat = true;
@@ -242,42 +245,43 @@ public class BattleManager : MonoBehaviour
                 break;
             }
         }
+
         if (defeat)
         {
             SceneManager.LoadScene(0);
         }
+
         return defeat;
     }
-    
+
     public static void AddXPToLoot(int xp)
     {
         xpReward += xp;
     }
-    
+
     public static void AddGilsToLoot(int gils)
     {
         //add gils to the player
         gilsReward += gils;
     }
-    
+
     public static void AddGilsAndXpToLoot(int gils, int xp)
     {
         AddGilsToLoot(gils);
         AddXPToLoot(xp);
     }
-    
+
     public static void AddItemToLoot(ItemSO item, int quantity)
     {
         //add item to the player
     }
-    
+
     public static void GetLoot(out int gils, out int xp, out List<ItemSO> items)
     {
         gils = gilsReward;
         xp = xpReward;
         items = new List<ItemSO>();
     }
-
 
 
     public static void AbortItemSelection()
@@ -307,6 +311,7 @@ public class BattleManager : MonoBehaviour
                 playersOnBattle[i].InitForBattle(player.inventoryItems);
                 playersOnBattle[i].transform.position = heroPos[i].position;
             }
+
             if (playersOnBattle[battleLoop.indexPlayer].unitData.CurrentHp <= 0) ChangeCharacter(1);
         }
         else

@@ -21,9 +21,11 @@ public class AnimDamageCharacter : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         damageText.text = "";
     }
+
     public void TakeDamageAnim(int damage)
     {
         if (!damageText) return;
-        StartCoroutine(animDamage(damage));
+        if (isActiveAndEnabled)
+            StartCoroutine(animDamage(damage));
     }
 }

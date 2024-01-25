@@ -252,7 +252,7 @@ public class PlayerEntityOnBattle : PlayerEntity
             case ActionBattle.AutoAttack or ActionBattle.Attack:
                 Vector3 targetPos = Vector3.zero;
                 Vector3 originalPos = transform.position;
-                if (target[index] != null)
+                if (target[index] != null && target[index].isActiveAndEnabled)
                 {
                     targetPos = target[index].transform.position;
                 }
