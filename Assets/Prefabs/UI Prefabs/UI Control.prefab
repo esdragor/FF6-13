@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f87bba9bd1afd14089b6757a3abb74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InputActionReference>k__BackingField: {fileID: 0}
   <TextMeshProUGUI>k__BackingField: {fileID: 7711314779611442248}
   <Image>k__BackingField: {fileID: 6504810036204163426}
 --- !u!1 &7036215295098787735
@@ -116,8 +117,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
