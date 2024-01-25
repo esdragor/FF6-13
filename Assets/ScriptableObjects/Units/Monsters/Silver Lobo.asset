@@ -156,10 +156,10 @@ MonoBehaviour:
   characterMaterial: {fileID: -876546973899608171, guid: 3c549ea7ccbb13e42ae2d94561021851,
     type: 3}
   sprite: {fileID: 21300000, guid: cba36b9d32b0d5943bcb12edeb14a2fb, type: 3}
-  spriteSize: {x: 16, y: 20}
+  spriteSize: {x: 17, y: 17}
   spriteSheetSize: {x: 409, y: 996}
-  spriteSheetOffset: {x: 150, y: 470}
-  spriteSheetPadding: {x: 14, y: 10}
+  spriteSheetOffset: {x: 149, y: 472}
+  spriteSheetPadding: {x: 0, y: 0}
   framesPerSecond: 24
   startWithDown: 1
   verticalRead: 1

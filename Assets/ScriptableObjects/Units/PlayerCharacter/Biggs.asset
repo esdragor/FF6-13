@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Biggs
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Biggs
+  <Portrait>k__BackingField: {fileID: 1739827823, guid: 8a153618352a72146b2b68dc812dab32,
+    type: 3}
   <Strength>k__BackingField: 41
   <Agility>k__BackingField: 36
   <Stamina>k__BackingField: 45
@@ -160,6 +162,7 @@ MonoBehaviour:
   spriteSheetSize: {x: 0, y: 0}
   spriteSheetOffset: {x: 0, y: 0}
   spriteSheetPadding: {x: 0, y: 0}
+  framesPerSecond: 24
   startWithDown: 0
   verticalRead: 0
   startIndex: 0

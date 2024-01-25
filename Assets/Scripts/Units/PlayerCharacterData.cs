@@ -242,13 +242,14 @@ namespace Units
         
         public bool GainXp(int amount)
         {
+            bool levelUp = false;
             xp += amount;
-            if (xp >= PlayerCharactersSo.GrowthTable.GrowthRates[Lvl - 1].Xp)
+            while (xp >= PlayerCharactersSo.GrowthTable.GrowthRates[Lvl - 1].Xp)
             {
                 Lvl++;
-                return true;
+                levelUp = true;
             }
-            return false;
+            return levelUp;
         }
         
         public int GetXpToNextLevel()

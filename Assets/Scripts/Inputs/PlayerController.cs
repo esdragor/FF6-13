@@ -10,11 +10,15 @@ using UnityEngine;
 public class PlayerController : BattleController
 {
     public static event Action<Entity> OnPlayerSpawned;
+    public static event Action<List<PlayerEntity>> TeamStatusChanged;
+    
     public Inventory inventoryItems { get; private set; }
 
     [SerializeField] private List<PlayerCharactersSO> companionsSo = new();
 
     private int nbGils = 0;
+
+    private List<PlayerEntity> team = new ();
 
 
     private static Inventory InitInventory(PlayerCharactersSO data)
@@ -38,6 +42,7 @@ public class PlayerController : BattleController
         base.InstantiateEntity();
         OnPlayerSpawned?.Invoke(entity);
         (entity as PlayerEntity)?.InitPlayer(this);
+        team = new List<PlayerEntity>();
 
         GameObject go = new GameObject();
         go.transform.SetParent(transform);
@@ -55,6 +60,9 @@ public class PlayerController : BattleController
             companions.Add(companionEntity);
             inventoryItems.AddItems(InitInventory(companion));
         }
+        team.Add(entity as PlayerEntity);
+        team.AddRange(companions);
+        TeamStatusChanged?.Invoke(team);
 
         go.SetActive(false);
     }
@@ -82,6 +90,11 @@ public class PlayerController : BattleController
         inventoryItems.AddItems(inventory);
     }
     
+    public void UpdateTeam()
+    {
+        TeamStatusChanged?.Invoke(team);
+    }
+    
     public void UseItemIndexOnEntity(int index, Entity target)
     {
         UseItemOnEntity(inventoryItems.Items[index].Item, target);
@@ -98,26 +111,24 @@ public class PlayerController : BattleController
     public string AddXP(int amount)
     {
         string result = "";
-        if (((PlayerCharacterData)entity.unitData).GainXp(amount))
+
+        foreach (var entity in team)
         {
-            result += $"{entity.SO.Name} leveled up to {entity.unitData.Level}\n";
-        }
-        foreach (var companion in companions)
-        {
-            if (((PlayerCharacterData)companion.unitData).GainXp(amount))
+            if (((PlayerCharacterData)entity.unitData).GainXp(amount))
             {
-                result += $"{companion.SO.Name} leveled up to {companion.unitData.Level}\n";
+                result += $"{entity.SO.Name} leveled up to {entity.unitData.Level}\n";
+                entity.unitData.TakeDamage(-entity.unitData.MaxHp);
             }
         }
         return result;
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            Debug.Log("Open Inventory");
-           UseItemIndexOnEntity(1, entity);
-        }
-    }
+    // public void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.I))
+    //     {
+    //         Debug.Log("Open Inventory");
+    //        UseItemIndexOnEntity(1, entity);
+    //     }
+    // }
 }

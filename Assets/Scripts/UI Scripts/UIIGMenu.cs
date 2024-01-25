@@ -1,8 +1,14 @@
+using System;
 using System.Collections.Generic;
+using Units;
 using UnityEngine;
 
 public class UIIGMenu : MonoBehaviour
 {
+    private event Action ItemSelected;
+    
+    public static bool IsOpen = false;
+    
     [SerializeField] private SettingsSO settingsSo;
     [SerializeField] private UISelectionPanel menuSelectionPanel;
     [Space]
@@ -10,6 +16,8 @@ public class UIIGMenu : MonoBehaviour
     [SerializeField] private UITextPair stepsTextPair;
     [SerializeField] private UITextPair gilTextPair;
     [SerializeField] private UITextPair locationTextPair;
+    [SerializeField] private UIPanel EquipPanel;
+    [SerializeField] private UIPanel ControlReminderPanel;
     [Space]
     [SerializeField] private UIRefs uiControlCloseMenu;
     [SerializeField] private UIRefs uiControlFormation;
@@ -17,13 +25,31 @@ public class UIIGMenu : MonoBehaviour
     [SerializeField] private UIRefs uiControlBack;
     [Space]
     [SerializeField] private UICharacterInfoBasic[] uiCharacterInfoBasics;
+    [Space]
+    [SerializeField] private UIPanel ItemPanel;
+    [SerializeField] private UIPanel mainPanel;
+
+    private void Awake()
+    {
+        ItemSelected = () => OpenItemPanel();
+    }
+
+    private void OnEnable()
+    {
+        PlayerController.TeamStatusChanged += UpdateTeamStatus;
+    }
     
-    
+    private void OnDisable()
+    {
+        PlayerController.TeamStatusChanged -= UpdateTeamStatus;
+    }
+
     private void Start()
     {
+        IsOpen = true;
         var selectionOptions = new List<UISelectionPanel.SelectionOption>
         {
-            new ("Items", ()=>Debug.Log("Items")),
+            new ("Items", ()=>ItemSelected?.Invoke()),
             new ("Abilities", ()=>Debug.Log("Abilities")),
             new ("Equip",()=>Debug.Log("Equip")),
             new ("Status",()=>Debug.Log("Status")),
@@ -58,5 +84,63 @@ public class UIIGMenu : MonoBehaviour
         }
         
         menuSelectionPanel.UIButtons[0].Button.Select();
+        
+        InputManager.OnOpenCloseMenu += OnOpenCloseMenu;
+        OnOpenCloseMenu();
+    }
+    
+    private void OnOpenCloseMenu()
+    {
+        if (IsOpen)
+        {
+            menuSelectionPanel.gameObject.SetActive(false);
+            uiControlCloseMenu.gameObject.SetActive(false);
+            uiControlFormation.gameObject.SetActive(false);
+            uiControlConfirm.gameObject.SetActive(false);
+            uiControlBack.gameObject.SetActive(false);
+            gilTextPair.gameObject.transform.parent.gameObject.SetActive(false);
+            EquipPanel.gameObject.SetActive(false);
+            locationTextPair.gameObject.SetActive(false);
+            ControlReminderPanel.gameObject.SetActive(false);
+            mainPanel.gameObject.SetActive(false);
+            ItemPanel.gameObject.SetActive(false);
+            IsOpen = false;
+        }
+        else
+        {
+            menuSelectionPanel.gameObject.SetActive(true);
+            uiControlCloseMenu.gameObject.SetActive(true);
+            uiControlFormation.gameObject.SetActive(true);
+            uiControlConfirm.gameObject.SetActive(true);
+            uiControlBack.gameObject.SetActive(true);
+            gilTextPair.gameObject.transform.parent.gameObject.SetActive(true);
+            locationTextPair.gameObject.SetActive(true);
+            ControlReminderPanel.gameObject.SetActive(true);
+            mainPanel.gameObject.SetActive(true);
+            IsOpen = true;
+            menuSelectionPanel.UIButtons[0].Button.Select();
+        }
+    }
+    
+    private void UpdateTeamStatus(List<PlayerEntity> team)
+    {
+        for (int i = 0; i < uiCharacterInfoBasics.Length; i++)
+        {
+            if (i < team.Count)
+            {
+                uiCharacterInfoBasics[i].Change(team[i].unitData as PlayerCharacterData);
+            }
+            else
+            {
+                uiCharacterInfoBasics[i].Change(null);
+            }
+        }
+    }
+
+    private void OpenItemPanel()
+    {
+        menuSelectionPanel.gameObject.SetActive(false);
+        mainPanel.gameObject.SetActive(false);
+        ItemPanel.gameObject.SetActive(true);
     }
 }

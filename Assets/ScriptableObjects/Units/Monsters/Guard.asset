@@ -155,16 +155,16 @@ MonoBehaviour:
   <ArrowCursorHeight>k__BackingField: 0.6
   characterMaterial: {fileID: -876546973899608171, guid: 3c549ea7ccbb13e42ae2d94561021851,
     type: 3}
-  sprite: {fileID: 21300000, guid: fdac43a3f82f49f4bae6e3c2491cd16c, type: 3}
+  sprite: {fileID: 21300000, guid: 05d2c6f060fa47b45984453f13d36050, type: 3}
   spriteSize: {x: 16, y: 24}
   spriteSheetSize: {x: 450, y: 920}
   spriteSheetOffset: {x: 0, y: 488}
-  spriteSheetPadding: {x: 14, y: 6}
+  spriteSheetPadding: {x: 0, y: 0}
   framesPerSecond: 24
   startWithDown: 1
   verticalRead: 1
   startIndex: 0
-  animationIndexOffset: 3
+  animationIndexOffset: 1
   idleFrame: 0
   framesPerState: 3
   <Level>k__BackingField: 5

@@ -27,6 +27,8 @@ public abstract class ExplorationController : InputController
     
     protected void MoveEntity(Vector2 value)
     {
+        if (UIIGMenu.IsOpen)
+            return;
         var playerEntity = entity as PlayerEntity;
 
         playerEntity.wantedDirection = value;

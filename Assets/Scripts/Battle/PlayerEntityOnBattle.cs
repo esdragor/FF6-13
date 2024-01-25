@@ -48,6 +48,7 @@ public class PlayerEntityOnBattle : PlayerEntity
     private bool currentlyAttacking = false;
     private bool isSelected = false;
     private Inventory inventory;
+    private Coroutine spinRoutine;
 
 
     public Inventory Inventory => inventory;
@@ -57,6 +58,20 @@ public class PlayerEntityOnBattle : PlayerEntity
         actionsStack.Clear();
         costOfActionQueue = 0;
         OnActonQueueUpdated?.Invoke(actionsStack);
+    }
+
+    private void OnEnable()
+    {
+        BattleManager.OnBattleStarted += ExitSpin;
+        BattleManager.OnBattleEnded += Spin2Win;
+        BattleManager.OnBattleExit += ExitSpin;
+    }
+
+    private void OnDisable()
+    {
+        BattleManager.OnBattleStarted -= ExitSpin;
+        BattleManager.OnBattleExit -= ExitSpin;
+        BattleManager.OnBattleEnded -= Spin2Win;
     }
 
     public bool Attack(List<Entity> targets)
@@ -79,15 +94,15 @@ public class PlayerEntityOnBattle : PlayerEntity
             Debug.Log("Inventory is null");
             return false;
         }
-        
+
         if (!inventory.HasItem(item))
         {
             Debug.Log("Item not found in inventory");
             return false;
         }
-        
+
         Inventory.Use(item, targets, unitData);
-        
+
 
         return true;
     }
@@ -162,7 +177,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
         ShowSelector(false);
     }
-    
+
     protected override void OnDying()
     {
         base.OnDying();
@@ -240,6 +255,7 @@ public class PlayerEntityOnBattle : PlayerEntity
             currentlyAttacking = false;
             yield break;
         }
+
         ActionBattle action = actionsStack[0].action;
         int index = actionsStack[0].index;
         List<Entity> target = actionsStack[0].target;
@@ -251,9 +267,15 @@ public class PlayerEntityOnBattle : PlayerEntity
             case ActionBattle.AutoAttack or ActionBattle.Attack:
                 Vector3 targetPos = Vector3.zero;
                 Vector3 originalPos = transform.position;
-                if (target[index] != null)
+                if (target[index] != null && target[index].isActiveAndEnabled)
                 {
                     targetPos = target[index].transform.position;
+                }
+                else
+                {
+                    Debug.Log("Target is null");
+                    SpendActionBar(cost * ratioBarre);
+                    yield return new WaitForSeconds(1f);
                 }
 
                 if (target.Count > 0)
@@ -272,6 +294,7 @@ public class PlayerEntityOnBattle : PlayerEntity
                 else
                 {
                     Debug.Log("No target");
+                    SpendActionBar(cost * ratioBarre);
                     yield return new WaitForSeconds(1f);
                 }
 
@@ -333,5 +356,31 @@ public class PlayerEntityOnBattle : PlayerEntity
     {
         if (previous != null) previous.ShowSelector(false);
         if (current != null) current.ShowSelector(true);
+    }
+
+    private void Spin2Win()
+    {
+        var directions = new []{Direction.Left,Direction.Down,Direction.Right,Direction.Up};
+
+        spinRoutine = StartCoroutine(SpinRoutine());
+        
+        return;
+        
+        IEnumerator SpinRoutine()
+        {
+            foreach (var direction in directions)
+            {
+                Turn(direction);
+                yield return new WaitForSeconds(0.25f);
+            }
+            spinRoutine = StartCoroutine(SpinRoutine());
+        }
+    }
+    
+    private void ExitSpin()
+    {
+        if(spinRoutine == null) return;
+        StopCoroutine(spinRoutine);
+        spinRoutine = null;
     }
 }

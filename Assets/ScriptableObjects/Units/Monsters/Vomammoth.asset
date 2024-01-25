@@ -159,7 +159,7 @@ MonoBehaviour:
   spriteSize: {x: 16, y: 24}
   spriteSheetSize: {x: 409, y: 996}
   spriteSheetOffset: {x: 0, y: 93}
-  spriteSheetPadding: {x: 14, y: 6}
+  spriteSheetPadding: {x: 0, y: 0}
   framesPerSecond: 24
   startWithDown: 1
   verticalRead: 1
