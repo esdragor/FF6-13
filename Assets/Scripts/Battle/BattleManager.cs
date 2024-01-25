@@ -112,13 +112,18 @@ public class BattleManager : MonoBehaviour
         xpReward = 0;
         endBattle = false;
         battleLoop.Reset();
+        int index = 0;
         for (int i = 0; i < nbMonster; i++)
         {
-            MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
-            newMonster.transform.position = monsterPos[i].position;
-            newMonster.Init(encounterSo.MonstersReadOnly[i].Monster, true);
-            newMonster.ResetValue();
-            monstersSpawned.Add(newMonster);
+            for (int j = 0; j < encounterSo.Monsters[i].MonsterCount; j++)
+            {
+                MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
+                newMonster.transform.position = monsterPos[index++].position;
+                newMonster.Init(encounterSo.MonstersReadOnly[i].Monster, true);
+                newMonster.ResetValue();
+                monstersSpawned.Add(newMonster);
+            }
+
         }
 
         backgroundRenderer.sprite = encounterSo.Background;

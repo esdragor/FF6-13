@@ -275,7 +275,10 @@ public class PlayerEntityOnBattle : PlayerEntity
                 {
                     Debug.Log("Target is null");
                     SpendActionBar(cost * ratioBarre);
-                    yield return new WaitForSeconds(1f);
+                    OnActonQueueUpdated?.Invoke(actionsStack);
+                    yield return new WaitForSeconds(1.0f); // animation delay between actions
+                    currentlyAttacking = false;
+                    yield break;
                 }
 
                 if (target.Count > 0)
@@ -295,7 +298,10 @@ public class PlayerEntityOnBattle : PlayerEntity
                 {
                     Debug.Log("No target");
                     SpendActionBar(cost * ratioBarre);
-                    yield return new WaitForSeconds(1f);
+                    OnActonQueueUpdated?.Invoke(actionsStack);
+                    yield return new WaitForSeconds(1.0f); // animation delay between actions
+                    currentlyAttacking = false;
+                    yield break;
                 }
 
                 break;
@@ -322,9 +328,7 @@ public class PlayerEntityOnBattle : PlayerEntity
         }
 
         OnActonQueueUpdated?.Invoke(actionsStack);
-
         yield return new WaitForSeconds(1.0f); // animation delay between actions
-
         currentlyAttacking = false;
     }
 
