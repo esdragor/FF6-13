@@ -18,6 +18,8 @@ public class PlayerController : BattleController
 
     private int nbGils = 0;
 
+    private List<PlayerEntity> team = new ();
+
 
     private static Inventory InitInventory(PlayerCharactersSO data)
     {
@@ -40,6 +42,7 @@ public class PlayerController : BattleController
         base.InstantiateEntity();
         OnPlayerSpawned?.Invoke(entity);
         (entity as PlayerEntity)?.InitPlayer(this);
+        team = new List<PlayerEntity>();
 
         GameObject go = new GameObject();
         go.transform.SetParent(transform);
@@ -57,8 +60,6 @@ public class PlayerController : BattleController
             companions.Add(companionEntity);
             inventoryItems.AddItems(InitInventory(companion));
         }
-        
-        List<PlayerEntity> team = new List<PlayerEntity>();
         team.Add(entity as PlayerEntity);
         team.AddRange(companions);
         TeamStatusChanged?.Invoke(team);
@@ -91,9 +92,6 @@ public class PlayerController : BattleController
     
     public void UpdateTeam()
     {
-        List<PlayerEntity> team = new List<PlayerEntity>();
-        team.Add(entity as PlayerEntity);
-        team.AddRange(companions);
         TeamStatusChanged?.Invoke(team);
     }
     
@@ -113,26 +111,24 @@ public class PlayerController : BattleController
     public string AddXP(int amount)
     {
         string result = "";
-        if (((PlayerCharacterData)entity.unitData).GainXp(amount))
+
+        foreach (var entity in team)
         {
-            result += $"{entity.SO.Name} leveled up to {entity.unitData.Level}\n";
-        }
-        foreach (var companion in companions)
-        {
-            if (((PlayerCharacterData)companion.unitData).GainXp(amount))
+            if (((PlayerCharacterData)entity.unitData).GainXp(amount))
             {
-                result += $"{companion.SO.Name} leveled up to {companion.unitData.Level}\n";
+                result += $"{entity.SO.Name} leveled up to {entity.unitData.Level}\n";
+                entity.unitData.TakeDamage(-entity.unitData.MaxHp);
             }
         }
         return result;
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            Debug.Log("Open Inventory");
-           UseItemIndexOnEntity(1, entity);
-        }
-    }
+    // public void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.I))
+    //     {
+    //         Debug.Log("Open Inventory");
+    //        UseItemIndexOnEntity(1, entity);
+    //     }
+    // }
 }

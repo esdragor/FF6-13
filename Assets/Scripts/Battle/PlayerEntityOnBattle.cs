@@ -79,15 +79,15 @@ public class PlayerEntityOnBattle : PlayerEntity
             Debug.Log("Inventory is null");
             return false;
         }
-        
+
         if (!inventory.HasItem(item))
         {
             Debug.Log("Item not found in inventory");
             return false;
         }
-        
+
         Inventory.Use(item, targets, unitData);
-        
+
 
         return true;
     }
@@ -162,7 +162,7 @@ public class PlayerEntityOnBattle : PlayerEntity
 
         ShowSelector(false);
     }
-    
+
     protected override void OnDying()
     {
         base.OnDying();
@@ -240,6 +240,7 @@ public class PlayerEntityOnBattle : PlayerEntity
             currentlyAttacking = false;
             yield break;
         }
+
         ActionBattle action = actionsStack[0].action;
         int index = actionsStack[0].index;
         List<Entity> target = actionsStack[0].target;
@@ -254,6 +255,12 @@ public class PlayerEntityOnBattle : PlayerEntity
                 if (target[index] != null)
                 {
                     targetPos = target[index].transform.position;
+                }
+                else
+                {
+                    Debug.Log("Target is null");
+                    SpendActionBar(cost * ratioBarre);
+                    yield return new WaitForSeconds(1f);
                 }
 
                 if (target.Count > 0)
@@ -272,6 +279,7 @@ public class PlayerEntityOnBattle : PlayerEntity
                 else
                 {
                     Debug.Log("No target");
+                    SpendActionBar(cost * ratioBarre);
                     yield return new WaitForSeconds(1f);
                 }
 
