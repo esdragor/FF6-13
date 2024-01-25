@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Locke
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Locke
+  <Portrait>k__BackingField: {fileID: -452498444, guid: 69a4a1f4fdf0cad419eb7b23f73a118e,
+    type: 3}
   <Strength>k__BackingField: 37
   <Agility>k__BackingField: 40
   <Stamina>k__BackingField: 31
@@ -160,6 +162,7 @@ MonoBehaviour:
   spriteSheetSize: {x: 0, y: 0}
   spriteSheetOffset: {x: 0, y: 0}
   spriteSheetPadding: {x: 0, y: 0}
+  framesPerSecond: 24
   startWithDown: 0
   verticalRead: 0
   startIndex: 0

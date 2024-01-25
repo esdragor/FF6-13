@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Terra
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Terra
+  <Portrait>k__BackingField: {fileID: -111197817, guid: 437b358477d408940b8cb010cb2b0c1e,
+    type: 3}
   <Strength>k__BackingField: 31
   <Agility>k__BackingField: 33
   <Stamina>k__BackingField: 28

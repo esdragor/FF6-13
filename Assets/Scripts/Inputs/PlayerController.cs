@@ -10,6 +10,8 @@ using UnityEngine;
 public class PlayerController : BattleController
 {
     public static event Action<Entity> OnPlayerSpawned;
+    public static event Action<List<PlayerEntity>> TeamStatusChanged;
+    
     public Inventory inventoryItems { get; private set; }
 
     [SerializeField] private List<PlayerCharactersSO> companionsSo = new();
@@ -55,6 +57,11 @@ public class PlayerController : BattleController
             companions.Add(companionEntity);
             inventoryItems.AddItems(InitInventory(companion));
         }
+        
+        List<PlayerEntity> team = new List<PlayerEntity>();
+        team.Add(entity as PlayerEntity);
+        team.AddRange(companions);
+        TeamStatusChanged?.Invoke(team);
 
         go.SetActive(false);
     }
@@ -80,6 +87,14 @@ public class PlayerController : BattleController
     {
         inventoryItems = new Inventory();
         inventoryItems.AddItems(inventory);
+    }
+    
+    public void UpdateTeam()
+    {
+        List<PlayerEntity> team = new List<PlayerEntity>();
+        team.Add(entity as PlayerEntity);
+        team.AddRange(companions);
+        TeamStatusChanged?.Invoke(team);
     }
     
     public void UseItemIndexOnEntity(int index, Entity target)

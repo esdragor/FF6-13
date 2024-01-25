@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Units;
 using UnityEngine;
 
 public class UIIGMenu : MonoBehaviour
@@ -31,6 +32,16 @@ public class UIIGMenu : MonoBehaviour
     private void Awake()
     {
         ItemSelected = () => OpenItemPanel();
+    }
+
+    private void OnEnable()
+    {
+        PlayerController.TeamStatusChanged += UpdateTeamStatus;
+    }
+    
+    private void OnDisable()
+    {
+        PlayerController.TeamStatusChanged -= UpdateTeamStatus;
     }
 
     private void Start()
@@ -107,6 +118,22 @@ public class UIIGMenu : MonoBehaviour
             ControlReminderPanel.gameObject.SetActive(true);
             mainPanel.gameObject.SetActive(true);
             IsOpen = true;
+            menuSelectionPanel.UIButtons[0].Button.Select();
+        }
+    }
+    
+    private void UpdateTeamStatus(List<PlayerEntity> team)
+    {
+        for (int i = 0; i < uiCharacterInfoBasics.Length; i++)
+        {
+            if (i < team.Count)
+            {
+                uiCharacterInfoBasics[i].Change(team[i].unitData as PlayerCharacterData);
+            }
+            else
+            {
+                uiCharacterInfoBasics[i].Change(null);
+            }
         }
     }
 
