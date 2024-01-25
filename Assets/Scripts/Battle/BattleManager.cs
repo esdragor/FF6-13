@@ -24,7 +24,7 @@ public class BattleManager : MonoBehaviour
     public static event Action<List<PlayerEntityOnBattle>, InterBattle> OnPlayerUpdated;
     public static event Action OnBattleStarted;
     public static event Action OnBattleEnded;
-    public static event Action OnBattleFinished;
+    public static event Action OnBattleExit; //back 2 world
     public static event Action<string> OnActionWasLaunched;
     public static event Action<int> OnSelectionChanged;
     public static event Action<PlayerEntityOnBattle, PlayerEntityOnBattle> OnCharacterSelected;
@@ -141,14 +141,12 @@ public class BattleManager : MonoBehaviour
         for (int i = 0; i < nbMonster; i++)
         {
             Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
-            if (monster != null)
-            {
-                MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
-                newMonster.transform.position = monsterPos[i].position;
-                newMonster.Init(monster, true);
-                newMonster.ResetValue();
-                monstersSpawned.Add(newMonster);
-            }
+            if (monster == null) continue;
+            MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
+            newMonster.transform.position = monsterPos[i].position;
+            newMonster.Init(monster, true);
+            newMonster.ResetValue();
+            monstersSpawned.Add(newMonster);
         }
 
         OnBattleStarted?.Invoke();
@@ -189,7 +187,7 @@ public class BattleManager : MonoBehaviour
 
     private void GetBackToWorld()
     {
-        OnBattleFinished?.Invoke();
+        OnBattleExit?.Invoke();
         for (int i = 0; i < playersOnBattle.Count; i++)
         {
             playersOnBattle[i].gameObject.SetActive(false);
@@ -209,6 +207,7 @@ public class BattleManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Debug.Log("Victory");
         endBattle = true;
+        
         OnBattleEnded?.Invoke();
 
         for (int i = 0; i < playersOnBattle.Count; i++)

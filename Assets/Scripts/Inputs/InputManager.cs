@@ -50,7 +50,6 @@ public class InputManager : MonoBehaviour
         _input.Battle.ChangeCharacter.started += ChangeCharacter;
         OnExploration();
         
-        
         _input.Interaction.SkipText.started += Skip;
     }
 
