@@ -49,11 +49,21 @@ public class InputManager : MonoBehaviour
         _input.Battle.Selection.started += Selection;
         _input.Battle.ChangeCharacter.started += ChangeCharacter;
         OnExploration();
-        PlayerEntity.OnCinematicStarted += OnCinematic;
-        PlayerEntity.OnCinematicEnded += OnEndCinematic;
+        
         
         _input.Interaction.SkipText.started += Skip;
-        
+    }
+
+    private void OnEnable()
+    {
+        PlayerEntity.OnCinematicStarted += OnCinematic;
+        PlayerEntity.OnCinematicEnded += OnEndCinematic;
+    }
+    
+    private void OnDisable()
+    {
+        PlayerEntity.OnCinematicStarted -= OnCinematic;
+        PlayerEntity.OnCinematicEnded -= OnEndCinematic;
     }
 
     public void OnExploration()

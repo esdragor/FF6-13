@@ -47,27 +47,17 @@ public class GameManager : MonoBehaviour
         _battleManager.StartBattle(_player._playerController);
     }
     
-    public void LaunchBattleScripted(List<MonsterSO> monsters)
+    public void LaunchBattleScripted(EncounterSO encounterSo)
     {
         Debug.Log("Battle");
         _state = State.Battle;
         _inputManager.OnBattle();
-        _battleManager.StartBattle(_player._playerController, monsters);
+        _battleManager.StartBattle(_player._playerController, encounterSo);
     }
     
     public void LaunchBattleScriptedEncounter(EncounterSO encounterSo)
     {
-        List<MonsterSO> monsters = new List<MonsterSO>();
-
-        foreach (var monstersSO in encounterSo.Monsters)
-        {
-            for (int i = 0; i < monstersSO.MonsterCount; i++)
-            {
-                monsters.Add(monstersSO.Monster);
-            }
-        }
-        
-        LaunchBattleScripted(monsters);
+        LaunchBattleScripted(encounterSo);
     }
 
     public void GetBackToExplore()

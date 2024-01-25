@@ -10,6 +10,8 @@ namespace Scriptable_Objects.Encounters
     {
         [field:Header("---EncounterSO---")]
         [field:SerializeField] public List<EncounterData> Monsters { get; private set; }
+        public IReadOnlyList<EncounterData> MonstersReadOnly => Monsters;
+        [field:SerializeField] public Sprite Background { get; private set; }
     }
     
     [Serializable] public class EncounterData
