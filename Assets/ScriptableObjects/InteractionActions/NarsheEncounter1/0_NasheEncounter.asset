@@ -16,3 +16,5 @@ MonoBehaviour:
   - <Monster>k__BackingField: {fileID: 11400000, guid: 045a6a410979a274e896d77c59c41224,
       type: 2}
     <MonsterCount>k__BackingField: 1
+  <Background>k__BackingField: {fileID: 1762800985, guid: 1387fe87b32f53945b46c1d22e209b08,
+    type: 3}

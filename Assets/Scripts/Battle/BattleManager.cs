@@ -1,10 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scriptable_Objects.Encounters;
 using Scriptable_Objects.Items;
-using Scriptable_Objects.Spells___Effects;
 using Scriptable_Objects.Unit;
-using Units;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -37,6 +36,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private List<Transform> heroPos = new();
     [SerializeField] private Camera exploreCamera;
     [SerializeField] private Camera combatCamera;
+    [SerializeField] private SpriteRenderer backgroundRenderer;
     [SerializeField] private PlayerControllerOnBattle playerBattlePrefab;
 
     private int nbMonster = 0;
@@ -102,12 +102,12 @@ public class BattleManager : MonoBehaviour
         OnActionWasLaunched?.Invoke(name);
     }
 
-    public void StartBattle(PlayerController playerController, List<MonsterSO> monsters)
+    public void StartBattle(PlayerController playerController, EncounterSO encounterSo)
     {
         //UIBattle.SetActive(true);
         exploreCamera.gameObject.SetActive(false);
         combatCamera.gameObject.SetActive(true);
-        nbMonster = monsters.Count;
+        nbMonster = encounterSo.MonstersReadOnly.Count;
         gilsReward = 0;
         xpReward = 0;
         endBattle = false;
@@ -116,11 +116,13 @@ public class BattleManager : MonoBehaviour
         {
             MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
             newMonster.transform.position = monsterPos[i].position;
-            newMonster.Init(monsters[i], true);
+            newMonster.Init(encounterSo.MonstersReadOnly[i].Monster, true);
             newMonster.ResetValue();
             monstersSpawned.Add(newMonster);
         }
 
+        backgroundRenderer.sprite = encounterSo.Background;
+        
         OnBattleStarted?.Invoke();
 
         UpdatePlayer(playerController);
