@@ -62,6 +62,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenCloseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""1705c37b-1230-4d02-b963-58fbb85c9d74"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -293,6 +302,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Sheme"",
                     ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f3e7e662-aa3b-4266-ad92-a6fa89aa3ec9"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenCloseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f928f189-14a6-4bf8-a162-49b66cc45ebe"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenCloseMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -616,6 +647,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Exploration_Talk = m_Exploration.FindAction("Talk", throwIfNotFound: true);
         m_Exploration_Cancel = m_Exploration.FindAction("Cancel", throwIfNotFound: true);
         m_Exploration_Select = m_Exploration.FindAction("Select", throwIfNotFound: true);
+        m_Exploration_OpenCloseMenu = m_Exploration.FindAction("OpenCloseMenu", throwIfNotFound: true);
         // Battle
         m_Battle = asset.FindActionMap("Battle", throwIfNotFound: true);
         m_Battle_Selection = m_Battle.FindAction("Selection", throwIfNotFound: true);
@@ -690,6 +722,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Exploration_Talk;
     private readonly InputAction m_Exploration_Cancel;
     private readonly InputAction m_Exploration_Select;
+    private readonly InputAction m_Exploration_OpenCloseMenu;
     public struct ExplorationActions
     {
         private @Controls m_Wrapper;
@@ -698,6 +731,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Talk => m_Wrapper.m_Exploration_Talk;
         public InputAction @Cancel => m_Wrapper.m_Exploration_Cancel;
         public InputAction @Select => m_Wrapper.m_Exploration_Select;
+        public InputAction @OpenCloseMenu => m_Wrapper.m_Exploration_OpenCloseMenu;
         public InputActionMap Get() { return m_Wrapper.m_Exploration; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -719,6 +753,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Select.started += instance.OnSelect;
             @Select.performed += instance.OnSelect;
             @Select.canceled += instance.OnSelect;
+            @OpenCloseMenu.started += instance.OnOpenCloseMenu;
+            @OpenCloseMenu.performed += instance.OnOpenCloseMenu;
+            @OpenCloseMenu.canceled += instance.OnOpenCloseMenu;
         }
 
         private void UnregisterCallbacks(IExplorationActions instance)
@@ -735,6 +772,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Select.started -= instance.OnSelect;
             @Select.performed -= instance.OnSelect;
             @Select.canceled -= instance.OnSelect;
+            @OpenCloseMenu.started -= instance.OnOpenCloseMenu;
+            @OpenCloseMenu.performed -= instance.OnOpenCloseMenu;
+            @OpenCloseMenu.canceled -= instance.OnOpenCloseMenu;
         }
 
         public void RemoveCallbacks(IExplorationActions instance)
@@ -883,6 +923,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnTalk(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
+        void OnOpenCloseMenu(InputAction.CallbackContext context);
     }
     public interface IBattleActions
     {

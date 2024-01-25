@@ -204,7 +204,7 @@ public class BattleManager : MonoBehaviour
 
     }
     
-    IEnumerator Victory() // changer par l'ecran de victoire
+    IEnumerator Victory()
     {
         yield return new WaitForSeconds(1f);
         Debug.Log("Victory");
@@ -219,6 +219,8 @@ public class BattleManager : MonoBehaviour
         LevelUp = playersOnExplore.AddXP(xpReward);
         OnGainXP?.Invoke(LevelUp);
         playersOnExplore.UpdateInventory(playersOnBattle[0].Inventory);
+        playersOnExplore.UpdateTeam();
+        
     }
 
     private void CheckVictory()
