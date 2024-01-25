@@ -222,7 +222,12 @@ namespace Narative
             inBattle = true;
             GameManager.Instance.LaunchBattleScriptedEncounter(battleSo.Encounter);
 
-            BattleManager.OnBattleEnded += ContinueAfterBattle;
+            BattleManager.OnBattleExit += ContinueAfterBattle;
+        }
+
+        private void OnDisable()
+        {
+            BattleManager.OnBattleExit -= ContinueAfterBattle;
         }
 
         private void Spawn(IneractionSpawnSO spawnSO)
@@ -263,7 +268,7 @@ namespace Narative
         {
             waitForInteractions = false;
             inBattle = false;
-            BattleManager.OnBattleEnded -= ContinueAfterBattle;
+            BattleManager.OnBattleExit -= ContinueAfterBattle;
         }
 
         private void Destroy(InteractionDestroySO destroySo)

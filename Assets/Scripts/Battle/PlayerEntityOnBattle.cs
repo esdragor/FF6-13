@@ -48,6 +48,7 @@ public class PlayerEntityOnBattle : PlayerEntity
     private bool currentlyAttacking = false;
     private bool isSelected = false;
     private Inventory inventory;
+    private Coroutine spinRoutine;
 
 
     public Inventory Inventory => inventory;
@@ -57,6 +58,20 @@ public class PlayerEntityOnBattle : PlayerEntity
         actionsStack.Clear();
         costOfActionQueue = 0;
         OnActonQueueUpdated?.Invoke(actionsStack);
+    }
+
+    private void OnEnable()
+    {
+        BattleManager.OnBattleStarted += ExitSpin;
+        BattleManager.OnBattleEnded += Spin2Win;
+        BattleManager.OnBattleExit += ExitSpin;
+    }
+
+    private void OnDisable()
+    {
+        BattleManager.OnBattleStarted -= ExitSpin;
+        BattleManager.OnBattleExit -= ExitSpin;
+        BattleManager.OnBattleEnded -= Spin2Win;
     }
 
     public bool Attack(List<Entity> targets)
@@ -341,5 +356,31 @@ public class PlayerEntityOnBattle : PlayerEntity
     {
         if (previous != null) previous.ShowSelector(false);
         if (current != null) current.ShowSelector(true);
+    }
+
+    private void Spin2Win()
+    {
+        var directions = new []{Direction.Left,Direction.Down,Direction.Right,Direction.Up};
+
+        spinRoutine = StartCoroutine(SpinRoutine());
+        
+        return;
+        
+        IEnumerator SpinRoutine()
+        {
+            foreach (var direction in directions)
+            {
+                Turn(direction);
+                yield return new WaitForSeconds(0.25f);
+            }
+            spinRoutine = StartCoroutine(SpinRoutine());
+        }
+    }
+    
+    private void ExitSpin()
+    {
+        if(spinRoutine == null) return;
+        StopCoroutine(spinRoutine);
+        spinRoutine = null;
     }
 }

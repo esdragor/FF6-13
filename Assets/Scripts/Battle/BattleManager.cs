@@ -24,7 +24,7 @@ public class BattleManager : MonoBehaviour
     public static event Action<List<PlayerEntityOnBattle>, InterBattle> OnPlayerUpdated;
     public static event Action OnBattleStarted;
     public static event Action OnBattleEnded;
-    public static event Action OnBattleFinished;
+    public static event Action OnBattleExit; //back 2 world
     public static event Action<string> OnActionWasLaunched;
     public static event Action<int> OnSelectionChanged;
     public static event Action<PlayerEntityOnBattle, PlayerEntityOnBattle> OnCharacterSelected;
@@ -53,7 +53,7 @@ public class BattleManager : MonoBehaviour
     private bool endBattle = false;
     private string LevelUp = "";
     private ActionBattle currentAction = ActionBattle.AutoAttack;
-    private bool debugMode = true;
+    private bool debugMode = false;
     private BattleLoop battleLoop;
 
     private void Awake()
@@ -135,8 +135,7 @@ public class BattleManager : MonoBehaviour
         exploreCamera.gameObject.SetActive(false);
         combatCamera.gameObject.SetActive(true);
         nbMonster = Random.Range(1, 4);
-        if (debugMode)
-            nbMonster = 3;
+        if (debugMode) nbMonster = 3;
         gilsReward = 0;
         xpReward = 0;
         endBattle = false;
@@ -144,14 +143,12 @@ public class BattleManager : MonoBehaviour
         for (int i = 0; i < nbMonster; i++)
         {
             Monsters.TryGetValue(soMonster[Random.Range(0, soMonster.Count)].name, out var monster);
-            if (monster != null)
-            {
-                MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
-                newMonster.transform.position = monsterPos[i].position;
-                newMonster.Init(monster, true);
-                newMonster.ResetValue();
-                monstersSpawned.Add(newMonster);
-            }
+            if (monster == null) continue;
+            MonsterEntity newMonster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity);
+            newMonster.transform.position = monsterPos[i].position;
+            newMonster.Init(monster, true);
+            newMonster.ResetValue();
+            monstersSpawned.Add(newMonster);
         }
 
         OnBattleStarted?.Invoke();
@@ -192,7 +189,7 @@ public class BattleManager : MonoBehaviour
 
     private void GetBackToWorld()
     {
-        OnBattleFinished?.Invoke();
+        OnBattleExit?.Invoke();
         for (int i = 0; i < playersOnBattle.Count; i++)
         {
             playersOnBattle[i].gameObject.SetActive(false);
@@ -212,6 +209,7 @@ public class BattleManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Debug.Log("Victory");
         endBattle = true;
+        
         OnBattleEnded?.Invoke();
 
         for (int i = 0; i < playersOnBattle.Count; i++)

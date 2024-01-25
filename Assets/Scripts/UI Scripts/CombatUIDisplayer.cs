@@ -47,7 +47,7 @@ public class CombatUIDisplayer : MonoBehaviour
         BattleManager.OnActionWasLaunched += ShowAbilityName;
         BattleManager.OnBattleEnded += Hide;
         BattleManager.OnBattleEnded += ShowEndPanel;
-        BattleManager.OnBattleFinished += Hide;
+        BattleManager.OnBattleExit += Hide;
         BattleManager.OnGainXP += UpdateLevelUp;
     }
 
@@ -60,7 +60,7 @@ public class CombatUIDisplayer : MonoBehaviour
         BattleManager.OnBattleEnded -= Hide;
         BattleManager.OnActionWasLaunched -= ShowAbilityName;
         BattleManager.OnBattleEnded -= ShowEndPanel;
-        BattleManager.OnBattleFinished -= Hide;
+        BattleManager.OnBattleExit -= Hide;
         BattleManager.OnGainXP -= UpdateLevelUp;
         UnitData.OnCurrentHpUpdated -= UpdateCharactersInfo;
 
