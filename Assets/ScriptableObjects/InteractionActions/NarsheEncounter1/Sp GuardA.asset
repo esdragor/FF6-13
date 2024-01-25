@@ -15,4 +15,4 @@ MonoBehaviour:
   <UnitToSpawn>k__BackingField: {fileID: 11400000, guid: 283d1bda70651a34fadf665e49c02a1c,
     type: 2}
   <StoreUnitAsId>k__BackingField: GuardA
-  <SpawnPos>k__BackingField: {x: 25.5, y: 20}
+  <SpawnPos>k__BackingField: {x: 25.5, y: 20.5}
