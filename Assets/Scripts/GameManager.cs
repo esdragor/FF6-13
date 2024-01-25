@@ -86,16 +86,16 @@ public class GameManager : MonoBehaviour
         GetBackToExplore();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            LaunchBattleRandom();
-            
-            // _state = State.Battle;
-            // _inputManager.OnBattle();
-            // _battleManager.UpdatePlayer(_player._playerController);
-            // _battleManager.StartBattle();
-        }
-    }
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Space))
+    //     {
+    //         LaunchBattleRandom();
+    //         
+    //         // _state = State.Battle;
+    //         // _inputManager.OnBattle();
+    //         // _battleManager.UpdatePlayer(_player._playerController);
+    //         // _battleManager.StartBattle();
+    //     }
+    // }
 }

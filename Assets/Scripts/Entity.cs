@@ -84,7 +84,7 @@ public abstract class Entity : MonoBehaviour
         unitData.TakeDamage(damage);
         if (element == Elements.Physical)
         {
-            if (transform != null)
+            if (transform != null && isActiveAndEnabled)
                 transform.DOShakePosition(0.3f, 0.3f, 10, 90f, false, true);
         }
 

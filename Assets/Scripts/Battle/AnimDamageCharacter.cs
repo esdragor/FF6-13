@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -20,6 +18,12 @@ public class AnimDamageCharacter : MonoBehaviour
         damageText.rectTransform.DOShakePosition(0.5f, 0.1f);
         yield return new WaitForSeconds(0.5f);
         damageText.text = "";
+    }
+
+    private void OnDestroy()
+    {
+        damageText.rectTransform.DOComplete();
+        damageText.rectTransform.DOKill();
     }
 
     public void TakeDamageAnim(int damage)

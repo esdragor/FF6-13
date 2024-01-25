@@ -11120,11 +11120,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6235673231748415630, guid: 7618f180610406b4faaecf6846dcc14a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1008.68
-      objectReference: {fileID: 0}
     - target: {fileID: 7017575910847954814, guid: 7618f180610406b4faaecf6846dcc14a,
         type: 3}
       propertyPath: m_LocalPosition.x

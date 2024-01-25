@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Scriptable_Objects.Unit;
 using UnityEngine;
 
@@ -59,7 +60,9 @@ public class MonsterEntity : Entity
     {
         //add here XP and gold
         BattleManager.AddGilsAndXpToLoot(((MonsterSO)SO).GilReward , ((MonsterSO)SO).XpReward);
-        gameObject.SetActive(false);
+        transform.DOComplete();
+        transform.DOKill();
+        Destroy(gameObject, 0.1f);
     }
 
     public override void OnTakeDamage()

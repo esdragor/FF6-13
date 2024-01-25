@@ -11,14 +11,14 @@ public class PlayerController : BattleController
 {
     public static event Action<Entity> OnPlayerSpawned;
     public static event Action<List<PlayerEntity>> TeamStatusChanged;
-    
+
     public Inventory inventoryItems { get; private set; }
 
     [SerializeField] private List<PlayerCharactersSO> companionsSo = new();
 
     private int nbGils = 0;
 
-    private List<PlayerEntity> team = new ();
+    private List<PlayerEntity> team = new();
 
 
     private static Inventory InitInventory(PlayerCharactersSO data)
@@ -60,6 +60,7 @@ public class PlayerController : BattleController
             companions.Add(companionEntity);
             inventoryItems.AddItems(InitInventory(companion));
         }
+
         team.Add(entity as PlayerEntity);
         team.AddRange(companions);
         TeamStatusChanged?.Invoke(team);
@@ -89,25 +90,25 @@ public class PlayerController : BattleController
         inventoryItems = new Inventory();
         inventoryItems.AddItems(inventory);
     }
-    
+
     public void UpdateTeam()
     {
         TeamStatusChanged?.Invoke(team);
     }
-    
+
     public void UseItemIndexOnEntity(int index, Entity target)
     {
         UseItemOnEntity(inventoryItems.Items[index].Item, target);
     }
-    
+
     public void UseItemOnEntity(UsableItemSo item, Entity target)
     {
         if (inventoryItems.HasItem(item))
         {
-            inventoryItems.Use(item, new List<Entity> {target}, entity.unitData);
+            inventoryItems.Use(item, new List<Entity> { target }, entity.unitData);
         }
     }
-    
+
     public string AddXP(int amount)
     {
         string result = "";
@@ -117,9 +118,11 @@ public class PlayerController : BattleController
             if (((PlayerCharacterData)entity.unitData).GainXp(amount))
             {
                 result += $"{entity.SO.Name} leveled up to {entity.unitData.Level}\n";
-                entity.unitData.TakeDamage(-entity.unitData.MaxHp);
+                if (entity.unitData.CurrentHp > 0)
+                    entity.unitData.TakeDamage(-entity.unitData.MaxHp);
             }
         }
+
         return result;
     }
 

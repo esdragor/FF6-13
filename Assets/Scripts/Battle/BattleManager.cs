@@ -53,7 +53,6 @@ public class BattleManager : MonoBehaviour
     private bool endBattle = false;
     private string LevelUp = "";
     private ActionBattle currentAction = ActionBattle.AutoAttack;
-    private bool debugMode = false;
     private BattleLoop battleLoop;
 
     private void Awake()
@@ -75,7 +74,7 @@ public class BattleManager : MonoBehaviour
     {
         if (monstersSpawned.Contains(entity))
         {
-            Destroy(entity.gameObject, 5f);
+            //Destroy(entity.gameObject, 5f);
             monstersSpawned.Remove(entity);
             CheckVictory();
         }
@@ -135,8 +134,6 @@ public class BattleManager : MonoBehaviour
         exploreCamera.gameObject.SetActive(false);
         combatCamera.gameObject.SetActive(true);
         nbMonster = Random.Range(1, 4);
-        if (debugMode)
-            nbMonster = 3;
         gilsReward = 0;
         xpReward = 0;
         endBattle = false;
