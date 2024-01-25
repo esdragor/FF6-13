@@ -26,8 +26,8 @@ public class InputManager : MonoBehaviour
     public static event Action OnSelect;
     public static event Action<Direction> OnSelection;
     public static event Action OnCancel;
-    
     public static event Action OnTalk;
+    public static event Action OnOpenCloseMenu;
 
     public static event Action SkipText;
 
@@ -42,6 +42,7 @@ public class InputManager : MonoBehaviour
         _input.Exploration.Turn.canceled += Turn;
         _input.Exploration.Turn.canceled += Move;
         _input.Exploration.Talk.started += Talk;
+        _input.Exploration.OpenCloseMenu.started += OpenCloseMenu;
 
         _input.Battle.Select.started += Select;
         _input.Battle.Cancel.started += Cancel;
@@ -92,6 +93,11 @@ public class InputManager : MonoBehaviour
     private void Talk(InputAction.CallbackContext obj)
     {
         OnTalk?.Invoke();
+    }
+    
+    private void OpenCloseMenu(InputAction.CallbackContext obj)
+    {
+        OnOpenCloseMenu?.Invoke();
     }
     
     private void Skip(InputAction.CallbackContext cbc)
