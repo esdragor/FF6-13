@@ -572,7 +572,7 @@ MonoBehaviour:
   - {fileID: 6235673231748415630}
   exploreCamera: {fileID: 0}
   combatCamera: {fileID: 0}
-  backgroundRenderer: {fileID: 0}
+  backgroundRenderer: {fileID: 4737613679590487599}
   playerBattlePrefab: {fileID: -7508613938992618098, guid: b364bd199fab1c14290104f0220085b0,
     type: 3}
 --- !u!1 &4067916171792693924
