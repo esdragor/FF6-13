@@ -37,8 +37,8 @@ MonoBehaviour:
   framesPerSecond: 24
   startWithDown: 1
   verticalRead: 1
-  startIndex: 0
-  animationIndexOffset: 3
+  startIndex: 1
+  animationIndexOffset: 1
   idleFrame: 0
   framesPerState: 3
   <Level>k__BackingField: 0

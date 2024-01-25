@@ -10,8 +10,8 @@ namespace Narative
 {
     public class StoryInteractor : MonoBehaviour, Interactor
     {
-        public event Action<StoryInteractor, string, bool> DisplayDialogue;
-        public event Action HideDialogue;
+        public static event Action<StoryInteractor, string, bool> DisplayDialogue;
+        public static event Action HideDialogue;
         public static event Action<float, bool> FadeToBlack;
         public static event Action<Vector2, List<Direction>> MoveCameraTO;
 

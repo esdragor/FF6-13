@@ -11,8 +11,6 @@ namespace UI_Scripts
         [SerializeField] private UISelectionPanel uiSelectionPanel;
         [SerializeField] private ReadJsonNara jsonNara;
         [Space]
-        [SerializeField] private List<StoryInteractor> storyInteractors;
-        [Space]
         [SerializeField] private CanvasGroup fadeToBlackCanvasGroup;
         [SerializeField] private GameObject fadeToBlackPanel;
 
@@ -29,21 +27,15 @@ namespace UI_Scripts
         
         private void OnEnable()
         {
-            foreach (var storyInteractor in storyInteractors)
-            {
-                storyInteractor.DisplayDialogue += DisplayDialogue;
-                storyInteractor.HideDialogue += HideDialogues;
-            }
+            StoryInteractor.DisplayDialogue += DisplayDialogue; 
+            StoryInteractor.HideDialogue += HideDialogues;
             StoryInteractor.FadeToBlack += FadeToBlack;
         }
 
         private void OnDisable()
         {
-            foreach (var storyInteractor in storyInteractors)
-            {
-                storyInteractor.DisplayDialogue -= DisplayDialogue;
-                storyInteractor.HideDialogue -= HideDialogues;
-            }
+            StoryInteractor.DisplayDialogue -= DisplayDialogue;
+            StoryInteractor.HideDialogue -= HideDialogues;
             StoryInteractor.FadeToBlack -= FadeToBlack;
         }
 
